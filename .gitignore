@@ -1,0 +1,16 @@
+# Python generator artifacts — not for publication
+__pycache__/
+*.py
+card_template.html
+
+# OS / system junk
+desktop.ini
+.DS_Store
+Thumbs.db
+
+# Test scratch files
+test_size.txt
+
+# Photos excluded from initial push (2.1 GB, exceeds GitHub repo limits)
+# Handle separately via Git LFS or a CDN
+photos/

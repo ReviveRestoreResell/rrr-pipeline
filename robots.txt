@@ -1,0 +1,24 @@
+# RRR Item Dashboard — Revive Restore Resell
+# Internal operator tool. Not for public crawling or indexing.
+
+User-agent: *
+Disallow: /
+
+# Specifically block AI/LLM crawlers
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
