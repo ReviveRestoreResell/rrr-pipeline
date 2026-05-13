@@ -285,19 +285,19 @@
     <div class="sband-body">
       <h4 style="margin-top:0">Intake Photos</h4>
       <div class="photo-grid" id="photoGrid">
-<a class="photo" href="../photos/Outerwear-0214/Outerwear-0214-garment.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../photos/Outerwear-0214/Outerwear-0214-garment.jpg" alt="Front" /><div class="ph-label">Front</div></a>
-<a class="photo" href="../photos/Outerwear-0214/Outerwear-0214-brand-tag.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../photos/Outerwear-0214/Outerwear-0214-brand-tag.jpg" alt="Detail-Brand-Tag" /><div class="ph-label">Detail-Brand-Tag</div></a>
-<a class="photo" href="../photos/Outerwear-0214/Outerwear-0214-care-tag.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../photos/Outerwear-0214/Outerwear-0214-care-tag.jpg" alt="Detail-Care-Tag" /><div class="ph-label">Detail-Care-Tag</div></a>
-<a class="photo" href="../photos/Outerwear-0214/Outerwear-0214-care-tag-alt-1.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../photos/Outerwear-0214/Outerwear-0214-care-tag-alt-1.jpg" alt="Detail-Care-Tag" /><div class="ph-label">Detail-Care-Tag</div></a>
-<a class="photo" href="../photos/Outerwear-0214/Outerwear-0214-care-tag-alt-2.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../photos/Outerwear-0214/Outerwear-0214-care-tag-alt-2.jpg" alt="Detail-Care-Tag" /><div class="ph-label">Detail-Care-Tag</div></a>
+<a class="photo" href="../thumbnails/Outerwear-0214/Outerwear-0214-garment.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Outerwear-0214/Outerwear-0214-garment.jpg" alt="Front" /><div class="ph-label">Front</div></a>
+<a class="photo" href="../thumbnails/Outerwear-0214/Outerwear-0214-brand-tag.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Outerwear-0214/Outerwear-0214-brand-tag.jpg" alt="Detail-Brand-Tag" /><div class="ph-label">Detail-Brand-Tag</div></a>
+<a class="photo" href="../thumbnails/Outerwear-0214/Outerwear-0214-care-tag.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Outerwear-0214/Outerwear-0214-care-tag.jpg" alt="Detail-Care-Tag" /><div class="ph-label">Detail-Care-Tag</div></a>
+<a class="photo" href="../thumbnails/Outerwear-0214/Outerwear-0214-care-tag-alt-1.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Outerwear-0214/Outerwear-0214-care-tag-alt-1.jpg" alt="Detail-Care-Tag" /><div class="ph-label">Detail-Care-Tag</div></a>
+<a class="photo" href="../thumbnails/Outerwear-0214/Outerwear-0214-care-tag-alt-2.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Outerwear-0214/Outerwear-0214-care-tag-alt-2.jpg" alt="Detail-Care-Tag" /><div class="ph-label">Detail-Care-Tag</div></a>
 </div>
       <h4>Customer-Facing Forward Photos</h4>
       <p style="color:var(--ink-mute);font-size:13px;margin:0">No customer-facing photos yet — will be added at listing stage.</p>
     </div>
   </div>
 
-  <!-- ── 2. COPY sband (open by default) ── -->
-  <div class="sband open" id="sbandCopy">
+  <!-- ── 2. COPY sband (closed by default) ── -->
+  <div class="sband" id="sbandCopy">
     <div class="sband-hdr" onclick="toggleBand(this)">
       <span class="sband-arrow">&#9658;</span>
       <span class="sband-label">Copy</span>
@@ -306,12 +306,12 @@
     <div class="sband-body">
       <div class="cws-blocks">
 
-        <!-- Title+ CONFIRMED -->
-        <div class="cws-block cws-confirmed" id="cwsb-title" onclick="cwsOpen('title')" role="button" tabindex="0">
+        <!-- Title+ status (dynamic: confirmed or pending) -->
+        <div class="cws-block cws-pending" id="cwsb-title" onclick="cwsOpen('title')" role="button" tabindex="0">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Title+</span>
-            <span class="cwsb-meta">78 chars</span>
-            <span class="cwsb-badge cws-confirmed">&#10003; Confirmed</span>
+            <span class="cwsb-meta">&#8212;&nbsp;chars</span>
+            <span class="cwsb-badge cws-pending">&#11015;&nbsp;Pending</span>
           </div>
           <div class="cwsb-body">
             <div class="cwsb-text" id="cws-title-display">Pending Phase 2</div>
@@ -546,7 +546,7 @@
     <div class="sband-body">
       <div style="font-size:11px;color:var(--ink-mute);margin-bottom:10px">Lay-flat unstretched &middot; all measurements in inches</div>
       <div class="grid">
-        <div class="row" data-field="ref.bust" data-status="green" data-source="Bench 2026-04-26" data-value="21"><div class="k">Bust / Chest (Flat)</div><div class="v"><div class="copyblock"><span class="cb-val">21 in</span><button class="cb-btn" onclick="copyVal(this,'21')">copy</button></div></div><button class="conf green" onclick="openField('ref.bust')">&#10003;</button></div>
+        <div class="row" data-field="ref.bust" data-status="green" data-source="Bench 2026-04-26" data-value="21"><div class="k">Pit to Pit (Flat)</div><div class="v"><div class="copyblock"><span class="cb-val">21 in</span><button class="cb-btn" onclick="copyVal(this,'21')">copy</button></div></div><button class="conf green" onclick="openField('ref.bust')">&#10003;</button></div>
         <div class="row" data-field="ref.length" data-status="green" data-source="Bench 2026-04-26" data-value="29"><div class="k">Length (Full)</div><div class="v"><div class="copyblock"><span class="cb-val">29 in</span><button class="cb-btn" onclick="copyVal(this,'29')">copy</button></div></div><button class="conf green" onclick="openField('ref.length')">&#10003;</button></div>
         <div class="row" data-field="ref.sleeve" data-status="green" data-source="Bench 2026-04-26" data-value="17"><div class="k">Sleeve (Full)</div><div class="v"><div class="copyblock"><span class="cb-val">17 in</span><button class="cb-btn" onclick="copyVal(this,'17')">copy</button></div></div><button class="conf green" onclick="openField('ref.sleeve')">&#10003;</button></div>
         <div class="row" data-field="ref.stretch" data-status="green" data-source="descriptors" data-value="No"><div class="k">Stretch</div><div class="v"><div class="selectblock"><span class="sb-val">No</span></div></div><button class="conf green" onclick="openField('ref.stretch')">&#10003;</button></div>

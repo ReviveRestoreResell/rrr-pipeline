@@ -285,21 +285,21 @@
     <div class="sband-body">
       <h4 style="margin-top:0">Intake Photos</h4>
       <div class="photo-grid" id="photoGrid">
-<a class="photo" href="../photos/Pants-1635/Pants-1635-sku-card.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../photos/Pants-1635/Pants-1635-sku-card.jpg" alt="Sku Card" /><div class="ph-label">Sku Card</div></a>
-<a class="photo" href="../photos/Pants-1635/Pants-1635-front.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../photos/Pants-1635/Pants-1635-front.jpg" alt="Front" /><div class="ph-label">Front</div></a>
-<a class="photo" href="../photos/Pants-1635/Pants-1635-brand-tag.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../photos/Pants-1635/Pants-1635-brand-tag.jpg" alt="Brand Tag" /><div class="ph-label">Brand Tag</div></a>
-<a class="photo" href="../photos/Pants-1635/Pants-1635-care-tag.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../photos/Pants-1635/Pants-1635-care-tag.jpg" alt="Care Tag" /><div class="ph-label">Care Tag</div></a>
-<a class="photo" href="../photos/Pants-1635/Pants-1635-care-tag-alt-1.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../photos/Pants-1635/Pants-1635-care-tag-alt-1.jpg" alt="Care Tag Alt 1" /><div class="ph-label">Care Tag Alt 1</div></a>
-<a class="photo" href="../photos/Pants-1635/Pants-1635-style-code.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../photos/Pants-1635/Pants-1635-style-code.jpg" alt="Style Code" /><div class="ph-label">Style Code</div></a>
-<a class="photo" href="../photos/Pants-1635/Pants-1635-back.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../photos/Pants-1635/Pants-1635-back.jpg" alt="Back" /><div class="ph-label">Back</div></a>
+<a class="photo" href="../thumbnails/Pants-1635/Pants-1635-sku-card.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Pants-1635/Pants-1635-sku-card.jpg" alt="Sku Card" /><div class="ph-label">Sku Card</div></a>
+<a class="photo" href="../thumbnails/Pants-1635/Pants-1635-front.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Pants-1635/Pants-1635-front.jpg" alt="Front" /><div class="ph-label">Front</div></a>
+<a class="photo" href="../thumbnails/Pants-1635/Pants-1635-brand-tag.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Pants-1635/Pants-1635-brand-tag.jpg" alt="Brand Tag" /><div class="ph-label">Brand Tag</div></a>
+<a class="photo" href="../thumbnails/Pants-1635/Pants-1635-care-tag.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Pants-1635/Pants-1635-care-tag.jpg" alt="Care Tag" /><div class="ph-label">Care Tag</div></a>
+<a class="photo" href="../thumbnails/Pants-1635/Pants-1635-care-tag-alt-1.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Pants-1635/Pants-1635-care-tag-alt-1.jpg" alt="Care Tag Alt 1" /><div class="ph-label">Care Tag Alt 1</div></a>
+<a class="photo" href="../thumbnails/Pants-1635/Pants-1635-style-code.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Pants-1635/Pants-1635-style-code.jpg" alt="Style Code" /><div class="ph-label">Style Code</div></a>
+<a class="photo" href="../thumbnails/Pants-1635/Pants-1635-back.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Pants-1635/Pants-1635-back.jpg" alt="Back" /><div class="ph-label">Back</div></a>
 </div>
       <h4>Customer-Facing Forward Photos</h4>
       <p style="color:var(--ink-mute);font-size:13px;margin:0">No customer-facing photos yet — will be added at listing stage.</p>
     </div>
   </div>
 
-  <!-- ── 2. COPY sband (open by default) ── -->
-  <div class="sband open" id="sbandCopy">
+  <!-- ── 2. COPY sband (closed by default) ── -->
+  <div class="sband" id="sbandCopy">
     <div class="sband-hdr" onclick="toggleBand(this)">
       <span class="sband-arrow">&#9658;</span>
       <span class="sband-label">Copy</span>
@@ -308,12 +308,12 @@
     <div class="sband-body">
       <div class="cws-blocks">
 
-        <!-- Title+ CONFIRMED -->
-        <div class="cws-block cws-confirmed" id="cwsb-title" onclick="cwsOpen('title')" role="button" tabindex="0">
+        <!-- Title+ status (dynamic: confirmed or pending) -->
+        <div class="cws-block cws-pending" id="cwsb-title" onclick="cwsOpen('title')" role="button" tabindex="0">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Title+</span>
-            <span class="cwsb-meta">78 chars</span>
-            <span class="cwsb-badge cws-confirmed">&#10003; Confirmed</span>
+            <span class="cwsb-meta">&#8212;&nbsp;chars</span>
+            <span class="cwsb-badge cws-pending">&#11015;&nbsp;Pending</span>
           </div>
           <div class="cwsb-body">
             <div class="cwsb-text" id="cws-title-display">Pending Phase 2</div>
