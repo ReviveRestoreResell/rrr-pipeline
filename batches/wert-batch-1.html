@@ -32,9 +32,15 @@ a{color:#0369a1;text-decoration:none}a:hover{text-decoration:underline}
 .copy-badge.mid{background:#fefce8;color:#854d0e;border:1px solid #fde68a}
 .copy-badge.low{background:#fff7ed;color:#9a3412;border:1px solid #fed7aa}
 .copy-badge.empty{background:#fef2f2;color:#991b1b;border:1px solid #fecaca}
+.ready-cell{width:28px;padding-left:14px;padding-right:0;text-align:center}
+thead th.ready-th{width:28px;padding-left:14px;padding-right:0}
+.ready-dot{display:inline-block;width:12px;height:12px;border-radius:50%;vertical-align:middle;box-shadow:0 0 0 1px rgba(0,0,0,.08) inset}
+.ready-dot.ready-green{background:#22c55e}
+.ready-dot.ready-yellow{background:#eab308}
+.ready-dot.ready-red{background:#ef4444}
 footer{margin-top:20px;font-size:11px;color:#9ca3af}
 @media(max-width:700px){
-  thead th:nth-child(4),td:nth-child(4){display:none}
+  thead th:nth-child(5),td:nth-child(5){display:none}
 }
 </style>
 </head>
@@ -45,11 +51,12 @@ footer{margin-top:20px;font-size:11px;color:#9ca3af}
   <a class="back-link" href="../index.html">&#8592; All Batches</a>
 </div>
 <div class="wrap">
-<div class="stats">16 items &nbsp;·&nbsp; Generated 2026-05-15 04:12 UTC</div>
+<div class="stats">16 items &nbsp;·&nbsp; Generated 2026-05-15 17:50 UTC</div>
 <div class="tbl-wrap">
 <table>
 <thead>
 <tr>
+  <th class="ready-th" title="Ready-for-list signal: green=ready, yellow=copy in progress, red=no copy" aria-label="Ready"></th>
   <th>SKU</th>
   <th>Brand</th>
   <th>Copy</th>
@@ -58,22 +65,22 @@ footer{margin-top:20px;font-size:11px;color:#9ca3af}
 </tr>
 </thead>
 <tbody>
-<tr><td><a href="../items/Dresses-0421.html">Dresses-0421</a></td><td>Max Studio</td><td><span class="copy-badge mid">4/5</span></td><td>NWT</td><td>—</td></tr>
-<tr><td><a href="../items/Outerwear-0229.html">Outerwear-0229</a></td><td>Halogen</td><td><span class="copy-badge mid">4/5</span></td><td>Pre-Loved</td><td>—</td></tr>
-<tr><td><a href="../items/Outerwear-0230.html">Outerwear-0230</a></td><td>Johnston &amp; Murphy</td><td><span class="copy-badge empty">0/5</span></td><td>GPO</td><td>—</td></tr>
-<tr><td><a href="../items/Outerwear-0231.html">Outerwear-0231</a></td><td>Johnston &amp; Murphy (XC4 line)</td><td><span class="copy-badge mid">4/5</span></td><td>GPO</td><td>—</td></tr>
-<tr><td><a href="../items/Outerwear-0232.html">Outerwear-0232</a></td><td>Johnston &amp; Murphy</td><td><span class="copy-badge empty">0/5</span></td><td>GPO</td><td>—</td></tr>
-<tr><td><a href="../items/Outerwear-0233.html">Outerwear-0233</a></td><td>Johnston &amp; Murphy</td><td><span class="copy-badge full">5/5</span></td><td>GPO</td><td>—</td></tr>
-<tr><td><a href="../items/Pants-0946.html">Pants-0946</a></td><td>Lauren Ralph Lauren</td><td><span class="copy-badge full">5/5</span></td><td>GPO</td><td>—</td></tr>
-<tr><td><a href="../items/Pants-0947.html">Pants-0947</a></td><td>Lauren Ralph Lauren</td><td><span class="copy-badge empty">0/5</span></td><td>GPO</td><td>—</td></tr>
-<tr><td><a href="../items/Pants-0948.html">Pants-0948</a></td><td>Lauren Ralph Lauren</td><td><span class="copy-badge full">5/5</span></td><td>GPO</td><td>—</td></tr>
-<tr><td><a href="../items/Pants-0949.html">Pants-0949</a></td><td>Lauren Ralph Lauren</td><td><span class="copy-badge full">5/5</span></td><td>GPO</td><td>—</td></tr>
-<tr><td><a href="../items/SB01-2733.html">SB01-2733</a></td><td>Frye</td><td><span class="copy-badge empty">0/5</span></td><td>Pre-Loved</td><td>—</td></tr>
-<tr><td><a href="../items/SB01-2739.html">SB01-2739</a></td><td>Dingo</td><td><span class="copy-badge empty">0/5</span></td><td>NWT</td><td>—</td></tr>
-<tr><td><a href="../items/SB03-2763.html">SB03-2763</a></td><td>Naturalizer</td><td><span class="copy-badge empty">0/5</span></td><td>GPO</td><td>—</td></tr>
-<tr><td><a href="../items/SB03-2769.html">SB03-2769</a></td><td>New Balance</td><td><span class="copy-badge empty">0/5</span></td><td>GPO</td><td>—</td></tr>
-<tr><td><a href="../items/Tops-1338.html">Tops-1338</a></td><td>Dolan</td><td><span class="copy-badge empty">0/5</span></td><td>GPO</td><td>—</td></tr>
-<tr><td><a href="../items/Tops-1339.html">Tops-1339</a></td><td>Lovestitch</td><td><span class="copy-badge full">5/5</span></td><td>GPO</td><td>—</td></tr>
+<tr><td class="ready-cell"><span class="ready-dot ready-yellow" title="Copy work in progress" aria-label="Copy work in progress"></span></td><td><a href="../items/Dresses-0421.html">Dresses-0421</a></td><td>Max Studio</td><td><span class="copy-badge mid">4/5</span></td><td>NWT</td><td>—</td></tr>
+<tr><td class="ready-cell"><span class="ready-dot ready-yellow" title="Copy work in progress" aria-label="Copy work in progress"></span></td><td><a href="../items/Outerwear-0229.html">Outerwear-0229</a></td><td>Halogen</td><td><span class="copy-badge mid">4/5</span></td><td>Pre-Loved</td><td>—</td></tr>
+<tr><td class="ready-cell"><span class="ready-dot ready-red" title="Missing copy" aria-label="Missing copy"></span></td><td><a href="../items/Outerwear-0230.html">Outerwear-0230</a></td><td>Johnston &amp; Murphy</td><td><span class="copy-badge empty">0/5</span></td><td>GPO</td><td>—</td></tr>
+<tr><td class="ready-cell"><span class="ready-dot ready-yellow" title="Copy work in progress" aria-label="Copy work in progress"></span></td><td><a href="../items/Outerwear-0231.html">Outerwear-0231</a></td><td>Johnston &amp; Murphy (XC4 line)</td><td><span class="copy-badge mid">4/5</span></td><td>GPO</td><td>—</td></tr>
+<tr><td class="ready-cell"><span class="ready-dot ready-red" title="Missing copy" aria-label="Missing copy"></span></td><td><a href="../items/Outerwear-0232.html">Outerwear-0232</a></td><td>Johnston &amp; Murphy</td><td><span class="copy-badge empty">0/5</span></td><td>GPO</td><td>—</td></tr>
+<tr><td class="ready-cell"><span class="ready-dot ready-yellow" title="Copy work in progress" aria-label="Copy work in progress"></span></td><td><a href="../items/Outerwear-0233.html">Outerwear-0233</a></td><td>Johnston &amp; Murphy</td><td><span class="copy-badge full">5/5</span></td><td>GPO</td><td>—</td></tr>
+<tr><td class="ready-cell"><span class="ready-dot ready-yellow" title="Copy work in progress" aria-label="Copy work in progress"></span></td><td><a href="../items/Pants-0946.html">Pants-0946</a></td><td>Lauren Ralph Lauren</td><td><span class="copy-badge full">5/5</span></td><td>GPO</td><td>—</td></tr>
+<tr><td class="ready-cell"><span class="ready-dot ready-red" title="Missing copy" aria-label="Missing copy"></span></td><td><a href="../items/Pants-0947.html">Pants-0947</a></td><td>Lauren Ralph Lauren</td><td><span class="copy-badge empty">0/5</span></td><td>GPO</td><td>—</td></tr>
+<tr><td class="ready-cell"><span class="ready-dot ready-yellow" title="Copy work in progress" aria-label="Copy work in progress"></span></td><td><a href="../items/Pants-0948.html">Pants-0948</a></td><td>Lauren Ralph Lauren</td><td><span class="copy-badge full">5/5</span></td><td>GPO</td><td>—</td></tr>
+<tr><td class="ready-cell"><span class="ready-dot ready-yellow" title="Copy work in progress" aria-label="Copy work in progress"></span></td><td><a href="../items/Pants-0949.html">Pants-0949</a></td><td>Lauren Ralph Lauren</td><td><span class="copy-badge full">5/5</span></td><td>GPO</td><td>—</td></tr>
+<tr><td class="ready-cell"><span class="ready-dot ready-red" title="Missing copy" aria-label="Missing copy"></span></td><td><a href="../items/SB01-2733.html">SB01-2733</a></td><td>Frye</td><td><span class="copy-badge empty">0/5</span></td><td>Pre-Loved</td><td>—</td></tr>
+<tr><td class="ready-cell"><span class="ready-dot ready-red" title="Missing copy" aria-label="Missing copy"></span></td><td><a href="../items/SB01-2739.html">SB01-2739</a></td><td>Dingo</td><td><span class="copy-badge empty">0/5</span></td><td>NWT</td><td>—</td></tr>
+<tr><td class="ready-cell"><span class="ready-dot ready-red" title="Missing copy" aria-label="Missing copy"></span></td><td><a href="../items/SB03-2763.html">SB03-2763</a></td><td>Naturalizer</td><td><span class="copy-badge empty">0/5</span></td><td>GPO</td><td>—</td></tr>
+<tr><td class="ready-cell"><span class="ready-dot ready-red" title="Missing copy" aria-label="Missing copy"></span></td><td><a href="../items/SB03-2769.html">SB03-2769</a></td><td>New Balance</td><td><span class="copy-badge empty">0/5</span></td><td>GPO</td><td>—</td></tr>
+<tr><td class="ready-cell"><span class="ready-dot ready-red" title="Missing copy" aria-label="Missing copy"></span></td><td><a href="../items/Tops-1338.html">Tops-1338</a></td><td>Dolan</td><td><span class="copy-badge empty">0/5</span></td><td>GPO</td><td>—</td></tr>
+<tr><td class="ready-cell"><span class="ready-dot ready-yellow" title="Copy work in progress" aria-label="Copy work in progress"></span></td><td><a href="../items/Tops-1339.html">Tops-1339</a></td><td>Lovestitch</td><td><span class="copy-badge full">5/5</span></td><td>GPO</td><td>—</td></tr>
 </tbody>
 </table>
 </div>
