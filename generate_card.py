@@ -15,6 +15,7 @@ import json
 import hashlib
 import ntpath
 import os
+import shutil
 import sys
 import glob
 from datetime import datetime
@@ -75,6 +76,29 @@ def fmt_price_raw(val, fallback=""):
 def label_to_slug(label):
     """Convert a batch label like 'NWLG Batch 1' to 'nwlg-batch-1'."""
     return label.lower().replace(" ", "-")
+
+
+def atomic_write_text(path, text, encoding="utf-8"):
+    """Write text to path atomically: tmp → validate non-empty → move."""
+    tmp = path + ".tmp"
+    with open(tmp, "w", encoding=encoding) as f:
+        f.write(text)
+    if os.path.getsize(tmp) == 0:
+        os.remove(tmp)
+        raise IOError(f"atomic_write_text: output was empty, aborting write to {path}")
+    shutil.move(tmp, path)
+
+
+def atomic_write_json(path, data, encoding="utf-8"):
+    """Write JSON to path atomically: tmp → round-trip validate → move."""
+    tmp = path + ".tmp"
+    with open(tmp, "w", encoding=encoding) as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+    # Validate round-trip
+    with open(tmp, "r", encoding=encoding) as f:
+        json.load(f)
+    shutil.move(tmp, path)
 
 
 def get_basename(path):
@@ -1419,8 +1443,38 @@ footer{{margin-top:20px;font-size:11px;color:#9ca3af}}
 </body>
 </html>
 """
-    with open(index_path, "w", encoding="utf-8") as f:
-        f.write(html)
+    atomic_write_text(index_path, html)
+
+
+def _copy_completeness(data):
+    """Return (count, total) — how many of the 5 RRR copy fields are present-and-nonempty.
+
+    Fields: copy.title, copy.description.{p1, p2_smc, p3_badges}, copy.keywords.line
+    """
+    paths = (
+        ("copy", "title"),
+        ("copy", "description", "p1"),
+        ("copy", "description", "p2_smc"),
+        ("copy", "description", "p3_badges"),
+        ("copy", "keywords", "line"),
+    )
+    n = 0
+    for p in paths:
+        v = get(data, *p, default="")
+        if isinstance(v, str) and v.strip():
+            n += 1
+    return n, len(paths)
+
+
+def _resolve_list_price(data):
+    """Best-available list price across batch shapes:
+       pricing.list_price -> pricing.card_snapshot.ebay_list -> None."""
+    pr = data.get("pricing", {}) if isinstance(data.get("pricing"), dict) else {}
+    lp = pr.get("list_price")
+    if lp is not None:
+        return lp
+    snap = pr.get("card_snapshot", {}) if isinstance(pr.get("card_snapshot"), dict) else {}
+    return snap.get("ebay_list")
 
 
 def _write_batch_index(batches_dir, slug, batch_label, items):
@@ -1431,18 +1485,23 @@ def _write_batch_index(batches_dir, slug, batch_label, items):
     for sku, data in items:
         brand = get(data, "identity", "brand", "value", default="")
         condition = get(data, "condition", "label", default="")
-        phase = get(data, "intake_meta", "phase", default=1)
-        captured = get(data, "intake_meta", "captured_date", default="")
-        phase_cls = "p2" if phase == 2 else "p1"
-        phase_label = f"Phase {phase}"
+        copy_n, copy_total = _copy_completeness(data)
+        if copy_n == copy_total:
+            copy_cls = "copy-badge full"
+        elif copy_n >= 3:
+            copy_cls = "copy-badge mid"
+        elif copy_n >= 1:
+            copy_cls = "copy-badge low"
+        else:
+            copy_cls = "copy-badge empty"
+        price_str = fmt_price(_resolve_list_price(data))
         rows.append(
             f'<tr>'
             f'<td><a href="../items/{esc(sku)}.html">{esc(sku)}</a></td>'
             f'<td>{esc(brand)}</td>'
+            f'<td><span class="{copy_cls}">{copy_n}/{copy_total}</span></td>'
             f'<td>{esc(condition)}</td>'
-            f'<td><span class="phase-badge {phase_cls}">{phase_label}</span></td>'
-            f'<td>{esc(captured)}</td>'
-            f'<td><a class="open-link" href="../items/{esc(sku)}.html">Open &#8594;</a></td>'
+            f'<td>{esc(price_str)}</td>'
             f'</tr>\n'
         )
 
@@ -1475,9 +1534,14 @@ a{{color:#0369a1;text-decoration:none}}a:hover{{text-decoration:underline}}
 .phase-badge.p1{{background:#fefce8;color:#854d0e;border:1px solid #fde68a}}
 .phase-badge.p2{{background:#ecfdf5;color:#065f46;border:1px solid #a7f3d0}}
 .open-link{{font-weight:600;font-size:12px}}
+.copy-badge{{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:99px;letter-spacing:.02em;font-variant-numeric:tabular-nums}}
+.copy-badge.full{{background:#ecfdf5;color:#065f46;border:1px solid #a7f3d0}}
+.copy-badge.mid{{background:#fefce8;color:#854d0e;border:1px solid #fde68a}}
+.copy-badge.low{{background:#fff7ed;color:#9a3412;border:1px solid #fed7aa}}
+.copy-badge.empty{{background:#fef2f2;color:#991b1b;border:1px solid #fecaca}}
 footer{{margin-top:20px;font-size:11px;color:#9ca3af}}
 @media(max-width:700px){{
-  thead th:nth-child(5),td:nth-child(5){{display:none}}
+  thead th:nth-child(4),td:nth-child(4){{display:none}}
 }}
 </style>
 </head>
@@ -1495,10 +1559,9 @@ footer{{margin-top:20px;font-size:11px;color:#9ca3af}}
 <tr>
   <th>SKU</th>
   <th>Brand</th>
+  <th>Copy</th>
   <th>Condition</th>
-  <th>Phase</th>
-  <th>Captured</th>
-  <th></th>
+  <th>Price</th>
 </tr>
 </thead>
 <tbody>
@@ -1512,8 +1575,7 @@ footer{{margin-top:20px;font-size:11px;color:#9ca3af}}
 """
     os.makedirs(batches_dir, exist_ok=True)
     out_path = os.path.join(batches_dir, f"{slug}.html")
-    with open(out_path, "w", encoding="utf-8") as f:
-        f.write(html)
+    atomic_write_text(out_path, html)
     return out_path
 
 
@@ -1560,9 +1622,7 @@ def load_manifest(items_dir):
 def save_manifest(items_dir, manifest):
     p = _manifest_path(items_dir)
     sorted_manifest = {k: manifest[k] for k in sorted(manifest)}
-    with open(p, "w", encoding="utf-8") as f:
-        json.dump(sorted_manifest, f, indent=2, ensure_ascii=False)
-        f.write("\n")
+    atomic_write_json(p, sorted_manifest)
 
 
 def build_manifest_entry(json_path, source_hash, renderer_version):
@@ -1600,8 +1660,7 @@ def generate_one(json_path, output_dir, template, nav=None, batch_slug=None, ren
         print(f"    WARN {sku}: unresolved tokens: {', '.join(unique)}")
 
     out_path = os.path.join(output_dir, f"{sku}.html")
-    with open(out_path, "w", encoding="utf-8") as f:
-        f.write(html)
+    atomic_write_text(out_path, html)
 
     # Manifest entry — content-hash + provenance for check_updates.py
     source_hash = compute_source_hash(json_path)
