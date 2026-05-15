@@ -239,6 +239,9 @@
   .cws-subblock-badge{font-size:10px;font-weight:700;padding:1px 8px;border-radius:99px;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
   .cws-subblock-badge.cws-subblock-confirmed{background:#10b981;color:#fff}
   .cws-subblock-badge.cws-subblock-pending{background:#f59e0b;color:#fff}
+  .cwsb-copy,.cws-subblock-copy{font-size:10px;font-weight:700;padding:2px 9px;border-radius:99px;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.12);color:#fff;cursor:pointer;letter-spacing:.04em;text-transform:uppercase;transition:background .12s ease,border-color .12s ease}
+  .cwsb-copy:hover,.cws-subblock-copy:hover{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.6)}
+  .cwsb-copy.copied,.cws-subblock-copy.copied{background:#10b981;border-color:#10b981}
   .cws-subblock-body{padding:10px 12px 8px}
 
 .nav-bar{position:sticky;top:0;z-index:100;background:#0f172a;display:flex;align-items:center;justify-content:space-between;padding:8px 18px;gap:12px;font-size:13px}
@@ -317,6 +320,7 @@
             <span class="cwsb-skill">Title+</span>
             <span class="cwsb-meta">75&nbsp;chars</span>
             <span class="cwsb-badge cws-confirmed">&#10003;&nbsp;Confirmed</span>
+            <button class="cwsb-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-title-display')" aria-label="Copy Title">copy</button>
           </div>
           <div class="cwsb-body">
             <div class="cwsb-text" id="cws-title-display">Arctic Expedition Hybradown Puffer Coat WMNS Plus 3X Green Camo Down Hooded</div>
@@ -337,6 +341,7 @@
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P1 &middot; Opening Paragraph</span>
                 <span class="cws-subblock-badge cws-subblock-confirmed" id="cwsb-desc-p1-badge">&#10003;&nbsp;Confirmed</span>
+                <button class="cws-subblock-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-desc-p1-display')" aria-label="Copy P1">copy</button>
               </div>
               <div class="cws-subblock-body">
                 <div class="cwsb-text" id="cws-desc-p1-display">Arctic Expedition Hybradown puffer coat women's plus 3X green camo polyester shell down fill hood quilted patch pockets relaxed fit with sportcore western utility. Quilted shell offers all-weather structure and insulating loft for outdoor workdays.</div>
@@ -349,6 +354,7 @@
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P2 &middot; SMC</span>
                 <span class="cws-subblock-badge cws-subblock-confirmed" id="cwsb-desc-p2-badge">&#10003;&nbsp;Confirmed</span>
+                <button class="cws-subblock-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-desc-p2-display')" aria-label="Copy P2 SMC">copy</button>
               </div>
               <div class="cws-subblock-body">
                 <div class="cwsb-text" id="cws-desc-p2-display">Shell 100% Polyester; Filling 75% Down / 25% Polyester (70% Down / 30% Waterfowl Feathers, body + hood); Lining + Interlining + Pocket + Mesh Lining 100% Polyester. Arctic Expedition Hybradown Coat in camo print with horizontal-baffle quilting, hooded, full front zip, patch pockets. Machine wash cold gentle, tumble dry low, do not dry clean. Designed in Canada / Made in China. Style Q5153HI-21 · RN 93395 · CA 00399 · Permit QUE.1750-746.
@@ -369,6 +375,7 @@
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P3 &middot; Badges</span>
                 <span class="cws-subblock-badge cws-subblock-confirmed" id="cwsb-desc-p3-badge">&#10003;&nbsp;Confirmed</span>
+                <button class="cws-subblock-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-desc-p3-display')" aria-label="Copy P3 Badges">copy</button>
               </div>
               <div class="cws-subblock-body">
                 <div class="cwsb-text" id="cws-desc-p3-display">🚢 Ready to Ship
@@ -388,6 +395,7 @@
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Keyword+</span>
             <span class="cwsb-badge cws-confirmed">&#10003;&nbsp;Confirmed</span>
+            <button class="cwsb-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-kw-display')" aria-label="Copy Keywords">copy</button>
           </div>
           <div class="cwsb-body">
             <div class="cwsb-text" id="cws-kw-display">arctic expedition camo puffer, camo down coat plus 3x, womens 3x camo parka, hooded camo puffer coat, camouflage winter coat plus, hybradown camo coat, plus size camo outerwear, down filled camo coat, military camo puffer, canadian camo down coat, womens camo parka 3x, cold weather camo coat, quilted camo puffer, camo winter outerwear #camocore #sportcore #plussizeoutdoor #camohuntress #wintercamo</div>
@@ -908,6 +916,14 @@ function copyVal(btn, val) {
     btn.textContent = 'ctrl+c';
     setTimeout(() => btn.textContent = 'copy', 1200);
   });
+}
+
+// Copy the innerText of a DOM element by id (used for multi-line CWS blocks)
+function copyFromEl(btn, sourceId) {
+  const el = document.getElementById(sourceId);
+  if (!el) return;
+  const val = (el.innerText || el.textContent || "").trim();
+  copyVal(btn, val);
 }
 
 // ── Section band toggle ──

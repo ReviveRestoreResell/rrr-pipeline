@@ -239,6 +239,9 @@
   .cws-subblock-badge{font-size:10px;font-weight:700;padding:1px 8px;border-radius:99px;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
   .cws-subblock-badge.cws-subblock-confirmed{background:#10b981;color:#fff}
   .cws-subblock-badge.cws-subblock-pending{background:#f59e0b;color:#fff}
+  .cwsb-copy,.cws-subblock-copy{font-size:10px;font-weight:700;padding:2px 9px;border-radius:99px;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.12);color:#fff;cursor:pointer;letter-spacing:.04em;text-transform:uppercase;transition:background .12s ease,border-color .12s ease}
+  .cwsb-copy:hover,.cws-subblock-copy:hover{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.6)}
+  .cwsb-copy.copied,.cws-subblock-copy.copied{background:#10b981;border-color:#10b981}
   .cws-subblock-body{padding:10px 12px 8px}
 
 .nav-bar{position:sticky;top:0;z-index:100;background:#0f172a;display:flex;align-items:center;justify-content:space-between;padding:8px 18px;gap:12px;font-size:13px}
@@ -315,6 +318,7 @@
             <span class="cwsb-skill">Title+</span>
             <span class="cwsb-meta">78&nbsp;chars</span>
             <span class="cwsb-badge cws-confirmed">&#10003;&nbsp;Confirmed</span>
+            <button class="cwsb-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-title-display')" aria-label="Copy Title">copy</button>
           </div>
           <div class="cwsb-body">
             <div class="cwsb-text" id="cws-title-display">Vans Sk8 Hi Slim Sneakers WMNS 8.5 Mens 7 Navy White High Top Streetwear Indie</div>
@@ -335,6 +339,7 @@
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P1 &middot; Opening Paragraph</span>
                 <span class="cws-subblock-badge cws-subblock-confirmed" id="cwsb-desc-p1-badge">&#10003;&nbsp;Confirmed</span>
+                <button class="cws-subblock-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-desc-p1-display')" aria-label="Copy P1">copy</button>
               </div>
               <div class="cws-subblock-body">
                 <div class="cwsb-text" id="cws-desc-p1-display">Vans Sk8-Hi Slim sneakers women's 8.5 mens 7 navy true white canvas suede high top contrast stitch lace up unisex fit with streetwear indie sleaze cut. Canvas suede upper provides classic skate structure and broken-in feel for everyday weekend looks.</div>
@@ -347,6 +352,7 @@
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P2 &middot; SMC</span>
                 <span class="cws-subblock-badge cws-subblock-confirmed" id="cwsb-desc-p2-badge">&#10003;&nbsp;Confirmed</span>
+                <button class="cws-subblock-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-desc-p2-display')" aria-label="Copy P2 SMC">copy</button>
               </div>
               <div class="cws-subblock-body">
                 <div class="cwsb-text" id="cws-desc-p2-display">Canvas + suede upper with signature waffle rubber outsole, padded collar and heel counter, classic side stripe. Vans Sk8-Hi Slim Hi-Top Skate Sneaker, Navy/True White colorway. Style VN000QG3NWD · UPC 4000265300020.
@@ -363,6 +369,7 @@
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P3 &middot; Badges</span>
                 <span class="cws-subblock-badge cws-subblock-confirmed" id="cwsb-desc-p3-badge">&#10003;&nbsp;Confirmed</span>
+                <button class="cws-subblock-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-desc-p3-display')" aria-label="Copy P3 Badges">copy</button>
               </div>
               <div class="cws-subblock-body">
                 <div class="cwsb-text" id="cws-desc-p3-display">🚢 Ready to Ship
@@ -382,6 +389,7 @@
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Keyword+</span>
             <span class="cwsb-badge cws-confirmed">&#10003;&nbsp;Confirmed</span>
+            <button class="cwsb-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-kw-display')" aria-label="Copy Keywords">copy</button>
           </div>
           <div class="cwsb-body">
             <div class="cwsb-text" id="cws-kw-display">vans sk8 hi slim, hi top skate sneaker, navy white vans, canvas suede sneakers, vans unisex sneakers, lace up skate shoes, y2k throwback sneakers, nineties revival vans, alt skater sneakers, streetwear hi top, classic vans hi top, womens vans 8.5, mens 7 vans hi top, off the wall vans #indiesleaze #y2krevival #streetwear #skatewear #ninetiesrevival</div>
@@ -901,6 +909,14 @@ function copyVal(btn, val) {
     btn.textContent = 'ctrl+c';
     setTimeout(() => btn.textContent = 'copy', 1200);
   });
+}
+
+// Copy the innerText of a DOM element by id (used for multi-line CWS blocks)
+function copyFromEl(btn, sourceId) {
+  const el = document.getElementById(sourceId);
+  if (!el) return;
+  const val = (el.innerText || el.textContent || "").trim();
+  copyVal(btn, val);
 }
 
 // ── Section band toggle ──
