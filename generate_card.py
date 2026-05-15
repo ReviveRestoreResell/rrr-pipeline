@@ -1387,47 +1387,46 @@ def build_card(data, template, nav=None, batch_slug=None, generated_date=None):
 def _write_index(index_path, items):
     """Write index.html as a batch card dashboard.
 
-    Groups items by batch, shows one card per batch with item count,
-    ready-light dot tally (red/yellow/green), and a link to the batch page.
-    Batches whose name contains "copy" (case-insensitive) are shown without
-    ready-light dots — they are copy-workstream cohorts, not intake batches.
+    Exactly 5 cards, hardcoded allowlist — no extra batches from migrated items.
+    Cards 1-4 show ready-light dot tallies. Card 5 (Copy cohort) has no ready-light.
+
+    Display name  |  JSON batch_name match  |  slug
+    ─────────────────────────────────────────────────
+    Batch 4       |  Batch 4                |  batch-4
+    Batch 5       |  Batch 5                |  batch-5
+    NWLG          |  NWLG Batch 1           |  nwlg-batch-1
+    Wert          |  WERT Batch 1           |  wert-batch-1
+    Copy — 40 SKU |  (no JSON match)        |  copy-reconcile-40sku-2026-05-10
     """
     from collections import defaultdict
 
-    # Known display order — any other batches append alphabetically
-    BATCH_ORDER = [
-        "Batch 4",
-        "Batch 5",
-        "NWLG Batch 1",
-        "Phase1 Migrated April 2026",
-        "WERT Batch 1",
+    # Allowlist — order determines card order on dashboard
+    CARD_CONFIG = [
+        {"display": "Batch 4",        "batch_key": "Batch 4",      "slug": "batch-4",                          "copy_cohort": False},
+        {"display": "Batch 5",        "batch_key": "Batch 5",      "slug": "batch-5",                          "copy_cohort": False},
+        {"display": "NWLG",           "batch_key": "NWLG Batch 1", "slug": "nwlg-batch-1",                     "copy_cohort": False},
+        {"display": "Wert",           "batch_key": "WERT Batch 1", "slug": "wert-batch-1",                     "copy_cohort": False},
+        {"display": "Copy — 40 SKU", "batch_key": None,       "slug": "copy-reconcile-40sku-2026-05-10",  "copy_cohort": True, "fixed_count": 40},
     ]
 
-    # Group items by batch label
+    # Group items by batch label (used only for the 4 intake batches)
     batch_map = defaultdict(list)
     for sku, data in items:
         batch = (
             get(data, "intake_meta", "batch_name")
-            or get(data, "intake_meta", "batch", default="Unknown")
+            or get(data, "intake_meta", "batch", default="")
         )
         batch_map[batch].append((sku, data))
 
-    # Ordered list: known batches first, then any extras alphabetically
-    ordered = [b for b in BATCH_ORDER if b in batch_map]
-    for b in sorted(batch_map.keys()):
-        if b not in ordered:
-            ordered.append(b)
-
     cards = []
-    for batch in ordered:
-        batch_items = batch_map[batch]
-        n = len(batch_items)
-        slug = label_to_slug(batch)
-        is_copy_cohort = "copy" in batch.lower()
+    for cfg in CARD_CONFIG:
+        is_copy = cfg["copy_cohort"]
+        batch_items = batch_map.get(cfg["batch_key"], []) if cfg["batch_key"] else []
+        n = cfg.get("fixed_count", len(batch_items))
 
-        # Tally ready-lights (skip for copy-workstream cohorts)
+        # Tally ready-lights (intake batches only)
         red = yellow = green = 0
-        if not is_copy_cohort:
+        if not is_copy:
             for _, d in batch_items:
                 s = _ready_status(d)
                 if s == "green":
@@ -1437,47 +1436,28 @@ def _write_index(index_path, items):
                 else:
                     red += 1
 
-        # Build dot tally HTML
+        # Dot tally HTML
         dot_parts = []
-        if not is_copy_cohort:
+        if not is_copy:
             if red:
-                dot_parts.append(
-                    f'<span class="dc"><span class="rd rd-r"></span>{red}</span>'
-                )
+                dot_parts.append(f'<span class="dc"><span class="rd rd-r"></span>{red}</span>')
             if yellow:
-                dot_parts.append(
-                    f'<span class="dc"><span class="rd rd-y"></span>{yellow}</span>'
-                )
+                dot_parts.append(f'<span class="dc"><span class="rd rd-y"></span>{yellow}</span>')
             if green:
-                dot_parts.append(
-                    f'<span class="dc"><span class="rd rd-g"></span>{green}</span>'
-                )
+                dot_parts.append(f'<span class="dc"><span class="rd rd-g"></span>{green}</span>')
         dots_html = " ".join(dot_parts)
 
-        # Batch description from intake_meta if available
-        desc = ""
-        for _, d in batch_items:
-            bd = (
-                get(d, "intake_meta", "batch_desc")
-                or get(d, "intake_meta", "batch_description", default="")
-            )
-            if bd:
-                desc = bd
-                break
-
-        link_label = "View Cohort" if is_copy_cohort else "View Batch"
-        desc_html = f'<p class="card-desc">{esc(desc)}</p>' if desc else ""
+        link_label = "View Cohort" if is_copy else "View Batch"
         dots_row = f'<div class="card-dots">{dots_html}</div>' if dots_html else ""
 
         cards.append(f"""\
   <div class="card">
     <div class="card-hd">
-      <span class="card-name">{esc(batch)}</span>
+      <span class="card-name">{esc(cfg["display"])}</span>
     </div>
     <div class="card-count">{n}<span class="card-count-unit"> items</span></div>
-    {desc_html}
     {dots_row}
-    <a class="card-link" href="batches/{esc(slug)}.html">{link_label} →</a>
+    <a class="card-link" href="batches/{esc(cfg['slug'])}.html">{link_label} →</a>
   </div>""")
 
     generated_at = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
