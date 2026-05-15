@@ -1,0 +1,828 @@
+{
+  "Accessories-1842": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Accessories-1842.json",
+    "source_sha256": "c0052a762ae9bcac0f02d8918459911eea21d67a694a22338d780f0339e38b43",
+    "source_mtime": "2026-05-15T00:54:36.085667Z",
+    "rendered_at": "2026-05-15T01:40:11.352865Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Accessories-1843": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Accessories-1843.json",
+    "source_sha256": "658c5683f1a1bff291b396dd71a183bda4a74fac9e6764b0a3785e9fac981980",
+    "source_mtime": "2026-05-14T17:06:42.734816Z",
+    "rendered_at": "2026-05-15T01:40:11.381430Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Accessories-1844": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Accessories-1844.json",
+    "source_sha256": "550afdd15fd207206a0e45b58ecc00def5e76e9c47ddc0ffe7137aa599a72e08",
+    "source_mtime": "2026-05-14T17:06:42.750791Z",
+    "rendered_at": "2026-05-15T01:40:11.409095Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Accessories-1845": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Accessories-1845.json",
+    "source_sha256": "387a39ebe4c8eb079053bdcb74cc6ae07c6fb2d23bcdb2fed3768d552f25b2d3",
+    "source_mtime": "2026-05-14T17:06:42.765798Z",
+    "rendered_at": "2026-05-15T01:40:11.436294Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Accessories-1846": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Accessories-1846.json",
+    "source_sha256": "42fe556a7d04b09b209d5dc769873ebea96be7e32b8d2998c8f988d84418e604",
+    "source_mtime": "2026-05-14T17:06:42.780792Z",
+    "rendered_at": "2026-05-15T01:40:11.465267Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Dresses-0418": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Dresses-0418.json",
+    "source_sha256": "497775fa058eec7c961334dfcd653f9a7d2b4e7b4b51fd4e490642d154727945",
+    "source_mtime": "2026-05-14T17:06:42.795791Z",
+    "rendered_at": "2026-05-15T01:40:11.491106Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Dresses-0419": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Dresses-0419.json",
+    "source_sha256": "158c494f36b64eab9d4a97a90884cd3b14d8bd2b3eeed403da985fe72d1dd29d",
+    "source_mtime": "2026-05-14T16:04:03.574698Z",
+    "rendered_at": "2026-05-15T01:40:11.519024Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Dresses-0420": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Dresses-0420.json",
+    "source_sha256": "5777fd9622155e4ba6c47211dcfa106fd1c252dc022ea13f650c1f85dcb08a11",
+    "source_mtime": "2026-05-15T00:54:36.095666Z",
+    "rendered_at": "2026-05-15T01:40:11.549831Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Dresses-0421": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/Dresses-0421.json",
+    "source_sha256": "ac1f7441f8188ddea4c3b1328b83e2d44d8274e5a3ae1ffc8f400f5b5809b606",
+    "source_mtime": "2026-05-15T00:42:47.087057Z",
+    "rendered_at": "2026-05-15T01:40:13.352819Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Outerwear-0214": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0214.json",
+    "source_sha256": "77d6b1fc285f10b5ef16ad39447c04b70800e9466523fc62fc6de4be401aad8b",
+    "source_mtime": "2026-05-14T19:09:20.858790Z",
+    "rendered_at": "2026-05-15T01:40:11.579870Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Outerwear-0215": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0215.json",
+    "source_sha256": "fb13a4a6c641aec05a3fe88d1ec499124c026f50f721f0a4ef4e19783ce5689f",
+    "source_mtime": "2026-05-14T19:09:20.874794Z",
+    "rendered_at": "2026-05-15T01:40:11.610090Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Outerwear-0216": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0216.json",
+    "source_sha256": "91f286833909d4b70ff43881ab31364947903faf50e8f5f74f450f05f5959e04",
+    "source_mtime": "2026-05-14T19:09:20.885561Z",
+    "rendered_at": "2026-05-15T01:40:11.642080Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Outerwear-0217": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0217.json",
+    "source_sha256": "c0408b7ae292d8a59aad19aeb0583ded39231cbd779724778d3a55a9042c6fc7",
+    "source_mtime": "2026-05-14T19:09:20.897566Z",
+    "rendered_at": "2026-05-15T01:40:11.671674Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Outerwear-0218": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0218.json",
+    "source_sha256": "64256153a774949cc734edb898d967a7168fea6fea9ed005b13498af81e2a70c",
+    "source_mtime": "2026-05-15T00:10:53.443777Z",
+    "rendered_at": "2026-05-15T01:40:11.701485Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Outerwear-0219": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0219.json",
+    "source_sha256": "99975920a557d7b7896243d656bd5923e36093d70b5f3d57ffcc2dc90aa63e1f",
+    "source_mtime": "2026-05-14T19:09:20.919566Z",
+    "rendered_at": "2026-05-15T01:40:11.732312Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Outerwear-0220": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0220.json",
+    "source_sha256": "9a978fe2e061003f53a06c11868e0439420c35706e590a6d7427e863029e1c53",
+    "source_mtime": "2026-05-14T19:09:20.932935Z",
+    "rendered_at": "2026-05-15T01:40:11.762217Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Outerwear-0221": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0221.json",
+    "source_sha256": "3fbc0ca05c731ee033ab9ca0dbcb8baf0ce563e50919294ee8c21a7fedd3be30",
+    "source_mtime": "2026-05-15T00:11:00.419779Z",
+    "rendered_at": "2026-05-15T01:40:11.795895Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Outerwear-0222": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0222.json",
+    "source_sha256": "9f50fec52b545c5dee3bbeba3eee335fac367d84caf31bb5c6a30b6b25d5f980",
+    "source_mtime": "2026-05-14T19:10:30.838128Z",
+    "rendered_at": "2026-05-15T01:40:11.825048Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Outerwear-0223": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0223.json",
+    "source_sha256": "18eb9dd1f416ceebf818be373f3b89133fca964307dacfbea06ba51c846037fe",
+    "source_mtime": "2026-05-14T19:10:30.852594Z",
+    "rendered_at": "2026-05-15T01:40:11.855882Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Outerwear-0224": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0224.json",
+    "source_sha256": "d1ba28592ca9406a5290662cef8b01c2ebcee6be07d7759edcf57f1bf81842ca",
+    "source_mtime": "2026-05-14T19:10:30.865609Z",
+    "rendered_at": "2026-05-15T01:40:11.886612Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Outerwear-0225": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0225.json",
+    "source_sha256": "8504dd6ff8d589b0162eb9db6dc91be577ffd3370ad5ac066dee2b4be4507233",
+    "source_mtime": "2026-05-14T19:10:30.877594Z",
+    "rendered_at": "2026-05-15T01:40:11.918253Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Outerwear-0226": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0226.json",
+    "source_sha256": "8cbf32a15ba7914fe61107f85e8386e57e77d7c066fb30e86f3c9587453c650a",
+    "source_mtime": "2026-05-14T19:10:30.888594Z",
+    "rendered_at": "2026-05-15T01:40:11.947390Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Outerwear-0227": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0227.json",
+    "source_sha256": "e5dc39101d28e2030eb99630d75b82b912767e29c1b395146901fdd286f962c2",
+    "source_mtime": "2026-05-14T19:10:30.901592Z",
+    "rendered_at": "2026-05-15T01:40:11.977022Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Outerwear-0228": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0228.json",
+    "source_sha256": "2c4e93727537adb3ae2ce5ccd0311a21258672b74dbed9f0c534e9b6960f4cca",
+    "source_mtime": "2026-05-14T19:10:30.912601Z",
+    "rendered_at": "2026-05-15T01:40:12.006374Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Outerwear-0229": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/Outerwear-0229.json",
+    "source_sha256": "cedee375906ee85b4c0a9d33b899754b4fa9e6654d302aa15bb030dccbe5cf23",
+    "source_mtime": "2026-05-15T00:41:55.354691Z",
+    "rendered_at": "2026-05-15T01:40:13.383381Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Outerwear-0230": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/Outerwear-0230.json",
+    "source_sha256": "0bd75603f30b94a4cca050ca227a872e0c7fb99c85f7cec6c493259db98a9aa0",
+    "source_mtime": "2026-05-15T00:41:55.379690Z",
+    "rendered_at": "2026-05-15T01:40:13.411962Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Outerwear-0231": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/Outerwear-0231.json",
+    "source_sha256": "406df2e94d32da42d1463e714488044590785e7b3e598e278a7988720f5046b8",
+    "source_mtime": "2026-05-14T17:41:12.010372Z",
+    "rendered_at": "2026-05-15T01:40:13.442999Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Outerwear-0232": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/Outerwear-0232.json",
+    "source_sha256": "22cd24bd44dc7e1122120a949fc539b9282da1cd16e7159f01da2d880c8310b5",
+    "source_mtime": "2026-05-15T00:41:55.402698Z",
+    "rendered_at": "2026-05-15T01:40:13.472511Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Outerwear-0233": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/Outerwear-0233.json",
+    "source_sha256": "c074a306ea23f3c18ad5d5001b685e857a6711bfaaff418ea39c5b8a4307b8aa",
+    "source_mtime": "2026-05-15T00:41:55.425353Z",
+    "rendered_at": "2026-05-15T01:40:13.503571Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0002": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0002.json",
+    "source_sha256": "16955ff936d84ffd7478a252ce23f0a6e7e743ae9a81dd4806c5e74e1db3aa26",
+    "source_mtime": "2026-05-14T03:21:36.488704Z",
+    "rendered_at": "2026-05-15T01:40:15.085655Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0928": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0928.json",
+    "source_sha256": "b4c5fac082ba8fa131411c8c9651cb745d76713328bb86a75a1a12c7d17dd828",
+    "source_mtime": "2026-05-14T19:11:37.880976Z",
+    "rendered_at": "2026-05-15T01:40:12.036065Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0929": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0929.json",
+    "source_sha256": "bfe31c8975ac84656262d0c95b6f0966c9d897b986622da9611da1c155f59d97",
+    "source_mtime": "2026-05-14T19:11:37.892991Z",
+    "rendered_at": "2026-05-15T01:40:12.066786Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0930": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0930.json",
+    "source_sha256": "263af402523af2b01017477f1f9f24f1bd14c3e2869456fae189d012042e3d6e",
+    "source_mtime": "2026-05-14T19:11:37.905978Z",
+    "rendered_at": "2026-05-15T01:40:12.095415Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0931": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0931.json",
+    "source_sha256": "11db4523d5ee27b73c7c015207b1d055fd4d2d5e63ed5d0a638e3d623e693f30",
+    "source_mtime": "2026-05-14T19:11:37.917983Z",
+    "rendered_at": "2026-05-15T01:40:12.125775Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0932": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0932.json",
+    "source_sha256": "fd8988d860ce40cedb7fbbb05e9cdc2ab15fb25f1360cccd0299c0be392f4052",
+    "source_mtime": "2026-05-14T19:11:37.930226Z",
+    "rendered_at": "2026-05-15T01:40:12.156753Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0933": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0933.json",
+    "source_sha256": "e0efadb54499b714099b738979ad5ba1591ba7b0dd94e26140caa4f9e27e95b1",
+    "source_mtime": "2026-05-14T19:11:37.940224Z",
+    "rendered_at": "2026-05-15T01:40:12.188763Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0934": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0934.json",
+    "source_sha256": "b7cfd5acab11bf2b662bd28a73308b1450b74f70a228a281b45c85a2722a34f7",
+    "source_mtime": "2026-05-14T19:11:37.951222Z",
+    "rendered_at": "2026-05-15T01:40:12.224063Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0935": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0935.json",
+    "source_sha256": "d9a06b9a40ab99592edefdf0d86d7c34970f7ffed6797efb4626afb0083b0d3d",
+    "source_mtime": "2026-05-14T19:11:37.963221Z",
+    "rendered_at": "2026-05-15T01:40:12.256359Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0936": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0936.json",
+    "source_sha256": "609ce2991a334f0285c194ca11d7e5f6605dd10fb60327950c6938dc95dd23cb",
+    "source_mtime": "2026-05-14T19:12:44.582793Z",
+    "rendered_at": "2026-05-15T01:40:12.287416Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0938": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0938.json",
+    "source_sha256": "08a3e442dcae7d7cc40b9d93e9398b1b33c404177c07e348cf59dd8c90937350",
+    "source_mtime": "2026-05-14T19:12:44.594976Z",
+    "rendered_at": "2026-05-15T01:40:12.317774Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0939": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0939.json",
+    "source_sha256": "609b157ab8595a3b6b7a441a90f38d687cb33091fa4fe562e03bb75c7f8b2684",
+    "source_mtime": "2026-05-14T19:12:44.605978Z",
+    "rendered_at": "2026-05-15T01:40:12.345477Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0940": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0940.json",
+    "source_sha256": "7dfd70d6ed1248b0768aa58a9cdb3181ebce8cf26a3e79c2aea1250699cd26fb",
+    "source_mtime": "2026-05-14T19:12:44.615974Z",
+    "rendered_at": "2026-05-15T01:40:12.375664Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0941": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0941.json",
+    "source_sha256": "bccc52b25fb13017c521e904fc0f39e1fce362d8a625d7a45adf57345de27677",
+    "source_mtime": "2026-05-14T19:12:44.626976Z",
+    "rendered_at": "2026-05-15T01:40:12.403893Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0942": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0942.json",
+    "source_sha256": "509a810ae75a875efc1bf88095a4985f36cee724b7256340a64b648305e57270",
+    "source_mtime": "2026-05-14T19:12:44.638977Z",
+    "rendered_at": "2026-05-15T01:40:12.433975Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0943": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0943.json",
+    "source_sha256": "825f07455790fe33183bf29f13722d087121c37576cc241d2aa6c08c93c94b65",
+    "source_mtime": "2026-05-14T19:12:44.650983Z",
+    "rendered_at": "2026-05-15T01:40:12.461992Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0944": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0944.json",
+    "source_sha256": "8c8916ff762aa5c2f20e76c463f66026097b20bbee1acd2eeb2849d7f97a54ff",
+    "source_mtime": "2026-05-14T19:12:44.661974Z",
+    "rendered_at": "2026-05-15T01:40:12.490550Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0946": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/Pants-0946.json",
+    "source_sha256": "ff0bba11b1a51b0a2b74e8e978cf66dcb56312779b330d4902710f940af95a7d",
+    "source_mtime": "2026-05-14T17:45:41.739239Z",
+    "rendered_at": "2026-05-15T01:40:13.535021Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0947": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/Pants-0947.json",
+    "source_sha256": "e4e0773361bc9609f8acaa2d8bf80f92860845898cb1aa13bd32a68d70a3b59a",
+    "source_mtime": "2026-05-15T00:42:47.121778Z",
+    "rendered_at": "2026-05-15T01:40:13.562543Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0948": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/Pants-0948.json",
+    "source_sha256": "fb689a3258b8a51d71d058182db4b89ab0ce23521fddbcf27d889f03a4249a9c",
+    "source_mtime": "2026-05-15T00:42:47.142555Z",
+    "rendered_at": "2026-05-15T01:40:13.594505Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0949": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/Pants-0949.json",
+    "source_sha256": "63b9415291da76b7c2a49fa6fd3b74213b153bf7e9dea1d03ef3ff52e5f4a805",
+    "source_mtime": "2026-05-14T17:45:41.783771Z",
+    "rendered_at": "2026-05-15T01:40:13.625798Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1624": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1624.json",
+    "source_sha256": "e84fb16b1f4f465b8e032ce0bf7cf2aab0023f4ab0642f336729c9fc4d10bd25",
+    "source_mtime": "2026-05-13T02:24:57.667864Z",
+    "rendered_at": "2026-05-15T01:40:13.897750Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1625": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1625.json",
+    "source_sha256": "69764dc45a6ea88fd71b32e1407c0891bb794ff0d4f19c4adb138e0bb28cc93e",
+    "source_mtime": "2026-05-13T02:24:57.683896Z",
+    "rendered_at": "2026-05-15T01:40:13.927691Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1626": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1626.json",
+    "source_sha256": "c33682320d19ca169695a006506288456c1843bb33c8ec00e571c0fa1c083a16",
+    "source_mtime": "2026-05-13T02:24:57.699113Z",
+    "rendered_at": "2026-05-15T01:40:13.958844Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1627": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1627.json",
+    "source_sha256": "43ebc3b1cc7757a4e8bc1de9cc856a93ba2533f616bd32a2e6fbfbc9c7006999",
+    "source_mtime": "2026-05-13T02:24:57.714664Z",
+    "rendered_at": "2026-05-15T01:40:13.987824Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1628": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1628.json",
+    "source_sha256": "57ba02d6b29d5bcf52e9bdfab8b80adf8f63ee9686c9390fc3740621ca100d0d",
+    "source_mtime": "2026-05-15T00:41:55.127200Z",
+    "rendered_at": "2026-05-15T01:40:14.015747Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1629": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1629.json",
+    "source_sha256": "f6d43a6925b8a152b043801f758373437122c06bbf6dc0837a23466e547a7c6f",
+    "source_mtime": "2026-05-13T02:24:57.741791Z",
+    "rendered_at": "2026-05-15T01:40:14.045435Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1630": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1630.json",
+    "source_sha256": "b29ff3c416208f9e7a8c842d1c07fcc063bac7a6f255f4b855ebd9ead2301227",
+    "source_mtime": "2026-05-13T02:24:57.757343Z",
+    "rendered_at": "2026-05-15T01:40:14.075299Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1631": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1631.json",
+    "source_sha256": "ee5dd632715863381b48c4f4c3566a38ad5f5884cd1c843e70117fc6f5515f06",
+    "source_mtime": "2026-05-13T02:24:57.773959Z",
+    "rendered_at": "2026-05-15T01:40:14.106383Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1632": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1632.json",
+    "source_sha256": "bdc9d396d6c0b498aabc583225639f0efae11913cddb034e860766dedc23476f",
+    "source_mtime": "2026-05-13T02:24:57.789830Z",
+    "rendered_at": "2026-05-15T01:40:14.136663Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1633": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1633.json",
+    "source_sha256": "63ab55c588d7bce21ecbb2d8f343ec86f8e193e6fb556bd65cf242ae0749048b",
+    "source_mtime": "2026-05-13T02:24:57.807169Z",
+    "rendered_at": "2026-05-15T01:40:14.168980Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1634": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1634.json",
+    "source_sha256": "747c2ea4a20a8376df1a0f61e829488b5f4f004a5907b839e7e87dac2b2c6fe9",
+    "source_mtime": "2026-05-13T02:24:57.824019Z",
+    "rendered_at": "2026-05-15T01:40:14.198675Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1635": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1635.json",
+    "source_sha256": "7b2cd4d9081be605bf252debbbb2329615ec20afbcf6718bad663b6c32507090",
+    "source_mtime": "2026-05-13T02:24:57.840649Z",
+    "rendered_at": "2026-05-15T01:40:14.229613Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1636": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1636.json",
+    "source_sha256": "6d90928b41dc604166f9346dc3e81850537116d495fd940b84363d67b84b186e",
+    "source_mtime": "2026-05-13T02:24:57.860941Z",
+    "rendered_at": "2026-05-15T01:40:14.262413Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1637": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1637.json",
+    "source_sha256": "4b78fcb6a0ceff0ab7c9c49faeda4655629293535e90de4489dad6eafe6c4f90",
+    "source_mtime": "2026-05-13T02:24:57.878483Z",
+    "rendered_at": "2026-05-15T01:40:14.294311Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1638": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1638.json",
+    "source_sha256": "c50f8e7d14f7983b1886344a45050684aa86191bc0efbaf48f6e9c591f536cc3",
+    "source_mtime": "2026-05-13T02:24:57.896252Z",
+    "rendered_at": "2026-05-15T01:40:14.326297Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1639": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1639.json",
+    "source_sha256": "af8a115be13d52884b4f1e9ceb473f3dadca6102f664a970999862e9956047f6",
+    "source_mtime": "2026-05-13T02:24:57.917318Z",
+    "rendered_at": "2026-05-15T01:40:14.358598Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1640": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1640.json",
+    "source_sha256": "8d3873a52a6b6367af1bfc262ec0d247423d5d0bfff98b1ca106966392de34f9",
+    "source_mtime": "2026-05-13T02:24:57.939654Z",
+    "rendered_at": "2026-05-15T01:40:14.391978Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1641": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1641.json",
+    "source_sha256": "70482ca34af0d3fbfd26db0134a2e07781dd1b4704f099f3cc05629f88a94980",
+    "source_mtime": "2026-05-13T02:24:57.963794Z",
+    "rendered_at": "2026-05-15T01:40:14.423729Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1642": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1642.json",
+    "source_sha256": "06f3615f4c24aaa4dbcf4c9e99bdb3f76057fccc5f107f5291710d93eccb5a4a",
+    "source_mtime": "2026-05-15T00:41:55.156178Z",
+    "rendered_at": "2026-05-15T01:40:14.453472Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1643": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1643.json",
+    "source_sha256": "90c9a6a4f5c981273d02accfb7a97598e32562d297d93994e8a276a5b37f807f",
+    "source_mtime": "2026-05-13T02:24:58.004482Z",
+    "rendered_at": "2026-05-15T01:40:14.482616Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1644": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1644.json",
+    "source_sha256": "a3ab0219da2c61d3b7dd60d78d5de2f15f134b2df7ec54b7f48e4fbcc3dc9a8f",
+    "source_mtime": "2026-05-13T02:24:58.025433Z",
+    "rendered_at": "2026-05-15T01:40:14.512025Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1645": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1645.json",
+    "source_sha256": "62a99d5fd8f5cc22224b330dc7f164955ceac275fd9d270d0fe060ae207a14f0",
+    "source_mtime": "2026-05-13T02:24:58.047291Z",
+    "rendered_at": "2026-05-15T01:40:14.543521Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1646": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1646.json",
+    "source_sha256": "009b79d41a80b57a73bd236e2ed954b13c87182cbcdd516af82b3c4993e42359",
+    "source_mtime": "2026-05-15T00:41:55.184179Z",
+    "rendered_at": "2026-05-15T01:40:14.576832Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1647": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1647.json",
+    "source_sha256": "9d5eb9008a2a7affa26b0d6de5d55e59dd16dc7adcd656bb5aef7edc4d5c4e34",
+    "source_mtime": "2026-05-13T02:24:58.098208Z",
+    "rendered_at": "2026-05-15T01:40:14.609330Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1648": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1648.json",
+    "source_sha256": "e80b7d620163b8a34fbb75bd5e8e908eb7eb486d970979fd159711e86b825386",
+    "source_mtime": "2026-05-13T02:24:58.125551Z",
+    "rendered_at": "2026-05-15T01:40:14.646022Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1649": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1649.json",
+    "source_sha256": "7005f6373b1b1e3e7a92415582623c79cca12ece355babb0720ac2c9db3a74c4",
+    "source_mtime": "2026-05-15T00:41:55.211179Z",
+    "rendered_at": "2026-05-15T01:40:14.678260Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1650": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1650.json",
+    "source_sha256": "3929639d5b4bb2dc733dce73a1b22a1f667666196b3b401e0fa8b72ed72f45d3",
+    "source_mtime": "2026-05-15T00:41:55.238178Z",
+    "rendered_at": "2026-05-15T01:40:14.713790Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1651": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1651.json",
+    "source_sha256": "64ad65bf5734219353d6d875c44f1c5106e5a2f89e699cbf1a7739ebbac145da",
+    "source_mtime": "2026-05-15T00:41:55.268176Z",
+    "rendered_at": "2026-05-15T01:40:14.750390Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1652": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1652.json",
+    "source_sha256": "3c30ee23f9f089c4d020b95d100a6ce357c2cd170282d393794c4967956abf22",
+    "source_mtime": "2026-05-13T02:24:58.237291Z",
+    "rendered_at": "2026-05-15T01:40:14.783600Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1653": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1653.json",
+    "source_sha256": "baea020cdabb6403601a2ba79206e43a4dcd01de032b1d5f825c2f0d2d1bdeb3",
+    "source_mtime": "2026-05-13T02:24:58.268151Z",
+    "rendered_at": "2026-05-15T01:40:14.818392Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1654": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1654.json",
+    "source_sha256": "4144029751878ef297f973e42e6a4e8afd19ba2337fbeaefc03513994946120b",
+    "source_mtime": "2026-05-15T00:41:55.302180Z",
+    "rendered_at": "2026-05-15T01:40:14.854434Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1655": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1655.json",
+    "source_sha256": "11ecf254c6fd4e23fe0c1164374f1f79d3ad3b6e0f0a8f34e4e23fdd2312b624",
+    "source_mtime": "2026-05-13T02:24:58.319250Z",
+    "rendered_at": "2026-05-15T01:40:14.889495Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1656": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1656.json",
+    "source_sha256": "fc73132d7e632214b702ec36d0acdbda32eff7008059dbdc0cdc2e31cc75a840",
+    "source_mtime": "2026-05-13T02:24:58.349650Z",
+    "rendered_at": "2026-05-15T01:40:14.926327Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1657": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1657.json",
+    "source_sha256": "e4e534b04ae3b53468561012ac8e54152e723ca4f0cb5bca0a6b81c00c57796f",
+    "source_mtime": "2026-05-15T00:41:55.330691Z",
+    "rendered_at": "2026-05-15T01:40:14.959510Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1658": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1658.json",
+    "source_sha256": "8a783a152e23349cb6a527374439b4a1e16a25dc37dcdfb04620164e1d87e202",
+    "source_mtime": "2026-05-13T02:24:58.407422Z",
+    "rendered_at": "2026-05-15T01:40:14.992775Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "SB01-2730": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/SB01-2730.json",
+    "source_sha256": "16710bcd1e9ace3efdfbbd585c03fa4b6ab36f5e5e8b8a0e8d8cd25637845d3e",
+    "source_mtime": "2026-05-15T00:54:36.157665Z",
+    "rendered_at": "2026-05-15T01:40:12.521779Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "SB01-2733": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/SB01-2733.json",
+    "source_sha256": "153ebf8c68381de11d7a4baf178008088b62a9a101dd7289c022a62f0392dcd5",
+    "source_mtime": "2026-05-14T15:45:07.237382Z",
+    "rendered_at": "2026-05-15T01:40:13.654201Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "SB01-2739": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/SB01-2739.json",
+    "source_sha256": "db22ac1592b500d98749a5534cfa594bcd27c9d8dd0a971c07ba533d292cc90d",
+    "source_mtime": "2026-05-14T15:45:07.259448Z",
+    "rendered_at": "2026-05-15T01:40:13.682781Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "SB03-2763": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/SB03-2763.json",
+    "source_sha256": "1fcebf26461208de5de1461b1a499b87ed5de7c60fb10de5624d162acf53001e",
+    "source_mtime": "2026-05-14T15:45:07.284094Z",
+    "rendered_at": "2026-05-15T01:40:13.712895Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "SB03-2769": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/SB03-2769.json",
+    "source_sha256": "a4a562ec073740889bcad18629dc85acf4691d009a10e0ad1f9d26482497d3c1",
+    "source_mtime": "2026-05-14T16:11:54.815533Z",
+    "rendered_at": "2026-05-15T01:40:13.742877Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "SB16-1535": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/SB16-1535.json",
+    "source_sha256": "8c297ae06de8f8212ee37e6a5ad39f2786e7d21b222a1822cc42800011d1a399",
+    "source_mtime": "2026-05-14T17:06:43.322547Z",
+    "rendered_at": "2026-05-15T01:40:12.546663Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "SB18-1569": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/SB18-1569.json",
+    "source_sha256": "f848cd9de393b33f85a9a843dd00c8329abf802b4aaa1a2053badffd6113f814",
+    "source_mtime": "2026-05-14T18:01:40.662086Z",
+    "rendered_at": "2026-05-15T01:40:12.576622Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "SB18-1585": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/SB18-1585.json",
+    "source_sha256": "86d63802cb265635eef2cd6bdd82e8fcc608a110e9482e1b48da22c491f00a21",
+    "source_mtime": "2026-05-14T17:06:43.362211Z",
+    "rendered_at": "2026-05-15T01:40:12.602697Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0004": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0004.json",
+    "source_sha256": "dfb15b0bd58f5c398b6b8ce76f87b9f496ea386799721bc399acbea2307bdabc",
+    "source_mtime": "2026-05-14T03:21:36.690912Z",
+    "rendered_at": "2026-05-15T01:40:15.169906Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0339": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Shorts-0339.json",
+    "source_sha256": "501d43802df5e59f01705ec8a009eb9ea9e4f531c9990f3b61c8b1ffb1a0f8bc",
+    "source_mtime": "2026-05-15T00:54:36.105666Z",
+    "rendered_at": "2026-05-15T01:40:12.634508Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Skirts-0125": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Skirts-0125.json",
+    "source_sha256": "f3a7e767d58a9c8436c04ba3aca1c756c804ec98963632bf2f45c215d3e509e8",
+    "source_mtime": "2026-05-15T00:54:36.115667Z",
+    "rendered_at": "2026-05-15T01:40:12.663314Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Skirts-0126": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Skirts-0126.json",
+    "source_sha256": "01cfa21bf1676c262cfdfbe25e1a25d0162708f1b5d188836b2bf23ee8b58d75",
+    "source_mtime": "2026-05-15T00:54:36.125668Z",
+    "rendered_at": "2026-05-15T01:40:12.692555Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Skirts-0127": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Skirts-0127.json",
+    "source_sha256": "f8afe72891ad1bbe769389aa21d7a6676596df275db9301e59ae7010ad4493d9",
+    "source_mtime": "2026-05-15T00:54:36.136664Z",
+    "rendered_at": "2026-05-15T01:40:12.723522Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Skirts-0128": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Skirts-0128.json",
+    "source_sha256": "c22491a8e6de655eb2f4b1e9271e21505055463ab8dc1ab7410c3246110e0185",
+    "source_mtime": "2026-05-15T00:54:36.146665Z",
+    "rendered_at": "2026-05-15T01:40:12.753488Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Tops-1321": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1321.json",
+    "source_sha256": "6b9c65dbdc1ea6c35e4ae6ae22980dc6850faf7522ec13997dd03cc8f0f964e6",
+    "source_mtime": "2026-05-14T19:13:48.987423Z",
+    "rendered_at": "2026-05-15T01:40:12.782913Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Tops-1322": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1322.json",
+    "source_sha256": "116a9451ed26cc373d7508e8e0eb2f97f4b556f63b4ca6161ccc9db20eda614d",
+    "source_mtime": "2026-05-14T19:13:48.999423Z",
+    "rendered_at": "2026-05-15T01:40:12.812055Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Tops-1323": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1323.json",
+    "source_sha256": "d76888a30f75e1c57166c049699da88100a61b6ac687a99be005ee4cd7d4de9f",
+    "source_mtime": "2026-05-14T19:13:49.011421Z",
+    "rendered_at": "2026-05-15T01:40:12.842758Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Tops-1324": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1324.json",
+    "source_sha256": "4f1cfaeb52e81cf36154d66baed945ddb3e8ff9ab214d5d4f807bad6ac44d93a",
+    "source_mtime": "2026-05-14T19:13:49.023423Z",
+    "rendered_at": "2026-05-15T01:40:12.872557Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Tops-1325": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1325.json",
+    "source_sha256": "2a89f3624b6df7b3ceab74001f3cd4936244e9a8a247f6a8635295a369047340",
+    "source_mtime": "2026-05-14T19:13:49.034423Z",
+    "rendered_at": "2026-05-15T01:40:12.901139Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Tops-1326": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1326.json",
+    "source_sha256": "d49692be586d5706383ad0574ff226f6b38e380295f04510def08b8a8e039082",
+    "source_mtime": "2026-05-14T19:13:49.045427Z",
+    "rendered_at": "2026-05-15T01:40:12.931240Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Tops-1327": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1327.json",
+    "source_sha256": "487f92e47538bcd36ee14f12811b46442ae89a417ff3408e7078b594283a4cbd",
+    "source_mtime": "2026-05-14T19:13:49.057938Z",
+    "rendered_at": "2026-05-15T01:40:12.961207Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Tops-1328": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1328.json",
+    "source_sha256": "e81072a973dc1330666d36abd81017bbdbd1e23da24ecc8de952563bfbc008d1",
+    "source_mtime": "2026-05-14T19:13:49.067938Z",
+    "rendered_at": "2026-05-15T01:40:12.990535Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Tops-1329": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1329.json",
+    "source_sha256": "2692cf3248fdeefa6d95af4188d47177e27b06945ca0ae8975b5d8729cacce4d",
+    "source_mtime": "2026-05-14T19:13:49.080938Z",
+    "rendered_at": "2026-05-15T01:40:13.020786Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Tops-1330": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1330.json",
+    "source_sha256": "bf2e19dfa1ab1a36a6393f804374751c0d05af8f6b4fae244e7d044541eb172c",
+    "source_mtime": "2026-05-14T19:14:42.138070Z",
+    "rendered_at": "2026-05-15T01:40:13.050833Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Tops-1331": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1331.json",
+    "source_sha256": "eb6500678dd33c35b0f56a2bfd61639966e94c8dfe33ae81179fb5b576ce9fb6",
+    "source_mtime": "2026-05-14T19:14:42.150043Z",
+    "rendered_at": "2026-05-15T01:40:13.081227Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Tops-1332": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1332.json",
+    "source_sha256": "6ed81c178146fa2a30b232e8f34e3c0b44a5b92d0e8ba06f454b461ac713b170",
+    "source_mtime": "2026-05-14T19:14:42.160047Z",
+    "rendered_at": "2026-05-15T01:40:13.112095Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Tops-1333": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1333.json",
+    "source_sha256": "6d592206b9a3cac7f963d3a9453ed2d5b7bbe258a57595a1c115a5ee06e31a0a",
+    "source_mtime": "2026-05-14T19:14:42.172803Z",
+    "rendered_at": "2026-05-15T01:40:13.141056Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Tops-1334": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1334.json",
+    "source_sha256": "bb0c520b0c1919a78d1a1df2fa1d7b0363f895248d594af9c655938047950f92",
+    "source_mtime": "2026-05-14T19:14:42.183802Z",
+    "rendered_at": "2026-05-15T01:40:13.170467Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Tops-1335": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1335.json",
+    "source_sha256": "342936c2207e5b5620ebed9bd9bf7124a5381bda31e9a90e10ccdd91dc593119",
+    "source_mtime": "2026-05-14T17:06:43.668041Z",
+    "rendered_at": "2026-05-15T01:40:13.197949Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Tops-1336": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1336.json",
+    "source_sha256": "72441fd29e7f417e535dbdd94a2ed6e0f3e436b471067d1ac4ef5e02868dfc9a",
+    "source_mtime": "2026-05-14T17:06:43.684039Z",
+    "rendered_at": "2026-05-15T01:40:13.224050Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Tops-1337": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1337.json",
+    "source_sha256": "758c2186ea8fee36ae004dfcdb0cfd7a61f9002b90c1dc4264e29776d50bee11",
+    "source_mtime": "2026-05-14T19:14:42.193799Z",
+    "rendered_at": "2026-05-15T01:40:13.252831Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Tops-1338": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/Tops-1338.json",
+    "source_sha256": "05816ec92eecbb59e4201fdc85fa99de2150cde783954c48254531ff5ef443f4",
+    "source_mtime": "2026-05-15T00:42:47.165309Z",
+    "rendered_at": "2026-05-15T01:40:13.772505Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Tops-1339": {
+    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/Tops-1339.json",
+    "source_sha256": "9def370c771d592b6b00fae223d0dce91c5320c741ce9ee6be62c6dcd34e475c",
+    "source_mtime": "2026-05-14T17:43:31.681134Z",
+    "rendered_at": "2026-05-15T01:40:13.806532Z",
+    "renderer_version": "de26f26db52a"
+  }
+}

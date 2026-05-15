@@ -270,10 +270,16 @@
   <div style="margin-bottom:14px"><div class="meta-pills">
     <span class="pill"><strong>Batch</strong>NWLG Batch 1</span>
     <span class="pill"><strong>COG</strong>$5</span>
-    <span class="pill"><strong>List</strong>$38 eBay &middot; $41 Posh &middot; $37 Depop</span>
-    <span class="pill"><strong>Net</strong>$17.50 @ sold</span>
-    <span class="pill" style="border-color:var(--green-bd);background:var(--green-bg);color:#065f46;"><strong>Phase 2</strong>2026-05-06</span>
+    <span class="pill"><strong>List</strong>—</span>
+    <span class="pill"><strong>Net</strong>—</span>
+    <span class="pill" style="border-color:var(--green-bd);background:var(--green-bg);color:#065f46;"><strong>Phase 2</strong></span>
   </div></div>
+
+  <!-- ── Publish blocker (P2 SMC pending = Rule #135 publish-block) ── -->
+  
+
+  <!-- ── Operational flag (from latest matching _card_corrections[]) ── -->
+  
 
   <!-- ── 1. PHOTOS sband (collapsed) ── -->
   <div class="sband" id="sbandPhotos">
@@ -285,10 +291,10 @@
     <div class="sband-body">
       <h4 style="margin-top:0">Intake Photos</h4>
       <div class="photo-grid" id="photoGrid">
-<a class="photo" href="../thumbnails/Outerwear-0218/Outerwear-0218-garment.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Outerwear-0218/Outerwear-0218-garment.jpg" alt="Flat-Lay" /><div class="ph-label">Flat-Lay</div></a>
-<a class="photo" href="../thumbnails/Outerwear-0218/Outerwear-0218-brand-tag.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Outerwear-0218/Outerwear-0218-brand-tag.jpg" alt="Detail-Brand-Tag" /><div class="ph-label">Detail-Brand-Tag</div></a>
-<a class="photo" href="../thumbnails/Outerwear-0218/Outerwear-0218-care-tag.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Outerwear-0218/Outerwear-0218-care-tag.jpg" alt="Detail-Care-Tag" /><div class="ph-label">Detail-Care-Tag</div></a>
-<a class="photo" href="../thumbnails/Outerwear-0218/Outerwear-0218-care-tag-alt-1.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Outerwear-0218/Outerwear-0218-care-tag-alt-1.jpg" alt="Detail-Care-Tag" /><div class="ph-label">Detail-Care-Tag</div></a>
+<a class="photo" href="../thumbnails/Outerwear-0218/Outerwear-0218-garment.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Outerwear-0218/Outerwear-0218-garment.jpg" alt="Garment" /><div class="ph-label">Garment</div></a>
+<a class="photo" href="../thumbnails/Outerwear-0218/Outerwear-0218-brand-tag.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Outerwear-0218/Outerwear-0218-brand-tag.jpg" alt="Brand Tag" /><div class="ph-label">Brand Tag</div></a>
+<a class="photo" href="../thumbnails/Outerwear-0218/Outerwear-0218-care-tag.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Outerwear-0218/Outerwear-0218-care-tag.jpg" alt="Care Tag" /><div class="ph-label">Care Tag</div></a>
+<a class="photo" href="../thumbnails/Outerwear-0218/Outerwear-0218-detail.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Outerwear-0218/Outerwear-0218-detail.jpg" alt="Detail" /><div class="ph-label">Detail</div></a>
 </div>
       <h4>Customer-Facing Forward Photos</h4>
       <p style="color:var(--ink-mute);font-size:13px;margin:0">No customer-facing photos yet — will be added at listing stage.</p>
@@ -300,64 +306,75 @@
     <div class="sband-hdr" onclick="toggleBand(this)">
       <span class="sband-arrow">&#9658;</span>
       <span class="sband-label">Copy</span>
-      <span class="sband-badge">Title+ &check; &nbsp;|&nbsp; Desc+ &hellip; &nbsp;|&nbsp; KW+ &hellip;</span>
+      <span class="sband-badge">Title+ &check; &nbsp;|&nbsp; Desc+ &check; &nbsp;|&nbsp; KW+ &check;</span>
     </div>
     <div class="sband-body">
       <div class="cws-blocks">
 
         <!-- Title+ status (dynamic: confirmed or pending) -->
-        <div class="cws-block cws-pending" id="cwsb-title" onclick="cwsOpen('title')" role="button" tabindex="0">
+        <div class="cws-block cws-confirmed" id="cwsb-title" onclick="cwsOpen('title')" role="button" tabindex="0">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Title+</span>
-            <span class="cwsb-meta">&#8212;&nbsp;chars</span>
-            <span class="cwsb-badge cws-pending">&#11015;&nbsp;Pending</span>
+            <span class="cwsb-meta">80&nbsp;chars</span>
+            <span class="cwsb-badge cws-confirmed">&#10003;&nbsp;Confirmed</span>
           </div>
           <div class="cwsb-body">
-            <div class="cwsb-text" id="cws-title-display">Pending Phase 2</div>
+            <div class="cwsb-text" id="cws-title-display">Onyx Nite Evening Duster WMNS L Black Gold Metallic Shimmer Stretch Mob Wife Y2K</div>
             <div class="cwsb-click-hint">&#9998; Click to edit</div>
           </div>
         </div>
 
-        <!-- Description+ PENDING (rendered, pending Tracie review) -->
-        <div class="cws-block cws-pending" id="cwsb-desc" style="cursor:default" role="region" aria-label="Description+">
+        <!-- Description+ (state driven by copy.pending[]) -->
+        <div class="cws-block cws-confirmed" id="cwsb-desc" style="cursor:default" role="region" aria-label="Description+">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Description+</span>
-            <span class="cwsb-badge cws-pending" id="cwsb-desc-badge">&#9203; Pending Review</span>
+            <span class="cwsb-badge cws-confirmed" id="cwsb-desc-badge">&#10003;&nbsp;Confirmed</span>
           </div>
           <div class="cwsb-body" style="display:flex;flex-direction:column;gap:8px">
 
             <!-- P1 sub-block -->
-            <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p1" onclick="cwsOpen('desc-p1')" role="button" tabindex="0">
+            <div class="cws-subblock cws-subblock-confirmed" id="cwsb-desc-p1" onclick="cwsOpen('desc-p1')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P1 &middot; Opening Paragraph</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p1-badge">&#9203; Pending</span>
+                <span class="cws-subblock-badge cws-subblock-confirmed" id="cwsb-desc-p1-badge">&#10003;&nbsp;Confirmed</span>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p1-display">Pending Phase 2</div>
+                <div class="cwsb-text" id="cws-desc-p1-display">Onyx Nite evening duster women's L black gold metallic shimmer acetate stretch shawl collar lined open front longline with mob wife Y2K edge. Fluid stretch weave delivers liquid drape and statement shimmer for going out and holiday glam.</div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
 
             <!-- P2 sub-block -->
-            <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p2" onclick="cwsOpen('desc-p2')" role="button" tabindex="0">
+            <div class="cws-subblock cws-subblock-confirmed" id="cwsb-desc-p2" onclick="cwsOpen('desc-p2')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P2 &middot; SMC</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p2-badge">&#9203; Pending</span>
+                <span class="cws-subblock-badge cws-subblock-confirmed" id="cwsb-desc-p2-badge">&#10003;&nbsp;Confirmed</span>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p2-display">Pending Phase 2</div>
+                <div class="cwsb-text" id="cws-desc-p2-display">90% Acetate / 10% Spandex with metallic-thread shimmer (gold swirl pattern). Onyx Nite by Wendye Chaitin Open-Front Longline Evening Duster, lined. Hand wash cold mild detergent, line dry, cool iron reverse. Made in USA. RN 83293 · Cut 2543.
+
+**Measurements (laid flat):**
+- Bust (pit-to-pit): 21&quot;
+- Length: 25.5&quot;
+- Sleeve: 19&quot;
+
+**Condition:** Gently Pre-Owned Vintage. Minor wear visible only on close inspection; metallic shimmer intact.</div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
 
             <!-- P3 sub-block -->
-            <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p3" onclick="cwsOpen('desc-p3')" role="button" tabindex="0">
+            <div class="cws-subblock cws-subblock-confirmed" id="cwsb-desc-p3" onclick="cwsOpen('desc-p3')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
-                <span class="cws-subblock-skill">P3 &middot; Service Block</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p3-badge">&#9203; Pending</span>
+                <span class="cws-subblock-skill">P3 &middot; Badges</span>
+                <span class="cws-subblock-badge cws-subblock-confirmed" id="cwsb-desc-p3-badge">&#10003;&nbsp;Confirmed</span>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p3-display">Pending Phase 2</div>
+                <div class="cwsb-text" id="cws-desc-p3-display">🚢 Ready to Ship
+📦 Bundle Discounts on Multiple Items
+🚚 Fast Delivery
+🌿 Sustainable Business
+⭐ 5 Star Seller</div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
@@ -365,14 +382,14 @@
           </div>
         </div>
 
-        <!-- Keyword+ PENDING (rendered, pending Tracie review) -->
-        <div class="cws-block cws-pending" id="cwsb-kw" onclick="cwsOpen('kw')" role="button" tabindex="0">
+        <!-- Keyword+ (state driven by copy.pending[] / keywords presence) -->
+        <div class="cws-block cws-confirmed" id="cwsb-kw" onclick="cwsOpen('kw')" role="button" tabindex="0">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Keyword+</span>
-            <span class="cwsb-badge cws-pending">&#9203; Pending Review</span>
+            <span class="cwsb-badge cws-confirmed">&#10003;&nbsp;Confirmed</span>
           </div>
           <div class="cwsb-body">
-            <div class="cwsb-text" id="cws-kw-display">Pending Phase 2</div>
+            <div class="cwsb-text" id="cws-kw-display">onyx nite duster, onyx nite evening jacket, black gold shimmer duster, vintage evening duster, metallic shimmer jacket, holiday evening jacket, open front longline duster, stretch evening jacket, 90s evening duster, mob wife duster, going out duster, cocktail duster womens, wendye chaitin duster, longline evening jacket #mobwife #y2krevival #vintageglam #holidayglam #shimmerduster</div>
             <div class="cwsb-click-hint">&#9998; Click to edit</div>
           </div>
         </div>
@@ -386,31 +403,18 @@
   <div class="sband-hdr" onclick="toggleBand(this)">
     <span class="sband-arrow">&#9658;</span>
     <span class="sband-label">Photo Intake</span>
-    <span class="sband-badge">2 aesthetics &middot; 4 photos</span>
+    <span class="sband-badge">captured</span>
   </div>
   <div class="sband-body">
 <h4 style="margin-top:0">Visual Properties</h4>
 <div class="row" data-field="cc.color.family" data-status="green" data-source="photo_agent" data-value="Black · black with gold metallic shimmer"><div class="k">Color</div><div class="v"><div class="copyblock"><span class="cb-val">Black · black with gold metallic shimmer</span><button class="cb-btn" onclick="copyVal(this,'Black · black with gold metallic shimmer')">copy</button></div></div><button class="conf green" onclick="openField('cc.color.family')">&#10003;</button></div>
-<div class="row" data-field="cc.color.secondary" data-status="green" data-source="photo_agent" data-value="Gold"><div class="k">Secondary Color</div><div class="v"><div class="copyblock"><span class="cb-val">Gold</span><button class="cb-btn" onclick="copyVal(this,'Gold')">copy</button></div></div><button class="conf green" onclick="openField('cc.color.secondary')">&#10003;</button></div>
 <div class="row" data-field="cc.pattern" data-status="green" data-source="photo_agent" data-value="Abstract · Medium"><div class="k">Pattern</div><div class="v"><div class="copyblock"><span class="cb-val">Abstract · Medium</span><button class="cb-btn" onclick="copyVal(this,'Abstract · Medium')">copy</button></div></div><button class="conf green" onclick="openField('cc.pattern')">&#10003;</button></div>
-<div class="row" data-field="cc.silhouette" data-status="green" data-source="photo_agent" data-value="Longline"><div class="k">Silhouette</div><div class="v"><div class="copyblock"><span class="cb-val">Longline</span><button class="cb-btn" onclick="copyVal(this,'Longline')">copy</button></div></div><button class="conf green" onclick="openField('cc.silhouette')">&#10003;</button></div>
-<div class="row" data-field="cc.closures" data-status="green" data-source="photo_agent" data-value="None · Front"><div class="k">Closures</div><div class="v"><div class="copyblock"><span class="cb-val">None · Front</span><button class="cb-btn" onclick="copyVal(this,'None · Front')">copy</button></div></div><button class="conf green" onclick="openField('cc.closures')">&#10003;</button></div>
-<div class="row" data-field="cc.closures.details" data-status="green" data-source="photo_agent" data-value="Open-front duster/jacket; no visible buttons or zipper in garment photo."><div class="k">Closure Note</div><div class="v"><div class="copyblock"><span class="cb-val">Open-front duster/jacket; no visible buttons or zipper in garment photo.</span><button class="cb-btn" onclick="copyVal(this,'Open-front duster/jacket; no visible buttons or zipper in garment photo.')">copy</button></div></div><button class="conf green" onclick="openField('cc.closures.details')">&#10003;</button></div>
+<div class="row" data-field="cc.silhouette" data-status="green" data-source="photo_agent" data-value="Hip-Length"><div class="k">Silhouette</div><div class="v"><div class="copyblock"><span class="cb-val">Hip-Length</span><button class="cb-btn" onclick="copyVal(this,'Hip-Length')">copy</button></div></div><button class="conf green" onclick="openField('cc.silhouette')">&#10003;</button></div>
+<div class="row" data-field="cc.closures" data-status="green" data-source="photo_agent" data-value="Jewel Clasp"><div class="k">Closures</div><div class="v"><div class="copyblock"><span class="cb-val">Jewel Clasp</span><button class="cb-btn" onclick="copyVal(this,'Jewel Clasp')">copy</button></div></div><button class="conf green" onclick="openField('cc.closures')">&#10003;</button></div>
+<div class="row" data-field="cc.closures.details" data-status="green" data-source="photo_agent" data-value="Open-front jacket with dainty jewel clasp closure at neckline."><div class="k">Closure Note</div><div class="v"><div class="copyblock"><span class="cb-val">Open-front jacket with dainty jewel clasp closure at neckline.</span><button class="cb-btn" onclick="copyVal(this,'Open-front jacket with dainty jewel clasp closure at neckline.')">copy</button></div></div><button class="conf green" onclick="openField('cc.closures.details')">&#10003;</button></div>
 <div class="row" data-field="cc.detailing" data-status="green" data-source="photo_agent" data-value="Lined"><div class="k">Detailing</div><div class="v"><div class="copyblock"><span class="cb-val">Lined</span><button class="cb-btn" onclick="copyVal(this,'Lined')">copy</button></div></div><button class="conf green" onclick="openField('cc.detailing')">&#10003;</button></div>
 <div class="row" data-field="cc.aesthetic.era" data-status="green" data-source="photo_agent" data-value="'90s"><div class="k">Era</div><div class="v"><div class="copyblock"><span class="cb-val">'90s</span><button class="cb-btn" onclick="copyVal(this,''90s')">copy</button></div></div><button class="conf green" onclick="openField('cc.aesthetic.era')">&#10003;</button></div>
 <h4>Aesthetics &amp; Style</h4>
-<div class="row" data-field="cc.aesthetic.primary_tags" data-status="green" data-source="photo_agent" data-value="mob wife, Y2K"><div class="k">Aesthetic Tags</div><div class="v"><div class="copyblock"><span class="cb-val">mob wife, Y2K</span><button class="cb-btn" onclick="copyVal(this,'mob wife, Y2K')">copy</button></div></div><button class="conf green" onclick="openField('cc.aesthetic.primary_tags')">&#10003;</button></div>
-<div class="row" data-field="cc.aesthetic.vibe" data-status="green" data-source="photo_agent" data-value="statement, polished, feminine"><div class="k">Vibe</div><div class="v"><div class="copyblock"><span class="cb-val">statement, polished, feminine</span><button class="cb-btn" onclick="copyVal(this,'statement, polished, feminine')">copy</button></div></div><button class="conf green" onclick="openField('cc.aesthetic.vibe')">&#10003;</button></div>
-<div class="row" data-field="cc.use_cases" data-status="green" data-source="photo_agent" data-value="Holiday, Cocktail, Going Out"><div class="k">Use Cases</div><div class="v"><div class="copyblock"><span class="cb-val">Holiday, Cocktail, Going Out</span><button class="cb-btn" onclick="copyVal(this,'Holiday, Cocktail, Going Out')">copy</button></div></div><button class="conf green" onclick="openField('cc.use_cases')">&#10003;</button></div>
-<h4>Agent Flags (3)</h4>
-<div class="row" data-field="cc.flag.silhouette.value" data-status="green" data-source="photo_agent · info" data-value="Garment photo shot crumpled in pile; shape (longline duster vs hip-length jacket) inferred from intake card 'open-front jacket/duster' note + measurements (length 25.5&quot;). Operator confirm at bench."><div class="k">silhouette.value</div><div class="v"><div class="copyblock"><span class="cb-val">Garment photo shot crumpled in pile; shape (longline duster vs hip-length jacket) inferred from intake card 'open-front jacket/duster' note + measurements (length 25.5&quot;). Operator confirm at bench.</span><button class="cb-btn" onclick="copyVal(this,'Garment photo shot crumpled in pile; shape (longline duster vs hip-length jacket) inferred from intake card 'open-front jacket/duster' note + measurements (length 25.5&quot;). Operator confirm at bench.')">copy</button></div></div><button class="conf green" onclick="openField('cc.flag.silhouette.value')">&#10003;</button></div>
-<div class="row" data-field="cc.flag.neckline.value" data-status="green" data-source="photo_agent · warn" data-value="Open-front collar shape not clearly readable from photo crumpled-pile context; shawl-collar assumption based on era/style register."><div class="k">neckline.value</div><div class="v"><div class="copyblock"><span class="cb-val">Open-front collar shape not clearly readable from photo crumpled-pile context; shawl-collar assumption based on era/style register.</span><button class="cb-btn" onclick="copyVal(this,'Open-front collar shape not clearly readable from photo crumpled-pile context; shawl-collar assumption based on era/style register.')">copy</button></div></div><button class="conf green" onclick="openField('cc.flag.neckline.value')">&#10003;</button></div>
-<div class="row" data-field="cc.flag.photo_inventory.count" data-status="green" data-source="photo_agent · warn" data-value="Zero canonical Front/Back/Detail-on-form shots; only crumpled-pile lay shot. Title+ photo re-shoot recommended."><div class="k">photo_inventory.count</div><div class="v"><div class="copyblock"><span class="cb-val">Zero canonical Front/Back/Detail-on-form shots; only crumpled-pile lay shot. Title+ photo re-shoot recommended.</span><button class="cb-btn" onclick="copyVal(this,'Zero canonical Front/Back/Detail-on-form shots; only crumpled-pile lay shot. Title+ photo re-shoot recommended.')">copy</button></div></div><button class="conf green" onclick="openField('cc.flag.photo_inventory.count')">&#10003;</button></div>
-<h4>Photo Reads (4)</h4>
-<details class="cc-photo-read"><summary>Flat-Lay — </summary><div class="cc-read-body"></div></details>
-<details class="cc-photo-read"><summary>Detail-Brand-Tag — </summary><div class="cc-read-body"></div></details>
-<details class="cc-photo-read"><summary>Detail-Care-Tag — </summary><div class="cc-read-body"></div></details>
-<details class="cc-photo-read"><summary>Detail-Care-Tag — </summary><div class="cc-read-body"></div></details>
   </div>
 </div>
 
@@ -424,10 +428,10 @@
       <h4>1 &middot; Item Details</h4>
       <div class="item-details-cols">
         <div class="item-details-left">
-          <div class="row" data-field="vendoo.brand" data-status="green" data-source="RN 83293 captured operator-side; brand widely documented in resale (eBay Onyx Nite category, Poshmark brand page, ShopThrilling vintage). US-distributed evening-wear brand active mid-80s through 2000s, mostly retired." data-value="Onyx Nite by Wendye Chaitin"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Onyx Nite by Wendye Chaitin</span><button class="cb-btn" onclick="copyVal(this,'Onyx Nite by Wendye Chaitin')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.brand')">&#10003;</button></div>
+          <div class="row" data-field="vendoo.brand" data-status="green" data-source="" data-value="Onyx Nite by Wendye Chaitin"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Onyx Nite by Wendye Chaitin</span><button class="cb-btn" onclick="copyVal(this,'Onyx Nite by Wendye Chaitin')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.brand')">&#10003;</button></div>
           <div class="row" data-field="vendoo.condition" data-options="NWT|NWOT|GPO (internal)|Pre-Loved (internal)|Fair (internal)|Pre-owned — Like New (eBay)|Pre-owned — Very Good (eBay)|Pre-owned — Good (eBay)|Pre-owned — Acceptable (eBay)|Like New (Vendoo)|Good (Vendoo)|Fair (Vendoo)|New with Tags (Vendoo)" data-status="green" data-source="Phase 1 intake &middot; GPO" data-value="GPO Vintage"><div class="k">Condition</div><div class="v"><div class="selectblock"><span class="sb-val">GPO Vintage</span></div></div><button class="conf green" onclick="openField('vendoo.condition')">&#10003;</button></div>
           <div class="row" data-field="vendoo.color1" data-options="Black|White|Gray|Brown|Tan/Beige|Red|Orange|Yellow|Green|Blue|Purple|Pink|Multi|Print|Other" data-status="green" data-source="copy_capture" data-value="Black"><div class="k">Primary Color</div><div class="v"><div class="selectblock"><span class="sb-val">Black</span></div></div><button class="conf green" onclick="openField('vendoo.color1')">&#10003;</button></div>
-          <div class="row" data-field="vendoo.color2" data-options="None|Black|White|Gray|Brown|Tan/Beige|Red|Orange|Yellow|Green|Blue|Purple|Pink|Multi|Print|Other" data-status="gray" data-source="copy_capture" data-value="Gold"><div class="k">Secondary Color</div><div class="v"><div class="selectblock "><span class="sb-val">Gold</span></div></div><button class="conf gray" onclick="openField('vendoo.color2')">&minus;</button></div>
+          <div class="row" data-field="vendoo.color2" data-options="None|Black|White|Gray|Brown|Tan/Beige|Red|Orange|Yellow|Green|Blue|Purple|Pink|Multi|Print|Other" data-status="gray" data-source="copy_capture" data-value=""><div class="k">Secondary Color</div><div class="v"><div class="selectblock pending"><span class="sb-val">none</span></div></div><button class="conf gray" onclick="openField('vendoo.color2')">&minus;</button></div>
           <div class="row" data-field="vendoo.zip" data-status="green" data-source="Operator default 97114" data-value="97114"><div class="k">Zip Code</div><div class="v"><div class="copyblock"><span class="cb-val">97114</span><button class="cb-btn" onclick="copyVal(this,'97114')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.zip')">&#10003;</button></div>
           <div class="row" data-field="vendoo.sku" data-status="green" data-source="Master_SKU registry" data-value="Outerwear-0218"><div class="k">SKU</div><div class="v"><div class="copyblock"><span class="cb-val">Outerwear-0218</span><button class="cb-btn" onclick="copyVal(this,'Outerwear-0218')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.sku')">&#10003;</button></div>
           <div class="row" data-field="vendoo.notes" data-status="gray" data-source="copy_capture" data-value=""><div class="k">Internal Notes</div><div class="v"><div class="copyblock pending"><span class="cb-val"></span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf gray" onclick="openField('vendoo.notes')">&minus;</button></div>
@@ -449,15 +453,15 @@
       </div>
       <h4>3 &middot; Package Details</h4>
       <div class="grid">
-        <div class="row" data-field="vendoo.pkg.weight.lbs" data-status="yellow" data-source="estimated — acetate/spandex evening jacket lighter than wool blazer; bench scale read pending" data-value="1"><div class="k">Weight (lb)</div><div class="v"><div class="copyblock"><span class="cb-val">1</span><button class="cb-btn" onclick="copyVal(this,'1')">copy</button></div><span style="font-size:12px;color:var(--ink-mute);margin-left:4px">lb</span></div><button class="conf yellow" onclick="openField('vendoo.pkg.weight.lbs')">&#9888;</button></div>
-        <div class="row" data-field="vendoo.pkg.weight.oz" data-status="yellow" data-source="estimated — acetate/spandex evening jacket lighter than wool blazer; bench scale read pending" data-value="2"><div class="k">Weight (oz)</div><div class="v"><div class="copyblock"><span class="cb-val">2</span><button class="cb-btn" onclick="copyVal(this,'2')">copy</button></div><span style="font-size:12px;color:var(--ink-mute);margin-left:4px">oz</span></div><button class="conf yellow" onclick="openField('vendoo.pkg.weight.oz')">&#9888;</button></div>
-        <div class="row" data-field="vendoo.pkg.dim.l" data-status="yellow" data-source="estimated (adj.) — long open-front jacket/duster folded in poly bag" data-value="12"><div class="k">Length</div><div class="v"><div class="copyblock"><span class="cb-val">12</span><button class="cb-btn" onclick="copyVal(this,'12')">copy</button></div><span style="font-size:12px;color:var(--ink-mute);margin-left:4px">in</span></div><button class="conf yellow" onclick="openField('vendoo.pkg.dim.l')">&#9888;</button></div>
-        <div class="row" data-field="vendoo.pkg.dim.w" data-status="yellow" data-source="estimated (adj.) — long open-front jacket/duster folded in poly bag" data-value="10"><div class="k">Width</div><div class="v"><div class="copyblock"><span class="cb-val">10</span><button class="cb-btn" onclick="copyVal(this,'10')">copy</button></div><span style="font-size:12px;color:var(--ink-mute);margin-left:4px">in</span></div><button class="conf yellow" onclick="openField('vendoo.pkg.dim.w')">&#9888;</button></div>
-        <div class="row" data-field="vendoo.pkg.dim.h" data-status="yellow" data-source="estimated (adj.) — long open-front jacket/duster folded in poly bag" data-value="3"><div class="k">Height</div><div class="v"><div class="copyblock"><span class="cb-val">3</span><button class="cb-btn" onclick="copyVal(this,'3')">copy</button></div><span style="font-size:12px;color:var(--ink-mute);margin-left:4px">in</span></div><button class="conf yellow" onclick="openField('vendoo.pkg.dim.h')">&#9888;</button></div>
+        <div class="row" data-field="vendoo.pkg.weight.lbs" data-status="gray" data-source="estimated" data-value="0"><div class="k">Weight (lb)</div><div class="v"><div class="copyblock"><span class="cb-val">0</span><button class="cb-btn" onclick="copyVal(this,'0')">copy</button></div><span style="font-size:12px;color:var(--ink-mute);margin-left:4px">lb</span></div><button class="conf gray" onclick="openField('vendoo.pkg.weight.lbs')">&#9888;</button></div>
+        <div class="row" data-field="vendoo.pkg.weight.oz" data-status="gray" data-source="estimated" data-value="0"><div class="k">Weight (oz)</div><div class="v"><div class="copyblock"><span class="cb-val">0</span><button class="cb-btn" onclick="copyVal(this,'0')">copy</button></div><span style="font-size:12px;color:var(--ink-mute);margin-left:4px">oz</span></div><button class="conf gray" onclick="openField('vendoo.pkg.weight.oz')">&#9888;</button></div>
+        <div class="row" data-field="vendoo.pkg.dim.l" data-status="gray" data-source="estimated" data-value=""><div class="k">Length</div><div class="v"><div class="copyblock"><span class="cb-val"></span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div><span style="font-size:12px;color:var(--ink-mute);margin-left:4px">in</span></div><button class="conf gray" onclick="openField('vendoo.pkg.dim.l')">&#9888;</button></div>
+        <div class="row" data-field="vendoo.pkg.dim.w" data-status="gray" data-source="estimated" data-value=""><div class="k">Width</div><div class="v"><div class="copyblock"><span class="cb-val"></span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div><span style="font-size:12px;color:var(--ink-mute);margin-left:4px">in</span></div><button class="conf gray" onclick="openField('vendoo.pkg.dim.w')">&#9888;</button></div>
+        <div class="row" data-field="vendoo.pkg.dim.h" data-status="gray" data-source="estimated" data-value=""><div class="k">Height</div><div class="v"><div class="copyblock"><span class="cb-val"></span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div><span style="font-size:12px;color:var(--ink-mute);margin-left:4px">in</span></div><button class="conf gray" onclick="openField('vendoo.pkg.dim.h')">&#9888;</button></div>
       </div>
       <h4>4 &middot; Price</h4>
       <div class="grid">
-        <div class="row" data-field="vendoo.listing_price" data-status="green" data-source="rrr-pricing &middot; eBay 75th &middot; medium confidence (n=6 90d)" data-value="38.00"><div class="k">Listing Price</div><div class="v"><div class="copyblock"><span class="cb-val">$38</span><button class="cb-btn" onclick="copyVal(this,'38.00')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.listing_price')">&#10003;</button></div>
+        <div class="row" data-field="vendoo.listing_price" data-status="green" data-source="rrr-pricing &middot; eBay 75th &middot; medium confidence (n=6 90d)" data-value=""><div class="k">Listing Price</div><div class="v"><div class="copyblock"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.listing_price')">&#10003;</button></div>
         <div class="row" data-field="vendoo.cog" data-status="green" data-source="NWLG default" data-value="5.00"><div class="k">Cost of Goods</div><div class="v"><div class="copyblock"><span class="cb-val">$5</span><button class="cb-btn" onclick="copyVal(this,'5.00')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.cog')">&#10003;</button></div>
       </div>
       <h4>5 &middot; Labels</h4>
@@ -478,23 +482,23 @@
       <!-- eBay sub-section -->
       <h4 style="margin-top:20px;padding-top:14px;border-top:2px solid var(--bd)">eBay &mdash; Top-Level Listing Fields</h4>
       <div class="grid">
-        <div class="row" data-field="ebay.price" data-status="green" data-source="rrr-pricing &middot; eBay 75th &middot; medium confidence (n=6 90d)" data-value="38.00"><div class="k">Price</div><div class="v"><div class="copyblock"><span class="cb-val">$38</span><button class="cb-btn" onclick="copyVal(this,'38.00')">copy</button></div></div><button class="conf green" onclick="openField('ebay.price')">&#10003;</button></div>
-        <div class="row" data-field="ebay.brand" data-status="green" data-source="RN 83293 captured operator-side; brand widely documented in resale (eBay Onyx Nite category, Poshmark brand page, ShopThrilling vintage). US-distributed evening-wear brand active mid-80s through 2000s, mostly retired." data-value="Onyx Nite by Wendye Chaitin"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Onyx Nite by Wendye Chaitin</span><button class="cb-btn" onclick="copyVal(this,'Onyx Nite by Wendye Chaitin')">copy</button></div></div><button class="conf green" onclick="openField('ebay.brand')">&#10003;</button></div>
+        <div class="row" data-field="ebay.price" data-status="green" data-source="rrr-pricing &middot; eBay 75th &middot; medium confidence (n=6 90d)" data-value=""><div class="k">Price</div><div class="v"><div class="copyblock"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf green" onclick="openField('ebay.price')">&#10003;</button></div>
+        <div class="row" data-field="ebay.brand" data-status="green" data-source="" data-value="Onyx Nite by Wendye Chaitin"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Onyx Nite by Wendye Chaitin</span><button class="cb-btn" onclick="copyVal(this,'Onyx Nite by Wendye Chaitin')">copy</button></div></div><button class="conf green" onclick="openField('ebay.brand')">&#10003;</button></div>
         <div class="row" data-field="ebay.color" data-status="green" data-source="copy_capture" data-value="Black"><div class="k">Color</div><div class="v"><div class="selectblock"><span class="sb-val">Black</span></div></div><button class="conf green" onclick="openField('ebay.color')">&#10003;</button></div>
-        <div class="row" data-field="ebay.priceformat" data-options="Fixed Price|Auction" data-status="yellow" data-source="Default &middot; Buy It Now" data-value="Fixed Price &middot; $38"><div class="k">Price Format</div><div class="v"><div class="selectblock"><span class="sb-val">Fixed Price &middot; $38</span></div></div><button class="conf yellow" onclick="openField('ebay.priceformat')">&#9888;</button></div>
+        <div class="row" data-field="ebay.priceformat" data-options="Fixed Price|Auction" data-status="yellow" data-source="Default &middot; Buy It Now" data-value="Fixed Price &middot; —"><div class="k">Price Format</div><div class="v"><div class="selectblock"><span class="sb-val">Fixed Price &middot; —</span></div></div><button class="conf yellow" onclick="openField('ebay.priceformat')">&#9888;</button></div>
         <div class="row" data-field="ebay.bestoffer" data-options="Yes|No" data-status="gray" data-source="Policy decision &middot; not in JSON" data-value=""><div class="k">Allow Best Offer</div><div class="v"><div class="selectblock pending"><span class="sb-val">policy decision</span></div></div><button class="conf gray" onclick="openField('ebay.bestoffer')">&minus;</button></div>
-        <div class="row" data-field="ebay.shipping" data-options="Buyer Pays Calculated|Free Shipping|Flat Rate" data-status="yellow" data-source="commerce.shipping" data-value="Buyer Pays Calculated (GPO Vintage condition, not NWT)"><div class="k">Shipping Policy</div><div class="v"><div class="selectblock"><span class="sb-val">Buyer Pays Calculated (GPO Vintage condition, not NWT)</span></div></div><button class="conf yellow" onclick="openField('ebay.shipping')">&#9888;</button></div>
+        <div class="row" data-field="ebay.shipping" data-options="Buyer Pays Calculated|Free Shipping|Flat Rate" data-status="yellow" data-source="commerce.shipping" data-value="Buyer Pays Calculated"><div class="k">Shipping Policy</div><div class="v"><div class="selectblock"><span class="sb-val">Buyer Pays Calculated</span></div></div><button class="conf yellow" onclick="openField('ebay.shipping')">&#9888;</button></div>
         <div class="row" data-field="ebay.return" data-options="Returns Accepted - 30 Days|Returns Accepted - 60 Days|No Returns" data-status="gray" data-source="Account default" data-value=""><div class="k">Return Policy</div><div class="v"><div class="selectblock pending"><span class="sb-val">account default</span></div></div><button class="conf gray" onclick="openField('ebay.return')">&minus;</button></div>
       </div>
       <h4>eBay &mdash; Category Specifics</h4>
       <div class="grid">
-        <div class="row" data-field="ebay.aspect.sizetype" data-options="Regular|Plus|Petite|Big|Tall" data-status="green" data-source="aspects" data-value="Regular"><div class="k">Size Type</div><div class="v"><div class="selectblock"><span class="sb-val">Regular</span></div></div><button class="conf green" onclick="openField('ebay.aspect.sizetype')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.sizetype" data-options="Regular|Plus|Petite|Big|Tall" data-status="green" data-source="aspects" data-value="—"><div class="k">Size Type</div><div class="v"><div class="selectblock"><span class="sb-val">—</span></div></div><button class="conf green" onclick="openField('ebay.aspect.sizetype')">&#10003;</button></div>
         <div class="row" data-field="ebay.aspect.size" data-status="green" data-source="Size tag photo &middot; Men's XL" data-value="L"><div class="k">Size</div><div class="v"><div class="copyblock"><span class="cb-val">L</span><button class="cb-btn" onclick="copyVal(this,'L')">copy</button></div></div><button class="conf green" onclick="openField('ebay.aspect.size')">&#10003;</button></div>
-        <div class="row" data-field="ebay.aspect.department" data-options="Men|Women|Unisex|Boys|Girls" data-status="green" data-source="aspects" data-value="Women"><div class="k">Department</div><div class="v"><div class="selectblock"><span class="sb-val">Women</span></div></div><button class="conf green" onclick="openField('ebay.aspect.department')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.department" data-options="Men|Women|Unisex|Boys|Girls" data-status="green" data-source="aspects" data-value="—"><div class="k">Department</div><div class="v"><div class="selectblock"><span class="sb-val">—</span></div></div><button class="conf green" onclick="openField('ebay.aspect.department')">&#10003;</button></div>
         <div class="row" data-field="ebay.aspect.condition" data-options="NWT|NWOT|GPO (internal)|Pre-Loved (internal)|Fair (internal)|Pre-owned — Like New (eBay)|Pre-owned — Very Good (eBay)|Pre-owned — Good (eBay)|Pre-owned — Acceptable (eBay)|Like New (Vendoo)|Good (Vendoo)|Fair (Vendoo)|New with Tags (Vendoo)" data-status="green" data-source="Phase 1 intake &middot; GPO Vintage" data-value="GPO Vintage"><div class="k">Condition</div><div class="v"><div class="selectblock"><span class="sb-val">GPO Vintage</span></div></div><button class="conf green" onclick="openField('ebay.aspect.condition')">&#10003;</button></div>
         <div class="row" data-field="ebay.aspect.sleeve" data-options="Short Sleeve|Long Sleeve|3/4 Sleeve|Sleeveless|Cap Sleeve" data-status="green" data-source="copy_capture &middot; 1.0 confidence" data-value="Long Sleeve"><div class="k">Sleeve Length</div><div class="v"><div class="selectblock"><span class="sb-val">Long Sleeve</span></div></div><button class="conf green" onclick="openField('ebay.aspect.sleeve')">&#10003;</button></div>
-        <div class="row" data-field="ebay.aspect.pattern" data-options="Solid|Plaid|Stripes|Checkered|Geometric|Floral|Abstract|Animal Print|Camouflage|Paisley|Graphic Print" data-status="green" data-source="photo_agent" data-value="Abstract"><div class="k">Pattern</div><div class="v"><div class="selectblock"><span class="sb-val">Abstract</span></div></div><button class="conf green" onclick="openField('ebay.aspect.pattern')">&#10003;</button></div>
-        <div class="row" data-field="ebay.aspect.material" data-status="green" data-source="Care tag &middot; 55% Cotton 45% Polyester" data-value="90% Acetate / 10% Spandex"><div class="k">Material</div><div class="v"><div class="copyblock"><span class="cb-val">90% Acetate / 10% Spandex</span><button class="cb-btn" onclick="copyVal(this,'90% Acetate / 10% Spandex')">copy</button></div></div><button class="conf green" onclick="openField('ebay.aspect.material')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.pattern" data-options="Solid|Plaid|Stripes|Checkered|Geometric|Floral|Abstract|Animal Print|Camouflage|Paisley|Graphic Print" data-status="green" data-source="descriptors" data-value="Abstract"><div class="k">Pattern</div><div class="v"><div class="selectblock"><span class="sb-val">Abstract</span></div></div><button class="conf green" onclick="openField('ebay.aspect.pattern')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.material" data-status="green" data-source="Care tag &middot; 55% Cotton 45% Polyester" data-value="90% Acetate / 10% Spandex (stretch flag will trip in Phase 2)"><div class="k">Material</div><div class="v"><div class="copyblock"><span class="cb-val">90% Acetate / 10% Spandex (stretch flag will trip in Phase 2)</span><button class="cb-btn" onclick="copyVal(this,'90% Acetate / 10% Spandex (stretch flag will trip in Phase 2)')">copy</button></div></div><button class="conf green" onclick="openField('ebay.aspect.material')">&#10003;</button></div>
         <div class="row" data-field="ebay.aspect.country" data-options="China|USA|Vietnam|Bangladesh|Cambodia|Mexico|India|Indonesia|Pakistan|Turkey|El Salvador|Sri Lanka" data-status="green" data-source="care tag" data-value="USA (imported fabric)"><div class="k">Country of Origin</div><div class="v"><div class="selectblock "><span class="sb-val">USA (imported fabric)</span></div></div><button class="conf green" onclick="openField('ebay.aspect.country')">&#10003;</button></div>
         <div class="row" data-field="ebay.aspect.care" data-options="Machine Washable|Hand Wash Only|Dry Clean Only|Spot Clean Only" data-status="green" data-source="care tag" data-value="Hand wash cold · Mild detergent · Non-chlorine bleach if needed · Line dry · Cool iron on reverse side"><div class="k">Garment Care</div><div class="v"><div class="selectblock "><span class="sb-val">Hand wash cold · Mild detergent · Non-chlorine bleach if needed · Line dry · Cool iron on reverse side</span></div></div><button class="conf green" onclick="openField('ebay.aspect.care')">&#10003;</button></div>
         <div class="row" data-field="ebay.aspect.neckline" data-options="Collared|V-Neck|Crew Neck|Scoop Neck|Turtleneck|Mock Neck|Henley|Boat Neck" data-status="green" data-source="Derived from copy_capture &middot; Point Collar" data-value="Collared"><div class="k">Neckline</div><div class="v"><div class="selectblock"><span class="sb-val">Collared</span></div></div><button class="conf green" onclick="openField('ebay.aspect.neckline')">&#10003;</button></div>
@@ -503,7 +507,7 @@
         <div class="row" data-field="ebay.aspect.occasion" data-options="Travel|Casual|Outdoor|Sport/Athletic|Business Casual|Hiking|Fishing|Camping" data-status="green" data-source="copy_capture use_cases &middot; 0.95 &middot; Travel" data-value="Travel"><div class="k">Occasion</div><div class="v"><div class="selectblock"><span class="sb-val">Travel</span></div></div><button class="conf green" onclick="openField('ebay.aspect.occasion')">&#10003;</button></div>
         <div class="row" data-field="ebay.aspect.chest" data-status="yellow" data-source="Derived: bust &times; 2 = 48 in" data-value="48"><div class="k">Chest Size</div><div class="v"><div class="copyblock"><span class="cb-val">48 in</span><button class="cb-btn" onclick="copyVal(this,'48')">copy</button></div></div><button class="conf yellow" onclick="openField('ebay.aspect.chest')">&#9888;</button></div>
         <div class="row" data-field="ebay.aspect.productline" data-status="gray" data-source="identity" data-value=""><div class="k">Product Line</div><div class="v"><div class="selectblock pending"><span class="sb-val">—</span></div></div><button class="conf gray" onclick="openField('ebay.aspect.productline')">&minus;</button></div>
-        <div class="row" data-field="ebay.aspect.model" data-status="green" data-source="identity" data-value="Onyx Nite shimmer evening jacket / duster (cut #2543)"><div class="k">Model</div><div class="v"><div class="copyblock "><span class="cb-val">Onyx Nite shimmer evening jacket / duster (cut #2543)</span><button class="cb-btn" onclick="copyVal(this,'Onyx Nite shimmer evening jacket / duster (cut #2543)')">copy</button></div></div><button class="conf green" onclick="openField('ebay.aspect.model')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.model" data-status="yellow" data-source="identity" data-value="—"><div class="k">Model</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'—')">copy</button></div></div><button class="conf yellow" onclick="openField('ebay.aspect.model')">&#9888;</button></div>
         <div class="row" data-field="ebay.aspect.fit" data-options="Regular|Slim|Relaxed|Oversized|Athletic" data-status="gray" data-source="Silhouette flagged warn &middot; cannot confirm fit" data-value=""><div class="k">Fit</div><div class="v"><div class="selectblock pending"><span class="sb-val">empty</span></div></div><button class="conf gray" onclick="openField('ebay.aspect.fit')">&minus;</button></div>
         <div class="row" data-field="ebay.aspect.vintage" data-options="Yes|No" data-status="gray" data-source="Era: Modern &middot; not vintage" data-value="No"><div class="k">Vintage</div><div class="v"><div class="selectblock"><span class="sb-val">No</span></div></div><button class="conf gray" onclick="openField('ebay.aspect.vintage')">&minus;</button></div>
         <div class="row" data-field="ebay.aspect.mpn" data-status="gray" data-source="Absent on tag" data-value=""><div class="k">MPN</div><div class="v"><div class="copyblock pending"><span class="cb-val">empty</span></div></div><button class="conf gray" onclick="openField('ebay.aspect.mpn')">&minus;</button></div>
@@ -517,17 +521,17 @@
     <div class="sband-hdr" onclick="toggleBand(this)">
       <span class="sband-arrow">&#9658;</span>
       <span class="sband-label">Identity</span>
-      <span class="sband-badge">Onyx Nite by Wendye Chaitin &middot; Onyx Nite shimmer evening jacket / duster (cut #2543)</span>
+      <span class="sband-badge">Onyx Nite by Wendye Chaitin &middot; —</span>
     </div>
     <div class="sband-body">
       <div class="grid">
-        <div class="row" data-field="ref.brand" data-status="green" data-source="RN 83293 captured operator-side; brand widely documented in resale (eBay Onyx Nite category, Poshmark brand page, ShopThrilling vintage). US-distributed evening-wear brand active mid-80s through 2000s, mostly retired." data-value="Onyx Nite by Wendye Chaitin"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Onyx Nite by Wendye Chaitin</span><button class="cb-btn" onclick="copyVal(this,'Onyx Nite by Wendye Chaitin')">copy</button></div></div><button class="conf green" onclick="openField('ref.brand')">&#10003;</button></div>
-        <div class="row" data-field="ref.model" data-status="green" data-source="identity" data-value="Onyx Nite shimmer evening jacket / duster (cut #2543)"><div class="k">Model</div><div class="v"><div class="copyblock "><span class="cb-val">Onyx Nite shimmer evening jacket / duster (cut #2543)</span><button class="cb-btn" onclick="copyVal(this,'Onyx Nite shimmer evening jacket / duster (cut #2543)')">copy</button></div></div><button class="conf green" onclick="openField('ref.model')">&#10003;</button></div>
+        <div class="row" data-field="ref.brand" data-status="green" data-source="" data-value="Onyx Nite by Wendye Chaitin"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Onyx Nite by Wendye Chaitin</span><button class="cb-btn" onclick="copyVal(this,'Onyx Nite by Wendye Chaitin')">copy</button></div></div><button class="conf green" onclick="openField('ref.brand')">&#10003;</button></div>
+        <div class="row" data-field="ref.model" data-status="yellow" data-source="identity" data-value="—"><div class="k">Model</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'—')">copy</button></div></div><button class="conf yellow" onclick="openField('ref.model')">&#9888;</button></div>
         <div class="row" data-field="ref.rn" data-status="green" data-source="brand tag" data-value="83293"><div class="k">RN</div><div class="v"><div class="copyblock "><span class="cb-val">83293</span><button class="cb-btn" onclick="copyVal(this,'83293')">copy</button></div></div><button class="conf green" onclick="openField('ref.rn')">&#10003;</button></div>
         <div class="row" data-field="ref.style" data-status="gray" data-source="brand tag" data-value="—"><div class="k">Style Code</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'—')">copy</button></div></div><button class="conf gray" onclick="openField('ref.style')">&minus;</button></div>
         <div class="row" data-field="ref.category" data-status="green" data-source="Internal classification" data-value="Tops / Button-Down"><div class="k">Category</div><div class="v"><div class="selectblock"><span class="sb-val">Tops &rsaquo; Button-Down</span></div></div><button class="conf green" onclick="openField('ref.category')">&#10003;</button></div>
         <div class="row" data-field="cap.color" data-status="green" data-source="copy_capture" data-value="Black"><div class="k">Color</div><div class="v"><div class="selectblock"><span class="sb-val">Black</span></div></div><button class="conf green" onclick="openField('cap.color')">&#10003;</button></div>
-        <div class="row" data-field="ebay.aspect.material" data-status="green" data-source="care tag" data-value="90% Acetate / 10% Spandex"><div class="k">Material</div><div class="v"><div class="copyblock "><span class="cb-val">90% Acetate / 10% Spandex</span><button class="cb-btn" onclick="copyVal(this,'90% Acetate / 10% Spandex')">copy</button></div></div><button class="conf green" onclick="openField('ebay.aspect.material')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.material" data-status="green" data-source="care tag" data-value="90% Acetate / 10% Spandex (stretch flag will trip in Phase 2)"><div class="k">Material</div><div class="v"><div class="copyblock "><span class="cb-val">90% Acetate / 10% Spandex (stretch flag will trip in Phase 2)</span><button class="cb-btn" onclick="copyVal(this,'90% Acetate / 10% Spandex (stretch flag will trip in Phase 2)')">copy</button></div></div><button class="conf green" onclick="openField('ebay.aspect.material')">&#10003;</button></div>
         <div class="row" data-field="ebay.aspect.care" data-options="Machine Washable|Hand Wash Only|Dry Clean Only|Spot Clean Only" data-status="green" data-source="care tag" data-value="Hand wash cold · Mild detergent · Non-chlorine bleach if needed · Line dry · Cool iron on reverse side"><div class="k">Care</div><div class="v"><div class="copyblock "><span class="cb-val">Hand wash cold · Mild detergent · Non-chlorine bleach if needed · Line dry · Cool iron on reverse side</span><button class="cb-btn" onclick="copyVal(this,'Hand wash cold · Mild detergent · Non-chlorine bleach if needed · Line dry · Cool iron on reverse side')">copy</button></div></div><button class="conf green" onclick="openField('ebay.aspect.care')">&#10003;</button></div>
         <div class="row" data-field="ebay.aspect.country" data-options="China|USA|Vietnam|Bangladesh|Cambodia|Mexico|India|Indonesia|Pakistan|Turkey|El Salvador|Sri Lanka" data-status="green" data-source="care tag" data-value="USA (imported fabric)"><div class="k">Country of Origin</div><div class="v"><div class="selectblock "><span class="sb-val">USA (imported fabric)</span></div></div><button class="conf green" onclick="openField('ebay.aspect.country')">&#10003;</button></div>
       </div>
@@ -544,9 +548,9 @@
     <div class="sband-body">
       <div style="font-size:11px;color:var(--ink-mute);margin-bottom:10px">Lay-flat unstretched &middot; all measurements in inches</div>
       <div class="grid">
-        <div class="row" data-field="ref.bust" data-status="green" data-source="Bench 2026-04-26" data-value="21"><div class="k">Pit to Pit (Flat)</div><div class="v"><div class="copyblock"><span class="cb-val">21 in</span><button class="cb-btn" onclick="copyVal(this,'21')">copy</button></div></div><button class="conf green" onclick="openField('ref.bust')">&#10003;</button></div>
-        <div class="row" data-field="ref.length" data-status="green" data-source="Bench 2026-04-26" data-value="25.5"><div class="k">Length (Full)</div><div class="v"><div class="copyblock"><span class="cb-val">25.5 in</span><button class="cb-btn" onclick="copyVal(this,'25.5')">copy</button></div></div><button class="conf green" onclick="openField('ref.length')">&#10003;</button></div>
-        <div class="row" data-field="ref.sleeve" data-status="green" data-source="Bench 2026-04-26" data-value="19"><div class="k">Sleeve (Full)</div><div class="v"><div class="copyblock"><span class="cb-val">19 in</span><button class="cb-btn" onclick="copyVal(this,'19')">copy</button></div></div><button class="conf green" onclick="openField('ref.sleeve')">&#10003;</button></div>
+        <div class="row" data-field="ref.bust" data-status="green" data-source="Bench 2026-04-26" data-value="21"><div class="k">Pit to Pit (flat)</div><div class="v"><div class="copyblock"><span class="cb-val">21 in</span><button class="cb-btn" onclick="copyVal(this,'21')">copy</button></div></div><button class="conf green" onclick="openField('ref.bust')">&#10003;</button></div>
+        <div class="row" data-field="ref.length" data-status="green" data-source="Bench 2026-04-26" data-value="25.5"><div class="k">Length (vertical)</div><div class="v"><div class="copyblock"><span class="cb-val">25.5 in</span><button class="cb-btn" onclick="copyVal(this,'25.5')">copy</button></div></div><button class="conf green" onclick="openField('ref.length')">&#10003;</button></div>
+        <div class="row" data-field="ref.sleeve" data-status="green" data-source="Bench 2026-04-26" data-value="19"><div class="k">Sleeve (vertical)</div><div class="v"><div class="copyblock"><span class="cb-val">19 in</span><button class="cb-btn" onclick="copyVal(this,'19')">copy</button></div></div><button class="conf green" onclick="openField('ref.sleeve')">&#10003;</button></div>
         <div class="row" data-field="ref.stretch" data-status="green" data-source="descriptors" data-value="Yes"><div class="k">Stretch</div><div class="v"><div class="selectblock"><span class="sb-val">Yes</span></div></div><button class="conf green" onclick="openField('ref.stretch')">&#10003;</button></div>
       </div>
     </div>
@@ -557,31 +561,31 @@
     <div class="sband-hdr" onclick="toggleBand(this)">
       <span class="sband-arrow">&#9658;</span>
       <span class="sband-label">Pricing</span>
-      <span class="sband-badge">$38 eBay &middot; Net $17.50 &middot; Low confidence</span>
+      <span class="sband-badge">—</span>
     </div>
     <div class="sband-body">
       <div class="grid">
-        <div class="row" data-field="ref.msrp" data-status="yellow" data-source="pricing" data-value="120"><div class="k">MSRP (est.)</div><div class="v"><div class="copyblock"><span class="cb-val">$120</span><button class="cb-btn" onclick="copyVal(this,'120')">copy</button></div></div><button class="conf yellow" onclick="openField('ref.msrp')">&#9888;</button></div>
-        <div class="row" data-field="ref.median" data-status="green" data-source="eBay sold" data-value="35.00"><div class="k">Comp Median</div><div class="v"><div class="copyblock "><span class="cb-val">$35</span><button class="cb-btn" onclick="copyVal(this,'35.00')">copy</button></div></div><button class="conf green" onclick="openField('ref.median')">&#10003;</button></div>
-        <div class="row" data-field="ref.p75" data-status="green" data-source="eBay sold" data-value="38.00"><div class="k">Comp p75</div><div class="v"><div class="copyblock "><span class="cb-val">$38</span><button class="cb-btn" onclick="copyVal(this,'38.00')">copy</button></div></div><button class="conf green" onclick="openField('ref.p75')">&#10003;</button></div>
-        <div class="row" data-field="ref.range" data-status="green" data-source="eBay sold range" data-value="20-60"><div class="k">Comp Range</div><div class="v"><div class="copyblock "><span class="cb-val">$20 – $60</span><button class="cb-btn" onclick="copyVal(this,'20-60')">copy</button></div></div><button class="conf green" onclick="openField('ref.range')">&#10003;</button></div>
-        <div class="row" data-field="ref.expected" data-status="green" data-source="rrr-pricing" data-value="38.00"><div class="k">Expected Sold</div><div class="v"><div class="copyblock "><span class="cb-val">$38</span><button class="cb-btn" onclick="copyVal(this,'38.00')">copy</button></div></div><button class="conf green" onclick="openField('ref.expected')">&#10003;</button></div>
-        <div class="row" data-field="ref.net" data-status="green" data-source="rrr-pricing net projection" data-value="17.50"><div class="k">Net @ Sold</div><div class="v"><div class="copyblock"><span class="cb-val">$17.50</span><button class="cb-btn" onclick="copyVal(this,'17.50')">copy</button></div></div><button class="conf green" onclick="openField('ref.net')">&#10003;</button></div>
+        <div class="row" data-field="ref.msrp" data-status="yellow" data-source="pricing" data-value=""><div class="k">MSRP (est.)</div><div class="v"><div class="copyblock"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf yellow" onclick="openField('ref.msrp')">&#9888;</button></div>
+        <div class="row" data-field="ref.median" data-status="gray" data-source="eBay sold" data-value=""><div class="k">Comp Median</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf gray" onclick="openField('ref.median')">&minus;</button></div>
+        <div class="row" data-field="ref.p75" data-status="gray" data-source="eBay sold" data-value=""><div class="k">Comp p75</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf gray" onclick="openField('ref.p75')">&minus;</button></div>
+        <div class="row" data-field="ref.range" data-status="gray" data-source="eBay sold range" data-value=""><div class="k">Comp Range</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf gray" onclick="openField('ref.range')">&minus;</button></div>
+        <div class="row" data-field="ref.expected" data-status="gray" data-source="rrr-pricing" data-value=""><div class="k">Expected Sold</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf gray" onclick="openField('ref.expected')">&minus;</button></div>
+        <div class="row" data-field="ref.net" data-status="green" data-source="rrr-pricing net projection" data-value=""><div class="k">Net @ Sold</div><div class="v"><div class="copyblock"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf green" onclick="openField('ref.net')">&#10003;</button></div>
       </div>
 
       <h4 style="margin-top:20px;padding-top:14px;border-top:2px solid var(--bd)">Platform Pricing</h4>
       <!-- Poshmark -->
       <h4>Poshmark</h4>
       <div class="grid">
-        <div class="row" data-field="posh.list" data-status="green" data-source="rrr-pricing chain" data-value="41.00"><div class="k">List Price</div><div class="v"><div class="copyblock"><span class="cb-val">$41</span><button class="cb-btn" onclick="copyVal(this,'41.00')">copy</button></div></div><button class="conf green" onclick="openField('posh.list')">&#10003;</button></div>
-        <div class="row" data-field="posh.floor" data-status="green" data-source="rrr-pricing chain" data-value="32.00"><div class="k">Floor</div><div class="v"><div class="copyblock "><span class="cb-val">$32</span><button class="cb-btn" onclick="copyVal(this,'32.00')">copy</button></div></div><button class="conf green" onclick="openField('posh.floor')">&#10003;</button></div>
-        <div class="row" data-field="posh.walk" data-status="green" data-source="rrr-pricing chain" data-value="26.00"><div class="k">Walk-Away</div><div class="v"><div class="copyblock "><span class="cb-val">$26</span><button class="cb-btn" onclick="copyVal(this,'26.00')">copy</button></div></div><button class="conf green" onclick="openField('posh.walk')">&#10003;</button></div>
+        <div class="row" data-field="posh.list" data-status="green" data-source="rrr-pricing chain" data-value=""><div class="k">List Price</div><div class="v"><div class="copyblock"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf green" onclick="openField('posh.list')">&#10003;</button></div>
+        <div class="row" data-field="posh.floor" data-status="gray" data-source="rrr-pricing chain" data-value=""><div class="k">Floor</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf gray" onclick="openField('posh.floor')">&minus;</button></div>
+        <div class="row" data-field="posh.walk" data-status="gray" data-source="rrr-pricing chain" data-value=""><div class="k">Walk-Away</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf gray" onclick="openField('posh.walk')">&minus;</button></div>
       </div>
       <!-- Depop -->
       <h4>Depop</h4>
       <div class="grid">
-        <div class="row" data-field="depop.list" data-status="green" data-source="rrr-pricing chain" data-value="37.00"><div class="k">List Price</div><div class="v"><div class="copyblock"><span class="cb-val">$37</span><button class="cb-btn" onclick="copyVal(this,'37.00')">copy</button></div></div><button class="conf green" onclick="openField('depop.list')">&#10003;</button></div>
-        <div class="row" data-field="depop.floor" data-status="green" data-source="rrr-pricing chain" data-value="32.00"><div class="k">Floor</div><div class="v"><div class="copyblock "><span class="cb-val">$32</span><button class="cb-btn" onclick="copyVal(this,'32.00')">copy</button></div></div><button class="conf green" onclick="openField('depop.floor')">&#10003;</button></div>
+        <div class="row" data-field="depop.list" data-status="green" data-source="rrr-pricing chain" data-value=""><div class="k">List Price</div><div class="v"><div class="copyblock"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf green" onclick="openField('depop.list')">&#10003;</button></div>
+        <div class="row" data-field="depop.floor" data-status="gray" data-source="rrr-pricing chain" data-value=""><div class="k">Floor</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf gray" onclick="openField('depop.floor')">&minus;</button></div>
       </div>
       <!-- Mercari -->
       <h4>Mercari</h4>
@@ -612,7 +616,7 @@
 
   <footer>
     <span><strong>Host:</strong> GitHub Pages &middot; vmonagon/Revive-Restore-Resell</span>
-    <span><strong>Render:</strong> static &middot; v0.6 (sband redesign) &middot; 2026-05-13</span>
+    <span><strong>Render:</strong> static &middot; v0.6 (sband redesign) &middot; 2026-05-15</span>
   </footer>
 </div>
   <!-- ── 9. FLOW STEP tracker (preserved exactly) ── -->
@@ -633,14 +637,7 @@
       <span class="sband-badge" id="flagsCount">6</span>
     </div>
     <div class="sband-body">
-      <div class="flag-item" data-field="model_not_found"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('model_not_found')">model_not_found</span></div></div>
-      <div class="flag-item" data-field="pricing_msrp_estimated"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('pricing_msrp_estimated')">pricing_msrp_estimated</span></div></div>
-      <div class="flag-item" data-field="stretch_fabric"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('stretch_fabric')">stretch_fabric</span></div></div>
-      <div class="flag-item" data-field="thin_sold_comps"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('thin_sold_comps')">thin_sold_comps</span></div></div>
-      <div class="flag-item" data-field="pricing_confidence_low"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('pricing_confidence_low')">pricing_confidence_low</span></div></div>
-      <div class="flag-item" data-field="silhouette.value"><span class="flag-sev info">INFO</span><div><span class="flag-link" onclick="openField('silhouette.value')">silhouette.value</span> — Garment photo shot crumpled in pile; shape (longline duster vs hip-length jacket) inferred from intake card 'open-front jacket/duster' note + measurements (length 25.5&quot;). Operator confirm at bench.</div></div>
-      <div class="flag-item" data-field="neckline.value"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('neckline.value')">neckline.value</span> — Open-front collar shape not clearly readable from photo crumpled-pile context; shawl-collar assumption based on era/style register.</div></div>
-      <div class="flag-item" data-field="photo_inventory.count"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('photo_inventory.count')">photo_inventory.count</span> — Zero canonical Front/Back/Detail-on-form shots; only crumpled-pile lay shot. Title+ photo re-shoot recommended.</div></div>
+      <div style="color:#065f46;font-size:13px;padding:4px 0">&#10003; No open items.</div>
     </div>
   </div>
 
@@ -878,7 +875,12 @@ function populateAuthors() {
 }
 
 function refreshSaveBtn() {
-  const pending = Object.values(state).filter(v => v && v.notes && v.notes.some(n => !n.exported)).length;
+  const pending = Object.values(state).filter(v =>
+    v && (
+      (v.notes && v.notes.some(n => !n.exported)) ||
+      (v.override !== undefined && !v.overrideExported)
+    )
+  ).length;
   const btn = document.getElementById('saveNotesBtn');
   const pc = document.getElementById('pcount');
   if (!btn) return;
@@ -1068,12 +1070,32 @@ function updateConfBadge(fieldPath) {
 }
 
 function exportHandcuff() {
-  const out = {};
+  const out = {
+    sku: SKU,
+    exported_at: new Date().toISOString().slice(0,19)
+  };
   Object.keys(state).forEach(k => {
     const s = state[k];
-    if (s && s.notes && s.notes.length) {
-      out[k] = {notes: s.notes, resolved: s.resolved || false};
+    if (!s) return;
+    const hasNotes = s.notes && s.notes.length;
+    const hasOverride = Object.prototype.hasOwnProperty.call(s, 'override');
+    if (!hasNotes && !hasOverride) return;
+    const entry = {};
+    if (hasOverride) {
+      // Pull the live displayed value at click-time, per spec.
+      const el = document.querySelector('.row[data-field="' + k + '"]');
+      let dispVal = s.override;
+      if (el) {
+        const node = el.querySelector('.cb-val') || el.querySelector('.sb-val');
+        if (node) dispVal = node.textContent;
+      }
+      entry.value = dispVal;
     }
+    if (hasNotes) {
+      entry.notes = s.notes;
+      entry.resolved = s.resolved || false;
+    }
+    out[k] = entry;
   });
   const blob = new Blob([JSON.stringify(out, null, 2)], {type:'application/json'});
   const url = URL.createObjectURL(blob);
@@ -1351,23 +1373,4 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="row-controls">From <select id="mdAuthor"></select></div>
         <textarea id="mdText" placeholder="Add a note for this field…" rows="3"></textarea>
         <div class="mb-actions">
-          <button class="primary" onclick="addNote()">Add Note</button>
-          <button class="resolve" id="mdResolveBtn" onclick="markResolved()">Mark Resolved</button>
-          <button class="reopen" id="mdReopenBtn" style="display:none" onclick="reopen()">Reopen</button>
-          <button onclick="closeModal()">Cancel</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ── Photo lightbox ── -->
-<div class="photo-lb-bd" id="photoLbBd" onclick="if(event.target===this)closePhotoLB()">
-  <button class="photo-lb-close" onclick="closePhotoLB()" aria-label="Close">&times;</button>
-  <img id="photoLbImg" src="" alt="" />
-  <div class="photo-lb-label" id="photoLbLabel"></div>
-</div>
-
-</div><!-- .wrap -->
-</body>
-</html>
+   

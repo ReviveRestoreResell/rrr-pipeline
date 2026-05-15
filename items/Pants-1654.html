@@ -275,6 +275,12 @@
     <span class="pill" style="border-color:var(--green-bd);background:var(--green-bg);color:#065f46;"><strong>Phase 2</strong>2026-05-12</span>
   </div></div>
 
+  <!-- ── Publish blocker (P2 SMC pending = Rule #135 publish-block) ── -->
+  
+
+  <!-- ── Operational flag (from latest matching _card_corrections[]) ── -->
+  
+
   <!-- ── 1. PHOTOS sband (collapsed) ── -->
   <div class="sband" id="sbandPhotos">
     <div class="sband-hdr" onclick="toggleBand(this)">
@@ -308,7 +314,7 @@
     <div class="sband-hdr" onclick="toggleBand(this)">
       <span class="sband-arrow">&#9658;</span>
       <span class="sband-label">Copy</span>
-      <span class="sband-badge">Title+ &check; &nbsp;|&nbsp; Desc+ &hellip; &nbsp;|&nbsp; KW+ &hellip;</span>
+      <span class="sband-badge">Title+ &hellip; &nbsp;|&nbsp; Desc+ &hellip; &nbsp;|&nbsp; KW+ &hellip;</span>
     </div>
     <div class="sband-body">
       <div class="cws-blocks">
@@ -318,19 +324,19 @@
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Title+</span>
             <span class="cwsb-meta">&#8212;&nbsp;chars</span>
-            <span class="cwsb-badge cws-pending">&#11015;&nbsp;Pending</span>
+            <span class="cwsb-badge cws-pending">&#9203;&nbsp;Pending</span>
           </div>
           <div class="cwsb-body">
-            <div class="cwsb-text" id="cws-title-display">Pending Phase 2</div>
+            <div class="cwsb-text" id="cws-title-display"></div>
             <div class="cwsb-click-hint">&#9998; Click to edit</div>
           </div>
         </div>
 
-        <!-- Description+ PENDING (rendered, pending Tracie review) -->
+        <!-- Description+ (state driven by copy.pending[]) -->
         <div class="cws-block cws-pending" id="cwsb-desc" style="cursor:default" role="region" aria-label="Description+">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Description+</span>
-            <span class="cwsb-badge cws-pending" id="cwsb-desc-badge">&#9203; Pending Review</span>
+            <span class="cwsb-badge cws-pending" id="cwsb-desc-badge">&#9203;&nbsp;Pending Review</span>
           </div>
           <div class="cwsb-body" style="display:flex;flex-direction:column;gap:8px">
 
@@ -338,10 +344,10 @@
             <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p1" onclick="cwsOpen('desc-p1')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P1 &middot; Opening Paragraph</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p1-badge">&#9203; Pending</span>
+                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p1-badge">&#9203;&nbsp;Pending</span>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p1-display">Pending Phase 2</div>
+                <div class="cwsb-text" id="cws-desc-p1-display"></div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
@@ -350,10 +356,10 @@
             <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p2" onclick="cwsOpen('desc-p2')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P2 &middot; SMC</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p2-badge">&#9203; Pending</span>
+                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p2-badge">&#9203;&nbsp;Pending</span>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p2-display">Pending Phase 2</div>
+                <div class="cwsb-text" id="cws-desc-p2-display"></div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
@@ -361,11 +367,11 @@
             <!-- P3 sub-block -->
             <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p3" onclick="cwsOpen('desc-p3')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
-                <span class="cws-subblock-skill">P3 &middot; Service Block</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p3-badge">&#9203; Pending</span>
+                <span class="cws-subblock-skill">P3 &middot; Badges</span>
+                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p3-badge">&#9203;&nbsp;Pending</span>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p3-display">Pending Phase 2</div>
+                <div class="cwsb-text" id="cws-desc-p3-display"></div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
@@ -373,14 +379,14 @@
           </div>
         </div>
 
-        <!-- Keyword+ PENDING (rendered, pending Tracie review) -->
+        <!-- Keyword+ (state driven by copy.pending[] / keywords presence) -->
         <div class="cws-block cws-pending" id="cwsb-kw" onclick="cwsOpen('kw')" role="button" tabindex="0">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Keyword+</span>
-            <span class="cwsb-badge cws-pending">&#9203; Pending Review</span>
+            <span class="cwsb-badge cws-pending">&#9203;&nbsp;Pending Review</span>
           </div>
           <div class="cwsb-body">
-            <div class="cwsb-text" id="cws-kw-display">Pending Phase 2</div>
+            <div class="cwsb-text" id="cws-kw-display"></div>
             <div class="cwsb-click-hint">&#9998; Click to edit</div>
           </div>
         </div>
@@ -413,7 +419,7 @@
 <div class="row" data-field="cc.use_cases" data-status="green" data-source="photo_agent" data-value="office, workwear, date night, travel"><div class="k">Use Cases</div><div class="v"><div class="copyblock"><span class="cb-val">office, workwear, date night, travel</span><button class="cb-btn" onclick="copyVal(this,'office, workwear, date night, travel')">copy</button></div></div><button class="conf green" onclick="openField('cc.use_cases')">&#10003;</button></div>
 <h4>Tier Gate — Rejected</h4>
 <div class="row" data-field="cc.gate.casualstreetwear" data-status="green" data-source="tier_gate" data-value="REJECTED"><div class="k">casualstreetwear</div><div class="v"><div class="copyblock"><span class="cb-val">REJECTED</span><button class="cb-btn" onclick="copyVal(this,'REJECTED')">copy</button></div></div><button class="conf green" onclick="openField('cc.gate.casualstreetwear')">&#10003;</button></div>
-<h4>Agent Flags (10)</h4>
+<h4>Agent Flags (9)</h4>
 <div class="row" data-field="cc.flag.color.family" data-status="green" data-source="photo_agent · warn" data-value="v1.2.0 PHOTO-TRUTH REVERSAL CANDIDATE (CRITICAL): Phase 1 bench did not record color (operator missed). Phase 2 photo-resolved to 'Charcoal' (color_family = 'Gray', verdict = 'corrected'). HOWEVER this photo-intake pass reads color INDEPENDENTLY from photos — front + back + brand-tag + multiple care-tag frames all show consistent DARK NAVY BLUE hue (not charcoal-gray). Possible Phase 2 photo-resolution lighting misread (some indoor LED lighting can desaturate navy toward gray-charcoal range). RECOMMEND Phase 2 RECONSIDER: descriptors.color_observed 'Charcoal' → 'Navy' / color_family 'Gray' → 'Navy.' Photo-truth call per v1.2.0 rule."><div class="k">color.family</div><div class="v"><div class="copyblock"><span class="cb-val">v1.2.0 PHOTO-TRUTH REVERSAL CANDIDATE (CRITICAL): Phase 1 bench did not record color (operator missed). Phase 2 photo-resolved to 'Charcoal' (color_family = 'Gray', verdict = 'corrected'). HOWEVER this photo-intake pass reads color INDEPENDENTLY from photos — front + back + brand-tag + multiple care-tag frames all show consistent DARK NAVY BLUE hue (not charcoal-gray). Possible Phase 2 photo-resolution lighting misread (some indoor LED lighting can desaturate navy toward gray-charcoal range). RECOMMEND Phase 2 RECONSIDER: descriptors.color_observed 'Charcoal' → 'Navy' / color_family 'Gray' → 'Navy.' Photo-truth call per v1.2.0 rule.</span><button class="cb-btn" onclick="copyVal(this,'v1.2.0 PHOTO-TRUTH REVERSAL CANDIDATE (CRITICAL): Phase 1 bench did not record color (operator missed). Phase 2 photo-resolved to 'Charcoal' (color_family = 'Gray', verdict = 'corrected'). HOWEVER this photo-intake pass reads color INDEPENDENTLY from photos — front + back + brand-tag + multiple care-tag frames all show consistent DARK NAVY BLUE hue (not charcoal-gray). Possible Phase 2 photo-resolution lighting misread (some indoor LED lighting can desaturate navy toward gray-charcoal range). RECOMMEND Phase 2 RECONSIDER: descriptors.color_observed 'Charcoal' → 'Navy' / color_family 'Gray' → 'Navy.' Photo-truth call per v1.2.0 rule.')">copy</button></div></div><button class="conf green" onclick="openField('cc.flag.color.family')">&#10003;</button></div>
 <div class="row" data-field="cc.flag.external_namespace_finding_brand_status" data-status="green" data-source="photo_agent · warn" data-value="PHASE 2 BACKFILL CANDIDATE (CRITICAL): Phase 1/2 identity.brand.status = 'pending' with note 'RN 59405 → UNVERIFIED - no authoritative Theory RN match found via web search.' Photo evidence is QUADRUPLE-CONFIRMED for Theory: (a) brand-tag photo shows canonical 'Theory' wordmark in proprietary Theory typography + black satin tab construction; (b) care-tag-alt-1 explicitly prints 'MODÈLE: TRECCA 4 / Nº DE MODÈLE: KO20226' — TRECCA is a Theory canonical model code (Theory uses TLI/TLA/TRECCA/etc. style code conventions); (c) care-tag includes RN 59405 + CA 59262 — both regulatory codes consistent with Theory production records; (d) fabric blend (linen / viscose / elastane with 100% cotton pockets) matches Theory premium tailored trouser editorial range. RECOMMEND Phase 2 upgrade brand.status: 'pending' → 'verified' with status_source: 'Theory wordmark + TRECCA model code + RN/CA dual codes + Theory fabric editorial blend = quadruple photo confirmation.' Existing 'brand_pending_rn_recheck' flag can be cleared."><div class="k">external_namespace_finding_brand_status</div><div class="v"><div class="copyblock"><span class="cb-val">PHASE 2 BACKFILL CANDIDATE (CRITICAL): Phase 1/2 identity.brand.status = 'pending' with note 'RN 59405 → UNVERIFIED - no authoritative Theory RN match found via web search.' Photo evidence is QUADRUPLE-CONFIRMED for Theory: (a) brand-tag photo shows canonical 'Theory' wordmark in proprietary Theory typography + black satin tab construction; (b) care-tag-alt-1 explicitly prints 'MODÈLE: TRECCA 4 / Nº DE MODÈLE: KO20226' — TRECCA is a Theory canonical model code (Theory uses TLI/TLA/TRECCA/etc. style code conventions); (c) care-tag includes RN 59405 + CA 59262 — both regulatory codes consistent with Theory production records; (d) fabric blend (linen / viscose / elastane with 100% cotton pockets) matches Theory premium tailored trouser editorial range. RECOMMEND Phase 2 upgrade brand.status: 'pending' → 'verified' with status_source: 'Theory wordmark + TRECCA model code + RN/CA dual codes + Theory fabric editorial blend = quadruple photo confirmation.' Existing 'brand_pending_rn_recheck' flag can be cleared.</span><button class="cb-btn" onclick="copyVal(this,'PHASE 2 BACKFILL CANDIDATE (CRITICAL): Phase 1/2 identity.brand.status = 'pending' with note 'RN 59405 → UNVERIFIED - no authoritative Theory RN match found via web search.' Photo evidence is QUADRUPLE-CONFIRMED for Theory: (a) brand-tag photo shows canonical 'Theory' wordmark in proprietary Theory typography + black satin tab construction; (b) care-tag-alt-1 explicitly prints 'MODÈLE: TRECCA 4 / Nº DE MODÈLE: KO20226' — TRECCA is a Theory canonical model code (Theory uses TLI/TLA/TRECCA/etc. style code conventions); (c) care-tag includes RN 59405 + CA 59262 — both regulatory codes consistent with Theory production records; (d) fabric blend (linen / viscose / elastane with 100% cotton pockets) matches Theory premium tailored trouser editorial range. RECOMMEND Phase 2 upgrade brand.status: 'pending' → 'verified' with status_source: 'Theory wordmark + TRECCA model code + RN/CA dual codes + Theory fabric editorial blend = quadruple photo confirmation.' Existing 'brand_pending_rn_recheck' flag can be cleared.')">copy</button></div></div><button class="conf green" onclick="openField('cc.flag.external_namespace_finding_brand_status')">&#10003;</button></div>
 <div class="row" data-field="cc.flag.external_namespace_finding_model" data-status="green" data-source="photo_agent · warn" data-value="PHASE 2 BACKFILL CANDIDATE (CRITICAL): Phase 1 identity.model.value = null, status 'not_found' — but care-tag-alt-1 EXPLICITLY shows 'MODÈLE: TRECCA 4' (French panel) — TRECCA 4 / TRECCA4 is the Theory model name. RECOMMEND Phase 2 backfill identity.model.value = 'Trecca 4' (or 'Trecca') with status = 'confirmed' and source = 'Theory care-tag direct print MODÈLE: TRECCA 4 + lot code KO20226.' identity.id_codes.style_candidates [TRECCA4, KO20226] confirmed; promote primary style = 'TRECCA4' or model='Trecca 4'."><div class="k">external_namespace_finding_model</div><div class="v"><div class="copyblock"><span class="cb-val">PHASE 2 BACKFILL CANDIDATE (CRITICAL): Phase 1 identity.model.value = null, status 'not_found' — but care-tag-alt-1 EXPLICITLY shows 'MODÈLE: TRECCA 4' (French panel) — TRECCA 4 / TRECCA4 is the Theory model name. RECOMMEND Phase 2 backfill identity.model.value = 'Trecca 4' (or 'Trecca') with status = 'confirmed' and source = 'Theory care-tag direct print MODÈLE: TRECCA 4 + lot code KO20226.' identity.id_codes.style_candidates [TRECCA4, KO20226] confirmed; promote primary style = 'TRECCA4' or model='Trecca 4'.</span><button class="cb-btn" onclick="copyVal(this,'PHASE 2 BACKFILL CANDIDATE (CRITICAL): Phase 1 identity.model.value = null, status 'not_found' — but care-tag-alt-1 EXPLICITLY shows 'MODÈLE: TRECCA 4' (French panel) — TRECCA 4 / TRECCA4 is the Theory model name. RECOMMEND Phase 2 backfill identity.model.value = 'Trecca 4' (or 'Trecca') with status = 'confirmed' and source = 'Theory care-tag direct print MODÈLE: TRECCA 4 + lot code KO20226.' identity.id_codes.style_candidates [TRECCA4, KO20226] confirmed; promote primary style = 'TRECCA4' or model='Trecca 4'.')">copy</button></div></div><button class="conf green" onclick="openField('cc.flag.external_namespace_finding_model')">&#10003;</button></div>
@@ -423,7 +429,6 @@
 <div class="row" data-field="cc.flag.external_namespace_finding_full_serial" data-status="green" data-source="photo_agent · info" data-value="PHASE 2 BACKFILL CANDIDATE: style-code + style-code-alt-1 photos show Theory internal lot serial '50573758' (separate from model code TRECCA 4 and lot code KO20226). This is a third Theory internal SKU-system serial. Phase 2 could capture as identity.id_codes.lot_serial = '50573758' for complete Theory production-record reference."><div class="k">external_namespace_finding_full_serial</div><div class="v"><div class="copyblock"><span class="cb-val">PHASE 2 BACKFILL CANDIDATE: style-code + style-code-alt-1 photos show Theory internal lot serial '50573758' (separate from model code TRECCA 4 and lot code KO20226). This is a third Theory internal SKU-system serial. Phase 2 could capture as identity.id_codes.lot_serial = '50573758' for complete Theory production-record reference.</span><button class="cb-btn" onclick="copyVal(this,'PHASE 2 BACKFILL CANDIDATE: style-code + style-code-alt-1 photos show Theory internal lot serial '50573758' (separate from model code TRECCA 4 and lot code KO20226). This is a third Theory internal SKU-system serial. Phase 2 could capture as identity.id_codes.lot_serial = '50573758' for complete Theory production-record reference.')">copy</button></div></div><button class="conf green" onclick="openField('cc.flag.external_namespace_finding_full_serial')">&#10003;</button></div>
 <div class="row" data-field="cc.flag.aesthetic.luxury_tier_compound_eligibility" data-status="green" data-source="photo_agent · info" data-value="Theory = luxury-tier (per Vaughn kickoff roster). All luxury-tier compound gates passed: quietluxury APPLIED (canonical no-logo refined fit), linenluxury APPLIED (BOTH tier-gate AND material-gate pass — luxury brand + 52-72% linen content), softtailoring APPLIED (no tier gate; canon-perennial register). relaxedluxury CONSIDERED but skipped because compound is silhouette-specific to 'cashmere joggers / premium loungewear' relaxed register — slim trouser doesn't fit. This is the textbook luxury-tier triple-compound case (quietluxury + linenluxury + softtailoring) for a premium tailored linen-blend trouser."><div class="k">aesthetic.luxury_tier_compound_eligibility</div><div class="v"><div class="copyblock"><span class="cb-val">Theory = luxury-tier (per Vaughn kickoff roster). All luxury-tier compound gates passed: quietluxury APPLIED (canonical no-logo refined fit), linenluxury APPLIED (BOTH tier-gate AND material-gate pass — luxury brand + 52-72% linen content), softtailoring APPLIED (no tier gate; canon-perennial register). relaxedluxury CONSIDERED but skipped because compound is silhouette-specific to 'cashmere joggers / premium loungewear' relaxed register — slim trouser doesn't fit. This is the textbook luxury-tier triple-compound case (quietluxury + linenluxury + softtailoring) for a premium tailored linen-blend trouser.</span><button class="cb-btn" onclick="copyVal(this,'Theory = luxury-tier (per Vaughn kickoff roster). All luxury-tier compound gates passed: quietluxury APPLIED (canonical no-logo refined fit), linenluxury APPLIED (BOTH tier-gate AND material-gate pass — luxury brand + 52-72% linen content), softtailoring APPLIED (no tier gate; canon-perennial register). relaxedluxury CONSIDERED but skipped because compound is silhouette-specific to 'cashmere joggers / premium loungewear' relaxed register — slim trouser doesn't fit. This is the textbook luxury-tier triple-compound case (quietluxury + linenluxury + softtailoring) for a premium tailored linen-blend trouser.')">copy</button></div></div><button class="conf green" onclick="openField('cc.flag.aesthetic.luxury_tier_compound_eligibility')">&#10003;</button></div>
 <div class="row" data-field="cc.flag.closures.type" data-status="green" data-source="photo_agent · info" data-value="Closures.type set to 'Zipper-Hidden' at confidence 0.70 — front photo shows clean front panel with NO visible buttons / NO exposed fly stitching. Theory premium tailored women's pants conventionally use hidden side-zip OR center-front hidden zip; both are consistent. detail.jpg frame was BLURRY (unusable) and no specific closure close-up was captured. Flag for verification — closure may be 'Zipper-Hidden Side-Left' rather than 'Zipper-Hidden Front.'"><div class="k">closures.type</div><div class="v"><div class="copyblock"><span class="cb-val">Closures.type set to 'Zipper-Hidden' at confidence 0.70 — front photo shows clean front panel with NO visible buttons / NO exposed fly stitching. Theory premium tailored women's pants conventionally use hidden side-zip OR center-front hidden zip; both are consistent. detail.jpg frame was BLURRY (unusable) and no specific closure close-up was captured. Flag for verification — closure may be 'Zipper-Hidden Side-Left' rather than 'Zipper-Hidden Front.'</span><button class="cb-btn" onclick="copyVal(this,'Closures.type set to 'Zipper-Hidden' at confidence 0.70 — front photo shows clean front panel with NO visible buttons / NO exposed fly stitching. Theory premium tailored women's pants conventionally use hidden side-zip OR center-front hidden zip; both are consistent. detail.jpg frame was BLURRY (unusable) and no specific closure close-up was captured. Flag for verification — closure may be 'Zipper-Hidden Side-Left' rather than 'Zipper-Hidden Front.'')">copy</button></div></div><button class="conf green" onclick="openField('cc.flag.closures.type')">&#10003;</button></div>
-<div class="row" data-field="cc.flag.external_namespace_finding_garment_type" data-status="green" data-source="photo_agent · info" data-value="PHASE 2 / TITLE+ HINT: Phase 1 garment_type = 'Pants' (generic). Photo + brand evidence supports more specific 'Tailored Trousers' or 'Premium Linen-Blend Trousers' classification. Theory's editorial vocabulary uses 'pants' / 'trousers' / 'cropped trouser' interchangeably depending on cut — slim straight 26&quot; inseam + 6.5&quot; leg opening reads as 'Cropped Trouser' or 'Slim Straight Trouser.' Recommend Phase 2 backfill identity.garment_type more specific value or Title+ disambiguate."><div class="k">external_namespace_finding_garment_type</div><div class="v"><div class="copyblock"><span class="cb-val">PHASE 2 / TITLE+ HINT: Phase 1 garment_type = 'Pants' (generic). Photo + brand evidence supports more specific 'Tailored Trousers' or 'Premium Linen-Blend Trousers' classification. Theory's editorial vocabulary uses 'pants' / 'trousers' / 'cropped trouser' interchangeably depending on cut — slim straight 26&quot; inseam + 6.5&quot; leg opening reads as 'Cropped Trouser' or 'Slim Straight Trouser.' Recommend Phase 2 backfill identity.garment_type more specific value or Title+ disambiguate.</span><button class="cb-btn" onclick="copyVal(this,'PHASE 2 / TITLE+ HINT: Phase 1 garment_type = 'Pants' (generic). Photo + brand evidence supports more specific 'Tailored Trousers' or 'Premium Linen-Blend Trousers' classification. Theory's editorial vocabulary uses 'pants' / 'trousers' / 'cropped trouser' interchangeably depending on cut — slim straight 26&quot; inseam + 6.5&quot; leg opening reads as 'Cropped Trouser' or 'Slim Straight Trouser.' Recommend Phase 2 backfill identity.garment_type more specific value or Title+ disambiguate.')">copy</button></div></div><button class="conf green" onclick="openField('cc.flag.external_namespace_finding_garment_type')">&#10003;</button></div>
 <h4>Photo Reads (12)</h4>
 <details class="cc-photo-read"><summary>Front — Pants-1654-front.jpg</summary><div class="cc-read-body">Lay-flat front view of dark navy Theory premium tailored pants on clear plastic multi-clip hanger. Garment is stacked over a pair of medium-wash blue jeans (stacking context). Visible: clean smooth tailored fabric with subtle linen-blend texture, belt loops visible at waistband (two on visible left side), small black 'Theory' woven tab visible at front waistband interior (peeking). NO visible exterior buttons, NO exposed zip-fly stitching — premium hidden-closure construction. Both legs in slim straight-trouser cut to ankle (~6.5&quot; leg opening). Color reads DARK NAVY BLUE (not charcoal — see flag). Subtle fabric drape visible at thigh + knee.</div></details>
 <details class="cc-photo-read"><summary>Back — Pants-1654-back.jpg</summary><div class="cc-read-body">Lay-flat reverse view of same Theory pants flipped on hanger. CRITICAL FEATURE: ONE single welt back pocket visible on left rear (single-welt back-pocket = canonical Theory premium tailored trouser construction). Smooth back panel — no rear yoke, no decorative stitching. Belt loops continue around (visible at upper edge). Both legs continue in slim straight-trouser cut to ankle. Garment is layered over the same medium-wash blue jeans visible at hanger top and at ankles (stacking context for batch shoot). Color confirms DARK NAVY (not charcoal).</div></details>
@@ -450,7 +455,7 @@
       <h4>1 &middot; Item Details</h4>
       <div class="item-details-cols">
         <div class="item-details-left">
-          <div class="row" data-field="vendoo.brand" data-status="green" data-source="RN 59405 → UNVERIFIED - no authoritative Theory RN match found via web search (verified via FTC fallback web sources)" data-value="Theory"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Theory</span><button class="cb-btn" onclick="copyVal(this,'Theory')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.brand')">&#10003;</button></div>
+          <div class="row" data-field="vendoo.brand" data-status="green" data-source="RN corrected 2026-05-14 to 84416 via direct Cowork care-tag-alt-1 photo read. Theory Inc. documented RN 84416 matches care-tag (was previously OCR'd as 59405). Brand verified." data-value="Theory"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Theory</span><button class="cb-btn" onclick="copyVal(this,'Theory')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.brand')">&#10003;</button></div>
           <div class="row" data-field="vendoo.condition" data-options="NWT|NWOT|GPO (internal)|Pre-Loved (internal)|Fair (internal)|Pre-owned — Like New (eBay)|Pre-owned — Very Good (eBay)|Pre-owned — Good (eBay)|Pre-owned — Acceptable (eBay)|Like New (Vendoo)|Good (Vendoo)|Fair (Vendoo)|New with Tags (Vendoo)" data-status="green" data-source="Phase 1 intake &middot; GPO" data-value="GPO"><div class="k">Condition</div><div class="v"><div class="selectblock"><span class="sb-val">Pre-Owned - Good</span></div></div><button class="conf green" onclick="openField('vendoo.condition')">&#10003;</button></div>
           <div class="row" data-field="vendoo.color1" data-options="Black|White|Gray|Brown|Tan/Beige|Red|Orange|Yellow|Green|Blue|Purple|Pink|Multi|Print|Other" data-status="green" data-source="copy_capture" data-value="Navy"><div class="k">Primary Color</div><div class="v"><div class="selectblock"><span class="sb-val">Navy</span></div></div><button class="conf green" onclick="openField('vendoo.color1')">&#10003;</button></div>
           <div class="row" data-field="vendoo.color2" data-options="None|Black|White|Gray|Brown|Tan/Beige|Red|Orange|Yellow|Green|Blue|Purple|Pink|Multi|Print|Other" data-status="gray" data-source="copy_capture" data-value=""><div class="k">Secondary Color</div><div class="v"><div class="selectblock pending"><span class="sb-val">none</span></div></div><button class="conf gray" onclick="openField('vendoo.color2')">&minus;</button></div>
@@ -505,7 +510,7 @@
       <h4 style="margin-top:20px;padding-top:14px;border-top:2px solid var(--bd)">eBay &mdash; Top-Level Listing Fields</h4>
       <div class="grid">
         <div class="row" data-field="ebay.price" data-status="green" data-source="rrr-pricing &middot; eBay 75th &middot; medium confidence (n=6 90d)" data-value=""><div class="k">Price</div><div class="v"><div class="copyblock"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf green" onclick="openField('ebay.price')">&#10003;</button></div>
-        <div class="row" data-field="ebay.brand" data-status="green" data-source="RN 59405 → UNVERIFIED - no authoritative Theory RN match found via web search (verified via FTC fallback web sources)" data-value="Theory"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Theory</span><button class="cb-btn" onclick="copyVal(this,'Theory')">copy</button></div></div><button class="conf green" onclick="openField('ebay.brand')">&#10003;</button></div>
+        <div class="row" data-field="ebay.brand" data-status="green" data-source="RN corrected 2026-05-14 to 84416 via direct Cowork care-tag-alt-1 photo read. Theory Inc. documented RN 84416 matches care-tag (was previously OCR'd as 59405). Brand verified." data-value="Theory"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Theory</span><button class="cb-btn" onclick="copyVal(this,'Theory')">copy</button></div></div><button class="conf green" onclick="openField('ebay.brand')">&#10003;</button></div>
         <div class="row" data-field="ebay.color" data-status="green" data-source="copy_capture" data-value="Navy"><div class="k">Color</div><div class="v"><div class="selectblock"><span class="sb-val">Navy</span></div></div><button class="conf green" onclick="openField('ebay.color')">&#10003;</button></div>
         <div class="row" data-field="ebay.priceformat" data-options="Fixed Price|Auction" data-status="yellow" data-source="Default &middot; Buy It Now" data-value="Fixed Price &middot; —"><div class="k">Price Format</div><div class="v"><div class="selectblock"><span class="sb-val">Fixed Price &middot; —</span></div></div><button class="conf yellow" onclick="openField('ebay.priceformat')">&#9888;</button></div>
         <div class="row" data-field="ebay.bestoffer" data-options="Yes|No" data-status="gray" data-source="Policy decision &middot; not in JSON" data-value=""><div class="k">Allow Best Offer</div><div class="v"><div class="selectblock pending"><span class="sb-val">policy decision</span></div></div><button class="conf gray" onclick="openField('ebay.bestoffer')">&minus;</button></div>
@@ -547,9 +552,9 @@
     </div>
     <div class="sband-body">
       <div class="grid">
-        <div class="row" data-field="ref.brand" data-status="green" data-source="RN 59405 → UNVERIFIED - no authoritative Theory RN match found via web search (verified via FTC fallback web sources)" data-value="Theory"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Theory</span><button class="cb-btn" onclick="copyVal(this,'Theory')">copy</button></div></div><button class="conf green" onclick="openField('ref.brand')">&#10003;</button></div>
+        <div class="row" data-field="ref.brand" data-status="green" data-source="RN corrected 2026-05-14 to 84416 via direct Cowork care-tag-alt-1 photo read. Theory Inc. documented RN 84416 matches care-tag (was previously OCR'd as 59405). Brand verified." data-value="Theory"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Theory</span><button class="cb-btn" onclick="copyVal(this,'Theory')">copy</button></div></div><button class="conf green" onclick="openField('ref.brand')">&#10003;</button></div>
         <div class="row" data-field="ref.model" data-status="yellow" data-source="identity" data-value="—"><div class="k">Model</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'—')">copy</button></div></div><button class="conf yellow" onclick="openField('ref.model')">&#9888;</button></div>
-        <div class="row" data-field="ref.rn" data-status="green" data-source="brand tag" data-value="59405"><div class="k">RN</div><div class="v"><div class="copyblock "><span class="cb-val">59405</span><button class="cb-btn" onclick="copyVal(this,'59405')">copy</button></div></div><button class="conf green" onclick="openField('ref.rn')">&#10003;</button></div>
+        <div class="row" data-field="ref.rn" data-status="green" data-source="brand tag" data-value="84416"><div class="k">RN</div><div class="v"><div class="copyblock "><span class="cb-val">84416</span><button class="cb-btn" onclick="copyVal(this,'84416')">copy</button></div></div><button class="conf green" onclick="openField('ref.rn')">&#10003;</button></div>
         <div class="row" data-field="ref.style" data-status="gray" data-source="brand tag" data-value="—"><div class="k">Style Code</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'—')">copy</button></div></div><button class="conf gray" onclick="openField('ref.style')">&minus;</button></div>
         <div class="row" data-field="ref.category" data-status="green" data-source="Internal classification" data-value="Tops / Button-Down"><div class="k">Category</div><div class="v"><div class="selectblock"><span class="sb-val">Tops &rsaquo; Button-Down</span></div></div><button class="conf green" onclick="openField('ref.category')">&#10003;</button></div>
         <div class="row" data-field="cap.color" data-status="green" data-source="copy_capture" data-value="Navy"><div class="k">Color</div><div class="v"><div class="selectblock"><span class="sb-val">Navy</span></div></div><button class="conf green" onclick="openField('cap.color')">&#10003;</button></div>
@@ -640,7 +645,7 @@
 
   <footer>
     <span><strong>Host:</strong> GitHub Pages &middot; vmonagon/Revive-Restore-Resell</span>
-    <span><strong>Render:</strong> static &middot; v0.6 (sband redesign) &middot; 2026-05-13</span>
+    <span><strong>Render:</strong> static &middot; v0.6 (sband redesign) &middot; 2026-05-15</span>
   </footer>
 </div>
   <!-- ── 9. FLOW STEP tracker (preserved exactly) ── -->
@@ -661,7 +666,6 @@
       <span class="sband-badge" id="flagsCount">6</span>
     </div>
     <div class="sband-body">
-      <div class="flag-item" data-field="brand_pending_rn_recheck: RN 59405 may have OCR misread; reinspect care-tag"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('brand_pending_rn_recheck: RN 59405 may have OCR misread; reinspect care-tag')">brand_pending_rn_recheck: RN 59405 may have OCR misread; reinspect care-tag</span></div></div>
       <div class="flag-item" data-field="material_missing: care-tag photo did not show full material %; Title+ should note 'material not specified'"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('material_missing: care-tag photo did not show full material %; Title+ should note 'material not specified'')">material_missing: care-tag photo did not show full material %; Title+ should note 'material not specified'</span></div></div>
       <div class="flag-item" data-field="color.family"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('color.family')">color.family</span> — v1.2.0 PHOTO-TRUTH REVERSAL CANDIDATE (CRITICAL): Phase 1 bench did not record color (operator missed). Phase 2 photo-resolved to 'Charcoal' (color_family = 'Gray', verdict = 'corrected'). HOWEVER this photo-intake pass reads color INDEPENDENTLY from photos — front + back + brand-tag + multiple care-tag frames all show consistent DARK NAVY BLUE hue (not charcoal-gray). Possible Phase 2 photo-resolution lighting misread (some indoor LED lighting can desaturate navy toward gray-charcoal range). RECOMMEND Phase 2 RECONSIDER: descriptors.color_observed 'Charcoal' → 'Navy' / color_family 'Gray' → 'Navy.' Photo-truth call per v1.2.0 rule.</div></div>
       <div class="flag-item" data-field="external_namespace_finding_brand_status"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('external_namespace_finding_brand_status')">external_namespace_finding_brand_status</span> — PHASE 2 BACKFILL CANDIDATE (CRITICAL): Phase 1/2 identity.brand.status = 'pending' with note 'RN 59405 → UNVERIFIED - no authoritative Theory RN match found via web search.' Photo evidence is QUADRUPLE-CONFIRMED for Theory: (a) brand-tag photo shows canonical 'Theory' wordmark in proprietary Theory typography + black satin tab construction; (b) care-tag-alt-1 explicitly prints 'MODÈLE: TRECCA 4 / Nº DE MODÈLE: KO20226' — TRECCA is a Theory canonical model code (Theory uses TLI/TLA/TRECCA/etc. style code conventions); (c) care-tag includes RN 59405 + CA 59262 — both regulatory codes consistent with Theory production records; (d) fabric blend (linen / viscose / elastane with 100% cotton pockets) matches Theory premium tailored trouser editorial range. RECOMMEND Phase 2 upgrade brand.status: 'pending' → 'verified' with status_source: 'Theory wordmark + TRECCA model code + RN/CA dual codes + Theory fabric editorial blend = quadruple photo confirmation.' Existing 'brand_pending_rn_recheck' flag can be cleared.</div></div>
@@ -672,7 +676,6 @@
       <div class="flag-item" data-field="external_namespace_finding_full_serial"><span class="flag-sev info">INFO</span><div><span class="flag-link" onclick="openField('external_namespace_finding_full_serial')">external_namespace_finding_full_serial</span> — PHASE 2 BACKFILL CANDIDATE: style-code + style-code-alt-1 photos show Theory internal lot serial '50573758' (separate from model code TRECCA 4 and lot code KO20226). This is a third Theory internal SKU-system serial. Phase 2 could capture as identity.id_codes.lot_serial = '50573758' for complete Theory production-record reference.</div></div>
       <div class="flag-item" data-field="aesthetic.luxury_tier_compound_eligibility"><span class="flag-sev info">INFO</span><div><span class="flag-link" onclick="openField('aesthetic.luxury_tier_compound_eligibility')">aesthetic.luxury_tier_compound_eligibility</span> — Theory = luxury-tier (per Vaughn kickoff roster). All luxury-tier compound gates passed: quietluxury APPLIED (canonical no-logo refined fit), linenluxury APPLIED (BOTH tier-gate AND material-gate pass — luxury brand + 52-72% linen content), softtailoring APPLIED (no tier gate; canon-perennial register). relaxedluxury CONSIDERED but skipped because compound is silhouette-specific to 'cashmere joggers / premium loungewear' relaxed register — slim trouser doesn't fit. This is the textbook luxury-tier triple-compound case (quietluxury + linenluxury + softtailoring) for a premium tailored linen-blend trouser.</div></div>
       <div class="flag-item" data-field="closures.type"><span class="flag-sev info">INFO</span><div><span class="flag-link" onclick="openField('closures.type')">closures.type</span> — Closures.type set to 'Zipper-Hidden' at confidence 0.70 — front photo shows clean front panel with NO visible buttons / NO exposed fly stitching. Theory premium tailored women's pants conventionally use hidden side-zip OR center-front hidden zip; both are consistent. detail.jpg frame was BLURRY (unusable) and no specific closure close-up was captured. Flag for verification — closure may be 'Zipper-Hidden Side-Left' rather than 'Zipper-Hidden Front.'</div></div>
-      <div class="flag-item" data-field="external_namespace_finding_garment_type"><span class="flag-sev info">INFO</span><div><span class="flag-link" onclick="openField('external_namespace_finding_garment_type')">external_namespace_finding_garment_type</span> — PHASE 2 / TITLE+ HINT: Phase 1 garment_type = 'Pants' (generic). Photo + brand evidence supports more specific 'Tailored Trousers' or 'Premium Linen-Blend Trousers' classification. Theory's editorial vocabulary uses 'pants' / 'trousers' / 'cropped trouser' interchangeably depending on cut — slim straight 26&quot; inseam + 6.5&quot; leg opening reads as 'Cropped Trouser' or 'Slim Straight Trouser.' Recommend Phase 2 backfill identity.garment_type more specific value or Title+ disambiguate.</div></div>
     </div>
   </div>
 
@@ -910,7 +913,12 @@ function populateAuthors() {
 }
 
 function refreshSaveBtn() {
-  const pending = Object.values(state).filter(v => v && v.notes && v.notes.some(n => !n.exported)).length;
+  const pending = Object.values(state).filter(v =>
+    v && (
+      (v.notes && v.notes.some(n => !n.exported)) ||
+      (v.override !== undefined && !v.overrideExported)
+    )
+  ).length;
   const btn = document.getElementById('saveNotesBtn');
   const pc = document.getElementById('pcount');
   if (!btn) return;
@@ -1100,12 +1108,32 @@ function updateConfBadge(fieldPath) {
 }
 
 function exportHandcuff() {
-  const out = {};
+  const out = {
+    sku: SKU,
+    exported_at: new Date().toISOString().slice(0,19)
+  };
   Object.keys(state).forEach(k => {
     const s = state[k];
-    if (s && s.notes && s.notes.length) {
-      out[k] = {notes: s.notes, resolved: s.resolved || false};
+    if (!s) return;
+    const hasNotes = s.notes && s.notes.length;
+    const hasOverride = Object.prototype.hasOwnProperty.call(s, 'override');
+    if (!hasNotes && !hasOverride) return;
+    const entry = {};
+    if (hasOverride) {
+      // Pull the live displayed value at click-time, per spec.
+      const el = document.querySelector('.row[data-field="' + k + '"]');
+      let dispVal = s.override;
+      if (el) {
+        const node = el.querySelector('.cb-val') || el.querySelector('.sb-val');
+        if (node) dispVal = node.textContent;
+      }
+      entry.value = dispVal;
     }
+    if (hasNotes) {
+      entry.notes = s.notes;
+      entry.resolved = s.resolved || false;
+    }
+    out[k] = entry;
   });
   const blob = new Blob([JSON.stringify(out, null, 2)], {type:'application/json'});
   const url = URL.createObjectURL(blob);
@@ -1383,23 +1411,4 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="row-controls">From <select id="mdAuthor"></select></div>
         <textarea id="mdText" placeholder="Add a note for this field…" rows="3"></textarea>
         <div class="mb-actions">
-          <button class="primary" onclick="addNote()">Add Note</button>
-          <button class="resolve" id="mdResolveBtn" onclick="markResolved()">Mark Resolved</button>
-          <button class="reopen" id="mdReopenBtn" style="display:none" onclick="reopen()">Reopen</button>
-          <button onclick="closeModal()">Cancel</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ── Photo lightbox ── -->
-<div class="photo-lb-bd" id="photoLbBd" onclick="if(event.target===this)closePhotoLB()">
-  <button class="photo-lb-close" onclick="closePhotoLB()" aria-label="Close">&times;</button>
-  <img id="photoLbImg" src="" alt="" />
-  <div class="photo-lb-label" id="photoLbLabel"></div>
-</div>
-
-</div><!-- .wrap -->
-</body>
-</html>
+   

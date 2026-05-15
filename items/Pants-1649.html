@@ -275,6 +275,12 @@
     <span class="pill" style="border-color:var(--green-bd);background:var(--green-bg);color:#065f46;"><strong>Phase 2</strong>2026-05-12</span>
   </div></div>
 
+  <!-- ── Publish blocker (P2 SMC pending = Rule #135 publish-block) ── -->
+  
+
+  <!-- ── Operational flag (from latest matching _card_corrections[]) ── -->
+  
+
   <!-- ── 1. PHOTOS sband (collapsed) ── -->
   <div class="sband" id="sbandPhotos">
     <div class="sband-hdr" onclick="toggleBand(this)">
@@ -302,7 +308,7 @@
     <div class="sband-hdr" onclick="toggleBand(this)">
       <span class="sband-arrow">&#9658;</span>
       <span class="sband-label">Copy</span>
-      <span class="sband-badge">Title+ &check; &nbsp;|&nbsp; Desc+ &hellip; &nbsp;|&nbsp; KW+ &hellip;</span>
+      <span class="sband-badge">Title+ &hellip; &nbsp;|&nbsp; Desc+ &hellip; &nbsp;|&nbsp; KW+ &hellip;</span>
     </div>
     <div class="sband-body">
       <div class="cws-blocks">
@@ -312,19 +318,19 @@
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Title+</span>
             <span class="cwsb-meta">&#8212;&nbsp;chars</span>
-            <span class="cwsb-badge cws-pending">&#11015;&nbsp;Pending</span>
+            <span class="cwsb-badge cws-pending">&#9203;&nbsp;Pending</span>
           </div>
           <div class="cwsb-body">
-            <div class="cwsb-text" id="cws-title-display">Pending Phase 2</div>
+            <div class="cwsb-text" id="cws-title-display"></div>
             <div class="cwsb-click-hint">&#9998; Click to edit</div>
           </div>
         </div>
 
-        <!-- Description+ PENDING (rendered, pending Tracie review) -->
+        <!-- Description+ (state driven by copy.pending[]) -->
         <div class="cws-block cws-pending" id="cwsb-desc" style="cursor:default" role="region" aria-label="Description+">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Description+</span>
-            <span class="cwsb-badge cws-pending" id="cwsb-desc-badge">&#9203; Pending Review</span>
+            <span class="cwsb-badge cws-pending" id="cwsb-desc-badge">&#9203;&nbsp;Pending Review</span>
           </div>
           <div class="cwsb-body" style="display:flex;flex-direction:column;gap:8px">
 
@@ -332,10 +338,10 @@
             <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p1" onclick="cwsOpen('desc-p1')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P1 &middot; Opening Paragraph</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p1-badge">&#9203; Pending</span>
+                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p1-badge">&#9203;&nbsp;Pending</span>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p1-display">Pending Phase 2</div>
+                <div class="cwsb-text" id="cws-desc-p1-display"></div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
@@ -344,10 +350,10 @@
             <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p2" onclick="cwsOpen('desc-p2')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P2 &middot; SMC</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p2-badge">&#9203; Pending</span>
+                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p2-badge">&#9203;&nbsp;Pending</span>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p2-display">Pending Phase 2</div>
+                <div class="cwsb-text" id="cws-desc-p2-display"></div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
@@ -355,11 +361,11 @@
             <!-- P3 sub-block -->
             <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p3" onclick="cwsOpen('desc-p3')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
-                <span class="cws-subblock-skill">P3 &middot; Service Block</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p3-badge">&#9203; Pending</span>
+                <span class="cws-subblock-skill">P3 &middot; Badges</span>
+                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p3-badge">&#9203;&nbsp;Pending</span>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p3-display">Pending Phase 2</div>
+                <div class="cwsb-text" id="cws-desc-p3-display"></div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
@@ -367,14 +373,14 @@
           </div>
         </div>
 
-        <!-- Keyword+ PENDING (rendered, pending Tracie review) -->
+        <!-- Keyword+ (state driven by copy.pending[] / keywords presence) -->
         <div class="cws-block cws-pending" id="cwsb-kw" onclick="cwsOpen('kw')" role="button" tabindex="0">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Keyword+</span>
-            <span class="cwsb-badge cws-pending">&#9203; Pending Review</span>
+            <span class="cwsb-badge cws-pending">&#9203;&nbsp;Pending Review</span>
           </div>
           <div class="cwsb-body">
-            <div class="cwsb-text" id="cws-kw-display">Pending Phase 2</div>
+            <div class="cwsb-text" id="cws-kw-display"></div>
             <div class="cwsb-click-hint">&#9998; Click to edit</div>
           </div>
         </div>
@@ -630,7 +636,7 @@
 
   <footer>
     <span><strong>Host:</strong> GitHub Pages &middot; vmonagon/Revive-Restore-Resell</span>
-    <span><strong>Render:</strong> static &middot; v0.6 (sband redesign) &middot; 2026-05-13</span>
+    <span><strong>Render:</strong> static &middot; v0.6 (sband redesign) &middot; 2026-05-15</span>
   </footer>
 </div>
   <!-- ── 9. FLOW STEP tracker (preserved exactly) ── -->
@@ -651,7 +657,6 @@
       <span class="sband-badge" id="flagsCount">6</span>
     </div>
     <div class="sband-body">
-      <div class="flag-item" data-field="brand_corrected_from_rn_lookup: bench Levi's → tag RN says Indigo Blue maternity"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('brand_corrected_from_rn_lookup: bench Levi's → tag RN says Indigo Blue maternity')">brand_corrected_from_rn_lookup: bench Levi's → tag RN says Indigo Blue maternity</span></div></div>
       <div class="flag-item" data-field="color.family"><span class="flag-sev info">INFO</span><div><span class="flag-link" onclick="openField('color.family')">color.family</span> — v1.2.0 photo-truth rule applied. Bench operator captured color = 'Indigo Blue' (brand-name overlap), Phase 2 resolved descriptors.color_observed = 'Indigo blue' / color_family = 'Blue.' Photo-intake independently confirms color.family = 'Blue' with specific = 'medium indigo wash' (the wash is medium-indigo on body — NOT the dark-indigo register of e.g. Pants-1636 L'AGENCE). High-confidence visual match. Two-tone secondary 'Navy' added for belly-panel coverage.</div></div>
       <div class="flag-item" data-field="external_namespace_finding_material_pct_parse_error"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('external_namespace_finding_material_pct_parse_error')">external_namespace_finding_material_pct_parse_error</span> — PHASE 2 BACKFILL CANDIDATE (CRITICAL): Phase 1 descriptors.material_pct = '98% Cotton, 2% Spandex, 84% Nylon' — this concatenation is PARSE-INCOMPLETE. The actual care-tag-alt-1 photo shows TWO distinct fabric specs (differentiated panel construction): (a) BODY: 98% Cotton / 2% Spandex; (b) BELLY PANEL: 84% Nylon / 16% Elastane. Current Phase 1 string lost the belly panel's 16% Elastane spec. RECOMMEND Phase 2 backfill descriptors.material_pct = 'Body: 98% Cotton, 2% Spandex; Belly Panel: 84% Nylon, 16% Elastane' OR split to descriptors.material_pct_body and descriptors.material_pct_belly. Mirrors Pants-1633 TNF differentiated-panel pattern. Critical for accurate Title+/Description+ fabric-content positioning.</div></div>
       <div class="flag-item" data-field="external_namespace_finding_brand_resolution_confirm"><span class="flag-sev info">INFO</span><div><span class="flag-link" onclick="openField('external_namespace_finding_brand_resolution_confirm')">external_namespace_finding_brand_resolution_confirm</span> — PHASE 2 BRAND RESOLUTION CONFIRMED: Phase 1 _card_corrections logs Phase 2 brand correction 'Levi's' (bench-mistaken) → 'Indigo Blue' via RN 79913 → Motherhood Maternity / Destination Maternity Corp. Size-tag photo INDEPENDENTLY confirms 'INDIGO BLUE' woven brand wordmark on size/country tag. Care-tag-alt-1 confirms RN 79913 + Secret Fit Belly trademark (Destination Maternity proprietary tech). Brand resolution is solid. Note: 'Indigo Blue' is the Motherhood Maternity sub-brand specifically for denim — this is a labeling convention nuance Title+ should know (parent brand is Motherhood Maternity / Destination Maternity, line/sub-brand is Indigo Blue for denim).</div></div>
@@ -896,7 +901,12 @@ function populateAuthors() {
 }
 
 function refreshSaveBtn() {
-  const pending = Object.values(state).filter(v => v && v.notes && v.notes.some(n => !n.exported)).length;
+  const pending = Object.values(state).filter(v =>
+    v && (
+      (v.notes && v.notes.some(n => !n.exported)) ||
+      (v.override !== undefined && !v.overrideExported)
+    )
+  ).length;
   const btn = document.getElementById('saveNotesBtn');
   const pc = document.getElementById('pcount');
   if (!btn) return;
@@ -1086,12 +1096,32 @@ function updateConfBadge(fieldPath) {
 }
 
 function exportHandcuff() {
-  const out = {};
+  const out = {
+    sku: SKU,
+    exported_at: new Date().toISOString().slice(0,19)
+  };
   Object.keys(state).forEach(k => {
     const s = state[k];
-    if (s && s.notes && s.notes.length) {
-      out[k] = {notes: s.notes, resolved: s.resolved || false};
+    if (!s) return;
+    const hasNotes = s.notes && s.notes.length;
+    const hasOverride = Object.prototype.hasOwnProperty.call(s, 'override');
+    if (!hasNotes && !hasOverride) return;
+    const entry = {};
+    if (hasOverride) {
+      // Pull the live displayed value at click-time, per spec.
+      const el = document.querySelector('.row[data-field="' + k + '"]');
+      let dispVal = s.override;
+      if (el) {
+        const node = el.querySelector('.cb-val') || el.querySelector('.sb-val');
+        if (node) dispVal = node.textContent;
+      }
+      entry.value = dispVal;
     }
+    if (hasNotes) {
+      entry.notes = s.notes;
+      entry.resolved = s.resolved || false;
+    }
+    out[k] = entry;
   });
   const blob = new Blob([JSON.stringify(out, null, 2)], {type:'application/json'});
   const url = URL.createObjectURL(blob);
@@ -1369,23 +1399,4 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="row-controls">From <select id="mdAuthor"></select></div>
         <textarea id="mdText" placeholder="Add a note for this field…" rows="3"></textarea>
         <div class="mb-actions">
-          <button class="primary" onclick="addNote()">Add Note</button>
-          <button class="resolve" id="mdResolveBtn" onclick="markResolved()">Mark Resolved</button>
-          <button class="reopen" id="mdReopenBtn" style="display:none" onclick="reopen()">Reopen</button>
-          <button onclick="closeModal()">Cancel</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ── Photo lightbox ── -->
-<div class="photo-lb-bd" id="photoLbBd" onclick="if(event.target===this)closePhotoLB()">
-  <button class="photo-lb-close" onclick="closePhotoLB()" aria-label="Close">&times;</button>
-  <img id="photoLbImg" src="" alt="" />
-  <div class="photo-lb-label" id="photoLbLabel"></div>
-</div>
-
-</div><!-- .wrap -->
-</body>
-</html>
+   

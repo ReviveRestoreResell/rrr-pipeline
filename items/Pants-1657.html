@@ -275,6 +275,12 @@
     <span class="pill" style="border-color:var(--green-bd);background:var(--green-bg);color:#065f46;"><strong>Phase 2</strong>2026-05-12</span>
   </div></div>
 
+  <!-- ── Publish blocker (P2 SMC pending = Rule #135 publish-block) ── -->
+  
+
+  <!-- ── Operational flag (from latest matching _card_corrections[]) ── -->
+  
+
   <!-- ── 1. PHOTOS sband (collapsed) ── -->
   <div class="sband" id="sbandPhotos">
     <div class="sband-hdr" onclick="toggleBand(this)">
@@ -306,7 +312,7 @@
     <div class="sband-hdr" onclick="toggleBand(this)">
       <span class="sband-arrow">&#9658;</span>
       <span class="sband-label">Copy</span>
-      <span class="sband-badge">Title+ &check; &nbsp;|&nbsp; Desc+ &hellip; &nbsp;|&nbsp; KW+ &hellip;</span>
+      <span class="sband-badge">Title+ &hellip; &nbsp;|&nbsp; Desc+ &hellip; &nbsp;|&nbsp; KW+ &hellip;</span>
     </div>
     <div class="sband-body">
       <div class="cws-blocks">
@@ -316,19 +322,19 @@
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Title+</span>
             <span class="cwsb-meta">&#8212;&nbsp;chars</span>
-            <span class="cwsb-badge cws-pending">&#11015;&nbsp;Pending</span>
+            <span class="cwsb-badge cws-pending">&#9203;&nbsp;Pending</span>
           </div>
           <div class="cwsb-body">
-            <div class="cwsb-text" id="cws-title-display">Pending Phase 2</div>
+            <div class="cwsb-text" id="cws-title-display"></div>
             <div class="cwsb-click-hint">&#9998; Click to edit</div>
           </div>
         </div>
 
-        <!-- Description+ PENDING (rendered, pending Tracie review) -->
+        <!-- Description+ (state driven by copy.pending[]) -->
         <div class="cws-block cws-pending" id="cwsb-desc" style="cursor:default" role="region" aria-label="Description+">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Description+</span>
-            <span class="cwsb-badge cws-pending" id="cwsb-desc-badge">&#9203; Pending Review</span>
+            <span class="cwsb-badge cws-pending" id="cwsb-desc-badge">&#9203;&nbsp;Pending Review</span>
           </div>
           <div class="cwsb-body" style="display:flex;flex-direction:column;gap:8px">
 
@@ -336,10 +342,10 @@
             <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p1" onclick="cwsOpen('desc-p1')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P1 &middot; Opening Paragraph</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p1-badge">&#9203; Pending</span>
+                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p1-badge">&#9203;&nbsp;Pending</span>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p1-display">Pending Phase 2</div>
+                <div class="cwsb-text" id="cws-desc-p1-display"></div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
@@ -348,10 +354,10 @@
             <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p2" onclick="cwsOpen('desc-p2')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P2 &middot; SMC</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p2-badge">&#9203; Pending</span>
+                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p2-badge">&#9203;&nbsp;Pending</span>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p2-display">Pending Phase 2</div>
+                <div class="cwsb-text" id="cws-desc-p2-display"></div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
@@ -359,11 +365,11 @@
             <!-- P3 sub-block -->
             <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p3" onclick="cwsOpen('desc-p3')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
-                <span class="cws-subblock-skill">P3 &middot; Service Block</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p3-badge">&#9203; Pending</span>
+                <span class="cws-subblock-skill">P3 &middot; Badges</span>
+                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p3-badge">&#9203;&nbsp;Pending</span>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p3-display">Pending Phase 2</div>
+                <div class="cwsb-text" id="cws-desc-p3-display"></div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
@@ -371,14 +377,14 @@
           </div>
         </div>
 
-        <!-- Keyword+ PENDING (rendered, pending Tracie review) -->
+        <!-- Keyword+ (state driven by copy.pending[] / keywords presence) -->
         <div class="cws-block cws-pending" id="cwsb-kw" onclick="cwsOpen('kw')" role="button" tabindex="0">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Keyword+</span>
-            <span class="cwsb-badge cws-pending">&#9203; Pending Review</span>
+            <span class="cwsb-badge cws-pending">&#9203;&nbsp;Pending Review</span>
           </div>
           <div class="cwsb-body">
-            <div class="cwsb-text" id="cws-kw-display">Pending Phase 2</div>
+            <div class="cwsb-text" id="cws-kw-display"></div>
             <div class="cwsb-click-hint">&#9998; Click to edit</div>
           </div>
         </div>
@@ -413,7 +419,7 @@
 <div class="row" data-field="cc.gate.linenluxury" data-status="green" data-source="tier_gate" data-value="REJECTED"><div class="k">linenluxury</div><div class="v"><div class="copyblock"><span class="cb-val">REJECTED</span><button class="cb-btn" onclick="copyVal(this,'REJECTED')">copy</button></div></div><button class="conf green" onclick="openField('cc.gate.linenluxury')">&#10003;</button></div>
 <div class="row" data-field="cc.gate.quietluxury" data-status="green" data-source="tier_gate" data-value="REJECTED"><div class="k">quietluxury</div><div class="v"><div class="copyblock"><span class="cb-val">REJECTED</span><button class="cb-btn" onclick="copyVal(this,'REJECTED')">copy</button></div></div><button class="conf green" onclick="openField('cc.gate.quietluxury')">&#10003;</button></div>
 <div class="row" data-field="cc.gate.slowfashion" data-status="green" data-source="tier_gate" data-value="REJECTED"><div class="k">slowfashion</div><div class="v"><div class="copyblock"><span class="cb-val">REJECTED</span><button class="cb-btn" onclick="copyVal(this,'REJECTED')">copy</button></div></div><button class="conf green" onclick="openField('cc.gate.slowfashion')">&#10003;</button></div>
-<h4>Agent Flags (9)</h4>
+<h4>Agent Flags (8)</h4>
 <div class="row" data-field="cc.flag.external_namespace_finding_material_pct" data-status="green" data-source="photo_agent · warn" data-value="PHASE 2 BACKFILL CANDIDATE (CRITICAL): Phase 2 descriptors.material_pct = null + material_missing flag raised. Care-tag photo CLEARLY shows fiber content: '53% LINEN / 24% COTTON / 21% VISCOSE / 2% ELASTANE.' RECOMMEND Phase 2 backfill descriptors.material_pct = '53% Linen, 24% Cotton, 21% Viscose, 2% Elastane' and CLEAR material_missing flag. RESOLVES open Phase 2 flag. Premium-mid linen-blend with stretch."><div class="k">external_namespace_finding_material_pct</div><div class="v"><div class="copyblock"><span class="cb-val">PHASE 2 BACKFILL CANDIDATE (CRITICAL): Phase 2 descriptors.material_pct = null + material_missing flag raised. Care-tag photo CLEARLY shows fiber content: '53% LINEN / 24% COTTON / 21% VISCOSE / 2% ELASTANE.' RECOMMEND Phase 2 backfill descriptors.material_pct = '53% Linen, 24% Cotton, 21% Viscose, 2% Elastane' and CLEAR material_missing flag. RESOLVES open Phase 2 flag. Premium-mid linen-blend with stretch.</span><button class="cb-btn" onclick="copyVal(this,'PHASE 2 BACKFILL CANDIDATE (CRITICAL): Phase 2 descriptors.material_pct = null + material_missing flag raised. Care-tag photo CLEARLY shows fiber content: '53% LINEN / 24% COTTON / 21% VISCOSE / 2% ELASTANE.' RECOMMEND Phase 2 backfill descriptors.material_pct = '53% Linen, 24% Cotton, 21% Viscose, 2% Elastane' and CLEAR material_missing flag. RESOLVES open Phase 2 flag. Premium-mid linen-blend with stretch.')">copy</button></div></div><button class="conf green" onclick="openField('cc.flag.external_namespace_finding_material_pct')">&#10003;</button></div>
 <div class="row" data-field="cc.flag.external_namespace_finding_stretch_flag" data-status="green" data-source="photo_agent · warn" data-value="PHASE 2 BACKFILL CANDIDATE (CRITICAL): Per RRR stretch rule v2 LOCKED — ANY presence of spandex/elastane/lycra triggers stretch_flag = true. CONFIRMED 2% ELASTANE in body composition per care-tag photo. Phase 2 currently has NO descriptors.stretch_flag value (omitted from field_changes). RECOMMEND Phase 2 backfill descriptors.stretch_flag = true / stretch_fabric note = 'low-stretch linen-blend, 2% elastane.' Note: AE retail brand-tag in Phase 1 photo_read identifies this as 'STRETCH' sub-line — SKU card shows 'Stretch · Size Small' — but stretch_flag was not propagated to descriptors block."><div class="k">external_namespace_finding_stretch_flag</div><div class="v"><div class="copyblock"><span class="cb-val">PHASE 2 BACKFILL CANDIDATE (CRITICAL): Per RRR stretch rule v2 LOCKED — ANY presence of spandex/elastane/lycra triggers stretch_flag = true. CONFIRMED 2% ELASTANE in body composition per care-tag photo. Phase 2 currently has NO descriptors.stretch_flag value (omitted from field_changes). RECOMMEND Phase 2 backfill descriptors.stretch_flag = true / stretch_fabric note = 'low-stretch linen-blend, 2% elastane.' Note: AE retail brand-tag in Phase 1 photo_read identifies this as 'STRETCH' sub-line — SKU card shows 'Stretch · Size Small' — but stretch_flag was not propagated to descriptors block.</span><button class="cb-btn" onclick="copyVal(this,'PHASE 2 BACKFILL CANDIDATE (CRITICAL): Per RRR stretch rule v2 LOCKED — ANY presence of spandex/elastane/lycra triggers stretch_flag = true. CONFIRMED 2% ELASTANE in body composition per care-tag photo. Phase 2 currently has NO descriptors.stretch_flag value (omitted from field_changes). RECOMMEND Phase 2 backfill descriptors.stretch_flag = true / stretch_fabric note = 'low-stretch linen-blend, 2% elastane.' Note: AE retail brand-tag in Phase 1 photo_read identifies this as 'STRETCH' sub-line — SKU card shows 'Stretch · Size Small' — but stretch_flag was not propagated to descriptors block.')">copy</button></div></div><button class="conf green" onclick="openField('cc.flag.external_namespace_finding_stretch_flag')">&#10003;</button></div>
 <div class="row" data-field="cc.flag.external_namespace_finding_silhouette_pull_on" data-status="green" data-source="photo_agent · info" data-value="PHASE 2 / TITLE+ HINT: Front photo confirms PULL-ON construction (smocked elastic waistband + drawstring tie + NO zip/button). Phase 1 garment_type = 'Stretch pants' / structured_fields.cut = null. RECOMMEND Phase 2 backfill structured_fields.cut = 'Pull-On Drawstring' or 'Relaxed Pull-On' for buyer-search differentiation. 'AE Stretch' / 'Pull-On Linen-Blend Pants' is the Title+ register for this item."><div class="k">external_namespace_finding_silhouette_pull_on</div><div class="v"><div class="copyblock"><span class="cb-val">PHASE 2 / TITLE+ HINT: Front photo confirms PULL-ON construction (smocked elastic waistband + drawstring tie + NO zip/button). Phase 1 garment_type = 'Stretch pants' / structured_fields.cut = null. RECOMMEND Phase 2 backfill structured_fields.cut = 'Pull-On Drawstring' or 'Relaxed Pull-On' for buyer-search differentiation. 'AE Stretch' / 'Pull-On Linen-Blend Pants' is the Title+ register for this item.</span><button class="cb-btn" onclick="copyVal(this,'PHASE 2 / TITLE+ HINT: Front photo confirms PULL-ON construction (smocked elastic waistband + drawstring tie + NO zip/button). Phase 1 garment_type = 'Stretch pants' / structured_fields.cut = null. RECOMMEND Phase 2 backfill structured_fields.cut = 'Pull-On Drawstring' or 'Relaxed Pull-On' for buyer-search differentiation. 'AE Stretch' / 'Pull-On Linen-Blend Pants' is the Title+ register for this item.')">copy</button></div></div><button class="conf green" onclick="openField('cc.flag.external_namespace_finding_silhouette_pull_on')">&#10003;</button></div>
@@ -422,7 +428,6 @@
 <div class="row" data-field="cc.flag.external_namespace_finding_back_pocket_signature" data-status="green" data-source="photo_agent · info" data-value="PHASE 2 / TITLE+ HINT: Back photo shows TWO patch back pockets with embroidered American Eagle eagle/swoop stitched signature on each pocket (tone-on-tone embroidery, canonical AE back-pocket signature). This is brand-authentication evidence + buyer-search asset ('American Eagle pants with eagle logo'). Phase 2 verification already confirmed brand; this is reinforcement evidence."><div class="k">external_namespace_finding_back_pocket_signature</div><div class="v"><div class="copyblock"><span class="cb-val">PHASE 2 / TITLE+ HINT: Back photo shows TWO patch back pockets with embroidered American Eagle eagle/swoop stitched signature on each pocket (tone-on-tone embroidery, canonical AE back-pocket signature). This is brand-authentication evidence + buyer-search asset ('American Eagle pants with eagle logo'). Phase 2 verification already confirmed brand; this is reinforcement evidence.</span><button class="cb-btn" onclick="copyVal(this,'PHASE 2 / TITLE+ HINT: Back photo shows TWO patch back pockets with embroidered American Eagle eagle/swoop stitched signature on each pocket (tone-on-tone embroidery, canonical AE back-pocket signature). This is brand-authentication evidence + buyer-search asset ('American Eagle pants with eagle logo'). Phase 2 verification already confirmed brand; this is reinforcement evidence.')">copy</button></div></div><button class="conf green" onclick="openField('cc.flag.external_namespace_finding_back_pocket_signature')">&#10003;</button></div>
 <div class="row" data-field="cc.flag.external_namespace_finding_pricing_anchors" data-status="green" data-source="photo_agent · info" data-value="PRICING WORKSTREAM SIGNAL: AE NWT hangtag shows original retail = $59.95 USD / $74.95 CAD. Phase 2 condition.label = NWT (confirmed by attached hangtag + price sticker + 'wash before wear'-equivalent care tag). Acquisition cost $3.00 = excellent margin position. MSRP $60 anchors pricing skill premium-mid baseline."><div class="k">external_namespace_finding_pricing_anchors</div><div class="v"><div class="copyblock"><span class="cb-val">PRICING WORKSTREAM SIGNAL: AE NWT hangtag shows original retail = $59.95 USD / $74.95 CAD. Phase 2 condition.label = NWT (confirmed by attached hangtag + price sticker + 'wash before wear'-equivalent care tag). Acquisition cost $3.00 = excellent margin position. MSRP $60 anchors pricing skill premium-mid baseline.</span><button class="cb-btn" onclick="copyVal(this,'PRICING WORKSTREAM SIGNAL: AE NWT hangtag shows original retail = $59.95 USD / $74.95 CAD. Phase 2 condition.label = NWT (confirmed by attached hangtag + price sticker + 'wash before wear'-equivalent care tag). Acquisition cost $3.00 = excellent margin position. MSRP $60 anchors pricing skill premium-mid baseline.')">copy</button></div></div><button class="conf green" onclick="openField('cc.flag.external_namespace_finding_pricing_anchors')">&#10003;</button></div>
 <div class="row" data-field="cc.flag.external_namespace_finding_full_style_codes" data-status="green" data-source="photo_agent · info" data-value="PHASE 2 BACKFILL CANDIDATE: Phase 2 style_candidates [AEM12060SU9A, S080]. Style-code photo provides FULL forms: AEM12060SU9A (RFC# / care-tag style code) + S080-0002 (NWT hangtag style ID) + UPC 4 00426 67634 4 + production code 7F19 + 6201097815 (waistband serial) + production date 02/25. Phase 2 could organize as identity.id_codes.style = 'AEM12060SU9A' (care-tag form) + identity.id_codes.style_alt = 'S080-0002' (NWT form) + identity.id_codes.upc = '400426676344'."><div class="k">external_namespace_finding_full_style_codes</div><div class="v"><div class="copyblock"><span class="cb-val">PHASE 2 BACKFILL CANDIDATE: Phase 2 style_candidates [AEM12060SU9A, S080]. Style-code photo provides FULL forms: AEM12060SU9A (RFC# / care-tag style code) + S080-0002 (NWT hangtag style ID) + UPC 4 00426 67634 4 + production code 7F19 + 6201097815 (waistband serial) + production date 02/25. Phase 2 could organize as identity.id_codes.style = 'AEM12060SU9A' (care-tag form) + identity.id_codes.style_alt = 'S080-0002' (NWT form) + identity.id_codes.upc = '400426676344'.</span><button class="cb-btn" onclick="copyVal(this,'PHASE 2 BACKFILL CANDIDATE: Phase 2 style_candidates [AEM12060SU9A, S080]. Style-code photo provides FULL forms: AEM12060SU9A (RFC# / care-tag style code) + S080-0002 (NWT hangtag style ID) + UPC 4 00426 67634 4 + production code 7F19 + 6201097815 (waistband serial) + production date 02/25. Phase 2 could organize as identity.id_codes.style = 'AEM12060SU9A' (care-tag form) + identity.id_codes.style_alt = 'S080-0002' (NWT form) + identity.id_codes.upc = '400426676344'.')">copy</button></div></div><button class="conf green" onclick="openField('cc.flag.external_namespace_finding_full_style_codes')">&#10003;</button></div>
-<div class="row" data-field="cc.flag.aesthetic.linen_compound_tier_gate_call" data-status="green" data-source="photo_agent · info" data-value="Tier-gate logged: linenluxury compound CONSIDERED but rejected — linen content (53%) qualifies material gate, BUT American Eagle is mass-tier (not on luxury roster). Same call as Pants-1653 Old Navy linen-blend (material qualifies, tier fails). softtailoring (no tier gate) + coastalcasual + earthtone APPLIED as appropriate canon-match. Note: AE 'Stretch' linen-blend at $60 MSRP is premium-mid territory but still distinctly mass-tier vs. Theory/Aritzia luxury-linen anchor brands."><div class="k">aesthetic.linen_compound_tier_gate_call</div><div class="v"><div class="copyblock"><span class="cb-val">Tier-gate logged: linenluxury compound CONSIDERED but rejected — linen content (53%) qualifies material gate, BUT American Eagle is mass-tier (not on luxury roster). Same call as Pants-1653 Old Navy linen-blend (material qualifies, tier fails). softtailoring (no tier gate) + coastalcasual + earthtone APPLIED as appropriate canon-match. Note: AE 'Stretch' linen-blend at $60 MSRP is premium-mid territory but still distinctly mass-tier vs. Theory/Aritzia luxury-linen anchor brands.</span><button class="cb-btn" onclick="copyVal(this,'Tier-gate logged: linenluxury compound CONSIDERED but rejected — linen content (53%) qualifies material gate, BUT American Eagle is mass-tier (not on luxury roster). Same call as Pants-1653 Old Navy linen-blend (material qualifies, tier fails). softtailoring (no tier gate) + coastalcasual + earthtone APPLIED as appropriate canon-match. Note: AE 'Stretch' linen-blend at $60 MSRP is premium-mid territory but still distinctly mass-tier vs. Theory/Aritzia luxury-linen anchor brands.')">copy</button></div></div><button class="conf green" onclick="openField('cc.flag.aesthetic.linen_compound_tier_gate_call')">&#10003;</button></div>
 <h4>Photo Reads (10)</h4>
 <details class="cc-photo-read"><summary>Front — Pants-1657-front.jpg</summary><div class="cc-read-body">Lay-flat front view of warm brown / taupe American Eagle drawstring pull-on pants on multi-clip hanger. Visible at top of front waistband: embroidered 'AMERICAN EAGLE' wordmark stitched directly into the smocked waistband fabric (decorative brand identifier, tone-on-tone). Smocked elastic waistband + drawstring tie construction (no zip, no button). NWT white American Eagle hangtag clipped at left waistband with barcode visible. Front pockets implied as slash pockets (visible pocket-opening lines at hip). Both legs in relaxed-straight cut continuing to ankle. Stacked over medium-wash blue jeans (batch shoot stacking). Color reads WARM BROWN/TAUPE with subtle dye variation across leg panels (the 'unique wash' the marketing tag describes is visible).</div></details>
 <details class="cc-photo-read"><summary>Back — Pants-1657-back.jpg</summary><div class="cc-read-body">Lay-flat reverse view of same AE pants flipped on multi-clip hanger. TWO PATCH BACK POCKETS visible — both feature embroidered American Eagle eagle/swoop stitched logo at upper-center (CANONICAL AE BACK POCKET SIGNATURE — small flying-eagle silhouette stitched in matching thread). Smocked elastic waistband continues around rear (visible shirring at upper edge). Both legs continue in relaxed-straight cut. Color uniform with front (warm brown/taupe). Stacked over medium-wash jeans (batch shoot stacking).</div></details>
@@ -562,15 +567,15 @@
     <div class="sband-hdr" onclick="toggleBand(this)">
       <span class="sband-arrow">&#9658;</span>
       <span class="sband-label">Measurements</span>
-      <span class="sband-badge">Hip 16&Prime; &middot; Inseam 11&Prime; &middot; Rise 20&Prime; &middot; Leg 12&Prime;</span>
+      <span class="sband-badge">Hip 16&Prime; &middot; Inseam 20&Prime; &middot; Rise 11&Prime; &middot; Leg 12&Prime;</span>
     </div>
     <div class="sband-body">
       <div style="font-size:11px;color:var(--ink-mute);margin-bottom:10px">Lay-flat unstretched &middot; all measurements in inches</div>
       <div class="grid">
         <div class="row" data-field="ref.waist" data-status="gray" data-source="Bench 2026-05-08" data-value=""><div class="k">Waist (Full)</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf gray" onclick="openField('ref.waist')">&minus;</button></div>
         <div class="row" data-field="ref.hip" data-status="green" data-source="Bench 2026-05-08" data-value="16"><div class="k">Hip (Flat)</div><div class="v"><div class="copyblock"><span class="cb-val">16 in</span><button class="cb-btn" onclick="copyVal(this,'16')">copy</button></div></div><button class="conf green" onclick="openField('ref.hip')">&#10003;</button></div>
-        <div class="row" data-field="ref.inseam" data-status="green" data-source="Bench 2026-05-08" data-value="11"><div class="k">Inseam (Full length)</div><div class="v"><div class="copyblock"><span class="cb-val">11 in</span><button class="cb-btn" onclick="copyVal(this,'11')">copy</button></div></div><button class="conf green" onclick="openField('ref.inseam')">&#10003;</button></div>
-        <div class="row" data-field="ref.rise" data-status="green" data-source="Bench 2026-05-08" data-value="20"><div class="k">Rise (Vertical)</div><div class="v"><div class="copyblock"><span class="cb-val">20 in</span><button class="cb-btn" onclick="copyVal(this,'20')">copy</button></div></div><button class="conf green" onclick="openField('ref.rise')">&#10003;</button></div>
+        <div class="row" data-field="ref.inseam" data-status="green" data-source="Bench 2026-05-08" data-value="20"><div class="k">Inseam (Full length)</div><div class="v"><div class="copyblock"><span class="cb-val">20 in</span><button class="cb-btn" onclick="copyVal(this,'20')">copy</button></div></div><button class="conf green" onclick="openField('ref.inseam')">&#10003;</button></div>
+        <div class="row" data-field="ref.rise" data-status="green" data-source="Bench 2026-05-08" data-value="11"><div class="k">Rise (Vertical)</div><div class="v"><div class="copyblock"><span class="cb-val">11 in</span><button class="cb-btn" onclick="copyVal(this,'11')">copy</button></div></div><button class="conf green" onclick="openField('ref.rise')">&#10003;</button></div>
         <div class="row" data-field="ref.leg_opening" data-status="green" data-source="Bench 2026-05-08" data-value="12"><div class="k">Leg Opening (Flat)</div><div class="v"><div class="copyblock"><span class="cb-val">12 in</span><button class="cb-btn" onclick="copyVal(this,'12')">copy</button></div></div><button class="conf green" onclick="openField('ref.leg_opening')">&#10003;</button></div>
         <div class="row" data-field="ref.stretch" data-status="gray" data-source="descriptors" data-value="—"><div class="k">Stretch</div><div class="v"><div class="selectblock"><span class="sb-val">—</span></div></div><button class="conf gray" onclick="openField('ref.stretch')">&#10003;</button></div>
       </div>
@@ -637,7 +642,7 @@
 
   <footer>
     <span><strong>Host:</strong> GitHub Pages &middot; vmonagon/Revive-Restore-Resell</span>
-    <span><strong>Render:</strong> static &middot; v0.6 (sband redesign) &middot; 2026-05-13</span>
+    <span><strong>Render:</strong> static &middot; v0.6 (sband redesign) &middot; 2026-05-15</span>
   </footer>
 </div>
   <!-- ── 9. FLOW STEP tracker (preserved exactly) ── -->
@@ -659,7 +664,7 @@
     </div>
     <div class="sband-body">
       <div class="flag-item" data-field="measurement_missing: waist"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('measurement_missing: waist')">measurement_missing: waist</span></div></div>
-      <div class="flag-item" data-field="measurement_suspected_inversion: rise/inseam values atypical (20&quot;/11&quot;)"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('measurement_suspected_inversion: rise/inseam values atypical (20&quot;/11&quot;)')">measurement_suspected_inversion: rise/inseam values atypical (20&quot;/11&quot;)</span></div></div>
+      <div class="flag-item" data-field="measurement_inversion_auto_corrected_2026-05-14: rise/inseam swapped (was 20/11, now 11/20); bench review recommended to confirm"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('measurement_inversion_auto_corrected_2026-05-14: rise/inseam swapped (was 20/11, now 11/20); bench review recommended to confirm')">measurement_inversion_auto_corrected_2026-05-14: rise/inseam swapped (was 20/11, now 11/20); bench review recommended to confirm</span></div></div>
       <div class="flag-item" data-field="material_missing: care-tag photo did not show full material %; Title+ should note 'material not specified'"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('material_missing: care-tag photo did not show full material %; Title+ should note 'material not specified'')">material_missing: care-tag photo did not show full material %; Title+ should note 'material not specified'</span></div></div>
       <div class="flag-item" data-field="external_namespace_finding_material_pct"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('external_namespace_finding_material_pct')">external_namespace_finding_material_pct</span> — PHASE 2 BACKFILL CANDIDATE (CRITICAL): Phase 2 descriptors.material_pct = null + material_missing flag raised. Care-tag photo CLEARLY shows fiber content: '53% LINEN / 24% COTTON / 21% VISCOSE / 2% ELASTANE.' RECOMMEND Phase 2 backfill descriptors.material_pct = '53% Linen, 24% Cotton, 21% Viscose, 2% Elastane' and CLEAR material_missing flag. RESOLVES open Phase 2 flag. Premium-mid linen-blend with stretch.</div></div>
       <div class="flag-item" data-field="external_namespace_finding_stretch_flag"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('external_namespace_finding_stretch_flag')">external_namespace_finding_stretch_flag</span> — PHASE 2 BACKFILL CANDIDATE (CRITICAL): Per RRR stretch rule v2 LOCKED — ANY presence of spandex/elastane/lycra triggers stretch_flag = true. CONFIRMED 2% ELASTANE in body composition per care-tag photo. Phase 2 currently has NO descriptors.stretch_flag value (omitted from field_changes). RECOMMEND Phase 2 backfill descriptors.stretch_flag = true / stretch_fabric note = 'low-stretch linen-blend, 2% elastane.' Note: AE retail brand-tag in Phase 1 photo_read identifies this as 'STRETCH' sub-line — SKU card shows 'Stretch · Size Small' — but stretch_flag was not propagated to descriptors block.</div></div>
@@ -669,7 +674,6 @@
       <div class="flag-item" data-field="external_namespace_finding_back_pocket_signature"><span class="flag-sev info">INFO</span><div><span class="flag-link" onclick="openField('external_namespace_finding_back_pocket_signature')">external_namespace_finding_back_pocket_signature</span> — PHASE 2 / TITLE+ HINT: Back photo shows TWO patch back pockets with embroidered American Eagle eagle/swoop stitched signature on each pocket (tone-on-tone embroidery, canonical AE back-pocket signature). This is brand-authentication evidence + buyer-search asset ('American Eagle pants with eagle logo'). Phase 2 verification already confirmed brand; this is reinforcement evidence.</div></div>
       <div class="flag-item" data-field="external_namespace_finding_pricing_anchors"><span class="flag-sev info">INFO</span><div><span class="flag-link" onclick="openField('external_namespace_finding_pricing_anchors')">external_namespace_finding_pricing_anchors</span> — PRICING WORKSTREAM SIGNAL: AE NWT hangtag shows original retail = $59.95 USD / $74.95 CAD. Phase 2 condition.label = NWT (confirmed by attached hangtag + price sticker + 'wash before wear'-equivalent care tag). Acquisition cost $3.00 = excellent margin position. MSRP $60 anchors pricing skill premium-mid baseline.</div></div>
       <div class="flag-item" data-field="external_namespace_finding_full_style_codes"><span class="flag-sev info">INFO</span><div><span class="flag-link" onclick="openField('external_namespace_finding_full_style_codes')">external_namespace_finding_full_style_codes</span> — PHASE 2 BACKFILL CANDIDATE: Phase 2 style_candidates [AEM12060SU9A, S080]. Style-code photo provides FULL forms: AEM12060SU9A (RFC# / care-tag style code) + S080-0002 (NWT hangtag style ID) + UPC 4 00426 67634 4 + production code 7F19 + 6201097815 (waistband serial) + production date 02/25. Phase 2 could organize as identity.id_codes.style = 'AEM12060SU9A' (care-tag form) + identity.id_codes.style_alt = 'S080-0002' (NWT form) + identity.id_codes.upc = '400426676344'.</div></div>
-      <div class="flag-item" data-field="aesthetic.linen_compound_tier_gate_call"><span class="flag-sev info">INFO</span><div><span class="flag-link" onclick="openField('aesthetic.linen_compound_tier_gate_call')">aesthetic.linen_compound_tier_gate_call</span> — Tier-gate logged: linenluxury compound CONSIDERED but rejected — linen content (53%) qualifies material gate, BUT American Eagle is mass-tier (not on luxury roster). Same call as Pants-1653 Old Navy linen-blend (material qualifies, tier fails). softtailoring (no tier gate) + coastalcasual + earthtone APPLIED as appropriate canon-match. Note: AE 'Stretch' linen-blend at $60 MSRP is premium-mid territory but still distinctly mass-tier vs. Theory/Aritzia luxury-linen anchor brands.</div></div>
     </div>
   </div>
 
@@ -907,7 +911,12 @@ function populateAuthors() {
 }
 
 function refreshSaveBtn() {
-  const pending = Object.values(state).filter(v => v && v.notes && v.notes.some(n => !n.exported)).length;
+  const pending = Object.values(state).filter(v =>
+    v && (
+      (v.notes && v.notes.some(n => !n.exported)) ||
+      (v.override !== undefined && !v.overrideExported)
+    )
+  ).length;
   const btn = document.getElementById('saveNotesBtn');
   const pc = document.getElementById('pcount');
   if (!btn) return;
@@ -1097,12 +1106,32 @@ function updateConfBadge(fieldPath) {
 }
 
 function exportHandcuff() {
-  const out = {};
+  const out = {
+    sku: SKU,
+    exported_at: new Date().toISOString().slice(0,19)
+  };
   Object.keys(state).forEach(k => {
     const s = state[k];
-    if (s && s.notes && s.notes.length) {
-      out[k] = {notes: s.notes, resolved: s.resolved || false};
+    if (!s) return;
+    const hasNotes = s.notes && s.notes.length;
+    const hasOverride = Object.prototype.hasOwnProperty.call(s, 'override');
+    if (!hasNotes && !hasOverride) return;
+    const entry = {};
+    if (hasOverride) {
+      // Pull the live displayed value at click-time, per spec.
+      const el = document.querySelector('.row[data-field="' + k + '"]');
+      let dispVal = s.override;
+      if (el) {
+        const node = el.querySelector('.cb-val') || el.querySelector('.sb-val');
+        if (node) dispVal = node.textContent;
+      }
+      entry.value = dispVal;
     }
+    if (hasNotes) {
+      entry.notes = s.notes;
+      entry.resolved = s.resolved || false;
+    }
+    out[k] = entry;
   });
   const blob = new Blob([JSON.stringify(out, null, 2)], {type:'application/json'});
   const url = URL.createObjectURL(blob);
@@ -1380,23 +1409,4 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="row-controls">From <select id="mdAuthor"></select></div>
         <textarea id="mdText" placeholder="Add a note for this field…" rows="3"></textarea>
         <div class="mb-actions">
-          <button class="primary" onclick="addNote()">Add Note</button>
-          <button class="resolve" id="mdResolveBtn" onclick="markResolved()">Mark Resolved</button>
-          <button class="reopen" id="mdReopenBtn" style="display:none" onclick="reopen()">Reopen</button>
-          <button onclick="closeModal()">Cancel</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ── Photo lightbox ── -->
-<div class="photo-lb-bd" id="photoLbBd" onclick="if(event.target===this)closePhotoLB()">
-  <button class="photo-lb-close" onclick="closePhotoLB()" aria-label="Close">&times;</button>
-  <img id="photoLbImg" src="" alt="" />
-  <div class="photo-lb-label" id="photoLbLabel"></div>
-</div>
-
-</div><!-- .wrap -->
-</body>
-</html>
+   

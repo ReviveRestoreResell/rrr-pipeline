@@ -275,6 +275,12 @@
     <span class="pill" style="border-color:var(--green-bd);background:var(--green-bg);color:#065f46;"><strong>Phase 2</strong>2026-05-12</span>
   </div></div>
 
+  <!-- ── Publish blocker (P2 SMC pending = Rule #135 publish-block) ── -->
+  
+
+  <!-- ── Operational flag (from latest matching _card_corrections[]) ── -->
+  
+
   <!-- ── 1. PHOTOS sband (collapsed) ── -->
   <div class="sband" id="sbandPhotos">
     <div class="sband-hdr" onclick="toggleBand(this)">
@@ -305,7 +311,7 @@
     <div class="sband-hdr" onclick="toggleBand(this)">
       <span class="sband-arrow">&#9658;</span>
       <span class="sband-label">Copy</span>
-      <span class="sband-badge">Title+ &check; &nbsp;|&nbsp; Desc+ &hellip; &nbsp;|&nbsp; KW+ &hellip;</span>
+      <span class="sband-badge">Title+ &hellip; &nbsp;|&nbsp; Desc+ &hellip; &nbsp;|&nbsp; KW+ &hellip;</span>
     </div>
     <div class="sband-body">
       <div class="cws-blocks">
@@ -315,19 +321,19 @@
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Title+</span>
             <span class="cwsb-meta">&#8212;&nbsp;chars</span>
-            <span class="cwsb-badge cws-pending">&#11015;&nbsp;Pending</span>
+            <span class="cwsb-badge cws-pending">&#9203;&nbsp;Pending</span>
           </div>
           <div class="cwsb-body">
-            <div class="cwsb-text" id="cws-title-display">Pending Phase 2</div>
+            <div class="cwsb-text" id="cws-title-display"></div>
             <div class="cwsb-click-hint">&#9998; Click to edit</div>
           </div>
         </div>
 
-        <!-- Description+ PENDING (rendered, pending Tracie review) -->
+        <!-- Description+ (state driven by copy.pending[]) -->
         <div class="cws-block cws-pending" id="cwsb-desc" style="cursor:default" role="region" aria-label="Description+">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Description+</span>
-            <span class="cwsb-badge cws-pending" id="cwsb-desc-badge">&#9203; Pending Review</span>
+            <span class="cwsb-badge cws-pending" id="cwsb-desc-badge">&#9203;&nbsp;Pending Review</span>
           </div>
           <div class="cwsb-body" style="display:flex;flex-direction:column;gap:8px">
 
@@ -335,10 +341,10 @@
             <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p1" onclick="cwsOpen('desc-p1')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P1 &middot; Opening Paragraph</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p1-badge">&#9203; Pending</span>
+                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p1-badge">&#9203;&nbsp;Pending</span>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p1-display">Pending Phase 2</div>
+                <div class="cwsb-text" id="cws-desc-p1-display"></div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
@@ -347,10 +353,10 @@
             <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p2" onclick="cwsOpen('desc-p2')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P2 &middot; SMC</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p2-badge">&#9203; Pending</span>
+                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p2-badge">&#9203;&nbsp;Pending</span>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p2-display">Pending Phase 2</div>
+                <div class="cwsb-text" id="cws-desc-p2-display"></div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
@@ -358,11 +364,11 @@
             <!-- P3 sub-block -->
             <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p3" onclick="cwsOpen('desc-p3')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
-                <span class="cws-subblock-skill">P3 &middot; Service Block</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p3-badge">&#9203; Pending</span>
+                <span class="cws-subblock-skill">P3 &middot; Badges</span>
+                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p3-badge">&#9203;&nbsp;Pending</span>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p3-display">Pending Phase 2</div>
+                <div class="cwsb-text" id="cws-desc-p3-display"></div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
@@ -370,14 +376,14 @@
           </div>
         </div>
 
-        <!-- Keyword+ PENDING (rendered, pending Tracie review) -->
+        <!-- Keyword+ (state driven by copy.pending[] / keywords presence) -->
         <div class="cws-block cws-pending" id="cwsb-kw" onclick="cwsOpen('kw')" role="button" tabindex="0">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Keyword+</span>
-            <span class="cwsb-badge cws-pending">&#9203; Pending Review</span>
+            <span class="cwsb-badge cws-pending">&#9203;&nbsp;Pending Review</span>
           </div>
           <div class="cwsb-body">
-            <div class="cwsb-text" id="cws-kw-display">Pending Phase 2</div>
+            <div class="cwsb-text" id="cws-kw-display"></div>
             <div class="cwsb-click-hint">&#9998; Click to edit</div>
           </div>
         </div>
@@ -445,7 +451,7 @@
       <h4>1 &middot; Item Details</h4>
       <div class="item-details-cols">
         <div class="item-details-left">
-          <div class="row" data-field="vendoo.brand" data-status="green" data-source="RN 153016 → UNVERIFIED - no authoritative NYDJ match found; one Cato Fashions product URL contains 153016 as path slug (unclear if RN or SKU) (verified via FTC fallback web sources)" data-value="NYDJ"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">NYDJ</span><button class="cb-btn" onclick="copyVal(this,'NYDJ')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.brand')">&#10003;</button></div>
+          <div class="row" data-field="vendoo.brand" data-status="green" data-source="RN 153016 confirmed 2026-05-14 via direct Cowork care-tag photo read — tag clearly shows 'RN# 153016'. Phase 1 OCR was correct; recheck flag was a false alarm. Brand verified." data-value="NYDJ"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">NYDJ</span><button class="cb-btn" onclick="copyVal(this,'NYDJ')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.brand')">&#10003;</button></div>
           <div class="row" data-field="vendoo.condition" data-options="NWT|NWOT|GPO (internal)|Pre-Loved (internal)|Fair (internal)|Pre-owned — Like New (eBay)|Pre-owned — Very Good (eBay)|Pre-owned — Good (eBay)|Pre-owned — Acceptable (eBay)|Like New (Vendoo)|Good (Vendoo)|Fair (Vendoo)|New with Tags (Vendoo)" data-status="green" data-source="Phase 1 intake &middot; GPO" data-value="GPO"><div class="k">Condition</div><div class="v"><div class="selectblock"><span class="sb-val">Pre-Owned - Good</span></div></div><button class="conf green" onclick="openField('vendoo.condition')">&#10003;</button></div>
           <div class="row" data-field="vendoo.color1" data-options="Black|White|Gray|Brown|Tan/Beige|Red|Orange|Yellow|Green|Blue|Purple|Pink|Multi|Print|Other" data-status="green" data-source="copy_capture" data-value="Sage"><div class="k">Primary Color</div><div class="v"><div class="selectblock"><span class="sb-val">Sage</span></div></div><button class="conf green" onclick="openField('vendoo.color1')">&#10003;</button></div>
           <div class="row" data-field="vendoo.color2" data-options="None|Black|White|Gray|Brown|Tan/Beige|Red|Orange|Yellow|Green|Blue|Purple|Pink|Multi|Print|Other" data-status="gray" data-source="copy_capture" data-value=""><div class="k">Secondary Color</div><div class="v"><div class="selectblock pending"><span class="sb-val">none</span></div></div><button class="conf gray" onclick="openField('vendoo.color2')">&minus;</button></div>
@@ -500,7 +506,7 @@
       <h4 style="margin-top:20px;padding-top:14px;border-top:2px solid var(--bd)">eBay &mdash; Top-Level Listing Fields</h4>
       <div class="grid">
         <div class="row" data-field="ebay.price" data-status="green" data-source="rrr-pricing &middot; eBay 75th &middot; medium confidence (n=6 90d)" data-value=""><div class="k">Price</div><div class="v"><div class="copyblock"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf green" onclick="openField('ebay.price')">&#10003;</button></div>
-        <div class="row" data-field="ebay.brand" data-status="green" data-source="RN 153016 → UNVERIFIED - no authoritative NYDJ match found; one Cato Fashions product URL contains 153016 as path slug (unclear if RN or SKU) (verified via FTC fallback web sources)" data-value="NYDJ"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">NYDJ</span><button class="cb-btn" onclick="copyVal(this,'NYDJ')">copy</button></div></div><button class="conf green" onclick="openField('ebay.brand')">&#10003;</button></div>
+        <div class="row" data-field="ebay.brand" data-status="green" data-source="RN 153016 confirmed 2026-05-14 via direct Cowork care-tag photo read — tag clearly shows 'RN# 153016'. Phase 1 OCR was correct; recheck flag was a false alarm. Brand verified." data-value="NYDJ"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">NYDJ</span><button class="cb-btn" onclick="copyVal(this,'NYDJ')">copy</button></div></div><button class="conf green" onclick="openField('ebay.brand')">&#10003;</button></div>
         <div class="row" data-field="ebay.color" data-status="green" data-source="copy_capture" data-value="Sage"><div class="k">Color</div><div class="v"><div class="selectblock"><span class="sb-val">Sage</span></div></div><button class="conf green" onclick="openField('ebay.color')">&#10003;</button></div>
         <div class="row" data-field="ebay.priceformat" data-options="Fixed Price|Auction" data-status="yellow" data-source="Default &middot; Buy It Now" data-value="Fixed Price &middot; —"><div class="k">Price Format</div><div class="v"><div class="selectblock"><span class="sb-val">Fixed Price &middot; —</span></div></div><button class="conf yellow" onclick="openField('ebay.priceformat')">&#9888;</button></div>
         <div class="row" data-field="ebay.bestoffer" data-options="Yes|No" data-status="gray" data-source="Policy decision &middot; not in JSON" data-value=""><div class="k">Allow Best Offer</div><div class="v"><div class="selectblock pending"><span class="sb-val">policy decision</span></div></div><button class="conf gray" onclick="openField('ebay.bestoffer')">&minus;</button></div>
@@ -542,7 +548,7 @@
     </div>
     <div class="sband-body">
       <div class="grid">
-        <div class="row" data-field="ref.brand" data-status="green" data-source="RN 153016 → UNVERIFIED - no authoritative NYDJ match found; one Cato Fashions product URL contains 153016 as path slug (unclear if RN or SKU) (verified via FTC fallback web sources)" data-value="NYDJ"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">NYDJ</span><button class="cb-btn" onclick="copyVal(this,'NYDJ')">copy</button></div></div><button class="conf green" onclick="openField('ref.brand')">&#10003;</button></div>
+        <div class="row" data-field="ref.brand" data-status="green" data-source="RN 153016 confirmed 2026-05-14 via direct Cowork care-tag photo read — tag clearly shows 'RN# 153016'. Phase 1 OCR was correct; recheck flag was a false alarm. Brand verified." data-value="NYDJ"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">NYDJ</span><button class="cb-btn" onclick="copyVal(this,'NYDJ')">copy</button></div></div><button class="conf green" onclick="openField('ref.brand')">&#10003;</button></div>
         <div class="row" data-field="ref.model" data-status="yellow" data-source="identity" data-value="—"><div class="k">Model</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'—')">copy</button></div></div><button class="conf yellow" onclick="openField('ref.model')">&#9888;</button></div>
         <div class="row" data-field="ref.rn" data-status="green" data-source="brand tag" data-value="153016"><div class="k">RN</div><div class="v"><div class="copyblock "><span class="cb-val">153016</span><button class="cb-btn" onclick="copyVal(this,'153016')">copy</button></div></div><button class="conf green" onclick="openField('ref.rn')">&#10003;</button></div>
         <div class="row" data-field="ref.style" data-status="green" data-source="brand tag" data-value="KH8F11"><div class="k">Style Code</div><div class="v"><div class="copyblock "><span class="cb-val">KH8F11</span><button class="cb-btn" onclick="copyVal(this,'KH8F11')">copy</button></div></div><button class="conf green" onclick="openField('ref.style')">&#10003;</button></div>
@@ -635,7 +641,7 @@
 
   <footer>
     <span><strong>Host:</strong> GitHub Pages &middot; vmonagon/Revive-Restore-Resell</span>
-    <span><strong>Render:</strong> static &middot; v0.6 (sband redesign) &middot; 2026-05-13</span>
+    <span><strong>Render:</strong> static &middot; v0.6 (sband redesign) &middot; 2026-05-15</span>
   </footer>
 </div>
   <!-- ── 9. FLOW STEP tracker (preserved exactly) ── -->
@@ -656,7 +662,6 @@
       <span class="sband-badge" id="flagsCount">6</span>
     </div>
     <div class="sband-body">
-      <div class="flag-item" data-field="brand_pending_rn_recheck: RN 153016 may have OCR misread; reinspect care-tag"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('brand_pending_rn_recheck: RN 153016 may have OCR misread; reinspect care-tag')">brand_pending_rn_recheck: RN 153016 may have OCR misread; reinspect care-tag</span></div></div>
       <div class="flag-item" data-field="material_missing: care-tag photo did not show full material %; Title+ should note 'material not specified'"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('material_missing: care-tag photo did not show full material %; Title+ should note 'material not specified'')">material_missing: care-tag photo did not show full material %; Title+ should note 'material not specified'</span></div></div>
       <div class="flag-item" data-field="color.family"><span class="flag-sev info">INFO</span><div><span class="flag-link" onclick="openField('color.family')">color.family</span> — v1.2.0 photo-truth applied. Bench card called color 'Mint Green' — photo-truth derives 'Sage' from close-up tag fabric photos (which show desaturated gray-green more than cool mint). Lay-flat photos render with overhead-light blue cast — close-up fabric tone is more reliable. Bench operator color may correspond to NYDJ's manufacturer colorway name (NYDJ does market 'mint' shades) — if so, Phase 2 / Title+ could use 'Mint Green' as manufacturer colorway + 'sage green' as buyer-typed shade. Confidence 0.72 acknowledges close-up vs lay-flat discrepancy.</div></div>
       <div class="flag-item" data-field="external_namespace_finding_brand_verification"><span class="flag-sev info">INFO</span><div><span class="flag-link" onclick="openField('external_namespace_finding_brand_verification')">external_namespace_finding_brand_verification</span> — PHASE 2 BACKFILL CANDIDATE: Phase 1 identity.brand.status = 'pending' (RN 153016 not confirmed via FTC). NYDJ brand is VISUALLY confirmed via multiple photo evidence: (a) purple woven 'NYDJ' cursive brand label (brand-tag-alt-1.jpg) + (b) purple 'LIFT TUCK TECHNOLOGY' interior tab (brand-tag.jpg) + (c) 'NxDJ' cursive logo on care tag (care-tag.jpg) + (d) NYDJ embossed silver-tone shank button (sku-card.jpg) + (e) purple 'LEGGING' NYDJ style sub-tab (style-code-alt-1.jpg). Brand-identity is unambiguously NYDJ regardless of RN lookup result. RECOMMEND Phase 2 backfill identity.brand.status = 'verified' with status_source = 'Visual confirmation via multiple NYDJ-branded tags + button embossing (photo-intake 2026-05-12).' Demote RN reliance — branded-tag evidence is stronger than FTC RN database for verification.</div></div>
@@ -901,7 +906,12 @@ function populateAuthors() {
 }
 
 function refreshSaveBtn() {
-  const pending = Object.values(state).filter(v => v && v.notes && v.notes.some(n => !n.exported)).length;
+  const pending = Object.values(state).filter(v =>
+    v && (
+      (v.notes && v.notes.some(n => !n.exported)) ||
+      (v.override !== undefined && !v.overrideExported)
+    )
+  ).length;
   const btn = document.getElementById('saveNotesBtn');
   const pc = document.getElementById('pcount');
   if (!btn) return;
@@ -1091,12 +1101,32 @@ function updateConfBadge(fieldPath) {
 }
 
 function exportHandcuff() {
-  const out = {};
+  const out = {
+    sku: SKU,
+    exported_at: new Date().toISOString().slice(0,19)
+  };
   Object.keys(state).forEach(k => {
     const s = state[k];
-    if (s && s.notes && s.notes.length) {
-      out[k] = {notes: s.notes, resolved: s.resolved || false};
+    if (!s) return;
+    const hasNotes = s.notes && s.notes.length;
+    const hasOverride = Object.prototype.hasOwnProperty.call(s, 'override');
+    if (!hasNotes && !hasOverride) return;
+    const entry = {};
+    if (hasOverride) {
+      // Pull the live displayed value at click-time, per spec.
+      const el = document.querySelector('.row[data-field="' + k + '"]');
+      let dispVal = s.override;
+      if (el) {
+        const node = el.querySelector('.cb-val') || el.querySelector('.sb-val');
+        if (node) dispVal = node.textContent;
+      }
+      entry.value = dispVal;
     }
+    if (hasNotes) {
+      entry.notes = s.notes;
+      entry.resolved = s.resolved || false;
+    }
+    out[k] = entry;
   });
   const blob = new Blob([JSON.stringify(out, null, 2)], {type:'application/json'});
   const url = URL.createObjectURL(blob);
@@ -1374,23 +1404,4 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="row-controls">From <select id="mdAuthor"></select></div>
         <textarea id="mdText" placeholder="Add a note for this field…" rows="3"></textarea>
         <div class="mb-actions">
-          <button class="primary" onclick="addNote()">Add Note</button>
-          <button class="resolve" id="mdResolveBtn" onclick="markResolved()">Mark Resolved</button>
-          <button class="reopen" id="mdReopenBtn" style="display:none" onclick="reopen()">Reopen</button>
-          <button onclick="closeModal()">Cancel</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ── Photo lightbox ── -->
-<div class="photo-lb-bd" id="photoLbBd" onclick="if(event.target===this)closePhotoLB()">
-  <button class="photo-lb-close" onclick="closePhotoLB()" aria-label="Close">&times;</button>
-  <img id="photoLbImg" src="" alt="" />
-  <div class="photo-lb-label" id="photoLbLabel"></div>
-</div>
-
-</div><!-- .wrap -->
-</body>
-</html>
+   

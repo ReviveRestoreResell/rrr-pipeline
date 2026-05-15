@@ -275,6 +275,12 @@
     <span class="pill" style="border-color:var(--green-bd);background:var(--green-bg);color:#065f46;"><strong>Phase 2</strong>2026-05-12</span>
   </div></div>
 
+  <!-- ── Publish blocker (P2 SMC pending = Rule #135 publish-block) ── -->
+  
+
+  <!-- ── Operational flag (from latest matching _card_corrections[]) ── -->
+  
+
   <!-- ── 1. PHOTOS sband (collapsed) ── -->
   <div class="sband" id="sbandPhotos">
     <div class="sband-hdr" onclick="toggleBand(this)">
@@ -301,7 +307,7 @@
     <div class="sband-hdr" onclick="toggleBand(this)">
       <span class="sband-arrow">&#9658;</span>
       <span class="sband-label">Copy</span>
-      <span class="sband-badge">Title+ &check; &nbsp;|&nbsp; Desc+ &hellip; &nbsp;|&nbsp; KW+ &hellip;</span>
+      <span class="sband-badge">Title+ &hellip; &nbsp;|&nbsp; Desc+ &hellip; &nbsp;|&nbsp; KW+ &hellip;</span>
     </div>
     <div class="sband-body">
       <div class="cws-blocks">
@@ -311,19 +317,19 @@
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Title+</span>
             <span class="cwsb-meta">&#8212;&nbsp;chars</span>
-            <span class="cwsb-badge cws-pending">&#11015;&nbsp;Pending</span>
+            <span class="cwsb-badge cws-pending">&#9203;&nbsp;Pending</span>
           </div>
           <div class="cwsb-body">
-            <div class="cwsb-text" id="cws-title-display">Pending Phase 2</div>
+            <div class="cwsb-text" id="cws-title-display"></div>
             <div class="cwsb-click-hint">&#9998; Click to edit</div>
           </div>
         </div>
 
-        <!-- Description+ PENDING (rendered, pending Tracie review) -->
+        <!-- Description+ (state driven by copy.pending[]) -->
         <div class="cws-block cws-pending" id="cwsb-desc" style="cursor:default" role="region" aria-label="Description+">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Description+</span>
-            <span class="cwsb-badge cws-pending" id="cwsb-desc-badge">&#9203; Pending Review</span>
+            <span class="cwsb-badge cws-pending" id="cwsb-desc-badge">&#9203;&nbsp;Pending Review</span>
           </div>
           <div class="cwsb-body" style="display:flex;flex-direction:column;gap:8px">
 
@@ -331,10 +337,10 @@
             <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p1" onclick="cwsOpen('desc-p1')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P1 &middot; Opening Paragraph</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p1-badge">&#9203; Pending</span>
+                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p1-badge">&#9203;&nbsp;Pending</span>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p1-display">Pending Phase 2</div>
+                <div class="cwsb-text" id="cws-desc-p1-display"></div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
@@ -343,10 +349,10 @@
             <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p2" onclick="cwsOpen('desc-p2')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P2 &middot; SMC</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p2-badge">&#9203; Pending</span>
+                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p2-badge">&#9203;&nbsp;Pending</span>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p2-display">Pending Phase 2</div>
+                <div class="cwsb-text" id="cws-desc-p2-display"></div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
@@ -354,11 +360,11 @@
             <!-- P3 sub-block -->
             <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p3" onclick="cwsOpen('desc-p3')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
-                <span class="cws-subblock-skill">P3 &middot; Service Block</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p3-badge">&#9203; Pending</span>
+                <span class="cws-subblock-skill">P3 &middot; Badges</span>
+                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p3-badge">&#9203;&nbsp;Pending</span>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p3-display">Pending Phase 2</div>
+                <div class="cwsb-text" id="cws-desc-p3-display"></div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
@@ -366,14 +372,14 @@
           </div>
         </div>
 
-        <!-- Keyword+ PENDING (rendered, pending Tracie review) -->
+        <!-- Keyword+ (state driven by copy.pending[] / keywords presence) -->
         <div class="cws-block cws-pending" id="cwsb-kw" onclick="cwsOpen('kw')" role="button" tabindex="0">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Keyword+</span>
-            <span class="cwsb-badge cws-pending">&#9203; Pending Review</span>
+            <span class="cwsb-badge cws-pending">&#9203;&nbsp;Pending Review</span>
           </div>
           <div class="cwsb-body">
-            <div class="cwsb-text" id="cws-kw-display">Pending Phase 2</div>
+            <div class="cwsb-text" id="cws-kw-display"></div>
             <div class="cwsb-click-hint">&#9998; Click to edit</div>
           </div>
         </div>
@@ -406,7 +412,7 @@
 <h4>Tier Gate — Rejected</h4>
 <div class="row" data-field="cc.gate.casualstreetwear" data-status="green" data-source="tier_gate" data-value="REJECTED"><div class="k">casualstreetwear</div><div class="v"><div class="copyblock"><span class="cb-val">REJECTED</span><button class="cb-btn" onclick="copyVal(this,'REJECTED')">copy</button></div></div><button class="conf green" onclick="openField('cc.gate.casualstreetwear')">&#10003;</button></div>
 <div class="row" data-field="cc.gate.linenluxury" data-status="green" data-source="tier_gate" data-value="REJECTED"><div class="k">linenluxury</div><div class="v"><div class="copyblock"><span class="cb-val">REJECTED</span><button class="cb-btn" onclick="copyVal(this,'REJECTED')">copy</button></div></div><button class="conf green" onclick="openField('cc.gate.linenluxury')">&#10003;</button></div>
-<h4>Agent Flags (8)</h4>
+<h4>Agent Flags (7)</h4>
 <div class="row" data-field="cc.flag.photo_capture_mode" data-status="green" data-source="photo_agent · warn" data-value="Tag-heavy partial capture mode declared per Vaughn kickoff directive and Phase 1 photos.front.status = 'na' + photos.back.status = 'na' (bench protocol — first few items missing reverse, plus no front exterior captured for Pants-1650). Per spec §9b: Gate 6 floor satisfied via SKU-Card-Composite frame; confidence ceiling 0.85 applied to silhouette + closures + hardware + front-detailing + distress-state fields. Color readable from SKU-card composite background context. Mode flag surfaces honest-but-thin capture for downstream Title+/Description+/Keyword+ to adjust drafting confidence accordingly."><div class="k">photo_capture_mode</div><div class="v"><div class="copyblock"><span class="cb-val">Tag-heavy partial capture mode declared per Vaughn kickoff directive and Phase 1 photos.front.status = 'na' + photos.back.status = 'na' (bench protocol — first few items missing reverse, plus no front exterior captured for Pants-1650). Per spec §9b: Gate 6 floor satisfied via SKU-Card-Composite frame; confidence ceiling 0.85 applied to silhouette + closures + hardware + front-detailing + distress-state fields. Color readable from SKU-card composite background context. Mode flag surfaces honest-but-thin capture for downstream Title+/Description+/Keyword+ to adjust drafting confidence accordingly.</span><button class="cb-btn" onclick="copyVal(this,'Tag-heavy partial capture mode declared per Vaughn kickoff directive and Phase 1 photos.front.status = 'na' + photos.back.status = 'na' (bench protocol — first few items missing reverse, plus no front exterior captured for Pants-1650). Per spec §9b: Gate 6 floor satisfied via SKU-Card-Composite frame; confidence ceiling 0.85 applied to silhouette + closures + hardware + front-detailing + distress-state fields. Color readable from SKU-card composite background context. Mode flag surfaces honest-but-thin capture for downstream Title+/Description+/Keyword+ to adjust drafting confidence accordingly.')">copy</button></div></div><button class="conf green" onclick="openField('cc.flag.photo_capture_mode')">&#10003;</button></div>
 <div class="row" data-field="cc.flag.color.family" data-status="green" data-source="photo_agent · info" data-value="v1.2.0 photo-truth rule applied. Bench operator typed color = 'Black' on SKU card; Phase 2 verified via SKU-card-composite background context. Photo-intake independently confirms color.family = 'Black' with specific = 'true black' — the visible denim behind the SKU card in the composite is unmistakably uniform black with no fade. Confidence held at 0.85 ceiling per partial-mode rule."><div class="k">color.family</div><div class="v"><div class="copyblock"><span class="cb-val">v1.2.0 photo-truth rule applied. Bench operator typed color = 'Black' on SKU card; Phase 2 verified via SKU-card-composite background context. Photo-intake independently confirms color.family = 'Black' with specific = 'true black' — the visible denim behind the SKU card in the composite is unmistakably uniform black with no fade. Confidence held at 0.85 ceiling per partial-mode rule.</span><button class="cb-btn" onclick="copyVal(this,'v1.2.0 photo-truth rule applied. Bench operator typed color = 'Black' on SKU card; Phase 2 verified via SKU-card-composite background context. Photo-intake independently confirms color.family = 'Black' with specific = 'true black' — the visible denim behind the SKU card in the composite is unmistakably uniform black with no fade. Confidence held at 0.85 ceiling per partial-mode rule.')">copy</button></div></div><button class="conf green" onclick="openField('cc.flag.color.family')">&#10003;</button></div>
 <div class="row" data-field="cc.flag.external_namespace_finding_style_code_misclassification" data-status="green" data-source="photo_agent · warn" data-value="PHASE 2 BACKFILL CANDIDATE (CRITICAL): Phase 1 identity.id_codes.style = '684896342' was promoted from care-tag-alt-1 photo_read. BUT this number is actually the UK VAT registration number ('C/V VAT No. GB 684896342') for Anthropologie's UK importer at 24 Market Place, 3rd Floor, London. It is NOT a Pilcro product style code. RECOMMEND Phase 2: (a) NULL identity.id_codes.style; (b) move '684896342' to a new field like identity.id_codes.eu_importer_vat = 'GB 684896342' OR drop entirely (not Title+/listing-relevant); (c) re-flag identity.id_codes.style = null and route style-code lookup to Title+ via SP code or other product-tag re-shoot."><div class="k">external_namespace_finding_style_code_misclassification</div><div class="v"><div class="copyblock"><span class="cb-val">PHASE 2 BACKFILL CANDIDATE (CRITICAL): Phase 1 identity.id_codes.style = '684896342' was promoted from care-tag-alt-1 photo_read. BUT this number is actually the UK VAT registration number ('C/V VAT No. GB 684896342') for Anthropologie's UK importer at 24 Market Place, 3rd Floor, London. It is NOT a Pilcro product style code. RECOMMEND Phase 2: (a) NULL identity.id_codes.style; (b) move '684896342' to a new field like identity.id_codes.eu_importer_vat = 'GB 684896342' OR drop entirely (not Title+/listing-relevant); (c) re-flag identity.id_codes.style = null and route style-code lookup to Title+ via SP code or other product-tag re-shoot.</span><button class="cb-btn" onclick="copyVal(this,'PHASE 2 BACKFILL CANDIDATE (CRITICAL): Phase 1 identity.id_codes.style = '684896342' was promoted from care-tag-alt-1 photo_read. BUT this number is actually the UK VAT registration number ('C/V VAT No. GB 684896342') for Anthropologie's UK importer at 24 Market Place, 3rd Floor, London. It is NOT a Pilcro product style code. RECOMMEND Phase 2: (a) NULL identity.id_codes.style; (b) move '684896342' to a new field like identity.id_codes.eu_importer_vat = 'GB 684896342' OR drop entirely (not Title+/listing-relevant); (c) re-flag identity.id_codes.style = null and route style-code lookup to Title+ via SP code or other product-tag re-shoot.')">copy</button></div></div><button class="conf green" onclick="openField('cc.flag.external_namespace_finding_style_code_misclassification')">&#10003;</button></div>
@@ -414,7 +420,6 @@
 <div class="row" data-field="cc.flag.external_namespace_finding_premium_fiber_lyocell" data-status="green" data-source="photo_agent · info" data-value="PHASE 2 BACKFILL CANDIDATE / DESCRIPTION+ FLAG: Care-tag photo confirms 31% Lyocell content — Lyocell is a Tencel-family closed-loop premium fiber (sustainable / FSC-certified wood pulp / silky drape / moisture-wicking). This is a significant material-positioning signal — buyer-search picks up 'Lyocell jeans' / 'Tencel jeans' as a premium-fiber differentiator. RECOMMEND Title+ surface Lyocell prominently; Description+ P1/P2 mention premium fabric blend. Phase 2 already captured 31% Lyocell in material_pct, which is correct."><div class="k">external_namespace_finding_premium_fiber_lyocell</div><div class="v"><div class="copyblock"><span class="cb-val">PHASE 2 BACKFILL CANDIDATE / DESCRIPTION+ FLAG: Care-tag photo confirms 31% Lyocell content — Lyocell is a Tencel-family closed-loop premium fiber (sustainable / FSC-certified wood pulp / silky drape / moisture-wicking). This is a significant material-positioning signal — buyer-search picks up 'Lyocell jeans' / 'Tencel jeans' as a premium-fiber differentiator. RECOMMEND Title+ surface Lyocell prominently; Description+ P1/P2 mention premium fabric blend. Phase 2 already captured 31% Lyocell in material_pct, which is correct.</span><button class="cb-btn" onclick="copyVal(this,'PHASE 2 BACKFILL CANDIDATE / DESCRIPTION+ FLAG: Care-tag photo confirms 31% Lyocell content — Lyocell is a Tencel-family closed-loop premium fiber (sustainable / FSC-certified wood pulp / silky drape / moisture-wicking). This is a significant material-positioning signal — buyer-search picks up 'Lyocell jeans' / 'Tencel jeans' as a premium-fiber differentiator. RECOMMEND Title+ surface Lyocell prominently; Description+ P1/P2 mention premium fabric blend. Phase 2 already captured 31% Lyocell in material_pct, which is correct.')">copy</button></div></div><button class="conf green" onclick="openField('cc.flag.external_namespace_finding_premium_fiber_lyocell')">&#10003;</button></div>
 <div class="row" data-field="cc.flag.external_namespace_finding_model_line" data-status="green" data-source="photo_agent · info" data-value="PHASE 2 BACKFILL CANDIDATE: Phase 1 identity.model.value = null. Pilcro premium denim has named fit lines ('Hyphen,' 'Stet,' 'Slang,' 'Serif,' etc. — Pilcro's typography-themed nomenclature). Care tags photographed do NOT show a specific model name. Could not extract model from available 3 frames. RECOMMEND Title+/Phase 2 lookup against Pilcro current catalog OR operator re-shoot with brand-tag close-up (if brand tag has a fit-flag tab embroidered with model name like Levi's 541 / KUT High Rise Ankle Straight Leg tab). Photo-intake cannot resolve from existing frames."><div class="k">external_namespace_finding_model_line</div><div class="v"><div class="copyblock"><span class="cb-val">PHASE 2 BACKFILL CANDIDATE: Phase 1 identity.model.value = null. Pilcro premium denim has named fit lines ('Hyphen,' 'Stet,' 'Slang,' 'Serif,' etc. — Pilcro's typography-themed nomenclature). Care tags photographed do NOT show a specific model name. Could not extract model from available 3 frames. RECOMMEND Title+/Phase 2 lookup against Pilcro current catalog OR operator re-shoot with brand-tag close-up (if brand tag has a fit-flag tab embroidered with model name like Levi's 541 / KUT High Rise Ankle Straight Leg tab). Photo-intake cannot resolve from existing frames.</span><button class="cb-btn" onclick="copyVal(this,'PHASE 2 BACKFILL CANDIDATE: Phase 1 identity.model.value = null. Pilcro premium denim has named fit lines ('Hyphen,' 'Stet,' 'Slang,' 'Serif,' etc. — Pilcro's typography-themed nomenclature). Care tags photographed do NOT show a specific model name. Could not extract model from available 3 frames. RECOMMEND Title+/Phase 2 lookup against Pilcro current catalog OR operator re-shoot with brand-tag close-up (if brand tag has a fit-flag tab embroidered with model name like Levi's 541 / KUT High Rise Ankle Straight Leg tab). Photo-intake cannot resolve from existing frames.')">copy</button></div></div><button class="conf green" onclick="openField('cc.flag.external_namespace_finding_model_line')">&#10003;</button></div>
 <div class="row" data-field="cc.flag.external_namespace_finding_reshoot_priority" data-status="green" data-source="photo_agent · warn" data-value="PHASE 2 BACKFILL CANDIDATE / RE-SHOOT FLAG: Phase 1 already carries 'condition_pending_reshoot: Pants-1650 needs front/back photo capture for grading.' Photo-intake CONFIRMS this need: tag-heavy mode is honest-but-thin; downstream Title+/Description+/Keyword+ will operate at partial-mode confidence ceiling 0.85. RE-SHOOT request: full front-flat + full back-flat + brand-tag close-up (for model line) when item resurfaces for listing. Upgrade path: re-run photo-intake with expanded frame set → mode upgrades 'tag-heavy' → 'full' automatically with capture_version increment per spec §9b."><div class="k">external_namespace_finding_reshoot_priority</div><div class="v"><div class="copyblock"><span class="cb-val">PHASE 2 BACKFILL CANDIDATE / RE-SHOOT FLAG: Phase 1 already carries 'condition_pending_reshoot: Pants-1650 needs front/back photo capture for grading.' Photo-intake CONFIRMS this need: tag-heavy mode is honest-but-thin; downstream Title+/Description+/Keyword+ will operate at partial-mode confidence ceiling 0.85. RE-SHOOT request: full front-flat + full back-flat + brand-tag close-up (for model line) when item resurfaces for listing. Upgrade path: re-run photo-intake with expanded frame set → mode upgrades 'tag-heavy' → 'full' automatically with capture_version increment per spec §9b.</span><button class="cb-btn" onclick="copyVal(this,'PHASE 2 BACKFILL CANDIDATE / RE-SHOOT FLAG: Phase 1 already carries 'condition_pending_reshoot: Pants-1650 needs front/back photo capture for grading.' Photo-intake CONFIRMS this need: tag-heavy mode is honest-but-thin; downstream Title+/Description+/Keyword+ will operate at partial-mode confidence ceiling 0.85. RE-SHOOT request: full front-flat + full back-flat + brand-tag close-up (for model line) when item resurfaces for listing. Upgrade path: re-run photo-intake with expanded frame set → mode upgrades 'tag-heavy' → 'full' automatically with capture_version increment per spec §9b.')">copy</button></div></div><button class="conf green" onclick="openField('cc.flag.external_namespace_finding_reshoot_priority')">&#10003;</button></div>
-<div class="row" data-field="cc.flag.aesthetic.tier_gate_quietluxury_pass" data-status="green" data-source="photo_agent · info" data-value="Aesthetic tier-gate quietluxury PASS logged: Pilcro on Vaughn kickoff luxury-tier candidate roster. Premium Anthropologie denim line + Lyocell-blend (luxury-tier sustainable fiber) + no-logo refined construction + black skinny clean register = canonical quietluxury fit. Same pattern as Pants-1636 L'AGENCE: tier qualifies + silhouette fits + no-logo aesthetic anchors. relaxedluxury skipped because silhouette is tailored skinny (not relaxed register). slowfashion considered via Lyocell fiber but skipped (no explicit brand sustainability claim, conservative)."><div class="k">aesthetic.tier_gate_quietluxury_pass</div><div class="v"><div class="copyblock"><span class="cb-val">Aesthetic tier-gate quietluxury PASS logged: Pilcro on Vaughn kickoff luxury-tier candidate roster. Premium Anthropologie denim line + Lyocell-blend (luxury-tier sustainable fiber) + no-logo refined construction + black skinny clean register = canonical quietluxury fit. Same pattern as Pants-1636 L'AGENCE: tier qualifies + silhouette fits + no-logo aesthetic anchors. relaxedluxury skipped because silhouette is tailored skinny (not relaxed register). slowfashion considered via Lyocell fiber but skipped (no explicit brand sustainability claim, conservative).</span><button class="cb-btn" onclick="copyVal(this,'Aesthetic tier-gate quietluxury PASS logged: Pilcro on Vaughn kickoff luxury-tier candidate roster. Premium Anthropologie denim line + Lyocell-blend (luxury-tier sustainable fiber) + no-logo refined construction + black skinny clean register = canonical quietluxury fit. Same pattern as Pants-1636 L'AGENCE: tier qualifies + silhouette fits + no-logo aesthetic anchors. relaxedluxury skipped because silhouette is tailored skinny (not relaxed register). slowfashion considered via Lyocell fiber but skipped (no explicit brand sustainability claim, conservative).')">copy</button></div></div><button class="conf green" onclick="openField('cc.flag.aesthetic.tier_gate_quietluxury_pass')">&#10003;</button></div>
 <h4>Photo Reads (3)</h4>
 <details class="cc-photo-read"><summary>SKU-Card-Composite — Pants-1650-sku-card.jpg</summary><div class="cc-read-body">White 4x6 SKU intake card composited over the waistband of BLACK denim with the 'Pilcro and the Letterpress / ANTHROPOLOGIE' woven brand label visible at left (cream/ecru text on the black denim background, sewn at waistband interior). Card content: 'Pants-1650 / Batch: Show the Sweet Guns / Pilcro and the Letterpress / Jeans · Skinny / Color: Black / Condition: — missing / 27/35 / Measurements: Waist 26&quot; / Hip 15&quot; / Rise 9&quot; / Inseam 26&quot; / Leg Opening 4.5&quot;.' Footer warning: 'Condition not captured. Brand initially heard as Velcro — corrected.' This is the ONLY frame providing direct garment-context visibility (black denim color + brand label + waistband area) — the other 2 frames are tag-only macros. Bench reference 27/35. Phase 1 marked photos.front.status = 'na' AND photos.back.status = 'na' — confirms tag-heavy partial mode.</div></details>
 <details class="cc-photo-read"><summary>Detail-Care-Tag — Pants-1650-care-tag.jpg</summary><div class="cc-read-body">Close-up of cream/off-white woven care/fiber-content tag held against black denim background. Visible content (rotated 90 degrees): 'RN: 86170 | CA: 13208 | SHELL: VESTE EXTERIOR: ESTERNO: OBEROFF: 31% COTTON, COTON, ALGODON, COTONE, BAUMWOLLE | 31% LYOCELL, LYOCELL, LYOCELL, LYOCELL, LYOCELL | 8% POLYESTER, POLYESTER, POLIESTER, POLYESTER, POLYESTER | 2% ELASTANE, ELASTHANNE, ELASTANO, ELASTAN, ELASTAN | MADE IN CHINA / HECHO EN CHINA / FABRIQUE EN CHINE | THIS GARMENT CONTAINS DYE WHICH MAY DISCOLOUR MATERIALS WITH WHICH IT COMES IN CONTACT | MACHINE WASH COLD WITH LIKE COLORS / ONLY NON-CHLORINE BLEACH / LOW IRON IF NEEDED / TUMBLE DRY LOW / MAY BE DRY CLEANED.' CRITICAL FINDINGS: RN 86170 + CA 13208 confirmed (Phase 1 had RN as 86170 but flagged for possible OCR misread vs. expected Anthropologie RN 66170 — re-read confirms 86170, suggesting it's a sub-line or a different Anthropologie RN); fiber content = 65% Cotton / 31% Lyocell / 2% Polyester / 2% Elastane wait — recount: care tag shows 31% Cotton + 31% Lyocell + 8% Polyester + 2% Elastane = 72% total which doesn't add to 100%; Phase 1 captured '65% Cotton, 31% Lyocell, 2% Polyester, 2% Elastane.' Re-read of this specific tag photo shows the SHELL line with 4 fibers BUT the percentages on this individual frame appear partially obscured/photographed-at-angle (the '31% COTTON' may actually be '65%' from the original tag) — Phase 1 backfilled correct percentage from a clearer view. Trust Phase 1: 65% Cotton, 31% Lyocell, 2% Polyester, 2% Elastane = 100%. Country = Made in China confirmed.</div></details>
@@ -432,7 +437,7 @@
       <h4>1 &middot; Item Details</h4>
       <div class="item-details-cols">
         <div class="item-details-left">
-          <div class="row" data-field="vendoo.brand" data-status="green" data-source="RN 86170 → UNVERIFIED - Anthropologie/Pilcro's documented RN is 66170 not 86170; possible tag misread (verified via FTC fallback web sources)" data-value="Pilcro and the Letterpress"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Pilcro and the Letterpress</span><button class="cb-btn" onclick="copyVal(this,'Pilcro and the Letterpress')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.brand')">&#10003;</button></div>
+          <div class="row" data-field="vendoo.brand" data-status="green" data-source="RN corrected 2026-05-14 to 66170 via direct Cowork care-tag photo read. Anthropologie/Pilcro documented RN 66170 matches care-tag (was previously OCR'd as 86170 — 8 vs 6 misread). Brand verified." data-value="Pilcro and the Letterpress"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Pilcro and the Letterpress</span><button class="cb-btn" onclick="copyVal(this,'Pilcro and the Letterpress')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.brand')">&#10003;</button></div>
           <div class="row" data-field="vendoo.condition" data-options="NWT|NWOT|GPO (internal)|Pre-Loved (internal)|Fair (internal)|Pre-owned — Like New (eBay)|Pre-owned — Very Good (eBay)|Pre-owned — Good (eBay)|Pre-owned — Acceptable (eBay)|Like New (Vendoo)|Good (Vendoo)|Fair (Vendoo)|New with Tags (Vendoo)" data-status="green" data-source="Phase 1 intake &middot; GPO" data-value="pending_photo_review"><div class="k">Condition</div><div class="v"><div class="selectblock"><span class="sb-val">pending_photo_review</span></div></div><button class="conf green" onclick="openField('vendoo.condition')">&#10003;</button></div>
           <div class="row" data-field="vendoo.color1" data-options="Black|White|Gray|Brown|Tan/Beige|Red|Orange|Yellow|Green|Blue|Purple|Pink|Multi|Print|Other" data-status="green" data-source="copy_capture" data-value="Black"><div class="k">Primary Color</div><div class="v"><div class="selectblock"><span class="sb-val">Black</span></div></div><button class="conf green" onclick="openField('vendoo.color1')">&#10003;</button></div>
           <div class="row" data-field="vendoo.color2" data-options="None|Black|White|Gray|Brown|Tan/Beige|Red|Orange|Yellow|Green|Blue|Purple|Pink|Multi|Print|Other" data-status="gray" data-source="copy_capture" data-value=""><div class="k">Secondary Color</div><div class="v"><div class="selectblock pending"><span class="sb-val">none</span></div></div><button class="conf gray" onclick="openField('vendoo.color2')">&minus;</button></div>
@@ -487,7 +492,7 @@
       <h4 style="margin-top:20px;padding-top:14px;border-top:2px solid var(--bd)">eBay &mdash; Top-Level Listing Fields</h4>
       <div class="grid">
         <div class="row" data-field="ebay.price" data-status="green" data-source="rrr-pricing &middot; eBay 75th &middot; medium confidence (n=6 90d)" data-value=""><div class="k">Price</div><div class="v"><div class="copyblock"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf green" onclick="openField('ebay.price')">&#10003;</button></div>
-        <div class="row" data-field="ebay.brand" data-status="green" data-source="RN 86170 → UNVERIFIED - Anthropologie/Pilcro's documented RN is 66170 not 86170; possible tag misread (verified via FTC fallback web sources)" data-value="Pilcro and the Letterpress"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Pilcro and the Letterpress</span><button class="cb-btn" onclick="copyVal(this,'Pilcro and the Letterpress')">copy</button></div></div><button class="conf green" onclick="openField('ebay.brand')">&#10003;</button></div>
+        <div class="row" data-field="ebay.brand" data-status="green" data-source="RN corrected 2026-05-14 to 66170 via direct Cowork care-tag photo read. Anthropologie/Pilcro documented RN 66170 matches care-tag (was previously OCR'd as 86170 — 8 vs 6 misread). Brand verified." data-value="Pilcro and the Letterpress"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Pilcro and the Letterpress</span><button class="cb-btn" onclick="copyVal(this,'Pilcro and the Letterpress')">copy</button></div></div><button class="conf green" onclick="openField('ebay.brand')">&#10003;</button></div>
         <div class="row" data-field="ebay.color" data-status="green" data-source="copy_capture" data-value="Black"><div class="k">Color</div><div class="v"><div class="selectblock"><span class="sb-val">Black</span></div></div><button class="conf green" onclick="openField('ebay.color')">&#10003;</button></div>
         <div class="row" data-field="ebay.priceformat" data-options="Fixed Price|Auction" data-status="yellow" data-source="Default &middot; Buy It Now" data-value="Fixed Price &middot; —"><div class="k">Price Format</div><div class="v"><div class="selectblock"><span class="sb-val">Fixed Price &middot; —</span></div></div><button class="conf yellow" onclick="openField('ebay.priceformat')">&#9888;</button></div>
         <div class="row" data-field="ebay.bestoffer" data-options="Yes|No" data-status="gray" data-source="Policy decision &middot; not in JSON" data-value=""><div class="k">Allow Best Offer</div><div class="v"><div class="selectblock pending"><span class="sb-val">policy decision</span></div></div><button class="conf gray" onclick="openField('ebay.bestoffer')">&minus;</button></div>
@@ -529,9 +534,9 @@
     </div>
     <div class="sband-body">
       <div class="grid">
-        <div class="row" data-field="ref.brand" data-status="green" data-source="RN 86170 → UNVERIFIED - Anthropologie/Pilcro's documented RN is 66170 not 86170; possible tag misread (verified via FTC fallback web sources)" data-value="Pilcro and the Letterpress"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Pilcro and the Letterpress</span><button class="cb-btn" onclick="copyVal(this,'Pilcro and the Letterpress')">copy</button></div></div><button class="conf green" onclick="openField('ref.brand')">&#10003;</button></div>
+        <div class="row" data-field="ref.brand" data-status="green" data-source="RN corrected 2026-05-14 to 66170 via direct Cowork care-tag photo read. Anthropologie/Pilcro documented RN 66170 matches care-tag (was previously OCR'd as 86170 — 8 vs 6 misread). Brand verified." data-value="Pilcro and the Letterpress"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Pilcro and the Letterpress</span><button class="cb-btn" onclick="copyVal(this,'Pilcro and the Letterpress')">copy</button></div></div><button class="conf green" onclick="openField('ref.brand')">&#10003;</button></div>
         <div class="row" data-field="ref.model" data-status="yellow" data-source="identity" data-value="—"><div class="k">Model</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'—')">copy</button></div></div><button class="conf yellow" onclick="openField('ref.model')">&#9888;</button></div>
-        <div class="row" data-field="ref.rn" data-status="green" data-source="brand tag" data-value="86170"><div class="k">RN</div><div class="v"><div class="copyblock "><span class="cb-val">86170</span><button class="cb-btn" onclick="copyVal(this,'86170')">copy</button></div></div><button class="conf green" onclick="openField('ref.rn')">&#10003;</button></div>
+        <div class="row" data-field="ref.rn" data-status="green" data-source="brand tag" data-value="66170"><div class="k">RN</div><div class="v"><div class="copyblock "><span class="cb-val">66170</span><button class="cb-btn" onclick="copyVal(this,'66170')">copy</button></div></div><button class="conf green" onclick="openField('ref.rn')">&#10003;</button></div>
         <div class="row" data-field="ref.style" data-status="green" data-source="brand tag" data-value="684896342"><div class="k">Style Code</div><div class="v"><div class="copyblock "><span class="cb-val">684896342</span><button class="cb-btn" onclick="copyVal(this,'684896342')">copy</button></div></div><button class="conf green" onclick="openField('ref.style')">&#10003;</button></div>
         <div class="row" data-field="ref.category" data-status="green" data-source="Internal classification" data-value="Tops / Button-Down"><div class="k">Category</div><div class="v"><div class="selectblock"><span class="sb-val">Tops &rsaquo; Button-Down</span></div></div><button class="conf green" onclick="openField('ref.category')">&#10003;</button></div>
         <div class="row" data-field="cap.color" data-status="green" data-source="copy_capture" data-value="Black"><div class="k">Color</div><div class="v"><div class="selectblock"><span class="sb-val">Black</span></div></div><button class="conf green" onclick="openField('cap.color')">&#10003;</button></div>
@@ -622,7 +627,7 @@
 
   <footer>
     <span><strong>Host:</strong> GitHub Pages &middot; vmonagon/Revive-Restore-Resell</span>
-    <span><strong>Render:</strong> static &middot; v0.6 (sband redesign) &middot; 2026-05-13</span>
+    <span><strong>Render:</strong> static &middot; v0.6 (sband redesign) &middot; 2026-05-15</span>
   </footer>
 </div>
   <!-- ── 9. FLOW STEP tracker (preserved exactly) ── -->
@@ -644,7 +649,6 @@
     </div>
     <div class="sband-body">
       <div class="flag-item" data-field="condition_missing: needs operator follow-up"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('condition_missing: needs operator follow-up')">condition_missing: needs operator follow-up</span></div></div>
-      <div class="flag-item" data-field="brand_pending_rn_recheck: RN 86170 may have OCR misread; reinspect care-tag"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('brand_pending_rn_recheck: RN 86170 may have OCR misread; reinspect care-tag')">brand_pending_rn_recheck: RN 86170 may have OCR misread; reinspect care-tag</span></div></div>
       <div class="flag-item" data-field="condition_pending_reshoot: Pants-1650 needs front/back photo capture for grading"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('condition_pending_reshoot: Pants-1650 needs front/back photo capture for grading')">condition_pending_reshoot: Pants-1650 needs front/back photo capture for grading</span></div></div>
       <div class="flag-item" data-field="photo_capture_mode"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('photo_capture_mode')">photo_capture_mode</span> — Tag-heavy partial capture mode declared per Vaughn kickoff directive and Phase 1 photos.front.status = 'na' + photos.back.status = 'na' (bench protocol — first few items missing reverse, plus no front exterior captured for Pants-1650). Per spec §9b: Gate 6 floor satisfied via SKU-Card-Composite frame; confidence ceiling 0.85 applied to silhouette + closures + hardware + front-detailing + distress-state fields. Color readable from SKU-card composite background context. Mode flag surfaces honest-but-thin capture for downstream Title+/Description+/Keyword+ to adjust drafting confidence accordingly.</div></div>
       <div class="flag-item" data-field="color.family"><span class="flag-sev info">INFO</span><div><span class="flag-link" onclick="openField('color.family')">color.family</span> — v1.2.0 photo-truth rule applied. Bench operator typed color = 'Black' on SKU card; Phase 2 verified via SKU-card-composite background context. Photo-intake independently confirms color.family = 'Black' with specific = 'true black' — the visible denim behind the SKU card in the composite is unmistakably uniform black with no fade. Confidence held at 0.85 ceiling per partial-mode rule.</div></div>
@@ -653,7 +657,6 @@
       <div class="flag-item" data-field="external_namespace_finding_premium_fiber_lyocell"><span class="flag-sev info">INFO</span><div><span class="flag-link" onclick="openField('external_namespace_finding_premium_fiber_lyocell')">external_namespace_finding_premium_fiber_lyocell</span> — PHASE 2 BACKFILL CANDIDATE / DESCRIPTION+ FLAG: Care-tag photo confirms 31% Lyocell content — Lyocell is a Tencel-family closed-loop premium fiber (sustainable / FSC-certified wood pulp / silky drape / moisture-wicking). This is a significant material-positioning signal — buyer-search picks up 'Lyocell jeans' / 'Tencel jeans' as a premium-fiber differentiator. RECOMMEND Title+ surface Lyocell prominently; Description+ P1/P2 mention premium fabric blend. Phase 2 already captured 31% Lyocell in material_pct, which is correct.</div></div>
       <div class="flag-item" data-field="external_namespace_finding_model_line"><span class="flag-sev info">INFO</span><div><span class="flag-link" onclick="openField('external_namespace_finding_model_line')">external_namespace_finding_model_line</span> — PHASE 2 BACKFILL CANDIDATE: Phase 1 identity.model.value = null. Pilcro premium denim has named fit lines ('Hyphen,' 'Stet,' 'Slang,' 'Serif,' etc. — Pilcro's typography-themed nomenclature). Care tags photographed do NOT show a specific model name. Could not extract model from available 3 frames. RECOMMEND Title+/Phase 2 lookup against Pilcro current catalog OR operator re-shoot with brand-tag close-up (if brand tag has a fit-flag tab embroidered with model name like Levi's 541 / KUT High Rise Ankle Straight Leg tab). Photo-intake cannot resolve from existing frames.</div></div>
       <div class="flag-item" data-field="external_namespace_finding_reshoot_priority"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('external_namespace_finding_reshoot_priority')">external_namespace_finding_reshoot_priority</span> — PHASE 2 BACKFILL CANDIDATE / RE-SHOOT FLAG: Phase 1 already carries 'condition_pending_reshoot: Pants-1650 needs front/back photo capture for grading.' Photo-intake CONFIRMS this need: tag-heavy mode is honest-but-thin; downstream Title+/Description+/Keyword+ will operate at partial-mode confidence ceiling 0.85. RE-SHOOT request: full front-flat + full back-flat + brand-tag close-up (for model line) when item resurfaces for listing. Upgrade path: re-run photo-intake with expanded frame set → mode upgrades 'tag-heavy' → 'full' automatically with capture_version increment per spec §9b.</div></div>
-      <div class="flag-item" data-field="aesthetic.tier_gate_quietluxury_pass"><span class="flag-sev info">INFO</span><div><span class="flag-link" onclick="openField('aesthetic.tier_gate_quietluxury_pass')">aesthetic.tier_gate_quietluxury_pass</span> — Aesthetic tier-gate quietluxury PASS logged: Pilcro on Vaughn kickoff luxury-tier candidate roster. Premium Anthropologie denim line + Lyocell-blend (luxury-tier sustainable fiber) + no-logo refined construction + black skinny clean register = canonical quietluxury fit. Same pattern as Pants-1636 L'AGENCE: tier qualifies + silhouette fits + no-logo aesthetic anchors. relaxedluxury skipped because silhouette is tailored skinny (not relaxed register). slowfashion considered via Lyocell fiber but skipped (no explicit brand sustainability claim, conservative).</div></div>
     </div>
   </div>
 
@@ -891,7 +894,12 @@ function populateAuthors() {
 }
 
 function refreshSaveBtn() {
-  const pending = Object.values(state).filter(v => v && v.notes && v.notes.some(n => !n.exported)).length;
+  const pending = Object.values(state).filter(v =>
+    v && (
+      (v.notes && v.notes.some(n => !n.exported)) ||
+      (v.override !== undefined && !v.overrideExported)
+    )
+  ).length;
   const btn = document.getElementById('saveNotesBtn');
   const pc = document.getElementById('pcount');
   if (!btn) return;
@@ -1081,12 +1089,32 @@ function updateConfBadge(fieldPath) {
 }
 
 function exportHandcuff() {
-  const out = {};
+  const out = {
+    sku: SKU,
+    exported_at: new Date().toISOString().slice(0,19)
+  };
   Object.keys(state).forEach(k => {
     const s = state[k];
-    if (s && s.notes && s.notes.length) {
-      out[k] = {notes: s.notes, resolved: s.resolved || false};
+    if (!s) return;
+    const hasNotes = s.notes && s.notes.length;
+    const hasOverride = Object.prototype.hasOwnProperty.call(s, 'override');
+    if (!hasNotes && !hasOverride) return;
+    const entry = {};
+    if (hasOverride) {
+      // Pull the live displayed value at click-time, per spec.
+      const el = document.querySelector('.row[data-field="' + k + '"]');
+      let dispVal = s.override;
+      if (el) {
+        const node = el.querySelector('.cb-val') || el.querySelector('.sb-val');
+        if (node) dispVal = node.textContent;
+      }
+      entry.value = dispVal;
     }
+    if (hasNotes) {
+      entry.notes = s.notes;
+      entry.resolved = s.resolved || false;
+    }
+    out[k] = entry;
   });
   const blob = new Blob([JSON.stringify(out, null, 2)], {type:'application/json'});
   const url = URL.createObjectURL(blob);
@@ -1364,23 +1392,4 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="row-controls">From <select id="mdAuthor"></select></div>
         <textarea id="mdText" placeholder="Add a note for this field…" rows="3"></textarea>
         <div class="mb-actions">
-          <button class="primary" onclick="addNote()">Add Note</button>
-          <button class="resolve" id="mdResolveBtn" onclick="markResolved()">Mark Resolved</button>
-          <button class="reopen" id="mdReopenBtn" style="display:none" onclick="reopen()">Reopen</button>
-          <button onclick="closeModal()">Cancel</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ── Photo lightbox ── -->
-<div class="photo-lb-bd" id="photoLbBd" onclick="if(event.target===this)closePhotoLB()">
-  <button class="photo-lb-close" onclick="closePhotoLB()" aria-label="Close">&times;</button>
-  <img id="photoLbImg" src="" alt="" />
-  <div class="photo-lb-label" id="photoLbLabel"></div>
-</div>
-
-</div><!-- .wrap -->
-</body>
-</html>
+   

@@ -269,11 +269,17 @@
   <!-- ── Meta Pills ── -->
   <div style="margin-bottom:14px"><div class="meta-pills">
     <span class="pill"><strong>Batch</strong>Batch 4</span>
-    <span class="pill"><strong>COG</strong>$3</span>
+    <span class="pill"><strong>COG</strong>—</span>
     <span class="pill"><strong>List</strong>—</span>
     <span class="pill"><strong>Net</strong>—</span>
-    <span class="pill" style="border-color:var(--green-bd);background:var(--green-bg);color:#065f46;"><strong>Phase 2</strong>2026-05-12</span>
+    <span class="pill" style="border-color:var(--green-bd);background:var(--green-bg);color:#065f46;"><strong>Phase 2</strong>2026-05-14</span>
   </div></div>
+
+  <!-- ── Publish blocker (P2 SMC pending = Rule #135 publish-block) ── -->
+  
+
+  <!-- ── Operational flag (from latest matching _card_corrections[]) ── -->
+  
 
   <!-- ── 1. PHOTOS sband (collapsed) ── -->
   <div class="sband" id="sbandPhotos">
@@ -285,9 +291,12 @@
     <div class="sband-body">
       <h4 style="margin-top:0">Intake Photos</h4>
       <div class="photo-grid" id="photoGrid">
-<a class="photo" href="../thumbnails/Pants-1628/Pants-1628-sku-brand-tag.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Pants-1628/Pants-1628-sku-brand-tag.jpg" alt="Sku Brand Tag" /><div class="ph-label">Sku Brand Tag</div></a>
+<a class="photo" href="../thumbnails/Pants-1628/Pants-1628-garment.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Pants-1628/Pants-1628-garment.jpg" alt="Garment" /><div class="ph-label">Garment</div></a>
+<a class="photo" href="../thumbnails/Pants-1628/Pants-1628-garment-back.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Pants-1628/Pants-1628-garment-back.jpg" alt="Garment Back" /><div class="ph-label">Garment Back</div></a>
+<a class="photo" href="../thumbnails/Pants-1628/Pants-1628-brand-tag.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Pants-1628/Pants-1628-brand-tag.jpg" alt="Brand Tag" /><div class="ph-label">Brand Tag</div></a>
 <a class="photo" href="../thumbnails/Pants-1628/Pants-1628-care-tag.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Pants-1628/Pants-1628-care-tag.jpg" alt="Care Tag" /><div class="ph-label">Care Tag</div></a>
-<a class="photo" href="../thumbnails/Pants-1628/Pants-1628-detail.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Pants-1628/Pants-1628-detail.jpg" alt="Detail" /><div class="ph-label">Detail</div></a>
+<a class="photo" href="../thumbnails/Pants-1628/Pants-1628-care-tag-alt-1.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Pants-1628/Pants-1628-care-tag-alt-1.jpg" alt="Care Tag Alt 1" /><div class="ph-label">Care Tag Alt 1</div></a>
+<a class="photo" href="../thumbnails/Pants-1628/Pants-1628-sku-card.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Pants-1628/Pants-1628-sku-card.jpg" alt="Sku Card" /><div class="ph-label">Sku Card</div></a>
 </div>
       <h4>Customer-Facing Forward Photos</h4>
       <p style="color:var(--ink-mute);font-size:13px;margin:0">No customer-facing photos yet — will be added at listing stage.</p>
@@ -299,7 +308,7 @@
     <div class="sband-hdr" onclick="toggleBand(this)">
       <span class="sband-arrow">&#9658;</span>
       <span class="sband-label">Copy</span>
-      <span class="sband-badge">Title+ &check; &nbsp;|&nbsp; Desc+ &hellip; &nbsp;|&nbsp; KW+ &hellip;</span>
+      <span class="sband-badge">Title+ &hellip; &nbsp;|&nbsp; Desc+ &hellip; &nbsp;|&nbsp; KW+ &hellip;</span>
     </div>
     <div class="sband-body">
       <div class="cws-blocks">
@@ -309,19 +318,19 @@
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Title+</span>
             <span class="cwsb-meta">&#8212;&nbsp;chars</span>
-            <span class="cwsb-badge cws-pending">&#11015;&nbsp;Pending</span>
+            <span class="cwsb-badge cws-pending">&#9203;&nbsp;Pending</span>
           </div>
           <div class="cwsb-body">
-            <div class="cwsb-text" id="cws-title-display">Pending Phase 2</div>
+            <div class="cwsb-text" id="cws-title-display"></div>
             <div class="cwsb-click-hint">&#9998; Click to edit</div>
           </div>
         </div>
 
-        <!-- Description+ PENDING (rendered, pending Tracie review) -->
+        <!-- Description+ (state driven by copy.pending[]) -->
         <div class="cws-block cws-pending" id="cwsb-desc" style="cursor:default" role="region" aria-label="Description+">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Description+</span>
-            <span class="cwsb-badge cws-pending" id="cwsb-desc-badge">&#9203; Pending Review</span>
+            <span class="cwsb-badge cws-pending" id="cwsb-desc-badge">&#9203;&nbsp;Pending Review</span>
           </div>
           <div class="cwsb-body" style="display:flex;flex-direction:column;gap:8px">
 
@@ -329,10 +338,10 @@
             <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p1" onclick="cwsOpen('desc-p1')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P1 &middot; Opening Paragraph</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p1-badge">&#9203; Pending</span>
+                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p1-badge">&#9203;&nbsp;Pending</span>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p1-display">Pending Phase 2</div>
+                <div class="cwsb-text" id="cws-desc-p1-display"></div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
@@ -341,10 +350,10 @@
             <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p2" onclick="cwsOpen('desc-p2')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P2 &middot; SMC</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p2-badge">&#9203; Pending</span>
+                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p2-badge">&#9203;&nbsp;Pending</span>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p2-display">Pending Phase 2</div>
+                <div class="cwsb-text" id="cws-desc-p2-display"></div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
@@ -352,11 +361,11 @@
             <!-- P3 sub-block -->
             <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p3" onclick="cwsOpen('desc-p3')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
-                <span class="cws-subblock-skill">P3 &middot; Service Block</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p3-badge">&#9203; Pending</span>
+                <span class="cws-subblock-skill">P3 &middot; Badges</span>
+                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p3-badge">&#9203;&nbsp;Pending</span>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p3-display">Pending Phase 2</div>
+                <div class="cwsb-text" id="cws-desc-p3-display"></div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
@@ -364,14 +373,14 @@
           </div>
         </div>
 
-        <!-- Keyword+ PENDING (rendered, pending Tracie review) -->
+        <!-- Keyword+ (state driven by copy.pending[] / keywords presence) -->
         <div class="cws-block cws-pending" id="cwsb-kw" onclick="cwsOpen('kw')" role="button" tabindex="0">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Keyword+</span>
-            <span class="cwsb-badge cws-pending">&#9203; Pending Review</span>
+            <span class="cwsb-badge cws-pending">&#9203;&nbsp;Pending Review</span>
           </div>
           <div class="cwsb-body">
-            <div class="cwsb-text" id="cws-kw-display">Pending Phase 2</div>
+            <div class="cwsb-text" id="cws-kw-display"></div>
             <div class="cwsb-click-hint">&#9998; Click to edit</div>
           </div>
         </div>
@@ -393,7 +402,7 @@
       <h4>1 &middot; Item Details</h4>
       <div class="item-details-cols">
         <div class="item-details-left">
-          <div class="row" data-field="vendoo.brand" data-status="green" data-source="No RN captured (no photos). Brand from bench note only — awaits re-shoot for verification." data-value="Everlane"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Everlane</span><button class="cb-btn" onclick="copyVal(this,'Everlane')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.brand')">&#10003;</button></div>
+          <div class="row" data-field="vendoo.brand" data-status="green" data-source="VERIFIED 2026-05-14 via direct Cowork photo read of inner brand label + RN care tag (operator uploaded photos to chat). Inner label shows 'EVERLANE / Made in Vietnam / 10'. Care tag shows 'EVERLANE / 2170 Folsom Street, San Francisco, CA 94110 / RN# 139393'. Everlane RN 139393 confirmed. Bench note 'Everlane' was correct." data-value="Everlane"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Everlane</span><button class="cb-btn" onclick="copyVal(this,'Everlane')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.brand')">&#10003;</button></div>
           <div class="row" data-field="vendoo.condition" data-options="NWT|NWOT|GPO (internal)|Pre-Loved (internal)|Fair (internal)|Pre-owned — Like New (eBay)|Pre-owned — Very Good (eBay)|Pre-owned — Good (eBay)|Pre-owned — Acceptable (eBay)|Like New (Vendoo)|Good (Vendoo)|Fair (Vendoo)|New with Tags (Vendoo)" data-status="green" data-source="Phase 1 intake &middot; GPO" data-value="GPO"><div class="k">Condition</div><div class="v"><div class="selectblock"><span class="sb-val">Pre-Owned - Good</span></div></div><button class="conf green" onclick="openField('vendoo.condition')">&#10003;</button></div>
           <div class="row" data-field="vendoo.color1" data-options="Black|White|Gray|Brown|Tan/Beige|Red|Orange|Yellow|Green|Blue|Purple|Pink|Multi|Print|Other" data-status="green" data-source="copy_capture" data-value="Tan"><div class="k">Primary Color</div><div class="v"><div class="selectblock"><span class="sb-val">Tan</span></div></div><button class="conf green" onclick="openField('vendoo.color1')">&#10003;</button></div>
           <div class="row" data-field="vendoo.color2" data-options="None|Black|White|Gray|Brown|Tan/Beige|Red|Orange|Yellow|Green|Blue|Purple|Pink|Multi|Print|Other" data-status="gray" data-source="copy_capture" data-value=""><div class="k">Secondary Color</div><div class="v"><div class="selectblock pending"><span class="sb-val">none</span></div></div><button class="conf gray" onclick="openField('vendoo.color2')">&minus;</button></div>
@@ -427,7 +436,7 @@
       <h4>4 &middot; Price</h4>
       <div class="grid">
         <div class="row" data-field="vendoo.listing_price" data-status="green" data-source="rrr-pricing &middot; eBay 75th &middot; medium confidence (n=6 90d)" data-value=""><div class="k">Listing Price</div><div class="v"><div class="copyblock"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.listing_price')">&#10003;</button></div>
-        <div class="row" data-field="vendoo.cog" data-status="green" data-source="NWLG default" data-value="3.00"><div class="k">Cost of Goods</div><div class="v"><div class="copyblock"><span class="cb-val">$3</span><button class="cb-btn" onclick="copyVal(this,'3.00')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.cog')">&#10003;</button></div>
+        <div class="row" data-field="vendoo.cog" data-status="green" data-source="NWLG default" data-value=""><div class="k">Cost of Goods</div><div class="v"><div class="copyblock"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.cog')">&#10003;</button></div>
       </div>
       <h4>5 &middot; Labels</h4>
       <div class="grid">
@@ -448,7 +457,7 @@
       <h4 style="margin-top:20px;padding-top:14px;border-top:2px solid var(--bd)">eBay &mdash; Top-Level Listing Fields</h4>
       <div class="grid">
         <div class="row" data-field="ebay.price" data-status="green" data-source="rrr-pricing &middot; eBay 75th &middot; medium confidence (n=6 90d)" data-value=""><div class="k">Price</div><div class="v"><div class="copyblock"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf green" onclick="openField('ebay.price')">&#10003;</button></div>
-        <div class="row" data-field="ebay.brand" data-status="green" data-source="No RN captured (no photos). Brand from bench note only — awaits re-shoot for verification." data-value="Everlane"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Everlane</span><button class="cb-btn" onclick="copyVal(this,'Everlane')">copy</button></div></div><button class="conf green" onclick="openField('ebay.brand')">&#10003;</button></div>
+        <div class="row" data-field="ebay.brand" data-status="green" data-source="VERIFIED 2026-05-14 via direct Cowork photo read of inner brand label + RN care tag (operator uploaded photos to chat). Inner label shows 'EVERLANE / Made in Vietnam / 10'. Care tag shows 'EVERLANE / 2170 Folsom Street, San Francisco, CA 94110 / RN# 139393'. Everlane RN 139393 confirmed. Bench note 'Everlane' was correct." data-value="Everlane"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Everlane</span><button class="cb-btn" onclick="copyVal(this,'Everlane')">copy</button></div></div><button class="conf green" onclick="openField('ebay.brand')">&#10003;</button></div>
         <div class="row" data-field="ebay.color" data-status="green" data-source="copy_capture" data-value="Tan"><div class="k">Color</div><div class="v"><div class="selectblock"><span class="sb-val">Tan</span></div></div><button class="conf green" onclick="openField('ebay.color')">&#10003;</button></div>
         <div class="row" data-field="ebay.priceformat" data-options="Fixed Price|Auction" data-status="yellow" data-source="Default &middot; Buy It Now" data-value="Fixed Price &middot; —"><div class="k">Price Format</div><div class="v"><div class="selectblock"><span class="sb-val">Fixed Price &middot; —</span></div></div><button class="conf yellow" onclick="openField('ebay.priceformat')">&#9888;</button></div>
         <div class="row" data-field="ebay.bestoffer" data-options="Yes|No" data-status="gray" data-source="Policy decision &middot; not in JSON" data-value=""><div class="k">Allow Best Offer</div><div class="v"><div class="selectblock pending"><span class="sb-val">policy decision</span></div></div><button class="conf gray" onclick="openField('ebay.bestoffer')">&minus;</button></div>
@@ -462,17 +471,17 @@
         <div class="row" data-field="ebay.aspect.department" data-options="Men|Women|Unisex|Boys|Girls" data-status="green" data-source="aspects" data-value="—"><div class="k">Department</div><div class="v"><div class="selectblock"><span class="sb-val">—</span></div></div><button class="conf green" onclick="openField('ebay.aspect.department')">&#10003;</button></div>
         <div class="row" data-field="ebay.aspect.condition" data-options="NWT|NWOT|GPO (internal)|Pre-Loved (internal)|Fair (internal)|Pre-owned — Like New (eBay)|Pre-owned — Very Good (eBay)|Pre-owned — Good (eBay)|Pre-owned — Acceptable (eBay)|Like New (Vendoo)|Good (Vendoo)|Fair (Vendoo)|New with Tags (Vendoo)" data-status="green" data-source="Phase 1 intake &middot; GPO" data-value="GPO"><div class="k">Condition</div><div class="v"><div class="selectblock"><span class="sb-val">Pre-owned — Good</span></div></div><button class="conf green" onclick="openField('ebay.aspect.condition')">&#10003;</button></div>
         <div class="row" data-field="ebay.aspect.sleeve" data-options="Short Sleeve|Long Sleeve|3/4 Sleeve|Sleeveless|Cap Sleeve" data-status="green" data-source="copy_capture &middot; 1.0 confidence" data-value="Long Sleeve"><div class="k">Sleeve Length</div><div class="v"><div class="selectblock"><span class="sb-val">Long Sleeve</span></div></div><button class="conf green" onclick="openField('ebay.aspect.sleeve')">&#10003;</button></div>
-        <div class="row" data-field="ebay.aspect.pattern" data-options="Solid|Plaid|Stripes|Checkered|Geometric|Floral|Abstract|Animal Print|Camouflage|Paisley|Graphic Print" data-status="gray" data-source="descriptors" data-value="—"><div class="k">Pattern</div><div class="v"><div class="selectblock"><span class="sb-val">—</span></div></div><button class="conf gray" onclick="openField('ebay.aspect.pattern')">&minus;</button></div>
-        <div class="row" data-field="ebay.aspect.material" data-status="green" data-source="Care tag &middot; 55% Cotton 45% Polyester" data-value=""><div class="k">Material</div><div class="v"><div class="copyblock"><span class="cb-val"></span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf green" onclick="openField('ebay.aspect.material')">&#10003;</button></div>
-        <div class="row" data-field="ebay.aspect.country" data-options="China|USA|Vietnam|Bangladesh|Cambodia|Mexico|India|Indonesia|Pakistan|Turkey|El Salvador|Sri Lanka" data-status="gray" data-source="care tag" data-value="—"><div class="k">Country of Origin</div><div class="v"><div class="selectblock pending"><span class="sb-val">—</span></div></div><button class="conf gray" onclick="openField('ebay.aspect.country')">&minus;</button></div>
-        <div class="row" data-field="ebay.aspect.care" data-options="Machine Washable|Hand Wash Only|Dry Clean Only|Spot Clean Only" data-status="gray" data-source="care tag" data-value="—"><div class="k">Garment Care</div><div class="v"><div class="selectblock pending"><span class="sb-val">—</span></div></div><button class="conf gray" onclick="openField('ebay.aspect.care')">&minus;</button></div>
+        <div class="row" data-field="ebay.aspect.pattern" data-options="Solid|Plaid|Stripes|Checkered|Geometric|Floral|Abstract|Animal Print|Camouflage|Paisley|Graphic Print" data-status="green" data-source="descriptors" data-value="Solid"><div class="k">Pattern</div><div class="v"><div class="selectblock"><span class="sb-val">Solid</span></div></div><button class="conf green" onclick="openField('ebay.aspect.pattern')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.material" data-status="green" data-source="Care tag &middot; 55% Cotton 45% Polyester" data-value="60% Tencel Lyocell / 40% Cotton"><div class="k">Material</div><div class="v"><div class="copyblock"><span class="cb-val">60% Tencel Lyocell / 40% Cotton</span><button class="cb-btn" onclick="copyVal(this,'60% Tencel Lyocell / 40% Cotton')">copy</button></div></div><button class="conf green" onclick="openField('ebay.aspect.material')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.country" data-options="China|USA|Vietnam|Bangladesh|Cambodia|Mexico|India|Indonesia|Pakistan|Turkey|El Salvador|Sri Lanka" data-status="green" data-source="care tag" data-value="Vietnam"><div class="k">Country of Origin</div><div class="v"><div class="selectblock "><span class="sb-val">Vietnam</span></div></div><button class="conf green" onclick="openField('ebay.aspect.country')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.care" data-options="Machine Washable|Hand Wash Only|Dry Clean Only|Spot Clean Only" data-status="green" data-source="care tag" data-value="Machine Wash Cold Gentle Cycle With Like Colors · Only Non-Chlorine Bleach When Needed · Line Dry · Cool Iron When Needed · Or Dry Clean"><div class="k">Garment Care</div><div class="v"><div class="selectblock "><span class="sb-val">Machine Wash Cold Gentle Cycle With Like Colors · Only Non-Chlorine Bleach When Needed · Line Dry · Cool Iron When Needed · Or Dry Clean</span></div></div><button class="conf green" onclick="openField('ebay.aspect.care')">&#10003;</button></div>
         <div class="row" data-field="ebay.aspect.neckline" data-options="Collared|V-Neck|Crew Neck|Scoop Neck|Turtleneck|Mock Neck|Henley|Boat Neck" data-status="green" data-source="Derived from copy_capture &middot; Point Collar" data-value="Collared"><div class="k">Neckline</div><div class="v"><div class="selectblock"><span class="sb-val">Collared</span></div></div><button class="conf green" onclick="openField('ebay.aspect.neckline')">&#10003;</button></div>
         <div class="row" data-field="ebay.aspect.collar" data-options="Point|Button-Down|Spread|Mandarin|Band|None" data-status="green" data-source="Vaughn visual &middot; 0.9" data-value="Point"><div class="k">Collar Style</div><div class="v"><div class="selectblock"><span class="sb-val">Point</span></div></div><button class="conf green" onclick="openField('ebay.aspect.collar')">&#10003;</button></div>
         <div class="row" data-field="ebay.aspect.closure" data-options="Button|Zipper|Hook and Eye|Snap|Pullover|Drawstring|Tie" data-status="green" data-source="Vaughn visual &middot; 0.95 &middot; Button Placket-Full" data-value="Button"><div class="k">Closure</div><div class="v"><div class="selectblock"><span class="sb-val">Button</span></div></div><button class="conf green" onclick="openField('ebay.aspect.closure')">&#10003;</button></div>
         <div class="row" data-field="ebay.aspect.occasion" data-options="Travel|Casual|Outdoor|Sport/Athletic|Business Casual|Hiking|Fishing|Camping" data-status="green" data-source="copy_capture use_cases &middot; 0.95 &middot; Travel" data-value="Travel"><div class="k">Occasion</div><div class="v"><div class="selectblock"><span class="sb-val">Travel</span></div></div><button class="conf green" onclick="openField('ebay.aspect.occasion')">&#10003;</button></div>
         <div class="row" data-field="ebay.aspect.chest" data-status="yellow" data-source="Derived: bust &times; 2 = 48 in" data-value="48"><div class="k">Chest Size</div><div class="v"><div class="copyblock"><span class="cb-val">48 in</span><button class="cb-btn" onclick="copyVal(this,'48')">copy</button></div></div><button class="conf yellow" onclick="openField('ebay.aspect.chest')">&#9888;</button></div>
         <div class="row" data-field="ebay.aspect.productline" data-status="gray" data-source="identity" data-value=""><div class="k">Product Line</div><div class="v"><div class="selectblock pending"><span class="sb-val">—</span></div></div><button class="conf gray" onclick="openField('ebay.aspect.productline')">&minus;</button></div>
-        <div class="row" data-field="ebay.aspect.model" data-status="yellow" data-source="identity" data-value="—"><div class="k">Model</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'—')">copy</button></div></div><button class="conf yellow" onclick="openField('ebay.aspect.model')">&#9888;</button></div>
+        <div class="row" data-field="ebay.aspect.model" data-status="green" data-source="identity" data-value="The Way-High Taper Pant"><div class="k">Model</div><div class="v"><div class="copyblock "><span class="cb-val">The Way-High Taper Pant</span><button class="cb-btn" onclick="copyVal(this,'The Way-High Taper Pant')">copy</button></div></div><button class="conf green" onclick="openField('ebay.aspect.model')">&#10003;</button></div>
         <div class="row" data-field="ebay.aspect.fit" data-options="Regular|Slim|Relaxed|Oversized|Athletic" data-status="gray" data-source="Silhouette flagged warn &middot; cannot confirm fit" data-value=""><div class="k">Fit</div><div class="v"><div class="selectblock pending"><span class="sb-val">empty</span></div></div><button class="conf gray" onclick="openField('ebay.aspect.fit')">&minus;</button></div>
         <div class="row" data-field="ebay.aspect.vintage" data-options="Yes|No" data-status="gray" data-source="Era: Modern &middot; not vintage" data-value="No"><div class="k">Vintage</div><div class="v"><div class="selectblock"><span class="sb-val">No</span></div></div><button class="conf gray" onclick="openField('ebay.aspect.vintage')">&minus;</button></div>
         <div class="row" data-field="ebay.aspect.mpn" data-status="gray" data-source="Absent on tag" data-value=""><div class="k">MPN</div><div class="v"><div class="copyblock pending"><span class="cb-val">empty</span></div></div><button class="conf gray" onclick="openField('ebay.aspect.mpn')">&minus;</button></div>
@@ -486,19 +495,19 @@
     <div class="sband-hdr" onclick="toggleBand(this)">
       <span class="sband-arrow">&#9658;</span>
       <span class="sband-label">Identity</span>
-      <span class="sband-badge">Everlane &middot; —</span>
+      <span class="sband-badge">Everlane &middot; The Way-High Taper Pant</span>
     </div>
     <div class="sband-body">
       <div class="grid">
-        <div class="row" data-field="ref.brand" data-status="green" data-source="No RN captured (no photos). Brand from bench note only — awaits re-shoot for verification." data-value="Everlane"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Everlane</span><button class="cb-btn" onclick="copyVal(this,'Everlane')">copy</button></div></div><button class="conf green" onclick="openField('ref.brand')">&#10003;</button></div>
-        <div class="row" data-field="ref.model" data-status="yellow" data-source="identity" data-value="—"><div class="k">Model</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'—')">copy</button></div></div><button class="conf yellow" onclick="openField('ref.model')">&#9888;</button></div>
-        <div class="row" data-field="ref.rn" data-status="gray" data-source="brand tag" data-value="—"><div class="k">RN</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'—')">copy</button></div></div><button class="conf gray" onclick="openField('ref.rn')">&minus;</button></div>
-        <div class="row" data-field="ref.style" data-status="gray" data-source="brand tag" data-value="—"><div class="k">Style Code</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'—')">copy</button></div></div><button class="conf gray" onclick="openField('ref.style')">&minus;</button></div>
+        <div class="row" data-field="ref.brand" data-status="green" data-source="VERIFIED 2026-05-14 via direct Cowork photo read of inner brand label + RN care tag (operator uploaded photos to chat). Inner label shows 'EVERLANE / Made in Vietnam / 10'. Care tag shows 'EVERLANE / 2170 Folsom Street, San Francisco, CA 94110 / RN# 139393'. Everlane RN 139393 confirmed. Bench note 'Everlane' was correct." data-value="Everlane"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Everlane</span><button class="cb-btn" onclick="copyVal(this,'Everlane')">copy</button></div></div><button class="conf green" onclick="openField('ref.brand')">&#10003;</button></div>
+        <div class="row" data-field="ref.model" data-status="green" data-source="identity" data-value="The Way-High Taper Pant"><div class="k">Model</div><div class="v"><div class="copyblock "><span class="cb-val">The Way-High Taper Pant</span><button class="cb-btn" onclick="copyVal(this,'The Way-High Taper Pant')">copy</button></div></div><button class="conf green" onclick="openField('ref.model')">&#10003;</button></div>
+        <div class="row" data-field="ref.rn" data-status="green" data-source="brand tag" data-value="139393"><div class="k">RN</div><div class="v"><div class="copyblock "><span class="cb-val">139393</span><button class="cb-btn" onclick="copyVal(this,'139393')">copy</button></div></div><button class="conf green" onclick="openField('ref.rn')">&#10003;</button></div>
+        <div class="row" data-field="ref.style" data-status="green" data-source="brand tag" data-value="F-BTM-CTN-WHGH-TPR"><div class="k">Style Code</div><div class="v"><div class="copyblock "><span class="cb-val">F-BTM-CTN-WHGH-TPR</span><button class="cb-btn" onclick="copyVal(this,'F-BTM-CTN-WHGH-TPR')">copy</button></div></div><button class="conf green" onclick="openField('ref.style')">&#10003;</button></div>
         <div class="row" data-field="ref.category" data-status="green" data-source="Internal classification" data-value="Tops / Button-Down"><div class="k">Category</div><div class="v"><div class="selectblock"><span class="sb-val">Tops &rsaquo; Button-Down</span></div></div><button class="conf green" onclick="openField('ref.category')">&#10003;</button></div>
         <div class="row" data-field="cap.color" data-status="green" data-source="copy_capture" data-value="Tan"><div class="k">Color</div><div class="v"><div class="selectblock"><span class="sb-val">Tan</span></div></div><button class="conf green" onclick="openField('cap.color')">&#10003;</button></div>
-        <div class="row" data-field="ebay.aspect.material" data-status="gray" data-source="care tag" data-value=""><div class="k">Material</div><div class="v"><div class="copyblock pending"><span class="cb-val"></span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf gray" onclick="openField('ebay.aspect.material')">&minus;</button></div>
-        <div class="row" data-field="ebay.aspect.care" data-options="Machine Washable|Hand Wash Only|Dry Clean Only|Spot Clean Only" data-status="gray" data-source="care tag" data-value="—"><div class="k">Care</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'—')">copy</button></div></div><button class="conf gray" onclick="openField('ebay.aspect.care')">&minus;</button></div>
-        <div class="row" data-field="ebay.aspect.country" data-options="China|USA|Vietnam|Bangladesh|Cambodia|Mexico|India|Indonesia|Pakistan|Turkey|El Salvador|Sri Lanka" data-status="gray" data-source="care tag" data-value="—"><div class="k">Country of Origin</div><div class="v"><div class="selectblock pending"><span class="sb-val">—</span></div></div><button class="conf gray" onclick="openField('ebay.aspect.country')">&minus;</button></div>
+        <div class="row" data-field="ebay.aspect.material" data-status="green" data-source="care tag" data-value="60% Tencel Lyocell / 40% Cotton"><div class="k">Material</div><div class="v"><div class="copyblock "><span class="cb-val">60% Tencel Lyocell / 40% Cotton</span><button class="cb-btn" onclick="copyVal(this,'60% Tencel Lyocell / 40% Cotton')">copy</button></div></div><button class="conf green" onclick="openField('ebay.aspect.material')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.care" data-options="Machine Washable|Hand Wash Only|Dry Clean Only|Spot Clean Only" data-status="green" data-source="care tag" data-value="Machine Wash Cold Gentle Cycle With Like Colors · Only Non-Chlorine Bleach When Needed · Line Dry · Cool Iron When Needed · Or Dry Clean"><div class="k">Care</div><div class="v"><div class="copyblock "><span class="cb-val">Machine Wash Cold Gentle Cycle With Like Colors · Only Non-Chlorine Bleach When Needed · Line Dry · Cool Iron When Needed · Or Dry Clean</span><button class="cb-btn" onclick="copyVal(this,'Machine Wash Cold Gentle Cycle With Like Colors · Only Non-Chlorine Bleach When Needed · Line Dry · Cool Iron When Needed · Or Dry Clean')">copy</button></div></div><button class="conf green" onclick="openField('ebay.aspect.care')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.country" data-options="China|USA|Vietnam|Bangladesh|Cambodia|Mexico|India|Indonesia|Pakistan|Turkey|El Salvador|Sri Lanka" data-status="green" data-source="care tag" data-value="Vietnam"><div class="k">Country of Origin</div><div class="v"><div class="selectblock "><span class="sb-val">Vietnam</span></div></div><button class="conf green" onclick="openField('ebay.aspect.country')">&#10003;</button></div>
       </div>
     </div>
   </div>
@@ -518,7 +527,7 @@
         <div class="row" data-field="ref.inseam" data-status="green" data-source="Bench 2026-05-08" data-value="26.5"><div class="k">Inseam (Full length)</div><div class="v"><div class="copyblock"><span class="cb-val">26.5 in</span><button class="cb-btn" onclick="copyVal(this,'26.5')">copy</button></div></div><button class="conf green" onclick="openField('ref.inseam')">&#10003;</button></div>
         <div class="row" data-field="ref.rise" data-status="green" data-source="Bench 2026-05-08" data-value="13.5"><div class="k">Rise (Vertical)</div><div class="v"><div class="copyblock"><span class="cb-val">13.5 in</span><button class="cb-btn" onclick="copyVal(this,'13.5')">copy</button></div></div><button class="conf green" onclick="openField('ref.rise')">&#10003;</button></div>
         <div class="row" data-field="ref.leg_opening" data-status="green" data-source="Bench 2026-05-08" data-value="7"><div class="k">Leg Opening (Flat)</div><div class="v"><div class="copyblock"><span class="cb-val">7 in</span><button class="cb-btn" onclick="copyVal(this,'7')">copy</button></div></div><button class="conf green" onclick="openField('ref.leg_opening')">&#10003;</button></div>
-        <div class="row" data-field="ref.stretch" data-status="gray" data-source="descriptors" data-value="—"><div class="k">Stretch</div><div class="v"><div class="selectblock"><span class="sb-val">—</span></div></div><button class="conf gray" onclick="openField('ref.stretch')">&#10003;</button></div>
+        <div class="row" data-field="ref.stretch" data-status="green" data-source="descriptors" data-value="No"><div class="k">Stretch</div><div class="v"><div class="selectblock"><span class="sb-val">No</span></div></div><button class="conf green" onclick="openField('ref.stretch')">&#10003;</button></div>
       </div>
     </div>
   </div>
@@ -572,7 +581,7 @@
     <div class="sband-body">
       <div class="grid">
         <div class="row" data-field="prov.source" data-status="green" data-source="intake_meta" data-value="Batch 4"><div class="k">Source</div><div class="v"><div class="selectblock"><span class="sb-val">Batch 4</span></div></div><button class="conf green" onclick="openField('prov.source')">&#10003;</button></div>
-        <div class="row" data-field="vendoo.cog" data-status="green" data-source="NWLG default $5.00" data-value="3.00"><div class="k">Acquisition Cost</div><div class="v"><div class="copyblock"><span class="cb-val">$3</span><button class="cb-btn" onclick="copyVal(this,'3.00')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.cog')">&#10003;</button></div>
+        <div class="row" data-field="vendoo.cog" data-status="green" data-source="NWLG default $5.00" data-value=""><div class="k">Acquisition Cost</div><div class="v"><div class="copyblock"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.cog')">&#10003;</button></div>
         <div class="row" data-field="prov.bench" data-status="yellow" data-source="JSON records operators as Vaughn / Tracie / Ellie &mdash; should be Elle (E-L-L-E)" data-value="2026-05-08"><div class="k">Bench Session</div><div class="v"><div class="selectblock"><span class="sb-val">2026-05-08</span></div></div><button class="conf yellow" onclick="openField('prov.bench')">&#9888;</button></div>
         <div class="row" data-field="prov.p1" data-status="green" data-source="2026-05-06 &middot; autonomous photo-read close" data-value=""><div class="k">Phase 1 Closed</div><div class="v"><div class="selectblock"><span class="sb-val">2026-05-06</span></div></div><button class="conf green" onclick="openField('prov.p1')">&#10003;</button></div>
         <div class="row" data-field="prov.p2" data-status="green" data-source="2026-05-06 &middot; brand verified &middot; pricing medium confidence" data-value=""><div class="k">Phase 2 Closed</div><div class="v"><div class="selectblock"><span class="sb-val">2026-05-06</span></div></div><button class="conf green" onclick="openField('prov.p2')">&#10003;</button></div>
@@ -583,12 +592,12 @@
 
   <footer>
     <span><strong>Host:</strong> GitHub Pages &middot; vmonagon/Revive-Restore-Resell</span>
-    <span><strong>Render:</strong> static &middot; v0.6 (sband redesign) &middot; 2026-05-13</span>
+    <span><strong>Render:</strong> static &middot; v0.6 (sband redesign) &middot; 2026-05-15</span>
   </footer>
 </div>
   <!-- ── 9. FLOW STEP tracker (preserved exactly) ── -->
   <div class="tracker">
-    <div class="tband" id="flowStepBand"><div class="tlabel tlabel-toggle" id="flowStepToggle" onclick="toggleTracker()">FLOW Step<span class="tracker-arrow">&#9658;</span></div><div class="tcells"><div class="tcell done">Sourcing</div><div class="tcell current">Intake</div><div class="tcell pending">Intake Photos</div><div class="tcell pending">Photography</div><div class="tcell pending">Listing</div><div class="tcell pending">Published</div><div class="tcell pending">Sold</div><div class="tcell pending">Fulfillment</div></div></div>
+    <div class="tband" id="flowStepBand"><div class="tlabel tlabel-toggle" id="flowStepToggle" onclick="toggleTracker()">FLOW Step<span class="tracker-arrow">&#9658;</span></div><div class="tcells"><div class="tcell done">Sourcing</div><div class="tcell done">Intake</div><div class="tcell done">Intake Photos</div><div class="tcell done">Photography</div><div class="tcell current">Listing</div><div class="tcell pending">Published</div><div class="tcell pending">Sold</div><div class="tcell pending">Fulfillment</div></div></div>
     <div class="tracker-children" id="trackerChildren">
       <div class="tband photo-track"><div class="tlabel">Photography Track<small>current Photo Ready</small></div><div class="tcells"><div class="tcell shared">Sourced</div><div class="tcell shared">Prep/Measure</div><div class="tcell shared">Intake Card</div><div class="tcell done">Intake Photos</div><div class="tcell current">Photo Ready</div><div class="tcell pending">Customer Photos</div><div class="tcell pending">Back Up</div><div class="tcell shared">Ready</div><div class="tcell shared">List</div><div class="tcell shared">Published</div><div class="tcell shared">Sold</div><div class="tcell shared">Shipped</div></div></div>
       <div class="tband copy-track"><div class="tlabel">Copy Track<small>current Intake Card Title</small></div><div class="tcells"><div class="tcell shared">Sourced</div><div class="tcell shared">Prep/Measure</div><div class="tcell shared">Intake Card</div><div class="tcell done">Placeholder</div><div class="tcell done">Draft</div><div class="tcell current">Intake Card Title</div><div class="tcell pending">Review</div><div class="tcell shared">Ready</div><div class="tcell shared">List</div><div class="tcell shared">Published</div><div class="tcell shared">Sold</div><div class="tcell shared">Shipped</div></div></div>
@@ -604,10 +613,7 @@
       <span class="sband-badge" id="flagsCount">6</span>
     </div>
     <div class="sband-body">
-      <div class="flag-item" data-field="brand_pending_reshoot: 1628 not photographed; brand from bench only"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('brand_pending_reshoot: 1628 not photographed; brand from bench only')">brand_pending_reshoot: 1628 not photographed; brand from bench only</span></div></div>
-      <div class="flag-item" data-field="photo_pending_reshoot: 1628 awaits photo capture before Phase 2 close"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('photo_pending_reshoot: 1628 awaits photo capture before Phase 2 close')">photo_pending_reshoot: 1628 awaits photo capture before Phase 2 close</span></div></div>
-      <div class="flag-item" data-field="material_missing: care-tag photo did not show full material %; Title+ should note 'material not specified'"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('material_missing: care-tag photo did not show full material %; Title+ should note 'material not specified'')">material_missing: care-tag photo did not show full material %; Title+ should note 'material not specified'</span></div></div>
-      <div class="flag-item" data-field="country_missing: care-tag photo did not show country of origin; Title+ should omit country claim"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('country_missing: care-tag photo did not show country of origin; Title+ should omit country claim')">country_missing: care-tag photo did not show country of origin; Title+ should omit country claim</span></div></div>
+      <div style="color:#065f46;font-size:13px;padding:4px 0">&#10003; No open items.</div>
     </div>
   </div>
 
@@ -845,7 +851,12 @@ function populateAuthors() {
 }
 
 function refreshSaveBtn() {
-  const pending = Object.values(state).filter(v => v && v.notes && v.notes.some(n => !n.exported)).length;
+  const pending = Object.values(state).filter(v =>
+    v && (
+      (v.notes && v.notes.some(n => !n.exported)) ||
+      (v.override !== undefined && !v.overrideExported)
+    )
+  ).length;
   const btn = document.getElementById('saveNotesBtn');
   const pc = document.getElementById('pcount');
   if (!btn) return;
@@ -1035,12 +1046,32 @@ function updateConfBadge(fieldPath) {
 }
 
 function exportHandcuff() {
-  const out = {};
+  const out = {
+    sku: SKU,
+    exported_at: new Date().toISOString().slice(0,19)
+  };
   Object.keys(state).forEach(k => {
     const s = state[k];
-    if (s && s.notes && s.notes.length) {
-      out[k] = {notes: s.notes, resolved: s.resolved || false};
+    if (!s) return;
+    const hasNotes = s.notes && s.notes.length;
+    const hasOverride = Object.prototype.hasOwnProperty.call(s, 'override');
+    if (!hasNotes && !hasOverride) return;
+    const entry = {};
+    if (hasOverride) {
+      // Pull the live displayed value at click-time, per spec.
+      const el = document.querySelector('.row[data-field="' + k + '"]');
+      let dispVal = s.override;
+      if (el) {
+        const node = el.querySelector('.cb-val') || el.querySelector('.sb-val');
+        if (node) dispVal = node.textContent;
+      }
+      entry.value = dispVal;
     }
+    if (hasNotes) {
+      entry.notes = s.notes;
+      entry.resolved = s.resolved || false;
+    }
+    out[k] = entry;
   });
   const blob = new Blob([JSON.stringify(out, null, 2)], {type:'application/json'});
   const url = URL.createObjectURL(blob);
@@ -1318,23 +1349,4 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="row-controls">From <select id="mdAuthor"></select></div>
         <textarea id="mdText" placeholder="Add a note for this field…" rows="3"></textarea>
         <div class="mb-actions">
-          <button class="primary" onclick="addNote()">Add Note</button>
-          <button class="resolve" id="mdResolveBtn" onclick="markResolved()">Mark Resolved</button>
-          <button class="reopen" id="mdReopenBtn" style="display:none" onclick="reopen()">Reopen</button>
-          <button onclick="closeModal()">Cancel</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ── Photo lightbox ── -->
-<div class="photo-lb-bd" id="photoLbBd" onclick="if(event.target===this)closePhotoLB()">
-  <button class="photo-lb-close" onclick="closePhotoLB()" aria-label="Close">&times;</button>
-  <img id="photoLbImg" src="" alt="" />
-  <div class="photo-lb-label" id="photoLbLabel"></div>
-</div>
-
-</div><!-- .wrap -->
-</body>
-</html>
+   
