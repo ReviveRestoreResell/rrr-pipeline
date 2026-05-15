@@ -7,17 +7,37 @@
 <title>Copy - 40 SKU — RRR Intake Cards</title>
 <style>
 *{box-sizing:border-box}
-html,body{margin:0;padding:0}
+html,body{margin:0;padding:0;scroll-behavior:smooth}
 body{font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#fafaf9;color:#111827;-webkit-text-size-adjust:100%}
-.hdr{background:#0f172a;color:#e2e8f0;padding:18px 20px;position:sticky;top:0;z-index:5}
-.hdr h1{margin:0;font-size:20px;font-weight:700;color:#fff}
+.hdr{background:#0f172a;color:#e2e8f0;padding:16px 20px;position:sticky;top:0;z-index:50}
+.hdr h1{margin:0;font-size:18px;font-weight:700;color:#fff}
 .hdr .sub{font-size:12px;color:#94a3b8;margin-top:4px}
 .hdr .back{display:inline-block;margin-top:8px;font-size:13px;color:#7dd3fc;text-decoration:none}
 .hdr .back:hover{color:#fff;text-decoration:underline}
 .wrap{max-width:640px;margin:0 auto;padding:18px 14px 60px}
-.stats{font-size:13px;color:#6b7280;margin:0 4px 18px;line-height:1.6}
-h2.cat{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#64748b;margin:30px 4px 12px;padding-bottom:6px;border-bottom:1px solid #e2e8f0}
-.sku{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:16px 16px 18px;margin:0 0 14px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.stats{font-size:13px;color:#6b7280;margin:0 4px 14px;line-height:1.6}
+
+#sku-index{margin:0 0 22px;background:#fff;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden}
+#sku-index summary{padding:11px 14px;font-size:13px;font-weight:700;color:#0f172a;cursor:pointer;background:#f8fafc;list-style:none;display:flex;align-items:center;justify-content:space-between}
+#sku-index summary::-webkit-details-marker{display:none}
+#sku-index summary:after{content:'\25BC';font-size:10px;color:#94a3b8}
+#sku-index[open] summary:after{content:'\25B2'}
+.toc-hint{font-size:11px;font-weight:500;color:#64748b;margin-left:8px}
+.toc-body{padding:10px 12px 14px}
+.toc-cat{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#475569;margin:8px 0 6px}
+.toc-cat a{color:#475569;text-decoration:none}
+.toc-cat a:hover{color:#0369a1}
+.toc-cat-group{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}
+.toc-sku{font-size:12px;padding:3px 9px;border-radius:99px;text-decoration:none;font-weight:600;border:1px solid;line-height:1.4}
+.toc-sku.chip-ok{background:#ecfdf5;color:#065f46;border-color:#a7f3d0}
+.toc-sku.chip-warn{background:#fffbeb;color:#92400e;border-color:#fcd34d}
+.toc-sku.chip-amber{background:#fff7ed;color:#9a3412;border-color:#fdba74}
+.toc-sku.chip-err{background:#fef2f2;color:#991b1b;border-color:#fecaca}
+.toc-sku.chip-mute{background:#f1f5f9;color:#475569;border-color:#cbd5e1}
+.toc-sku:hover{filter:brightness(.96)}
+
+h2.cat{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#64748b;margin:28px 4px 12px;padding-bottom:6px;border-bottom:1px solid #e2e8f0;scroll-margin-top:80px}
+.sku{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:16px 16px 14px;margin:0 0 14px;box-shadow:0 1px 2px rgba(0,0,0,.03);scroll-margin-top:80px}
 .sku-h{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
 .sku-name{font-size:16px;font-weight:700;color:#0f172a;flex:1;min-width:0;word-break:break-word}
 .chip{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:3px 9px;border-radius:99px;white-space:nowrap}
@@ -28,17 +48,27 @@ h2.cat{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.0
 .chip-mute{background:#f1f5f9;color:#475569;border:1px solid #cbd5e1}
 .inline-flag{font-size:12.5px;color:#9a3412;background:#fff7ed;border:1px solid #fed7aa;border-radius:6px;padding:6px 10px;margin:0 0 12px;line-height:1.5}
 .lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#64748b;margin:14px 0 6px}
-.cb{margin:0;padding:11px 13px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;font:14px/1.55 "SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;color:#0f172a;white-space:pre-wrap;word-wrap:break-word;-webkit-user-select:text;user-select:text}
+
+.cb-wrap{position:relative;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px}
+.cb{margin:0;padding:11px 60px 11px 13px;font:14px/1.55 "SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;color:#0f172a;white-space:pre-wrap;word-wrap:break-word;-webkit-user-select:text;user-select:text;background:transparent;border:none}
+.cb-btn{position:absolute;top:8px;right:8px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:4px 10px;border-radius:6px;border:1px solid #cbd5e1;background:#fff;color:#475569;cursor:pointer;font-family:inherit;transition:all .12s ease}
+.cb-btn:hover{background:#f1f5f9;color:#0369a1;border-color:#94a3b8}
+.cb-btn:active{transform:scale(.97)}
+.cb-btn.copied{background:#10b981;color:#fff;border-color:#10b981}
+
 .opflag{margin-top:14px;font-size:13px;color:#7c2d12;background:#fef3c7;border:1px solid #fbbf24;border-radius:8px;padding:10px 12px;line-height:1.5}
 .opflag strong{color:#7c2d12}
+.to-top{display:inline-block;margin-top:14px;font-size:11px;color:#94a3b8;text-decoration:none;letter-spacing:.04em;text-transform:uppercase}
+.to-top:hover{color:#0369a1}
 footer{margin-top:30px;font-size:11px;color:#9ca3af;text-align:center;line-height:1.6}
+
 @media (min-width: 720px){
   .wrap{padding:24px 22px 60px}
-  .sku{padding:20px 22px 22px}
+  .sku{padding:20px 22px 18px}
 }
 </style>
 </head>
-<body>
+<body id="top">
 <div class="hdr">
   <h1>Copy &mdash; 40 SKU</h1>
   <div class="sub">Reconciled cohort &middot; Pass ID copy_reconcile_40sku_2026-05-10</div>
@@ -47,17 +77,37 @@ footer{margin-top:30px;font-size:11px;color:#9ca3af;text-align:center;line-heigh
 <div class="wrap">
 <div class="stats">40 SKUs &nbsp;&middot;&nbsp; <b>24</b> Full Lock &nbsp;&middot;&nbsp; <b>11</b> SMC Gap &nbsp;&middot;&nbsp; <b>2</b> Title Gap &nbsp;&middot;&nbsp; <b>1</b> P1+SMC Gap &nbsp;&middot;&nbsp; <b>2</b> Zero Data</div>
 
-<h2 class="cat">PANTS (17)</h2>
+<details id="sku-index" open><summary>SKU Index <span class="toc-hint">(tap to jump)</span></summary>
+<div class="toc-body">
+<div class="toc-cat"><a href="#sku-PANTS--17-">PANTS (17)</a></div>
+<div class="toc-cat-group"><a class="toc-sku chip-ok" href="#sku-Pants-002">Pants-002</a><a class="toc-sku chip-ok" href="#sku-Pants-003">Pants-003</a><a class="toc-sku chip-ok" href="#sku-Pants-005">Pants-005</a><a class="toc-sku chip-ok" href="#sku-Pants-006">Pants-006</a><a class="toc-sku chip-ok" href="#sku-Pants-007">Pants-007</a><a class="toc-sku chip-ok" href="#sku-Pants-008">Pants-008</a><a class="toc-sku chip-ok" href="#sku-Pants-009">Pants-009</a><a class="toc-sku chip-ok" href="#sku-Pants-011">Pants-011</a><a class="toc-sku chip-ok" href="#sku-Pants-012">Pants-012</a><a class="toc-sku chip-ok" href="#sku-Pants-013">Pants-013</a><a class="toc-sku chip-ok" href="#sku-Pants-015">Pants-015</a><a class="toc-sku chip-ok" href="#sku-Pants-016">Pants-016</a><a class="toc-sku chip-ok" href="#sku-Pants-017">Pants-017</a><a class="toc-sku chip-ok" href="#sku-Pants-018">Pants-018</a><a class="toc-sku chip-ok" href="#sku-Pants-019">Pants-019</a><a class="toc-sku chip-ok" href="#sku-Pants-020">Pants-020</a><a class="toc-sku chip-ok" href="#sku-Pants-021">Pants-021</a></div>
+<div class="toc-cat"><a href="#sku-SKIRTS--8-">SKIRTS (8)</a></div>
+<div class="toc-cat-group"><a class="toc-sku chip-warn" href="#sku-Skirts-001">Skirts-001</a><a class="toc-sku chip-warn" href="#sku-Skirts-003">Skirts-003</a><a class="toc-sku chip-warn" href="#sku-Skirts-007">Skirts-007</a><a class="toc-sku chip-warn" href="#sku-Skirts-009">Skirts-009</a><a class="toc-sku chip-warn" href="#sku-Skirts-010">Skirts-010</a><a class="toc-sku chip-warn" href="#sku-Skirts-011">Skirts-011</a><a class="toc-sku chip-warn" href="#sku-Skirts-012">Skirts-012</a><a class="toc-sku chip-warn" href="#sku-Skirts-018">Skirts-018</a></div>
+<div class="toc-cat"><a href="#sku-SHORTS--9-">SHORTS (9)</a></div>
+<div class="toc-cat-group"><a class="toc-sku chip-warn" href="#sku-Shorts-003">Shorts-003</a><a class="toc-sku chip-warn" href="#sku-Shorts-004">Shorts-004</a><a class="toc-sku chip-warn" href="#sku-Shorts-005">Shorts-005</a><a class="toc-sku chip-ok" href="#sku-Shorts-018">Shorts-018</a><a class="toc-sku chip-ok" href="#sku-Shorts-019">Shorts-019</a><a class="toc-sku chip-ok" href="#sku-Shorts-020">Shorts-020</a><a class="toc-sku chip-warn" href="#sku-Shorts-023">Shorts-023</a><a class="toc-sku chip-ok" href="#sku-Shorts-024">Shorts-024</a><a class="toc-sku chip-ok" href="#sku-Shorts-025">Shorts-025</a></div>
+<div class="toc-cat"><a href="#sku-ACCESSORIES--3-">ACCESSORIES (3)</a></div>
+<div class="toc-cat-group"><a class="toc-sku chip-ok" href="#sku-Accessories-001">Accessories-001</a><a class="toc-sku chip-warn" href="#sku-Accessories-002">Accessories-002</a><a class="toc-sku chip-ok" href="#sku-Acessories-004">Acessories-004</a></div>
+<div class="toc-cat"><a href="#sku-SHIRTS--1-">SHIRTS (1)</a></div>
+<div class="toc-cat-group"><a class="toc-sku chip-err" href="#sku-Shirts-002">Shirts-002</a></div>
+<div class="toc-cat"><a href="#sku-BIN-CODE-SKUs--2-">BIN-CODE SKUs (2)</a></div>
+<div class="toc-cat-group"><a class="toc-sku chip-err" href="#sku-A-9-2545">A-9 2545</a><a class="toc-sku chip-warn" href="#sku-LA32-1109">LA32 1109</a></div>
+</div></details>
 
-<section class="sku">
+<h2 class="cat" id="cat-sku-PANTS--17-">PANTS (17)</h2>
+
+<section class="sku" id="sku-Pants-002">
   <header class="sku-h">
     <span class="sku-name">Pants-002</span>
     <span class="chip chip-ok">FULL LOCK</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">Counterparts Crop Pants WMNS XL Lime Green Mid Rise Modern Minimalist Clean Girl</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-1">Counterparts Crop Pants WMNS XL Lime Green Mid Rise Modern Minimalist Clean Girl</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-1')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Counterparts Luxe Stretch crop pants WMNS XL lime green rayon nylon spandex mid rise 25-inch inseam contoured fit with Modern Minimalist Clean Girl finish. Lightweight blend offers four-way give and tailored stretch for refined everyday wear.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-2">Counterparts Luxe Stretch crop pants WMNS XL lime green rayon nylon spandex mid rise 25-inch inseam contoured fit with Modern Minimalist Clean Girl finish. Lightweight blend offers four-way give and tailored stretch for refined everyday wear.
 
 76% Rayon / 20% Nylon / 4% Spandex. Mid-Rise Crop Pant. Machine wash cold, tumble dry low, cool iron if needed. Style 10990098HA · RN 19747.
 
@@ -75,19 +125,29 @@ Condition: New With Tags.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-2')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">counterparts crop pants, statement pants, luxe stretch crop, lime green chartreuse, mid rise stretch, contoured ankle, comfort stretch fit, womens xl plus, modern minimalist, clean girl, clean minimal, capsule wardrobe, elevated basics, spring summer essential, everyday casual, #modernminimalist #cleangirl #capsulewardrobe #moderncapsule #elevatedbasics</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-3">counterparts crop pants, statement pants, luxe stretch crop, lime green chartreuse, mid rise stretch, contoured ankle, comfort stretch fit, womens xl plus, modern minimalist, clean girl, clean minimal, capsule wardrobe, elevated basics, spring summer essential, everyday casual, #modernminimalist #cleangirl #capsulewardrobe #moderncapsule #elevatedbasics</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-3')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Pants-003">
   <header class="sku-h">
     <span class="sku-name">Pants-003</span>
     <span class="chip chip-ok">FULL LOCK</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">Aritzia Wilfred Effortless Pants WMNS 2 Beige Tencel Linen Wide Leg Quiet Luxury</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-4">Aritzia Wilfred Effortless Pants WMNS 2 Beige Tencel Linen Wide Leg Quiet Luxury</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-4')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Aritzia Wilfred Effortless pants WMNS 2 beige Tencel linen high rise 32-inch inseam wide leg relaxed fit with Quiet Luxury drape. Fluid weave offers natural movement and breathable softness for elevated capsule dressing.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-5">Aritzia Wilfred Effortless pants WMNS 2 beige Tencel linen high rise 32-inch inseam wide leg relaxed fit with Quiet Luxury drape. Fluid weave offers natural movement and breathable softness for elevated capsule dressing.
 
 66% Tencel Lyocell / 34% Linen. Effortless High-Rise Wide-Leg Pant. Machine wash cold gentle, tumble dry low, or dry clean. Made in Vietnam. Style WTN04-06-6988-R-SU23 · RN 122354.
 
@@ -105,19 +165,29 @@ Condition: Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-5')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">aritzia wilfred pants, effortless trousers, wide leg pants, beige tencel linen, high rise wide leg, relaxed flowy fit, womens 2 small, quiet luxury, modern minimalist, elevated basics, capsule wardrobe, office core, spring summer staple, weekend rotation, #quietluxury #moderncapsule #elevatedbasics #cleanminimal #capsulestaple</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-6">aritzia wilfred pants, effortless trousers, wide leg pants, beige tencel linen, high rise wide leg, relaxed flowy fit, womens 2 small, quiet luxury, modern minimalist, elevated basics, capsule wardrobe, office core, spring summer staple, weekend rotation, #quietluxury #moderncapsule #elevatedbasics #cleanminimal #capsulestaple</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-6')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Pants-005">
   <header class="sku-h">
     <span class="sku-name">Pants-005</span>
     <span class="chip chip-ok">FULL LOCK</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">Kut from the Kloth Pants WMNS 8 Burgundy Corduroy Skinny Mid Rise Modern Vintage</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-7">Kut from the Kloth Pants WMNS 8 Burgundy Corduroy Skinny Mid Rise Modern Vintage</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-7')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Kut from the Kloth pants WMNS 8 burgundy corduroy cotton spandex mid rise 30-inch inseam skinny fit with Modern Vintage texture. Brushed pile weave offers warm give and softened stretch for wine-toned fall rotation.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-8">Kut from the Kloth pants WMNS 8 burgundy corduroy cotton spandex mid rise 30-inch inseam skinny fit with Modern Vintage texture. Brushed pile weave offers warm give and softened stretch for wine-toned fall rotation.
 
 Cotton / Spandex blend. Mid-Rise Corduroy Skinny Pant. Machine wash cold, tumble dry low or lay flat, warm iron. Made in China. Style KP494MQ9 · RN 58539.
 
@@ -135,20 +205,30 @@ Condition: Very Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-8')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">kut from the kloth pants, skinny corduroy pants, burgundy corduroy, wine tone bottoms, mid rise skinny, brushed pile texture, womens 8 medium, modern vintage, vintage revival, capsule wardrobe, fall winter essential, autumn rotation, retro inspired, everyday casual, #modernvintage #vintagerevival #autumncapsule #fallrotation #retroinspired</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-9">kut from the kloth pants, skinny corduroy pants, burgundy corduroy, wine tone bottoms, mid rise skinny, brushed pile texture, womens 8 medium, modern vintage, vintage revival, capsule wardrobe, fall winter essential, autumn rotation, retro inspired, everyday casual, #modernvintage #vintagerevival #autumncapsule #fallrotation #retroinspired</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-9')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Pants-006">
   <header class="sku-h">
     <span class="sku-name">Pants-006</span>
     <span class="chip chip-ok">FULL LOCK</span>
   </header>
   <div class="inline-flag">Op flag: RN 151301 VA verify (likely Spanx cross-brand)</div>
   <div class="lbl">Title</div>
-  <pre class="cb">Good American Jeans WMNS 10/30 Blue Medium Wash High Rise Mom 90s Modern Vintage</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-10">Good American Jeans WMNS 10/30 Blue Medium Wash High Rise Mom 90s Modern Vintage</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-10')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Good American jeans WMNS 10/30 medium wash blue cotton elastane high rise 27-inch inseam Mom fit with 90s Modern Vintage cut. Power-stretch weave delivers Good Waist gap-proof shaping and lived-in give for retro-revival denim styling.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-11">Good American jeans WMNS 10/30 medium wash blue cotton elastane high rise 27-inch inseam Mom fit with 90s Modern Vintage cut. Power-stretch weave delivers Good Waist gap-proof shaping and lived-in give for retro-revival denim styling.
 
 Cotton / Elastane blend. High-Rise Mom Jean. Machine wash cold, tumble dry low. Made in Paraguay. Style GM602T BLUE · PO 06447-00 · RN 151301.
 
@@ -166,20 +246,30 @@ Condition: Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-11')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">good american jeans, mom jeans, good waist denim, medium wash blue, high rise mom, gap proof shaping, womens 10 30, 90s modern vintage, 90s revival, vintage denim, capsule wardrobe, retro inspired, everyday casual, denim essentials, #modernvintage #ninetiesrevival #denimcapsule #vintagerevival #retroinspired</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-12">good american jeans, mom jeans, good waist denim, medium wash blue, high rise mom, gap proof shaping, womens 10 30, 90s modern vintage, 90s revival, vintage denim, capsule wardrobe, retro inspired, everyday casual, denim essentials, #modernvintage #ninetiesrevival #denimcapsule #vintagerevival #retroinspired</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-12')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
   <div class="opflag"><strong>Op flag:</strong> RN 151301 likely cross-brand (Spanx). Flag for VA cascade-correct before publish.</div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Pants-007">
   <header class="sku-h">
     <span class="sku-name">Pants-007</span>
     <span class="chip chip-ok">FULL LOCK</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">Spanx Perfect Pants WMNS Plus 2X Black Ponte High Rise Slim Straight Office Core</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-13">Spanx Perfect Pants WMNS Plus 2X Black Ponte High Rise Slim Straight Office Core</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-13')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Spanx Perfect Pants WMNS Plus 2X black ponte viscose nylon elastane high rise 28-inch inseam slim straight fit with Office Core polish. Compression weave offers all-over smoothing and refined movement for workday capsule dressing.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-14">Spanx Perfect Pants WMNS Plus 2X black ponte viscose nylon elastane high rise 28-inch inseam slim straight fit with Office Core polish. Compression weave offers all-over smoothing and refined movement for workday capsule dressing.
 
 68% Viscose Rayon / 28% Nylon / 4% Elastane. Perfect High-Rise Slim Straight Ponte Pant. Machine wash cold, gentle cycle. Made in Vietnam. Style 20254R · RN 112121.
 
@@ -197,19 +287,29 @@ Condition: Very Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-14')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">spanx perfect pants, ponte pants womens, slim straight pants, black ponte, high rise slim, compression smoothing, womens plus 2x, office core, modern minimalist, quiet luxury, capsule wardrobe, workwear essential, business casual, office attire, #officecore #moderncapsule #quietluxury #workwearstaple #elevatedbasics</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-15">spanx perfect pants, ponte pants womens, slim straight pants, black ponte, high rise slim, compression smoothing, womens plus 2x, office core, modern minimalist, quiet luxury, capsule wardrobe, workwear essential, business casual, office attire, #officecore #moderncapsule #quietluxury #workwearstaple #elevatedbasics</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-15')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Pants-008">
   <header class="sku-h">
     <span class="sku-name">Pants-008</span>
     <span class="chip chip-ok">FULL LOCK</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">1822 Denim Jeans WMNS 12 Blue Dark Wash Mid Rise Slim Straight Modern Minimalist</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-16">1822 Denim Jeans WMNS 12 Blue Dark Wash Mid Rise Slim Straight Modern Minimalist</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-16')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">1822 Denim jeans WMNS 12 dark wash blue cotton polyester spandex mid rise 27-inch inseam slim straight fit with Modern Minimalist anchor. Stretch denim weave offers tailored give and lived-in softness for capsule wardrobe rotation.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-17">1822 Denim jeans WMNS 12 dark wash blue cotton polyester spandex mid rise 27-inch inseam slim straight fit with Modern Minimalist anchor. Stretch denim weave offers tailored give and lived-in softness for capsule wardrobe rotation.
 
 Cotton / Polyester / Spandex blend. Mid-Rise Slim Straight Dark Wash Jean. Machine wash cold, gentle cycle. Made in China. Style CA9M1113A3 · Cut 63951.
 
@@ -227,19 +327,29 @@ Condition: Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-17')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">1822 denim jeans, slim straight jeans, dark wash denim, mid rise slim, tailored stretch denim, womens 12 large, modern minimalist, clean girl, clean minimal, capsule wardrobe, elevated basics, everyday casual, weekend rotation, denim essentials, #modernminimalist #cleanminimal #capsulewardrobe #moderncapsule #elevatedbasics</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-18">1822 denim jeans, slim straight jeans, dark wash denim, mid rise slim, tailored stretch denim, womens 12 large, modern minimalist, clean girl, clean minimal, capsule wardrobe, elevated basics, everyday casual, weekend rotation, denim essentials, #modernminimalist #cleanminimal #capsulewardrobe #moderncapsule #elevatedbasics</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-18')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Pants-009">
   <header class="sku-h">
     <span class="sku-name">Pants-009</span>
     <span class="chip chip-ok">FULL LOCK</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">Old Navy Pixie Pants WMNS 4 Tall Red Faux Leather Dark Feminine City Chic</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-19">Old Navy Pixie Pants WMNS 4 Tall Red Faux Leather Dark Feminine City Chic</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-19')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Old Navy Pixie Pants WMNS 4 Tall red faux leather polyester elastane high rise 34-inch inseam straight fit with Dark Feminine City Chic statement. Coated finish delivers sleek polish and contoured give for night-out burgundy styling.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-20">Old Navy Pixie Pants WMNS 4 Tall red faux leather polyester elastane high rise 34-inch inseam straight fit with Dark Feminine City Chic statement. Coated finish delivers sleek polish and contoured give for night-out burgundy styling.
 
 Polyester / Elastane blend. Pixie High-Rise Faux Leather Pant Tall. Machine wash cold. Made in Cambodia.
 
@@ -257,21 +367,31 @@ Condition: New With Tags.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-20')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">old navy pants, pixie faux leather pant, red faux leather, burgundy oxblood, coated finish, high rise straight, polished stretch, dark feminine, city chic, edgy minimalist, 2000s revival, downtown edgy, model off duty, mob wife, indie sleaze, night out, evening wear, holiday party, #edgyminimalist #modeloffduty #mobwife #indiesleaze #urbanminimal</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-21">old navy pants, pixie faux leather pant, red faux leather, burgundy oxblood, coated finish, high rise straight, polished stretch, dark feminine, city chic, edgy minimalist, 2000s revival, downtown edgy, model off duty, mob wife, indie sleaze, night out, evening wear, holiday party, #edgyminimalist #modeloffduty #mobwife #indiesleaze #urbanminimal</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-21')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
   <div class="opflag"><strong>Op flag:</strong> No RN/style code captured in intake — VA recheck flag.</div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Pants-011">
   <header class="sku-h">
     <span class="sku-name">Pants-011</span>
     <span class="chip chip-ok">FULL LOCK</span>
   </header>
   <div class="inline-flag">Op flag: Waist 39&quot; current vs 29&quot; prior (10&quot; gap) — re-measure before listing</div>
   <div class="lbl">Title</div>
-  <pre class="cb">BDG Urban Outfitters Carpenter Jeans WMNS 28 Off White Cotton Utility Streetwear</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-22">BDG Urban Outfitters Carpenter Jeans WMNS 28 Off White Cotton Utility Streetwear</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-22')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">BDG Urban Outfitters carpenter jeans WMNS 28 off white 100% cotton high rise 31-inch inseam straight leg carpenter pocket relaxed fit with Utility Streetwear build. Structured cotton weave delivers durable give and lived-in feel for everyday workwear rotation.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-23">BDG Urban Outfitters carpenter jeans WMNS 28 off white 100% cotton high rise 31-inch inseam straight leg carpenter pocket relaxed fit with Utility Streetwear build. Structured cotton weave delivers durable give and lived-in feel for everyday workwear rotation.
 
 100% Cotton. High-Rise Carpenter Jean. Machine wash cold. Made in Mexico. Style OB1695669 · RN 66170.
 
@@ -289,20 +409,30 @@ Condition: Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-23')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">bdg carpenter jeans, urban outfitters jeans, carpenter pant denim, off white cotton, high rise straight, relaxed carpenter, womens 28 medium, utility streetwear, workwear chic, urban grunge, downtown casual, everyday workwear, weekend casual, gorpcore adjacent, #utilitystreetwear #workwearchic #urbangrunge #downtowncasual #moderncasual</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-24">bdg carpenter jeans, urban outfitters jeans, carpenter pant denim, off white cotton, high rise straight, relaxed carpenter, womens 28 medium, utility streetwear, workwear chic, urban grunge, downtown casual, everyday workwear, weekend casual, gorpcore adjacent, #utilitystreetwear #workwearchic #urbangrunge #downtowncasual #moderncasual</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-24')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
   <div class="opflag"><strong>Op flag:</strong> Waist measurement discrepancy — re-measure required before listing publish.</div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Pants-012">
   <header class="sku-h">
     <span class="sku-name">Pants-012</span>
     <span class="chip chip-ok">FULL LOCK</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">Levi&#x27;s 541 Jeans Mens 34x30 Athletic Taper White Modern Minimalist Streetwear</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-25">Levi&#x27;s 541 Jeans Mens 34x30 Athletic Taper White Modern Minimalist Streetwear</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-25')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Levi&#x27;s 541 jeans Mens 34x30 athletic taper white 100% cotton mid rise 29-inch inseam tapered fit with Modern Minimalist Streetwear mainstay. Heavyweight cotton weave delivers structured give and broken-in feel for everyday mens denim rotation.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-26">Levi&#x27;s 541 jeans Mens 34x30 athletic taper white 100% cotton mid rise 29-inch inseam tapered fit with Modern Minimalist Streetwear mainstay. Heavyweight cotton weave delivers structured give and broken-in feel for everyday mens denim rotation.
 
 100% Cotton. 541 Athletic Taper Mid-Rise Jean. Machine wash cold. Made in Vietnam. Style 541 · PC9-18181-0537.
 
@@ -320,20 +450,30 @@ Condition: Very Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-26')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">levis 541 jeans, athletic taper denim, white cotton jeans, mens 34x30, mid rise taper, broken in cotton, modern minimalist, streetwear staple, capsule wardrobe, urban casual, weekend rotation, americana basic, everyday wear, mens essentials, #modernminimalist #streetwearstaple #urbancasual #cleanminimal #moderncapsule</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-27">levis 541 jeans, athletic taper denim, white cotton jeans, mens 34x30, mid rise taper, broken in cotton, modern minimalist, streetwear staple, capsule wardrobe, urban casual, weekend rotation, americana basic, everyday wear, mens essentials, #modernminimalist #streetwearstaple #urbancasual #cleanminimal #moderncapsule</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-27')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Pants-013">
   <header class="sku-h">
     <span class="sku-name">Pants-013</span>
     <span class="chip chip-ok">FULL LOCK</span>
   </header>
   <div class="inline-flag">Op flag: Waist 42&quot; current vs 36&quot; prior (6&quot; gap) — re-measure + dust spots</div>
   <div class="lbl">Title</div>
-  <pre class="cb">Democracy Jeans WMNS 16 White Ab Technology Raw Hem Ankle Modern Minimalist</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-28">Democracy Jeans WMNS 16 White Ab Technology Raw Hem Ankle Modern Minimalist</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-28')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Democracy jeans WMNS 16 white Ab Technology cotton blend high rise 27-inch inseam raw hem ankle stretch slim fit with Modern Minimalist look. Power-stretch weave delivers slimming panel support and tailored give for white denim spring rotation.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-29">Democracy jeans WMNS 16 white Ab Technology cotton blend high rise 27-inch inseam raw hem ankle stretch slim fit with Modern Minimalist look. Power-stretch weave delivers slimming panel support and tailored give for white denim spring rotation.
 
 60% Cotton / 22% Rayon / 17% Polyester / 1% Spandex. High-Rise Raw Hem Ankle Skimmer Jean with Ab Technology slimming panel. Machine wash cold. Made in China. Style B23294T0WXX · PO 100-00120890 · RN 15600.
 
@@ -351,20 +491,30 @@ Condition: New With Tags.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-29')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">democracy jeans, ab technology jeans, raw hem ankle jeans, white denim, high rise slim, slimming panel stretch, ab tech tummy control, womens 16 plus, modern minimalist, clean girl, capsule wardrobe, spring summer essential, elevated basics, everyday casual, #modernminimalist #cleangirl #capsulewardrobe #moderncapsule #elevatedbasics</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-30">democracy jeans, ab technology jeans, raw hem ankle jeans, white denim, high rise slim, slimming panel stretch, ab tech tummy control, womens 16 plus, modern minimalist, clean girl, capsule wardrobe, spring summer essential, elevated basics, everyday casual, #modernminimalist #cleangirl #capsulewardrobe #moderncapsule #elevatedbasics</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-30')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
   <div class="opflag"><strong>Op flag:</strong> Waist measurement discrepancy — re-measure + store dust spot detail before listing publish.</div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Pants-015">
   <header class="sku-h">
     <span class="sku-name">Pants-015</span>
     <span class="chip chip-ok">FULL LOCK</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">Max and Mia Waffle Knit Joggers WMNS S Sage Cotton Blend Soft Girl Athleisure</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-31">Max and Mia Waffle Knit Joggers WMNS S Sage Cotton Blend Soft Girl Athleisure</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-31')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Max and Mia waffle knit joggers WMNS S sage cotton blend mid rise 29-inch inseam drawstring tapered cuffed ankle relaxed fit with Soft Girl Athleisure feel. Brushed knit texture offers cozy give and lounge-soft warmth for weekend pastel dressing.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-32">Max and Mia waffle knit joggers WMNS S sage cotton blend mid rise 29-inch inseam drawstring tapered cuffed ankle relaxed fit with Soft Girl Athleisure feel. Brushed knit texture offers cozy give and lounge-soft warmth for weekend pastel dressing.
 
 58% Cotton / 39% Polyester / 3% Spandex. Mid-Rise Waffle Knit Drawstring Tapered Jogger. Machine wash cold. Made in China. Item 1815321 · RN 93608.
 
@@ -382,20 +532,30 @@ Condition: New With Tags.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-32')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">max and mia joggers, waffle knit joggers, sage cotton joggers, mid rise drawstring, tapered cuffed ankle, brushed knit texture, womens small, soft girl, soft athleisure, cozy core, loungewear staple, weekend lounge, pastel essential, neutral athleisure, #softgirl #softathleisure #cozycore #loungewearstaple #pastelcasual</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-33">max and mia joggers, waffle knit joggers, sage cotton joggers, mid rise drawstring, tapered cuffed ankle, brushed knit texture, womens small, soft girl, soft athleisure, cozy core, loungewear staple, weekend lounge, pastel essential, neutral athleisure, #softgirl #softathleisure #cozycore #loungewearstaple #pastelcasual</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-33')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Pants-016">
   <header class="sku-h">
     <span class="sku-name">Pants-016</span>
     <span class="chip chip-ok">FULL LOCK</span>
   </header>
   <div class="inline-flag">Op flag: Dust spots</div>
   <div class="lbl">Title</div>
-  <pre class="cb">Zara Trousers WMNS XL Cream Satin Flared High Rise Office Core Quiet Luxury</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-34">Zara Trousers WMNS XL Cream Satin Flared High Rise Office Core Quiet Luxury</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-34')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Zara trousers WMNS XL cream polyester blend high rise 33-inch inseam flared leg satin finish tailored fit with Office Core Quiet Luxury refinement. Smooth weave delivers fluid drape and polished sheen for elevated occasion dressing.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-35">Zara trousers WMNS XL cream polyester blend high rise 33-inch inseam flared leg satin finish tailored fit with Office Core Quiet Luxury refinement. Smooth weave delivers fluid drape and polished sheen for elevated occasion dressing.
 
 Polyester blend. High-Rise Flared Satin Trouser. Machine wash. Made in Morocco. Style 8305/585/712 · GLEN 768 · RUC 80089348-4 · RN 77302.
 
@@ -413,21 +573,31 @@ Condition: New With Tags.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-35')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">zara trousers, satin flared trousers, cream satin pants, high rise flared, womens xl plus, fluid drape finish, office core, quiet luxury, modern minimalist, evening wear, occasion dressing, capsule wardrobe, elevated basics, date night, #quietluxury #officecore #moderncapsule #eveningchic #elevatedbasics</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-36">zara trousers, satin flared trousers, cream satin pants, high rise flared, womens xl plus, fluid drape finish, office core, quiet luxury, modern minimalist, evening wear, occasion dressing, capsule wardrobe, elevated basics, date night, #quietluxury #officecore #moderncapsule #eveningchic #elevatedbasics</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-36')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
   <div class="opflag"><strong>Op flag:</strong> Store dust spot detail before listing publish.</div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Pants-017">
   <header class="sku-h">
     <span class="sku-name">Pants-017</span>
     <span class="chip chip-ok">FULL LOCK</span>
   </header>
   <div class="inline-flag">Op flag: Inseam 30&quot; measured vs labeled 32&quot; (2&quot; hemmed)</div>
   <div class="lbl">Title</div>
-  <pre class="cb">Polo Ralph Lauren Authentic Dungarees Jeans Mens 38x32 Straight Black Heritage Casual</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-37">Polo Ralph Lauren Authentic Dungarees Jeans Mens 38x32 Straight Black Heritage Casual</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-37')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Polo Ralph Lauren Authentic Dungarees jeans Mens 38x32 black 100% cotton mid rise 30-inch inseam straight leg leather patch relaxed fit with Heritage Casual construction. Heavyweight cotton denim delivers broken-in give and rugged durability for americana mens rotation.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-38">Polo Ralph Lauren Authentic Dungarees jeans Mens 38x32 black 100% cotton mid rise 30-inch inseam straight leg leather patch relaxed fit with Heritage Casual construction. Heavyweight cotton denim delivers broken-in give and rugged durability for americana mens rotation.
 
 100% Cotton. Authentic Dungarees Mid-Rise Straight Leg Jean with leather patch. Machine wash cold, tumble dry low. Made in Mexico. Style 710626337001 · Factory 02000000713 · RN 41381 · CA 56658.
 
@@ -445,19 +615,29 @@ Condition: Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-38')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">polo ralph lauren jeans, ralph lauren denim, authentic dungarees, black cotton jeans, mens 38x32, mid rise straight, rugged broken in, heritage casual, americana classic, heritage prep, minimalist noir, mens capsule, everyday denim, weekend rotation, #heritageprep #minimalistnoir #americanaclean #heritagecasual #ruggedclassic</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-39">polo ralph lauren jeans, ralph lauren denim, authentic dungarees, black cotton jeans, mens 38x32, mid rise straight, rugged broken in, heritage casual, americana classic, heritage prep, minimalist noir, mens capsule, everyday denim, weekend rotation, #heritageprep #minimalistnoir #americanaclean #heritagecasual #ruggedclassic</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-39')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Pants-018">
   <header class="sku-h">
     <span class="sku-name">Pants-018</span>
     <span class="chip chip-ok">FULL LOCK</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">Kut from the Kloth Jeans WMNS 8 Blue Fab Ab Dark Wash Skinny Modern Minimalist</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-40">Kut from the Kloth Jeans WMNS 8 Blue Fab Ab Dark Wash Skinny Modern Minimalist</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-40')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Kut from the Kloth jeans WMNS 8 blue Fab Ab modal blend dark wash high rise 31-inch inseam coated skinny fit with Modern Minimalist signature. Coated stretch weave delivers slimming panel support and sleek give for night-out dark denim styling.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-41">Kut from the Kloth jeans WMNS 8 blue Fab Ab modal blend dark wash high rise 31-inch inseam coated skinny fit with Modern Minimalist signature. Coated stretch weave delivers slimming panel support and sleek give for night-out dark denim styling.
 
 59% Modal / 39% Polyester / 2% Lycra. High-Rise Fab Ab Coated Dark-Wash Skinny Jean. Machine wash cold separately, inside out, tumble dry low. Made in China. Style KP0890MF5 · CUT 153306 · RN 53539.
 
@@ -475,19 +655,29 @@ Condition: New With Tags.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-41')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">kut from the kloth jeans, fab ab jeans, coated skinny jeans, dark wash blue, high rise skinny, slimming panel stretch, womens 8 medium, modern minimalist, edgy minimalist, dark feminine, capsule wardrobe, night out denim, date night, evening rotation, #modernminimalist #edgyminimalist #urbanminimal #nightoutchic #capsuleessentials</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-42">kut from the kloth jeans, fab ab jeans, coated skinny jeans, dark wash blue, high rise skinny, slimming panel stretch, womens 8 medium, modern minimalist, edgy minimalist, dark feminine, capsule wardrobe, night out denim, date night, evening rotation, #modernminimalist #edgyminimalist #urbanminimal #nightoutchic #capsuleessentials</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-42')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Pants-019">
   <header class="sku-h">
     <span class="sku-name">Pants-019</span>
     <span class="chip chip-ok">FULL LOCK</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">Cynthia Rowley Pants WMNS 6 Multicolor Floral Linen Wide Leg Tropical Resortwear</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-43">Cynthia Rowley Pants WMNS 6 Multicolor Floral Linen Wide Leg Tropical Resortwear</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-43')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Cynthia Rowley pants WMNS 6 multicolor floral 100% linen high rise 23-inch inseam elastic pull-on wide leg crop relaxed fit with Tropical Resortwear piece. Lightweight linen weave offers airy drape and breezy flow for vacation packing.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-44">Cynthia Rowley pants WMNS 6 multicolor floral 100% linen high rise 23-inch inseam elastic pull-on wide leg crop relaxed fit with Tropical Resortwear piece. Lightweight linen weave offers airy drape and breezy flow for vacation packing.
 
 100% Linen. High-Rise Wide-Leg Cropped Pull-On Linen Pant. Machine wash cool, delicate cycle, line dry, low iron if needed. Made in Cambodia. RN 75343 · CA 07043.
 
@@ -505,19 +695,29 @@ Condition: Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-44')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">cynthia rowley pants, floral linen pants, wide leg crop, multicolor floral, high rise pull on, airy linen weave, womens 6 small, tropical resortwear, coastal boho, vacation core, resort ready, beach packing essential, summer vacation, garden party, #tropicalresortwear #coastalboho #vacationcore #resortready #summergetaway</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-45">cynthia rowley pants, floral linen pants, wide leg crop, multicolor floral, high rise pull on, airy linen weave, womens 6 small, tropical resortwear, coastal boho, vacation core, resort ready, beach packing essential, summer vacation, garden party, #tropicalresortwear #coastalboho #vacationcore #resortready #summergetaway</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-45')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Pants-020">
   <header class="sku-h">
     <span class="sku-name">Pants-020</span>
     <span class="chip chip-ok">FULL LOCK</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">Madewell Perfect Vintage Jeans WMNS 28 Acid Wash Denim 90s Modern Vintage</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-46">Madewell Perfect Vintage Jeans WMNS 28 Acid Wash Denim 90s Modern Vintage</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-46')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Madewell Perfect Vintage jeans WMNS 28 acid wash 99% cotton 1% elastane high rise 27-inch inseam straight leg vintage relaxed fit with Denim 90s Modern Vintage register. Cotton-rich weave delivers broken-in give and faded patina for capsule denim rotation.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-47">Madewell Perfect Vintage jeans WMNS 28 acid wash 99% cotton 1% elastane high rise 27-inch inseam straight leg vintage relaxed fit with Denim 90s Modern Vintage register. Cotton-rich weave delivers broken-in give and faded patina for capsule denim rotation.
 
 99% Cotton / 1% Elastane. Perfect Vintage High-Rise Straight Leg Acid Wash Jean. Machine wash cold, tumble dry low. Made in Guatemala. Style N3914 · DM4815 · 0279490 · RN 77388.
 
@@ -535,20 +735,30 @@ Condition: Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-47')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">madewell perfect vintage jeans, vintage straight jeans, acid wash denim, faded patina denim, high rise straight, broken in cotton, womens 28 small, modern vintage, 90s revival, vintage denim, capsule wardrobe, retro inspired, everyday casual, denim essentials, #modernvintage #ninetiesrevival #vintagerevival #denimcapsule #retroinspired</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-48">madewell perfect vintage jeans, vintage straight jeans, acid wash denim, faded patina denim, high rise straight, broken in cotton, womens 28 small, modern vintage, 90s revival, vintage denim, capsule wardrobe, retro inspired, everyday casual, denim essentials, #modernvintage #ninetiesrevival #vintagerevival #denimcapsule #retroinspired</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-48')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Pants-021">
   <header class="sku-h">
     <span class="sku-name">Pants-021</span>
     <span class="chip chip-ok">FULL LOCK</span>
   </header>
   <div class="inline-flag">Op flag: RN HOLD (PD-07 / PIN-V1-B): 142065 vs 144635</div>
   <div class="lbl">Title</div>
-  <pre class="cb">KanCan Jeans WMNS 5/26 Gray Wash Raw Hem High Rise Skinny Ankle Light Grunge</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-49">KanCan Jeans WMNS 5/26 Gray Wash Raw Hem High Rise Skinny Ankle Light Grunge</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-49')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">KanCan jeans WMNS 5/26 gray wash cotton polyester spandex high rise 26.5-inch inseam raw hem ankle skinny fit with Light Grunge stance. Stretch denim weave delivers tailored give and lived-in fade for distressed-light ankle rotation.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-50">KanCan jeans WMNS 5/26 gray wash cotton polyester spandex high rise 26.5-inch inseam raw hem ankle skinny fit with Light Grunge stance. Stretch denim weave delivers tailored give and lived-in fade for distressed-light ankle rotation.
 
 93% Cotton / 6% Polyester / 1% Spandex. High-Rise Raw Hem Ankle Skinny Jean. Machine wash cold, tumble dry low. Made in Vietnam. Style KC9216LG · Cut 39300 · RN 144635.
 
@@ -566,22 +776,32 @@ Condition: Very Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-50')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">kancan jeans, raw hem skinny jeans, gray wash denim, high rise skinny ankle, lived in fade denim, distressed light, womens 5 26 small, light grunge, soft grunge, indie revival, capsule wardrobe, vintage inspired, downtown casual, weekend rotation, #lightgrunge #softgrunge #indierevival #grungeessentials #downtowncasual</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-51">kancan jeans, raw hem skinny jeans, gray wash denim, high rise skinny ankle, lived in fade denim, distressed light, womens 5 26 small, light grunge, soft grunge, indie revival, capsule wardrobe, vintage inspired, downtown casual, weekend rotation, #lightgrunge #softgrunge #indierevival #grungeessentials #downtowncasual</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-51')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
   <div class="opflag"><strong>Op flag:</strong> RN conflict 142065 vs 144635 — verify physical tag before listing publish.</div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<h2 class="cat">SKIRTS (8)</h2>
+<h2 class="cat" id="cat-sku-SKIRTS--8-">SKIRTS (8)</h2>
 
-<section class="sku">
+<section class="sku" id="sku-Skirts-001">
   <header class="sku-h">
     <span class="sku-name">Skirts-001</span>
     <span class="chip chip-warn">SMC GAP</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">Ann Taylor Pencil Skirt WMNS 6 Beige Cotton Stretch Knee Workwear Old Money Chic</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-52">Ann Taylor Pencil Skirt WMNS 6 Beige Cotton Stretch Knee Workwear Old Money Chic</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-52')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Ann Taylor pencil skirt women&#x27;s 6 beige/tan cotton stretch knee length tailored fit with a structured silhouette and clean quiet luxury styling. Office wear, elevated everyday outfits, and capsule wardrobe styling — a timeless, workwear-ready, modern anchor.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-53">Ann Taylor pencil skirt women&#x27;s 6 beige/tan cotton stretch knee length tailored fit with a structured silhouette and clean quiet luxury styling. Office wear, elevated everyday outfits, and capsule wardrobe styling — a timeless, workwear-ready, modern anchor.
 
 [SMC PENDING — physical-verify build required: Material % · Style/RN · Care · Made-in · Measurements (waist/hip/length) · Condition tier]
 
@@ -590,20 +810,30 @@ Condition: Very Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-53')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">ann taylor pencil skirt, knee length pencil skirt, beige cotton stretch, structured tailored fit, womens 6 small, office attire skirt, quiet luxury, modern minimalist, workwear essential, capsule wardrobe, business casual, office core, elevated basics, weekday rotation, #quietluxury #officecore #workwearstaple #moderncapsule #elevatedbasics</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-54">ann taylor pencil skirt, knee length pencil skirt, beige cotton stretch, structured tailored fit, womens 6 small, office attire skirt, quiet luxury, modern minimalist, workwear essential, capsule wardrobe, business casual, office core, elevated basics, weekday rotation, #quietluxury #officecore #workwearstaple #moderncapsule #elevatedbasics</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-54')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
   <div class="opflag"><strong>Op flag:</strong> P2 SMC BLOCKS listing publish per Rule #135. VA cascade: pull physical, build SMC, route through Description+ P2 pass before listing.</div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Skirts-003">
   <header class="sku-h">
     <span class="sku-name">Skirts-003</span>
     <span class="chip chip-warn">SMC GAP</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">NYCC Pencil Skirt WMNS XL Black Stretch Midi Workwear Minimalist Chic Classic</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-55">NYCC Pencil Skirt WMNS XL Black Stretch Midi Workwear Minimalist Chic Classic</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-55')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">NYCC midi pencil skirt women&#x27;s XL black stretch fabric structured fit with a clean tailored silhouette and refined office siren cut. Business casual rotation, capsule wardrobe pieces, and modern office wear — a polished, sleek, quiet-luxury staple.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-56">NYCC midi pencil skirt women&#x27;s XL black stretch fabric structured fit with a clean tailored silhouette and refined office siren cut. Business casual rotation, capsule wardrobe pieces, and modern office wear — a polished, sleek, quiet-luxury staple.
 
 [SMC PENDING — physical-verify build required: Material % · Style/RN · Care · Made-in · Measurements (waist/hip/length) · Condition tier]
 
@@ -612,20 +842,30 @@ Condition: Very Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-56')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">nycc pencil skirt, midi pencil skirt, black stretch midi, structured tailored fit, womens xl plus, office siren skirt, quiet luxury, modern minimalist, polished sleek, office core, capsule wardrobe, business casual, workwear essential, weekday rotation, #quietluxury #officesiren #officecore #moderncapsule #workwearstaple</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-57">nycc pencil skirt, midi pencil skirt, black stretch midi, structured tailored fit, womens xl plus, office siren skirt, quiet luxury, modern minimalist, polished sleek, office core, capsule wardrobe, business casual, workwear essential, weekday rotation, #quietluxury #officesiren #officecore #moderncapsule #workwearstaple</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-57')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
   <div class="opflag"><strong>Op flag:</strong> P2 SMC BLOCKS listing publish per Rule #135. VA cascade: pull physical, build SMC, route through Description+ P2 pass before listing.</div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Skirts-007">
   <header class="sku-h">
     <span class="sku-name">Skirts-007</span>
     <span class="chip chip-warn">SMC GAP</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">Ann Taylor Factory Skirt WMNS 0 Blue Floral Cotton Midi Cottagecore Preppy Soft</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-58">Ann Taylor Factory Skirt WMNS 0 Blue Floral Cotton Midi Cottagecore Preppy Soft</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-58')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Ann Taylor Factory skirt women&#x27;s 0 blue floral cotton 30-inch midi A-line fit with structured cottagecore silhouette and refined preppy finish. Garden party outfits, wedding guest looks, and romantic spring rotation — a feminine, boho-revival, picnic-ready edit.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-59">Ann Taylor Factory skirt women&#x27;s 0 blue floral cotton 30-inch midi A-line fit with structured cottagecore silhouette and refined preppy finish. Garden party outfits, wedding guest looks, and romantic spring rotation — a feminine, boho-revival, picnic-ready edit.
 
 [SMC PENDING — physical-verify build required: Material % · Style/RN · Care · Made-in · Measurements (waist/hip/length) · Condition tier]
 
@@ -634,20 +874,30 @@ Condition: Very Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-59')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">ann taylor factory skirt, blue floral midi skirt, cotton midi a line, blue floral print, midi a line fit, womens 0 xs, cottagecore, boho revival, preppy soft, romantic feminine, garden party outfit, wedding guest, spring rotation, picnic ready, #cottagecore #bohorevival #romanticfeminine #springgarden #weddingguestchic</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-60">ann taylor factory skirt, blue floral midi skirt, cotton midi a line, blue floral print, midi a line fit, womens 0 xs, cottagecore, boho revival, preppy soft, romantic feminine, garden party outfit, wedding guest, spring rotation, picnic ready, #cottagecore #bohorevival #romanticfeminine #springgarden #weddingguestchic</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-60')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
   <div class="opflag"><strong>Op flag:</strong> P2 SMC BLOCKS listing publish per Rule #135.</div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Skirts-009">
   <header class="sku-h">
     <span class="sku-name">Skirts-009</span>
     <span class="chip chip-warn">SMC GAP</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">Aqua Green Swim Skort WMNS Plus Size 20W/22W Black Stretch Beach Resortwear</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-61">Aqua Green Swim Skort WMNS Plus Size 20W/22W Black Stretch Beach Resortwear</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-61')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Aqua Green swim skort women&#x27;s plus size 20W/22W black stretch mini-length relaxed fit with built-in coverage and beach resortwear finish. Vacation packing, coastal weekend styling, and beach getaway looks — a breezy, tropical, swim-ready piece.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-62">Aqua Green swim skort women&#x27;s plus size 20W/22W black stretch mini-length relaxed fit with built-in coverage and beach resortwear finish. Vacation packing, coastal weekend styling, and beach getaway looks — a breezy, tropical, swim-ready piece.
 
 [SMC PENDING — physical-verify build required: Material % · Style/RN · Care · Made-in · Measurements (waist/hip/length/inseam) · Condition tier]
 
@@ -656,20 +906,30 @@ Condition: Very Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-62')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">aqua green swim skort, plus size swim skort, black swim coverup, beach skort plus, stretch swim bottom, womens plus 20w 22w, beach resortwear, coastal resort, vacation core, plus size swim, beach essential, resort ready, vacation packing, summer beach, #beachresortwear #coastalresort #vacationcore #resortready #pluscapsule</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-63">aqua green swim skort, plus size swim skort, black swim coverup, beach skort plus, stretch swim bottom, womens plus 20w 22w, beach resortwear, coastal resort, vacation core, plus size swim, beach essential, resort ready, vacation packing, summer beach, #beachresortwear #coastalresort #vacationcore #resortready #pluscapsule</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-63')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
   <div class="opflag"><strong>Op flag:</strong> P2 SMC BLOCKS publish. Shipping override 7.99 GPO per card flag.</div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Skirts-010">
   <header class="sku-h">
     <span class="sku-name">Skirts-010</span>
     <span class="chip chip-warn">SMC GAP</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">Kona Sol Swim Skort WMNS Plus Size 16W/18W Black Quick Dry Beach Resortwear</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-64">Kona Sol Swim Skort WMNS Plus Size 16W/18W Black Quick Dry Beach Resortwear</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-64')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Kona Sol swim skort women&#x27;s plus size 16W/18W black quick-dry stretch knee-length relaxed fit with built-in coverage and beach resortwear finish. Pool day rotation, weekend cabana wear, and beach packing — a breezy, tropical, swim-ready find.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-65">Kona Sol swim skort women&#x27;s plus size 16W/18W black quick-dry stretch knee-length relaxed fit with built-in coverage and beach resortwear finish. Pool day rotation, weekend cabana wear, and beach packing — a breezy, tropical, swim-ready find.
 
 [SMC PENDING — physical-verify build required: Material % · Style/RN · Care · Made-in · Measurements (waist/hip/length/inseam) · Condition tier]
 
@@ -678,20 +938,30 @@ Condition: Very Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-65')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">kona sol swim skort, plus size swim skort, black quick dry, quick dry swim bottom, beach skort plus, womens plus 16w 18w, beach resortwear, coastal resort, vacation core, plus size swim, summer beach, resort ready, vacation packing, beach essential, #beachresortwear #coastalresort #vacationcore #resortready #pluscapsule</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-66">kona sol swim skort, plus size swim skort, black quick dry, quick dry swim bottom, beach skort plus, womens plus 16w 18w, beach resortwear, coastal resort, vacation core, plus size swim, summer beach, resort ready, vacation packing, beach essential, #beachresortwear #coastalresort #vacationcore #resortready #pluscapsule</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-66')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
   <div class="opflag"><strong>Op flag:</strong> P2 SMC BLOCKS publish. Shipping override 7.99 GPO per card flag.</div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Skirts-011">
   <header class="sku-h">
     <span class="sku-name">Skirts-011</span>
     <span class="chip chip-warn">SMC GAP</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">Kona Sol Swim Skort WMNS Plus Size 20W/22W Black Quick Dry Beach Resortwear</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-67">Kona Sol Swim Skort WMNS Plus Size 20W/22W Black Quick Dry Beach Resortwear</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-67')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Kona Sol swim skort women&#x27;s plus size 20W/22W black quick-dry stretch knee-length relaxed fit with built-in coverage and beach resortwear finish. Vacation packing, weekend cabana looks, and coastal pool styling — a breezy, tropical, vacation-ready piece.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-68">Kona Sol swim skort women&#x27;s plus size 20W/22W black quick-dry stretch knee-length relaxed fit with built-in coverage and beach resortwear finish. Vacation packing, weekend cabana looks, and coastal pool styling — a breezy, tropical, vacation-ready piece.
 
 [SMC PENDING — physical-verify build required: Material % · Style/RN · Care · Made-in · Measurements (waist/hip/length/inseam) · Condition tier]
 
@@ -700,21 +970,31 @@ Condition: Very Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-68')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">kona sol swim skort, plus size swim skort, black quick dry, quick dry swim bottom, beach skort plus, womens plus 20w 22w, beach resortwear, coastal resort, vacation core, plus size swim, summer beach, resort ready, vacation packing, beach essential, #beachresortwear #coastalresort #vacationcore #resortready #pluscapsule</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-69">kona sol swim skort, plus size swim skort, black quick dry, quick dry swim bottom, beach skort plus, womens plus 20w 22w, beach resortwear, coastal resort, vacation core, plus size swim, summer beach, resort ready, vacation packing, beach essential, #beachresortwear #coastalresort #vacationcore #resortready #pluscapsule</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-69')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
   <div class="opflag"><strong>Op flag:</strong> P2 SMC BLOCKS publish. Shipping override 7.99 GPO per card flag.</div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Skirts-012">
   <header class="sku-h">
     <span class="sku-name">Skirts-012</span>
     <span class="chip chip-warn">SMC GAP</span>
   </header>
   <div class="inline-flag">Op flag: Brand wrong on XL file — verify brand before lock</div>
   <div class="lbl">Title</div>
-  <pre class="cb">Old Navy Swim Skirt WMNS Plus Size 1X Black Stretch Coverup Beach Resortwear</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-70">Old Navy Swim Skirt WMNS Plus Size 1X Black Stretch Coverup Beach Resortwear</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-70')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Old Navy swim skirt women&#x27;s plus size 1X black stretch coverup-style relaxed fit with breezy summer drape and beach resortwear finish. Vacation packing, coastal weekend styling, and beach getaway looks — a breezy, tropical, swim-ready must-have.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-71">Old Navy swim skirt women&#x27;s plus size 1X black stretch coverup-style relaxed fit with breezy summer drape and beach resortwear finish. Vacation packing, coastal weekend styling, and beach getaway looks — a breezy, tropical, swim-ready must-have.
 
 [SMC PENDING — physical-verify build required: Material % · Style/RN · Care · Made-in · Measurements (waist/hip/length/inseam) · Condition tier]
 
@@ -723,20 +1003,30 @@ Condition: Very Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-71')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">old navy swim skirt, plus size swim skirt, black swim coverup, beach skirt plus, stretch swim bottom, womens plus 1x, beach resortwear, coastal resort, vacation core, plus size swim, summer beach, resort ready, vacation packing, swim coverup, #beachresortwear #coastalresort #vacationcore #resortready #pluscapsule</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-72">old navy swim skirt, plus size swim skirt, black swim coverup, beach skirt plus, stretch swim bottom, womens plus 1x, beach resortwear, coastal resort, vacation core, plus size swim, summer beach, resort ready, vacation packing, swim coverup, #beachresortwear #coastalresort #vacationcore #resortready #pluscapsule</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-72')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
   <div class="opflag"><strong>Op flag:</strong> Brand wrong on XL file — VERIFY BRAND before Op lock (title + P1 + P4 currently render &quot;Old Navy&quot;). SMC also BLOCKS publish.</div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Skirts-018">
   <header class="sku-h">
     <span class="sku-name">Skirts-018</span>
     <span class="chip chip-warn">SMC GAP</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">Duluth Trading Skort WMNS Size XL Black Cotton Stretch Everyday Active Comfort</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-73">Duluth Trading Skort WMNS Size XL Black Cotton Stretch Everyday Active Comfort</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-73')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Duluth Trading skort women&#x27;s XL black cotton-stretch knee-length relaxed fit with built-in shorts and everyday active finish. Travel-day styling, outdoor weekend rotation, and active everyday wear — a streamlined, gorpcore, comfort-tech essential.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-74">Duluth Trading skort women&#x27;s XL black cotton-stretch knee-length relaxed fit with built-in shorts and everyday active finish. Travel-day styling, outdoor weekend rotation, and active everyday wear — a streamlined, gorpcore, comfort-tech essential.
 
 [SMC PENDING — physical-verify build required: Material % · Style/RN · Care · Made-in · Measurements (waist/hip/length/inseam) · Condition tier]
 
@@ -745,22 +1035,32 @@ Condition: Very Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-74')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">duluth trading skort, womens active skort, black cotton skort, cotton stretch skort, womens xl plus, everyday active wear, performance athleisure, neutral athleisure, capsule wardrobe, weekend rotation, outdoor casual, gorpcore adjacent, trail ready, everyday casual, #performanceathleisure #neutralathleisure #outdoorcasual #activecapsule #weekendready</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-75">duluth trading skort, womens active skort, black cotton skort, cotton stretch skort, womens xl plus, everyday active wear, performance athleisure, neutral athleisure, capsule wardrobe, weekend rotation, outdoor casual, gorpcore adjacent, trail ready, everyday casual, #performanceathleisure #neutralathleisure #outdoorcasual #activecapsule #weekendready</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-75')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
   <div class="opflag"><strong>Op flag:</strong> P2 SMC BLOCKS publish.</div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<h2 class="cat">SHORTS (9)</h2>
+<h2 class="cat" id="cat-sku-SHORTS--9-">SHORTS (9)</h2>
 
-<section class="sku">
+<section class="sku" id="sku-Shorts-003">
   <header class="sku-h">
     <span class="sku-name">Shorts-003</span>
     <span class="chip chip-warn">SMC GAP</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">[Title+ pass needed — Phase 2 intake JSON + photo_capture block required]</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-76">[Title+ pass needed — Phase 2 intake JSON + photo_capture block required]</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-76')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">S.O.N.G. Maternity denim shorts women&#x27;s M dark wash blue distressed full-panel fit with pull-on stretch and faux front pocket detail. Festival outfits, summer maternity wear, and Y2K indie sleaze nights — a vintage-inspired, lived-in, grunge-revival find.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-77">S.O.N.G. Maternity denim shorts women&#x27;s M dark wash blue distressed full-panel fit with pull-on stretch and faux front pocket detail. Festival outfits, summer maternity wear, and Y2K indie sleaze nights — a vintage-inspired, lived-in, grunge-revival find.
 
 [SMC PENDING — physical-verify build required: Material % · Style/RN · Care · Made-in · Measurements (waist/hip/rise/inseam) · Condition tier]
 
@@ -769,21 +1069,31 @@ Condition: Very Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-77')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">song maternity shorts, maternity denim shorts, dark wash maternity, distressed denim shorts, full panel maternity, faux front pocket, womens m medium, vintage inspired, grunge revival, y2k revival, indie sleaze, festival outfit, summer maternity, night out, #grungerevival #indiesleaze #y2krevival #vintageinspired #festivalcore</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-78">song maternity shorts, maternity denim shorts, dark wash maternity, distressed denim shorts, full panel maternity, faux front pocket, womens m medium, vintage inspired, grunge revival, y2k revival, indie sleaze, festival outfit, summer maternity, night out, #grungerevival #indiesleaze #y2krevival #vintageinspired #festivalcore</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-78')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
   <div class="opflag"><strong>Op flag:</strong> Title+ pass needed. P2 SMC BLOCKS publish.</div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Shorts-004">
   <header class="sku-h">
     <span class="sku-name">Shorts-004</span>
     <span class="chip chip-warn">SMC GAP</span>
   </header>
   <div class="inline-flag">Title shows size 13, physical verified 12 W31 — title re-lock needed</div>
   <div class="lbl">Title</div>
-  <pre class="cb">Hollister Co Shorts WMNS 13 White Cotton Stretch Ultra High Rise Coastal Preppy</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-79">Hollister Co Shorts WMNS 13 White Cotton Stretch Ultra High Rise Coastal Preppy</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-79')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Hollister Ultra High-Rise Mom Shorts women&#x27;s 12 white cotton-stretch 3-inch inseam relaxed fit with breezy summer cut and coastal preppy finish. Vacation packing, Y2K outfits, and capsule wardrobe pieces — a vintage-inspired, resort-core, summer-ready must-have.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-80">Hollister Ultra High-Rise Mom Shorts women&#x27;s 12 white cotton-stretch 3-inch inseam relaxed fit with breezy summer cut and coastal preppy finish. Vacation packing, Y2K outfits, and capsule wardrobe pieces — a vintage-inspired, resort-core, summer-ready must-have.
 
 [SMC PENDING — physical-verify build required: Material % · Style/RN · Care · Made-in · Measurements (waist/hip/rise/inseam) · Condition tier]
 
@@ -792,20 +1102,30 @@ Condition: Very Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-80')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">hollister mom shorts, ultra high rise shorts, white cotton stretch, mom fit shorts, ultra high rise mom, 3 inch inseam shorts, womens 12 medium, coastal preppy, y2k revival, vintage inspired, resort core, summer ready, vacation packing, capsule wardrobe, #coastalpreppy #y2krevival #resortcore #summercore #moderncapsule</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-81">hollister mom shorts, ultra high rise shorts, white cotton stretch, mom fit shorts, ultra high rise mom, 3 inch inseam shorts, womens 12 medium, coastal preppy, y2k revival, vintage inspired, resort core, summer ready, vacation packing, capsule wardrobe, #coastalpreppy #y2krevival #resortcore #summercore #moderncapsule</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-81')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
   <div class="opflag"><strong>Op flag:</strong> Title size mismatch (13 vs verified 12 W31) — Title+ re-lock required + P2 SMC BLOCKS publish.</div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Shorts-005">
   <header class="sku-h">
     <span class="sku-name">Shorts-005</span>
     <span class="chip chip-warn">SMC GAP</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">[Title+ pass needed — Phase 2 intake JSON + photo_capture block required]</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-82">[Title+ pass needed — Phase 2 intake JSON + photo_capture block required]</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-82')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">J.Crew 4-inch Stretch Chino Short women&#x27;s 4 blue cotton-stretch straight fit with polished summer finish and lightweight casual drape. Beach packing, preppy weekend rotation, and resort styling — a clean, coastal-casual, vacation-ready pick.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-83">J.Crew 4-inch Stretch Chino Short women&#x27;s 4 blue cotton-stretch straight fit with polished summer finish and lightweight casual drape. Beach packing, preppy weekend rotation, and resort styling — a clean, coastal-casual, vacation-ready pick.
 
 [SMC PENDING — physical-verify build required: Material % · Style/RN · Care · Made-in · Measurements (waist/hip/rise/inseam) · Condition tier]
 
@@ -814,20 +1134,30 @@ Condition: Very Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-83')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">jcrew chino shorts, stretch chino shorts, blue cotton stretch, 4 inch inseam shorts, polished straight shorts, womens 4 small, coastal casual, coastal preppy, vacation ready, resort core, preppy minimalist, capsule wardrobe, summer essential, weekend rotation, #coastalcasual #coastalpreppy #vacationcore #resortcore #summercapsule</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-84">jcrew chino shorts, stretch chino shorts, blue cotton stretch, 4 inch inseam shorts, polished straight shorts, womens 4 small, coastal casual, coastal preppy, vacation ready, resort core, preppy minimalist, capsule wardrobe, summer essential, weekend rotation, #coastalcasual #coastalpreppy #vacationcore #resortcore #summercapsule</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-84')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
   <div class="opflag"><strong>Op flag:</strong> Title+ pass needed. P2 SMC BLOCKS publish.</div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Shorts-018">
   <header class="sku-h">
     <span class="sku-name">Shorts-018</span>
     <span class="chip chip-ok">FULL LOCK</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">Cacique Swim Board Shorts WMNS Plus Size 18/20 Black 5 Inch Beach Resortwear</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-85">Cacique Swim Board Shorts WMNS Plus Size 18/20 Black 5 Inch Beach Resortwear</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-85')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Cacique swim board shorts women&#x27;s plus size 18/20 black stretch elastic waistband drawstring quick-dry 5-inch inseam relaxed fit with resort wear coastal casual standby. Water-ready weave offers breezy give and lightweight comfort for easy poolside days.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-86">Cacique swim board shorts women&#x27;s plus size 18/20 black stretch elastic waistband drawstring quick-dry 5-inch inseam relaxed fit with resort wear coastal casual standby. Water-ready weave offers breezy give and lightweight comfort for easy poolside days.
 
 Shell 100% Polyester · Lining 85% Polyester / 15% Spandex. Swim Board Short Bottoms. Machine wash cold. Made in China. RN 118641.
 
@@ -844,20 +1174,30 @@ Condition: Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-86')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">cacique swim shorts, board shorts plus, black swim shorts, plus size swim, 5 inch inseam shorts, womens plus 18 20, beach resortwear, coastal resort, vacation core, plus size swim, summer beach, resort ready, vacation packing, swim essential, #beachresortwear #coastalresort #vacationcore #resortready #pluscapsule</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-87">cacique swim shorts, board shorts plus, black swim shorts, plus size swim, 5 inch inseam shorts, womens plus 18 20, beach resortwear, coastal resort, vacation core, plus size swim, summer beach, resort ready, vacation packing, swim essential, #beachresortwear #coastalresort #vacationcore #resortready #pluscapsule</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-87')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Shorts-019">
   <header class="sku-h">
     <span class="sku-name">Shorts-019</span>
     <span class="chip chip-ok">FULL LOCK</span>
   </header>
   <div class="inline-flag">Op flag: Color &quot;blue abstract&quot; carried per title — physical card verify pending</div>
   <div class="lbl">Title</div>
-  <pre class="cb">Balance Collection Bike Shorts WMNS SZ M Blue Abstract 7 Inch Performance Active</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-88">Balance Collection Bike Shorts WMNS SZ M Blue Abstract 7 Inch Performance Active</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-88')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Balance Collection bike shorts women&#x27;s M blue abstract print stretch 7-inch inseam compression fit with performance wear athleisure form. Four-way stretch delivers all-over support and breathable flow for active training.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-89">Balance Collection bike shorts women&#x27;s M blue abstract print stretch 7-inch inseam compression fit with performance wear athleisure form. Four-way stretch delivers all-over support and breathable flow for active training.
 
 92% Polyester / 8% Spandex. High-Rise Compression Bike Short. Machine wash cold. Made in Egypt. Style BLS1672A · RN 137013.
 
@@ -874,21 +1214,31 @@ Condition: New With Tags.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-89')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">balance collection bike shorts, blue abstract print shorts, 7 inch bike shorts, performance bike shorts, abstract pattern shorts, womens medium, performance athleisure, athleisure active, training rotation, gym ready, capsule athleisure, everyday active, weekend workout, summer activewear, #performanceathleisure #activecapsule #trainingcore #gymready #moderncasual</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-90">balance collection bike shorts, blue abstract print shorts, 7 inch bike shorts, performance bike shorts, abstract pattern shorts, womens medium, performance athleisure, athleisure active, training rotation, gym ready, capsule athleisure, everyday active, weekend workout, summer activewear, #performanceathleisure #activecapsule #trainingcore #gymready #moderncasual</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-90')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
   <div class="opflag"><strong>Op flag:</strong> Color physical verify pending (currently carries title &quot;blue abstract&quot;).</div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Shorts-020">
   <header class="sku-h">
     <span class="sku-name">Shorts-020</span>
     <span class="chip chip-ok">FULL LOCK</span>
   </header>
   <div class="inline-flag">Op flag: Gender = Mens confirmed by Tracie 2026-04-29 (card had conflict)</div>
   <div class="lbl">Title</div>
-  <pre class="cb">Madewell 5&quot; Everywear Shorts Mens Size XXL Green Cotton Corduroy Modern Vintage</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-91">Madewell 5&quot; Everywear Shorts Mens Size XXL Green Cotton Corduroy Modern Vintage</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-91')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Madewell Everywear shorts mens XXL green corduroy 5-inch inseam elastic waist relaxed fit with coastal casual modern minimalist finish. Brushed pile texture offers lightweight comfort and subtle structure for laid-back neutral core looks.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-92">Madewell Everywear shorts mens XXL green corduroy 5-inch inseam elastic waist relaxed fit with coastal casual modern minimalist finish. Brushed pile texture offers lightweight comfort and subtle structure for laid-back neutral core looks.
 
 100% Cotton corduroy. Everywear Shorts. Machine wash cold. Made in Vietnam. RN 77388 · CA 65645.
 
@@ -905,19 +1255,29 @@ Condition: Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-92')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">madewell everywear shorts, mens corduroy shorts, green corduroy shorts, 5 inch cotton cord, brushed pile shorts, mens xxl plus, modern vintage, vintage revival, retro inspired, capsule wardrobe, mens essentials, weekend rotation, fall casual, autumn rotation, #modernvintage #vintagerevival #retroinspired #autumncapsule #moderncapsule</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-93">madewell everywear shorts, mens corduroy shorts, green corduroy shorts, 5 inch cotton cord, brushed pile shorts, mens xxl plus, modern vintage, vintage revival, retro inspired, capsule wardrobe, mens essentials, weekend rotation, fall casual, autumn rotation, #modernvintage #vintagerevival #retroinspired #autumncapsule #moderncapsule</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-93')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Shorts-023">
   <header class="sku-h">
     <span class="sku-name">Shorts-023</span>
     <span class="chip chip-warn">SMC GAP</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">Rachel Zoe Pull On Shorts WMNS Plus 2X Multicolor Floral Linen Boho Resortwear</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-94">Rachel Zoe Pull On Shorts WMNS Plus 2X Multicolor Floral Linen Boho Resortwear</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-94')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Rachel Zoe pull-on shorts women&#x27;s plus 2X multicolor floral 100% linen relaxed fit with flowing silhouette and boho chic finish. Hawaii vacation outfits, destination wedding looks, and summer beach essentials — a coastal-casual, resort-wear, tropical-minimalist edit.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-95">Rachel Zoe pull-on shorts women&#x27;s plus 2X multicolor floral 100% linen relaxed fit with flowing silhouette and boho chic finish. Hawaii vacation outfits, destination wedding looks, and summer beach essentials — a coastal-casual, resort-wear, tropical-minimalist edit.
 
 [SMC PENDING — physical-verify build required: Material % (linen confirmed cert-material; need full %) · Style/RN · Care · Made-in · Measurements (waist/hip/rise/inseam) · Condition tier]
 
@@ -926,20 +1286,30 @@ Condition: Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-95')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">rachel zoe shorts, pull on linen shorts, multicolor floral linen, plus size linen, pull on stretch waist, womens plus 2x, boho resortwear, tropical resort, coastal boho, vacation core, resort ready, beach packing, garden party, summer vacation, #bohoresortwear #tropicalresort #coastalboho #vacationcore #resortready</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-96">rachel zoe shorts, pull on linen shorts, multicolor floral linen, plus size linen, pull on stretch waist, womens plus 2x, boho resortwear, tropical resort, coastal boho, vacation core, resort ready, beach packing, garden party, summer vacation, #bohoresortwear #tropicalresort #coastalboho #vacationcore #resortready</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-96')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
   <div class="opflag"><strong>Op flag:</strong> P2 SMC BLOCKS publish.</div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Shorts-024">
   <header class="sku-h">
     <span class="sku-name">Shorts-024</span>
     <span class="chip chip-ok">FULL LOCK</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">Gloria Vanderbilt Amanda Shorts WMNS Size 14 White Multicolor Floral Cottagecore</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-97">Gloria Vanderbilt Amanda Shorts WMNS Size 14 White Multicolor Floral Cottagecore</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-97')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Gloria Vanderbilt Amanda shorts women&#x27;s 14 white floral cotton-stretch high-rise zip fly button 5 pocket relaxed fit with feminine clean classic silhouette. Breathable cotton weave offers soft stretch and gentle give for romantic garden party dressing.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-98">Gloria Vanderbilt Amanda shorts women&#x27;s 14 white floral cotton-stretch high-rise zip fly button 5 pocket relaxed fit with feminine clean classic silhouette. Breathable cotton weave offers soft stretch and gentle give for romantic garden party dressing.
 
 98% Cotton / 2% Spandex. Amanda Short. Machine wash cold. Made in Egypt. Style CDGVB4240-DRM · UPC 029025601416 · RN 80328 · CA 08349.
 
@@ -956,19 +1326,29 @@ Condition: Very Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-98')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">gloria vanderbilt amanda shorts, amanda denim shorts, white floral shorts, multicolor floral print, cotton stretch shorts, womens 14 large, cottagecore, romantic feminine, boho revival, garden party, summer rotation, vacation packing, wedding guest, picnic ready, #cottagecore #bohorevival #romanticfeminine #springgarden #weddingguestchic</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-99">gloria vanderbilt amanda shorts, amanda denim shorts, white floral shorts, multicolor floral print, cotton stretch shorts, womens 14 large, cottagecore, romantic feminine, boho revival, garden party, summer rotation, vacation packing, wedding guest, picnic ready, #cottagecore #bohorevival #romanticfeminine #springgarden #weddingguestchic</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-99')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Shorts-025">
   <header class="sku-h">
     <span class="sku-name">Shorts-025</span>
     <span class="chip chip-ok">FULL LOCK</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">Woolrich Chino Shorts Mens Size 38 British Tan Khaki 9.5 Inch Outdoor Casual</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-100">Woolrich Chino Shorts Mens Size 38 British Tan Khaki 9.5 Inch Outdoor Casual</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-100')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Woolrich chino shorts mens 38 british tan khaki 100% cotton 9.5-inch inseam button zip 4 pockets relaxed fit with heritage outdoor build. Structured cotton weave offers durable comfort and rugged ease for everyday americana wear.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-101">Woolrich chino shorts mens 38 british tan khaki 100% cotton 9.5-inch inseam button zip 4 pockets relaxed fit with heritage outdoor build. Structured cotton weave offers durable comfort and rugged ease for everyday americana wear.
 
 100% Cotton. Classic Chino Shorts Style 3021. Machine wash cold. Made in China. CA 05331.
 
@@ -984,21 +1364,31 @@ Condition: Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-101')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">outdoor casual, heritage casual, americana classic, gorpcore adjacent, woolrich chino shorts, british tan khaki, 9.5 inch chino, mens chino outdoor, mens 38 medium, weekend outdoors, trail ready, capsule rotation, mens essentials, fall heritage, #outdoorcasual #heritagecasual #americanaclean #gorpcoreadjacent #fallheritage</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-102">outdoor casual, heritage casual, americana classic, gorpcore adjacent, woolrich chino shorts, british tan khaki, 9.5 inch chino, mens chino outdoor, mens 38 medium, weekend outdoors, trail ready, capsule rotation, mens essentials, fall heritage, #outdoorcasual #heritagecasual #americanaclean #gorpcoreadjacent #fallheritage</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-102')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<h2 class="cat">ACCESSORIES (3)</h2>
+<h2 class="cat" id="cat-sku-ACCESSORIES--3-">ACCESSORIES (3)</h2>
 
-<section class="sku">
+<section class="sku" id="sku-Accessories-001">
   <header class="sku-h">
     <span class="sku-name">Accessories-001</span>
     <span class="chip chip-ok">FULL LOCK</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">Cupshe One Piece Swimsuit Size M Green Tropical Leaf Print Coastal Resortwear</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-103">Cupshe One Piece Swimsuit Size M Green Tropical Leaf Print Coastal Resortwear</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-103')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Cupshe one-piece swimsuit women&#x27;s M green tan leaf print stretch built-in bra removable pads adjustable straps medium coverage with tropical resort island luxe cut.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-104">Cupshe one-piece swimsuit women&#x27;s M green tan leaf print stretch built-in bra removable pads adjustable straps medium coverage with tropical resort island luxe cut.
 
 Shell 80% Chinlon / 20% Spandex · Lining 90% Polyester / 10% Spandex. Tropical Print One-Piece swimsuit with built-in bra cups, removable pads, adjustable straps, no underwire, smooth-lined interior. Machine wash cold. Made in China. Style OSC-912C.
 
@@ -1015,19 +1405,29 @@ Condition: Very Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-104')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">cupshe one piece, tropical leaf swimsuit, green tropical print, one piece swim womens, womens medium, coastal resortwear, tropical resort, vacation core, resort ready, beach essential, summer swim, vacation packing, swim coverup, beach rotation, #coastalresortwear #tropicalresort #vacationcore #resortready #beachgetaway</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-105">cupshe one piece, tropical leaf swimsuit, green tropical print, one piece swim womens, womens medium, coastal resortwear, tropical resort, vacation core, resort ready, beach essential, summer swim, vacation packing, swim coverup, beach rotation, #coastalresortwear #tropicalresort #vacationcore #resortready #beachgetaway</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-105')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Accessories-002">
   <header class="sku-h">
     <span class="sku-name">Accessories-002</span>
     <span class="chip chip-warn">SMC GAP</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">Athleta Tankini Top Size 38 D/DD Black White Cabana Stripe Coastal Resortwear</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-106">Athleta Tankini Top Size 38 D/DD Black White Cabana Stripe Coastal Resortwear</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-106')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Athleta tankini top women&#x27;s 38 D/DD black white cabana stripe stretch fit with built-in support and coastal resortwear finish. Pool day outfits, beach trip packing, and coastal weekend styling — a breezy, tropical, vacation-ready essential.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-107">Athleta tankini top women&#x27;s 38 D/DD black white cabana stripe stretch fit with built-in support and coastal resortwear finish. Pool day outfits, beach trip packing, and coastal weekend styling — a breezy, tropical, vacation-ready essential.
 
 [SMC PENDING — physical-verify build required: Material % (card flag carries) · Style ID (visible on photo, not captured) · Care · Made-in · Measurements (band/bust/length) · Condition tier]
 
@@ -1036,20 +1436,30 @@ Condition: Very Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-107')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">athleta tankini top, cabana stripe tankini, black white stripe, tankini swim top, size 38 d dd, womens d cup tankini, coastal resortwear, coastal preppy, vacation core, resort ready, summer swim, beach rotation, vacation packing, swim essential, #coastalresortwear #coastalpreppy #vacationcore #resortready #beachgetaway</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-108">athleta tankini top, cabana stripe tankini, black white stripe, tankini swim top, size 38 d dd, womens d cup tankini, coastal resortwear, coastal preppy, vacation core, resort ready, summer swim, beach rotation, vacation packing, swim essential, #coastalresortwear #coastalpreppy #vacationcore #resortready #beachgetaway</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-108')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
   <div class="opflag"><strong>Op flag:</strong> Material % + Style ID both missing — P2 SMC BLOCKS publish until captured.</div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-Acessories-004">
   <header class="sku-h">
     <span class="sku-name">Acessories-004</span>
     <span class="chip chip-ok">FULL LOCK</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">Coral Tropics One Piece Swimsuit Plus Size 2X Olive Green Crochet Earthy Coastal</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-109">Coral Tropics One Piece Swimsuit Plus Size 2X Olive Green Crochet Earthy Coastal</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-109')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">Coral Tropics one-piece swimsuit women&#x27;s plus 2X olive green crochet stretch built-in bra removable pads adjustable straps with boho chic earthy coastal edit. Open-weave texture offers airy comfort and natural give for a flattering summer staple.
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-110">Coral Tropics one-piece swimsuit women&#x27;s plus 2X olive green crochet stretch built-in bra removable pads adjustable straps with boho chic earthy coastal edit. Open-weave texture offers airy comfort and natural give for a flattering summer staple.
 
 Nylon / Spandex blend. Crochet Panel Deep V One-Piece swimsuit with built-in bra cups, removable pads, adjustable straps, no underwire. Hand wash cold. Made in China. RN 15167.
 
@@ -1066,64 +1476,94 @@ Condition: Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-110')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">coral tropics one piece, plus size swimsuit, olive green crochet, crochet swimsuit plus, earthy coastal swim, womens plus 2x, coastal earthy, tropical resort, vacation core, plus size swim, resort ready, summer beach, vacation packing, swim essential, #coastalresortwear #earthycoastal #tropicalresort #vacationcore #pluscapsule</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-111">coral tropics one piece, plus size swimsuit, olive green crochet, crochet swimsuit plus, earthy coastal swim, womens plus 2x, coastal earthy, tropical resort, vacation core, plus size swim, resort ready, summer beach, vacation packing, swim essential, #coastalresortwear #earthycoastal #tropicalresort #vacationcore #pluscapsule</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-111')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
   <div class="opflag"><strong>Op flag:</strong> SKU typo &quot;Acessories-004&quot; → cascade-correct to &quot;Accessories-004&quot; (VA fix downstream); non-blocking for Op.</div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<h2 class="cat">SHIRTS (1)</h2>
+<h2 class="cat" id="cat-sku-SHIRTS--1-">SHIRTS (1)</h2>
 
-<section class="sku">
+<section class="sku" id="sku-Shirts-002">
   <header class="sku-h">
     <span class="sku-name">Shirts-002</span>
     <span class="chip chip-err">ZERO DATA</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">[No title — Shirts category unprocessed in Wave 1/2 title batches]</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-112">[No title — Shirts category unprocessed in Wave 1/2 title batches]</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-112')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">[No description on file — Phase 1 intake → Phase 2 verification → Title+ → Description+ all required]
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-113">[No description on file — Phase 1 intake → Phase 2 verification → Title+ → Description+ all required]
 
 🚢 Ready to Ship
 📦 Bundle Discounts on Multiple Items
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-113')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">[Cannot render — Rule #1 research-first audit gate fails. Pull Phase 2 intake JSON → run Title+ → run Description+ → return to Keyword+]</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-114">[Cannot render — Rule #1 research-first audit gate fails. Pull Phase 2 intake JSON → run Title+ → run Description+ → return to Keyword+]</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-114')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
   <div class="opflag"><strong>Op flag:</strong> Full pipeline restart from Phase 1 intake. Tracie attention required.</div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<h2 class="cat">BIN-CODE SKUs (2)</h2>
+<h2 class="cat" id="cat-sku-BIN-CODE-SKUs--2-">BIN-CODE SKUs (2)</h2>
 
-<section class="sku">
+<section class="sku" id="sku-A-9-2545">
   <header class="sku-h">
     <span class="sku-name">A-9 2545</span>
     <span class="chip chip-err">ZERO DATA</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">[No title — Tops category, Draft status per vendoo_copy_gaps_2026-05-10.csv]</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-115">[No title — Tops category, Draft status per vendoo_copy_gaps_2026-05-10.csv]</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-115')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">[No description on file — Phase 1 intake → Phase 2 verification → Title+ → Description+ all required]
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-116">[No description on file — Phase 1 intake → Phase 2 verification → Title+ → Description+ all required]
 
 🚢 Ready to Ship
 📦 Bundle Discounts on Multiple Items
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-116')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">[Cannot render — title generation required first. Run Title+ on bin-code A-9 2545 (Tops)]</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-117">[Cannot render — title generation required first. Run Title+ on bin-code A-9 2545 (Tops)]</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-117')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
   <div class="opflag"><strong>Op flag:</strong> Full pipeline restart from Phase 1 intake. Tracie attention required.</div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
-<section class="sku">
+<section class="sku" id="sku-LA32-1109">
   <header class="sku-h">
     <span class="sku-name">LA32 1109</span>
     <span class="chip chip-warn">SMC GAP</span>
   </header>
   <div class="lbl">Title</div>
-  <pre class="cb">J.Crew Slim-Fit Jean in Signature Flex Men&#x27;s Size 33 x 34 Dark Harbor Blue Denim</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-118">J.Crew Slim-Fit Jean in Signature Flex Men&#x27;s Size 33 x 34 Dark Harbor Blue Denim</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-118')" aria-label="Copy Title">copy</button>
+  </div>
   <div class="lbl">Description</div>
-  <pre class="cb">[P1 PENDING — Description+ pass required: requires Phase 2 intake JSON + photo_capture.* block]
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-119">[P1 PENDING — Description+ pass required: requires Phase 2 intake JSON + photo_capture.* block]
 
 [SMC PENDING — physical-verify build required: Material % · Style/RN · Care · Made-in · Measurements (waist/hip/rise/inseam) · Condition tier]
 
@@ -1132,12 +1572,52 @@ Condition: Gently Pre-Owned.
 🚚 Fast Delivery
 🌿 Sustainable Business
 ⭐ 5 Star Seller</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-119')" aria-label="Copy Description">copy</button>
+  </div>
   <div class="lbl">P4 Keywords</div>
-  <pre class="cb">jcrew slim fit jean, signature flex denim, slim fit mens jeans, dark harbor blue, dark wash blue denim, mens 33x34, signature flex stretch, modern minimalist, clean minimal, capsule wardrobe, mens denim essential, weekday casual, weekend rotation, business casual mens, #modernminimalist #cleanminimal #moderncapsule #urbanminimal #americanaclean</pre>
+  <div class="cb-wrap">
+    <pre class="cb" id="cb-120">jcrew slim fit jean, signature flex denim, slim fit mens jeans, dark harbor blue, dark wash blue denim, mens 33x34, signature flex stretch, modern minimalist, clean minimal, capsule wardrobe, mens denim essential, weekday casual, weekend rotation, business casual mens, #modernminimalist #cleanminimal #moderncapsule #urbanminimal #americanaclean</pre>
+    <button class="cb-btn" type="button" onclick="copyFromEl(this,'cb-120')" aria-label="Copy P4 Keywords">copy</button>
+  </div>
   <div class="opflag"><strong>Op flag:</strong> P1 + P2 SMC both BLOCK listing publish. Description+ pass needed after Phase 2 intake captures.</div>
+  <a class="to-top" href="#top">&uarr; Top</a>
 </section>
 
 <footer>Source: Reconciled_40SKU_Batch_2026-05-10.md &middot; canonical JSONs in Phase1_Migrated_April_2026</footer>
 </div>
+<script>
+function copyFromEl(btn, id){
+  var el = document.getElementById(id);
+  if(!el) return;
+  var text = el.innerText || el.textContent || '';
+  function done(){
+    var orig = btn.textContent;
+    btn.classList.add('copied');
+    btn.textContent = 'Copied!';
+    setTimeout(function(){
+      btn.classList.remove('copied');
+      btn.textContent = orig;
+    }, 1400);
+  }
+  if(navigator.clipboard && window.isSecureContext !== false){
+    navigator.clipboard.writeText(text).then(done).catch(function(){
+      fallback();
+    });
+  } else {
+    fallback();
+  }
+  function fallback(){
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try{ document.execCommand('copy'); done(); }
+    catch(e){ btn.textContent = 'Press Cmd/Ctrl+C'; }
+    document.body.removeChild(ta);
+  }
+}
+</script>
 </body>
 </html>
