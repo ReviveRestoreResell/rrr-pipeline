@@ -1676,7 +1676,42 @@ def main():
         print("  python generate_card.py path/to/SKU.json")
         print("  python generate_card.py --batch path/to/folder/")
         print("  python generate_card.py --batch path/to/folder/ --batch-label 'NWLG Batch 1'")
+        print("  python generate_card.py --full-index path/to/intake-root/")
         sys.exit(1)
+
+    # ── Full index mode ────────────────────────────────────────────────────────
+    # --full-index <intake-root>
+    # Walks all immediate subdirectories of the intake root, loads every *.json,
+    # and writes a comprehensive index.html covering all batches.
+    if args[0] == "--full-index":
+        if len(args) < 2:
+            print("Error: --full-index requires the intake root path")
+            sys.exit(1)
+        intake_root = args[1]
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+
+        EXCLUDE_DIRS = {"_archive", "_phase1_backup", "_p2_preflight", "github pages", "items"}
+
+        all_items = []
+        for entry in sorted(os.scandir(intake_root), key=lambda e: e.name):
+            if not entry.is_dir():
+                continue
+            if entry.name.lower() in EXCLUDE_DIRS or entry.name.startswith("."):
+                continue
+            for jf in sorted(glob.glob(os.path.join(entry.path, "*.json"))):
+                try:
+                    with open(jf, "r", encoding="utf-8") as f:
+                        data = json.load(f)
+                    sku = data.get("sku") or os.path.splitext(os.path.basename(jf))[0]
+                    all_items.append((sku, data))
+                except Exception as e:
+                    print(f"  SKIP {os.path.basename(jf)}: {e}")
+
+        all_items.sort(key=lambda x: x[0])
+        index_path = os.path.join(script_dir, "index.html")
+        _write_index(index_path, all_items)
+        print(f"index.html written — {len(all_items)} items from {intake_root}")
+        sys.exit(0)
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
     output_dir = os.path.join(script_dir, "items")
