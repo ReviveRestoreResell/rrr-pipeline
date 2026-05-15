@@ -15,6 +15,7 @@ import json
 import hashlib
 import ntpath
 import os
+import re
 import shutil
 import sys
 import glob
@@ -79,26 +80,53 @@ def label_to_slug(label):
 
 
 def atomic_write_text(path, text, encoding="utf-8"):
-    """Write text to path atomically: tmp → validate non-empty → move."""
+    """Write text to path atomically: tmp → fsync → validate non-empty → os.replace.
+
+    DO NOT use shutil.move — on Windows it falls back to copy+delete when the
+    destination exists, which is not atomic and lets OneDrive sync corrupt the file.
+    """
     tmp = path + ".tmp"
-    with open(tmp, "w", encoding=encoding) as f:
-        f.write(text)
-    if os.path.getsize(tmp) == 0:
-        os.remove(tmp)
-        raise IOError(f"atomic_write_text: output was empty, aborting write to {path}")
-    shutil.move(tmp, path)
+    try:
+        with open(tmp, "w", encoding=encoding) as f:
+            f.write(text)
+            f.flush()
+            os.fsync(f.fileno())
+        if os.path.getsize(tmp) == 0:
+            os.remove(tmp)
+            raise IOError(f"atomic_write_text: output was empty, aborting write to {path}")
+        os.replace(tmp, path)
+    except Exception:
+        if os.path.exists(tmp):
+            try:
+                os.remove(tmp)
+            except OSError:
+                pass
+        raise
 
 
 def atomic_write_json(path, data, encoding="utf-8"):
-    """Write JSON to path atomically: tmp → round-trip validate → move."""
+    """Write JSON to path atomically: tmp → fsync → round-trip validate → os.replace.
+
+    DO NOT use shutil.move — see atomic_write_text for rationale.
+    """
     tmp = path + ".tmp"
-    with open(tmp, "w", encoding=encoding) as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-        f.write("\n")
-    # Validate round-trip
-    with open(tmp, "r", encoding=encoding) as f:
-        json.load(f)
-    shutil.move(tmp, path)
+    try:
+        with open(tmp, "w", encoding=encoding) as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+            f.write("\n")
+            f.flush()
+            os.fsync(f.fileno())
+        # Validate round-trip
+        with open(tmp, "r", encoding=encoding) as f:
+            json.load(f)
+        os.replace(tmp, path)
+    except Exception:
+        if os.path.exists(tmp):
+            try:
+                os.remove(tmp)
+            except OSError:
+                pass
+        raise
 
 
 def get_basename(path):
@@ -1357,29 +1385,103 @@ def build_card(data, template, nav=None, batch_slug=None, generated_date=None):
 # ── Index / batch index builders (preserved from v1) ─────────────────────
 
 def _write_index(index_path, items):
-    """Write index.html listing all items. items = [(sku, data), ...]"""
-    generated_at = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+    """Write index.html as a batch card dashboard.
 
-    rows = []
+    Groups items by batch, shows one card per batch with item count,
+    ready-light dot tally (red/yellow/green), and a link to the batch page.
+    Batches whose name contains "copy" (case-insensitive) are shown without
+    ready-light dots — they are copy-workstream cohorts, not intake batches.
+    """
+    from collections import defaultdict
+
+    # Known display order — any other batches append alphabetically
+    BATCH_ORDER = [
+        "Batch 4",
+        "Batch 5",
+        "NWLG Batch 1",
+        "Phase1 Migrated April 2026",
+        "WERT Batch 1",
+    ]
+
+    # Group items by batch label
+    batch_map = defaultdict(list)
     for sku, data in items:
-        brand = get(data, "identity", "brand", "value", default="")
-        condition = get(data, "condition", "label", default="")
-        phase = get(data, "intake_meta", "phase", default=1)
-        batch = get(data, "intake_meta", "batch_name") or get(data, "intake_meta", "batch", default="")
-        captured = get(data, "intake_meta", "captured_date", default="")
-        phase_cls = "p2" if phase == 2 else "p1"
-        phase_label = f"Phase {phase}"
-        rows.append(
-            f'<tr>'
-            f'<td><a href="items/{esc(sku)}.html">{esc(sku)}</a></td>'
-            f'<td>{esc(brand)}</td>'
-            f'<td>{esc(condition)}</td>'
-            f'<td><span class="phase-badge {phase_cls}">{phase_label}</span></td>'
-            f'<td>{esc(batch)}</td>'
-            f'<td>{esc(captured)}</td>'
-            f'<td><a class="open-link" href="items/{esc(sku)}.html">Open &#8594;</a></td>'
-            f'</tr>\n'
+        batch = (
+            get(data, "intake_meta", "batch_name")
+            or get(data, "intake_meta", "batch", default="Unknown")
         )
+        batch_map[batch].append((sku, data))
+
+    # Ordered list: known batches first, then any extras alphabetically
+    ordered = [b for b in BATCH_ORDER if b in batch_map]
+    for b in sorted(batch_map.keys()):
+        if b not in ordered:
+            ordered.append(b)
+
+    cards = []
+    for batch in ordered:
+        batch_items = batch_map[batch]
+        n = len(batch_items)
+        slug = label_to_slug(batch)
+        is_copy_cohort = "copy" in batch.lower()
+
+        # Tally ready-lights (skip for copy-workstream cohorts)
+        red = yellow = green = 0
+        if not is_copy_cohort:
+            for _, d in batch_items:
+                s = _ready_status(d)
+                if s == "green":
+                    green += 1
+                elif s == "yellow":
+                    yellow += 1
+                else:
+                    red += 1
+
+        # Build dot tally HTML
+        dot_parts = []
+        if not is_copy_cohort:
+            if red:
+                dot_parts.append(
+                    f'<span class="dc"><span class="rd rd-r"></span>{red}</span>'
+                )
+            if yellow:
+                dot_parts.append(
+                    f'<span class="dc"><span class="rd rd-y"></span>{yellow}</span>'
+                )
+            if green:
+                dot_parts.append(
+                    f'<span class="dc"><span class="rd rd-g"></span>{green}</span>'
+                )
+        dots_html = " ".join(dot_parts)
+
+        # Batch description from intake_meta if available
+        desc = ""
+        for _, d in batch_items:
+            bd = (
+                get(d, "intake_meta", "batch_desc")
+                or get(d, "intake_meta", "batch_description", default="")
+            )
+            if bd:
+                desc = bd
+                break
+
+        link_label = "View Cohort" if is_copy_cohort else "View Batch"
+        desc_html = f'<p class="card-desc">{esc(desc)}</p>' if desc else ""
+        dots_row = f'<div class="card-dots">{dots_html}</div>' if dots_html else ""
+
+        cards.append(f"""\
+  <div class="card">
+    <div class="card-hd">
+      <span class="card-name">{esc(batch)}</span>
+    </div>
+    <div class="card-count">{n}<span class="card-count-unit"> items</span></div>
+    {desc_html}
+    {dots_row}
+    <a class="card-link" href="batches/{esc(slug)}.html">{link_label} →</a>
+  </div>""")
+
+    generated_at = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+    cards_html = "\n".join(cards)
 
     html = f"""<!doctype html>
 <html lang="en">
@@ -1387,58 +1489,45 @@ def _write_index(index_path, items):
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <meta name="robots" content="noindex,nofollow"/>
-<title>RRR Intake Cards — Index</title>
+<title>RRR Intake Cards</title>
 <style>
 *{{box-sizing:border-box}}
-body{{font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:0;padding:0;background:#fafaf9;color:#111827}}
-.hdr{{background:#0f172a;color:#e2e8f0;padding:16px 28px;display:flex;align-items:baseline;gap:16px}}
+body{{font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:0;padding:0;background:#f1f5f9;color:#111827}}
+.hdr{{background:#0f172a;color:#e2e8f0;padding:16px 28px}}
 .hdr h1{{margin:0;font-size:18px;font-weight:700;color:#fff}}
-.hdr .mute{{font-size:12px;color:#94a3b8}}
-.wrap{{max-width:1040px;margin:0 auto;padding:24px 22px 60px}}
-.stats{{font-size:13px;color:#6b7280;margin-bottom:16px}}
-.tbl-wrap{{background:#fff;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden}}
-table{{width:100%;border-collapse:collapse;font-size:13px}}
-thead th{{background:#f8fafc;color:#6b7280;font-size:11px;text-transform:uppercase;letter-spacing:.5px;font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid #e5e7eb}}
-tbody tr{{border-bottom:1px solid #f1f5f9}}
-tbody tr:last-child{{border-bottom:none}}
-tbody tr:hover{{background:#f8fafc}}
-td{{padding:9px 14px;vertical-align:middle}}
-a{{color:#0369a1;text-decoration:none}}a:hover{{text-decoration:underline}}
-.phase-badge{{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:99px;text-transform:uppercase;letter-spacing:.04em}}
-.phase-badge.p1{{background:#fefce8;color:#854d0e;border:1px solid #fde68a}}
-.phase-badge.p2{{background:#ecfdf5;color:#065f46;border:1px solid #a7f3d0}}
-.open-link{{font-weight:600;font-size:12px}}
-footer{{margin-top:20px;font-size:11px;color:#9ca3af}}
-@media(max-width:700px){{
-  thead th:nth-child(5),thead th:nth-child(6),td:nth-child(5),td:nth-child(6){{display:none}}
-}}
+.hdr .sub{{font-size:12px;color:#94a3b8;margin-top:2px}}
+.wrap{{max-width:1100px;margin:0 auto;padding:32px 22px 60px}}
+.section-lbl{{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#94a3b8;margin-bottom:14px}}
+.grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}}
+.card{{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:20px 20px 18px;display:flex;flex-direction:column;gap:6px}}
+.card-hd{{}}
+.card-name{{font-size:15px;font-weight:700;color:#0f172a}}
+.card-count{{font-size:28px;font-weight:800;color:#1d4ed8;line-height:1.1}}
+.card-count-unit{{font-size:13px;font-weight:400;color:#6b7280}}
+.card-desc{{font-size:12px;color:#6b7280;margin:0}}
+.card-dots{{display:flex;gap:10px;margin-top:4px;flex-wrap:wrap}}
+.dc{{display:inline-flex;align-items:center;gap:4px;font-size:12px;color:#374151;font-variant-numeric:tabular-nums}}
+.rd{{display:inline-block;width:10px;height:10px;border-radius:50%}}
+.rd-r{{background:#ef4444}}
+.rd-y{{background:#f59e0b}}
+.rd-g{{background:#22c55e}}
+.card-link{{margin-top:8px;font-size:13px;font-weight:600;color:#0369a1;text-decoration:none}}
+.card-link:hover{{text-decoration:underline}}
+footer{{margin-top:24px;font-size:11px;color:#9ca3af}}
+@media(max-width:600px){{.grid{{grid-template-columns:1fr 1fr}}}}
 </style>
 </head>
 <body>
 <div class="hdr">
   <h1>RRR Intake Cards</h1>
-  <span class="mute">Internal operator view · Revive Restore Resell</span>
+  <div class="sub">Internal operator view &nbsp;·&nbsp; Revive Restore Resell</div>
 </div>
 <div class="wrap">
-<div class="stats">{len(items)} items &nbsp;·&nbsp; Generated {generated_at}</div>
-<div class="tbl-wrap">
-<table>
-<thead>
-<tr>
-  <th>SKU</th>
-  <th>Brand</th>
-  <th>Condition</th>
-  <th>Phase</th>
-  <th>Batch</th>
-  <th>Captured</th>
-  <th></th>
-</tr>
-</thead>
-<tbody>
-{"".join(rows)}</tbody>
-</table>
-</div>
-<footer>For operators: Vaughn · Tracie · Shital · Elle</footer>
+  <div class="section-lbl">Batches</div>
+  <div class="grid">
+{cards_html}
+  </div>
+  <footer>For operators: Vaughn &middot; Tracie &middot; Shital &middot; Elle</footer>
 </div>
 </body>
 </html>
@@ -1464,6 +1553,59 @@ def _copy_completeness(data):
         if isinstance(v, str) and v.strip():
             n += 1
     return n, len(paths)
+
+
+
+# Matches Tracie's "ready for list" note (case-insensitive).
+# Accepts: "ready for list", "ready to list", "ready for listing", "ready to be listed".
+_READY_FOR_LIST_RE = re.compile(
+    r"\bready\s+(?:for|to)\s+(?:be\s+)?list(?:ing|ed)?\b",
+    re.IGNORECASE,
+)
+
+
+def _has_ready_for_list_note(data):
+    """True iff Tracie has signaled the item is ready for list.
+
+    Two ways to signal (either is sufficient):
+      (a) Top-level boolean: data["ready_for_list"] == True
+      (b) The phrase "ready for list" (or variant) appears in ANY string value
+          stored under a key whose name contains "note" (case-insensitive),
+          anywhere in the JSON tree.
+    """
+    if isinstance(data, dict) and data.get("ready_for_list") is True:
+        return True
+
+    def _scan(node):
+        if isinstance(node, dict):
+            for k, v in node.items():
+                if isinstance(k, str) and "note" in k.lower() and isinstance(v, str):
+                    if _READY_FOR_LIST_RE.search(v):
+                        return True
+                if _scan(v):
+                    return True
+        elif isinstance(node, list):
+            for item in node:
+                if _scan(item):
+                    return True
+        return False
+
+    return _scan(data)
+
+
+def _ready_status(data):
+    """Return 'green' | 'yellow' | 'red' for the Ready-for-List light.
+
+      green  = 5/5 copy AND Tracie's ready-for-list note present
+      yellow = any copy present (1+ of 5) but not yet ready
+      red    = no copy at all (0/5)
+    """
+    n, total = _copy_completeness(data)
+    if n == 0:
+        return "red"
+    if n == total and _has_ready_for_list_note(data):
+        return "green"
+    return "yellow"
 
 
 def _resolve_list_price(data):
@@ -1494,9 +1636,16 @@ def _write_batch_index(batches_dir, slug, batch_label, items):
             copy_cls = "copy-badge low"
         else:
             copy_cls = "copy-badge empty"
+        ready = _ready_status(data)
+        ready_title = {
+            "green":  "Ready for list \u2014 5/5 copy + Tracie's ready-for-list note",
+            "yellow": "Copy work in progress",
+            "red":    "Missing copy",
+        }[ready]
         price_str = fmt_price(_resolve_list_price(data))
         rows.append(
             f'<tr>'
+            f'<td class="ready-cell"><span class="ready-dot ready-{ready}" title="{esc(ready_title)}" aria-label="{esc(ready_title)}"></span></td>'
             f'<td><a href="../items/{esc(sku)}.html">{esc(sku)}</a></td>'
             f'<td>{esc(brand)}</td>'
             f'<td><span class="{copy_cls}">{copy_n}/{copy_total}</span></td>'
@@ -1539,9 +1688,15 @@ a{{color:#0369a1;text-decoration:none}}a:hover{{text-decoration:underline}}
 .copy-badge.mid{{background:#fefce8;color:#854d0e;border:1px solid #fde68a}}
 .copy-badge.low{{background:#fff7ed;color:#9a3412;border:1px solid #fed7aa}}
 .copy-badge.empty{{background:#fef2f2;color:#991b1b;border:1px solid #fecaca}}
+.ready-cell{{width:28px;padding-left:14px;padding-right:0;text-align:center}}
+thead th.ready-th{{width:28px;padding-left:14px;padding-right:0}}
+.ready-dot{{display:inline-block;width:12px;height:12px;border-radius:50%;vertical-align:middle;box-shadow:0 0 0 1px rgba(0,0,0,.08) inset}}
+.ready-dot.ready-green{{background:#22c55e}}
+.ready-dot.ready-yellow{{background:#eab308}}
+.ready-dot.ready-red{{background:#ef4444}}
 footer{{margin-top:20px;font-size:11px;color:#9ca3af}}
 @media(max-width:700px){{
-  thead th:nth-child(4),td:nth-child(4){{display:none}}
+  thead th:nth-child(5),td:nth-child(5){{display:none}}
 }}
 </style>
 </head>
@@ -1557,6 +1712,7 @@ footer{{margin-top:20px;font-size:11px;color:#9ca3af}}
 <table>
 <thead>
 <tr>
+  <th class="ready-th" title="Ready-for-list signal: green=ready, yellow=copy in progress, red=no copy" aria-label="Ready"></th>
   <th>SKU</th>
   <th>Brand</th>
   <th>Copy</th>
@@ -1805,27 +1961,25 @@ def main():
 
         print(f"\nDone: {len(ok)} generated, {len(errors)} errors.")
         if errors:
-            print("Errors:")
-            for path, msg in errors:
-                print(f"  {path}: {msg}")
+            for jf, msg in errors:
+                print(f"  ERR  {os.path.basename(jf)}: {msg}")
+        return
 
-        sys.exit(0 if not errors else 1)
-
-    else:
-        json_path = args[0]
-        try:
-            sku, out_path, _, manifest_entry = generate_one(
-                json_path, output_dir, template, renderer_version=renderer_version,
-            )
-            manifest[sku] = manifest_entry
-            save_manifest(output_dir, manifest)
-            print(f"Generated: {out_path}")
-            print(f"Manifest: {MANIFEST_FILENAME} updated")
-        except Exception as e:
-            import traceback
-            print(f"Error: {e}")
-            traceback.print_exc()
-            sys.exit(1)
+    # Single-SKU mode
+    json_path = args[0]
+    try:
+        sku, out_path, data, manifest_entry = generate_one(
+            json_path, output_dir, template,
+            renderer_version=renderer_version,
+        )
+        manifest[sku] = manifest_entry
+        save_manifest(output_dir, manifest)
+        print(f"OK  {sku}  ->  {out_path}")
+    except Exception as e:
+        import traceback
+        print(f"ERR  {os.path.basename(json_path)}: {e}")
+        traceback.print_exc()
+        sys.exit(2)
 
 
 if __name__ == "__main__":

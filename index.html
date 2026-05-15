@@ -7,72 +7,111 @@
 <title>RRR Intake Cards</title>
 <style>
 *{box-sizing:border-box}
-body{font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:0;padding:0;background:#fafaf9;color:#111827}
-.hdr{background:#0f172a;color:#e2e8f0;padding:20px 28px}
-.hdr h1{margin:0 0 4px;font-size:20px;font-weight:700;color:#fff}
-.hdr .sub{font-size:12px;color:#94a3b8}
-.wrap{max-width:860px;margin:0 auto;padding:32px 22px 60px}
-.section-label{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#9ca3af;font-weight:600;margin-bottom:14px}
-.batches{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
-.batch-card{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:22px 24px;text-decoration:none;color:#111827;display:flex;flex-direction:column;gap:6px;transition:box-shadow .12s,border-color .12s}
-.batch-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.08);border-color:#cbd5e1;text-decoration:none}
-.batch-name{font-size:16px;font-weight:700;color:#0f172a}
-.batch-count{font-size:22px;font-weight:800;color:#0369a1;line-height:1}
-.batch-count-label{font-size:11px;color:#9ca3af;font-weight:500;margin-top:-2px}
-.batch-desc{font-size:12px;color:#6b7280;margin-top:4px;line-height:1.45}
-.batch-link{font-size:12px;font-weight:600;color:#0369a1;margin-top:8px}
-footer{margin-top:36px;padding-top:12px;border-top:1px solid #e5e7eb;font-size:11px;color:#9ca3af}
+body{font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:0;padding:0;background:#f1f5f9;color:#111827}
+.hdr{background:#0f172a;color:#e2e8f0;padding:16px 28px}
+.hdr h1{margin:0;font-size:18px;font-weight:700;color:#fff}
+.hdr .sub{font-size:12px;color:#94a3b8;margin-top:2px}
+.wrap{max-width:1100px;margin:0 auto;padding:32px 22px 60px}
+.section-lbl{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#94a3b8;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:20px 20px 18px;display:flex;flex-direction:column;gap:6px}
+.card-hd{}
+.card-name{font-size:15px;font-weight:700;color:#0f172a}
+.card-count{font-size:28px;font-weight:800;color:#1d4ed8;line-height:1.1}
+.card-count-unit{font-size:13px;font-weight:400;color:#6b7280}
+.card-desc{font-size:12px;color:#6b7280;margin:0}
+.card-dots{display:flex;gap:10px;margin-top:4px;flex-wrap:wrap}
+.dc{display:inline-flex;align-items:center;gap:4px;font-size:12px;color:#374151;font-variant-numeric:tabular-nums}
+.rd{display:inline-block;width:10px;height:10px;border-radius:50%}
+.rd-r{background:#ef4444}
+.rd-y{background:#f59e0b}
+.rd-g{background:#22c55e}
+.card-link{margin-top:8px;font-size:13px;font-weight:600;color:#0369a1;text-decoration:none}
+.card-link:hover{text-decoration:underline}
+footer{margin-top:24px;font-size:11px;color:#9ca3af}
+@media(max-width:600px){.grid{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
 <div class="hdr">
   <h1>RRR Intake Cards</h1>
-  <div class="sub">Internal operator view &nbsp;&middot;&nbsp; Revive Restore Resell</div>
+  <div class="sub">Internal operator view &nbsp;·&nbsp; Revive Restore Resell</div>
 </div>
 <div class="wrap">
-  <div class="section-label">Batches</div>
-  <div class="batches">
-
-    <a class="batch-card" href="batches/batch-4.html">
-      <div class="batch-name">Batch 4</div>
-      <div class="batch-count">35</div>
-      <div class="batch-count-label">items</div>
-      <div class="batch-desc">Pants &mdash; Phase 1, May 2026 bench session</div>
-      <div class="batch-link">View Batch &rarr;</div>
-    </a>
-
-    <a class="batch-card" href="batches/batch-5.html">
-      <div class="batch-name">Batch 5</div>
-      <div class="batch-count">49</div>
-      <div class="batch-count-label">items</div>
-      <div class="batch-desc">Pants &amp; Shorts &mdash; Phase 1, May 2026 bench session</div>
-      <div class="batch-link">View Batch &rarr;</div>
-    </a>
-
-    <a class="batch-card" href="batches/nwlg-batch-1.html">
-      <div class="batch-name">NWLG Batch 1</div>
-      <div class="batch-count">65</div>
-      <div class="batch-count-label">items</div>
-      <div class="batch-desc">Northwest Living Garage Sale &mdash; Phase 2</div>
-      <div class="batch-link">View Batch &rarr;</div>
-    </a>
-
-    <a class="batch-card" href="batches/wert-batch-1.html">
-      <div class="batch-name">WERT Batch 1</div>
-      <div class="batch-count">16</div>
-      <div class="batch-count-label">items</div>
-      <div class="batch-desc">Wert &mdash; Phase 2</div>
-      <div class="batch-link">View Batch &rarr;</div>
-    </a>
-
-    <a class="batch-card" href="batches/copy-reconcile-40sku-2026-05-10.html">
-      <div class="batch-name">Copy &mdash; 40 SKU</div>
-      <div class="batch-count">40</div>
-      <div class="batch-count-label">items</div>
-      <div class="batch-desc">Reconciled May 10 &mdash; 1-click copy blocks</div>
-      <div class="batch-link">View Cohort &rarr;</div>
-    </a>
-
+  <div class="section-lbl">Batches</div>
+  <div class="grid">
+  <div class="card">
+    <div class="card-hd">
+      <span class="card-name">Batch 4</span>
+    </div>
+    <div class="card-count">35<span class="card-count-unit"> items</span></div>
+    
+    <div class="card-dots"><span class="dc"><span class="rd rd-r"></span>35</span></div>
+    <a class="card-link" href="batches/batch-4.html">View Batch →</a>
+  </div>
+  <div class="card">
+    <div class="card-hd">
+      <span class="card-name">Batch 5</span>
+    </div>
+    <div class="card-count">12<span class="card-count-unit"> items</span></div>
+    
+    <div class="card-dots"><span class="dc"><span class="rd rd-r"></span>12</span></div>
+    <a class="card-link" href="batches/batch-5.html">View Batch →</a>
+  </div>
+  <div class="card">
+    <div class="card-hd">
+      <span class="card-name">NWLG Batch 1</span>
+    </div>
+    <div class="card-count">65<span class="card-count-unit"> items</span></div>
+    
+    <div class="card-dots"><span class="dc"><span class="rd rd-r"></span>1</span> <span class="dc"><span class="rd rd-y"></span>64</span></div>
+    <a class="card-link" href="batches/nwlg-batch-1.html">View Batch →</a>
+  </div>
+  <div class="card">
+    <div class="card-hd">
+      <span class="card-name">WERT Batch 1</span>
+    </div>
+    <div class="card-count">16<span class="card-count-unit"> items</span></div>
+    
+    <div class="card-dots"><span class="dc"><span class="rd rd-r"></span>8</span> <span class="dc"><span class="rd rd-y"></span>8</span></div>
+    <a class="card-link" href="batches/wert-batch-1.html">View Batch →</a>
+  </div>
+  <div class="card">
+    <div class="card-hd">
+      <span class="card-name">Batch 1 (24)</span>
+    </div>
+    <div class="card-count">24<span class="card-count-unit"> items</span></div>
+    
+    <div class="card-dots"><span class="dc"><span class="rd rd-r"></span>18</span> <span class="dc"><span class="rd rd-y"></span>6</span></div>
+    <a class="card-link" href="batches/batch-1-(24).html">View Batch →</a>
+  </div>
+  <div class="card">
+    <div class="card-hd">
+      <span class="card-name">Batch 2 (24)</span>
+    </div>
+    <div class="card-count">24<span class="card-count-unit"> items</span></div>
+    
+    <div class="card-dots"><span class="dc"><span class="rd rd-r"></span>10</span> <span class="dc"><span class="rd rd-y"></span>14</span></div>
+    <a class="card-link" href="batches/batch-2-(24).html">View Batch →</a>
+  </div>
+  <div class="card">
+    <div class="card-hd">
+      <span class="card-name">Batch 3 (30)</span>
+    </div>
+    <div class="card-count">30<span class="card-count-unit"> items</span></div>
+    
+    <div class="card-dots"><span class="dc"><span class="rd rd-r"></span>13</span> <span class="dc"><span class="rd rd-y"></span>17</span></div>
+    <a class="card-link" href="batches/batch-3-(30).html">View Batch →</a>
+  </div>
+  <div class="card">
+    <div class="card-hd">
+      <span class="card-name">Unknown</span>
+    </div>
+    <div class="card-count">38<span class="card-count-unit"> items</span></div>
+    
+    <div class="card-dots"><span class="dc"><span class="rd rd-r"></span>38</span></div>
+    <a class="card-link" href="batches/unknown.html">View Batch →</a>
+  </div>
   </div>
   <footer>For operators: Vaughn &middot; Tracie &middot; Shital &middot; Elle</footer>
 </div>
