@@ -1,0 +1,1368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Pants-1686 · Alfani  · RRR Item Dashboard</title>
+<style>
+  :root{
+    --green:#10b981; --green-bg:#ecfdf5; --green-bd:#a7f3d0;
+    --yellow:#ca8a04; --yellow-bg:#fefce8; --yellow-bd:#fde68a;
+    --red:#dc2626; --red-bg:#fef2f2; --red-bd:#fecaca;
+    --gray:#6b7280; --gray-bg:#f3f4f6; --gray-bd:#e5e7eb;
+    --photo:#7c3aed; --photo-bg:#f5f3ff; --photo-bd:#ddd6fe;
+    --copy:#0369a1;  --copy-bg:#eff6ff;  --copy-bd:#bfdbfe;
+    --ink:#111827; --ink-soft:#374151; --ink-mute:#6b7280;
+    --bg:#fafaf9; --bd:#e5e7eb; --accent:#0f172a;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  a{color:#0369a1;text-decoration:none}a:hover{text-decoration:underline}
+  .wrap{max-width:900px;margin:0 auto;padding:18px 22px 60px}
+  .titlebar{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;border-bottom:1px solid var(--bd);padding:6px 0 14px;margin-bottom:14px}
+  .sku{font:600 22px/1.1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--accent);letter-spacing:.3px}
+  .nickname{font-size:16px;color:var(--ink-soft);font-weight:500}
+  .meta-pills{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+  .pill{font-size:11px;padding:3px 8px;border-radius:99px;border:1px solid var(--bd);background:#fff;color:var(--ink-soft);white-space:nowrap}
+  .pill strong{color:var(--accent);margin-right:4px}
+  .opbar{display:flex;gap:10px;align-items:center;margin-left:auto;flex-wrap:wrap}
+  .opbar select{font:inherit;border:1px solid var(--bd);border-radius:4px;padding:4px 8px;background:#fff;color:var(--ink-soft);font-size:12px}
+  .opbar .save-btn{background:var(--accent);color:#fff;border:none;border-radius:4px;padding:6px 12px;cursor:pointer;font-size:12px;font-weight:600;display:inline-flex;align-items:center;gap:6px}
+  .opbar .save-btn[disabled]{background:#cbd5e1;cursor:not-allowed}
+  .opbar .save-btn:hover:not([disabled]){background:#1e293b}
+  .opbar .save-btn .pcount{background:#fff;color:var(--accent);font-size:10px;padding:1px 6px;border-radius:99px;font-weight:700;display:none}
+  .opbar .save-btn.has-pending .pcount{display:inline-block}
+  /* ── Tracker ── */
+  .tracker{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+  .tband{display:flex;border:1px solid var(--bd);border-radius:6px;overflow:hidden;background:#fff}
+  .tband>.tlabel{flex:0 0 130px;padding:8px 10px;font-size:11px;font-weight:600;color:var(--ink-mute);text-transform:uppercase;letter-spacing:.5px;background:#fafaf9;border-right:1px solid var(--bd);display:flex;align-items:center;flex-direction:column;justify-content:center;text-align:left}
+  .tband>.tlabel small{display:block;font-weight:500;font-size:9px;color:var(--ink-mute);margin-top:1px;text-transform:none;letter-spacing:0}
+  .tband.photo-track>.tlabel{background:var(--photo-bg);color:var(--photo);border-right-color:var(--photo-bd)}
+  .tband.copy-track>.tlabel{background:var(--copy-bg);color:var(--copy);border-right-color:var(--copy-bd)}
+  .tcells{display:flex;flex:1;min-width:0}
+  .tcell{flex:1;min-width:0;padding:7px 6px;text-align:center;font-size:11px;color:var(--ink-soft);border-right:1px solid var(--bd);position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .tcell:last-child{border-right:none}
+  .tcell.done{background:var(--green-bg);color:#065f46;font-weight:600}
+  .tcell.current{background:#0f172a;color:#fff;font-weight:700}
+  .tcell.pending{background:#fff;color:var(--ink-mute)}
+  .tcell.shared{background:#fafaf9;color:var(--ink-mute);font-style:italic;font-size:10px}
+  /* ── Tracker toggle ── */
+  .tlabel.tlabel-toggle{flex-direction:row;align-items:center;justify-content:space-between;cursor:pointer;gap:4px;user-select:none;padding-left:14px;}
+  .tracker-arrow{font-size:9px;color:var(--ink-mute);transition:transform .15s ease;display:inline-block;flex-shrink:0}
+  .tlabel.tlabel-toggle.expanded .tracker-arrow{transform:rotate(90deg)}
+  .tracker-children{display:flex;flex-direction:column;gap:6px}
+  .tracker-children:not(.open){display:none}
+  /* ── Section bands ── */
+  .sband{border:1px solid var(--bd);border-radius:6px;background:#fff;margin-bottom:10px;overflow:hidden}
+  .sband-hdr{display:flex;align-items:center;gap:10px;padding:9px 14px;cursor:pointer;user-select:none;background:#fafaf9;border-bottom:none}
+  .sband-hdr:hover{background:#f1f5f9}
+  .sband-arrow{font-size:10px;color:var(--ink-mute);transition:transform .12s;flex-shrink:0;display:inline-block}
+  .sband.open .sband-arrow{transform:rotate(90deg)}
+  .sband-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-soft);flex:1}
+  .sband-badge{font-size:11px;color:var(--ink-mute);font-weight:500;background:#f3f4f6;padding:2px 8px;border-radius:99px}
+  .sband-body{display:none;border-top:1px solid var(--bd);padding:14px}
+  .sband.open .sband-body{display:block}
+  /* ── Flags ── */
+  .flag-item{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px dashed #fecaca;font-size:13px;color:#7f1d1d}
+  .flag-item:last-child{border-bottom:none}
+  .flag-item.resolved{color:var(--ink-mute);text-decoration:line-through}
+  .flag-sev{font-size:10px;font-weight:700;text-transform:uppercase;padding:1px 6px;border-radius:3px;background:#fff;flex:0 0 auto;line-height:1.5;border:1px solid currentColor}
+  .flag-sev.red{color:var(--red)}.flag-sev.yellow{color:var(--yellow);background:var(--yellow-bg)}
+  .flag-sev.info{color:#0369a1;background:#dbeafe;border-color:#93c5fd}
+  .flag-link{font-weight:700;cursor:pointer;text-decoration:underline}
+  /* ── sband flag color override ── */
+  .sband.flags-active{border-color:var(--red-bd);background:var(--red-bg)}
+  .sband.flags-active .sband-hdr{background:var(--red-bg)}
+  .sband.flags-active .sband-hdr:hover{background:#fee2e2}
+  .sband.flags-active .sband-label{color:#7f1d1d}
+  .sband.flags-active .sband-body{border-top-color:var(--red-bd)}
+  /* ── Rows / fields ── */
+  .section{margin-bottom:14px}
+  .section h4,h4.sh{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--ink-mute);margin:14px 0 8px;padding-bottom:4px;border-bottom:1px solid var(--bd);font-weight:700}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}
+  @media(max-width:700px){.grid{grid-template-columns:1fr}}
+  .item-details-cols{display:flex;gap:16px;align-items:flex-start}
+  .item-details-left{flex:1;min-width:0}
+  .item-details-right{flex:1;min-width:0}
+  @media(max-width:700px){.item-details-cols{flex-direction:column}}
+  .row{display:grid;grid-template-columns:140px 1fr 28px;gap:8px;padding:6px 0;border-bottom:1px dashed #f1f5f9;align-items:start}
+  .row:last-child{border-bottom:none}.row.resolved{opacity:.7}
+  .row.subrow .k{padding-left:14px;font-size:11px;color:var(--ink-mute)}
+  .row.subrow .k::before{content:"└";color:var(--ink-mute);margin-right:4px}
+  .k{font-size:12px;color:var(--ink-mute);font-weight:500;padding-top:4px}
+  .v{font-size:13px;color:var(--ink);min-width:0}
+  .copyblock{display:flex;align-items:stretch;border:1px solid var(--bd);border-radius:4px;background:#f8fafc;font:12.5px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  .copyblock .cb-val{padding:5px 8px;flex:1;min-width:0;color:var(--ink);word-break:break-word;white-space:pre-wrap}
+  .copyblock .cb-btn{flex:0 0 auto;border:none;border-left:1px solid var(--bd);background:#fff;color:var(--ink-mute);font-size:11px;padding:0 8px;cursor:pointer;font-family:inherit}
+  .copyblock .cb-btn:hover{background:#f1f5f9;color:var(--accent)}
+  .copyblock .cb-btn.copied{background:var(--green-bg);color:#065f46}
+  .copyblock.empty{background:#fef2f2;border-color:var(--red-bd)}
+  .copyblock.empty .cb-val{color:#dc2626;font-style:italic}
+  .copyblock.pending{background:var(--yellow-bg);border-color:var(--yellow-bd)}
+  .copyblock.pending .cb-val{color:#854d0e;font-style:italic}
+  .copyblock.yellow{border-color:var(--yellow-bd);background:#fffbeb}
+  .copyblock.long .cb-val{max-height:120px;overflow:auto;font-size:12px}
+  .selectblock{display:flex;align-items:center;gap:6px;padding:5px 8px;border:1px solid var(--bd);border-radius:4px;background:#fff;font-size:13px;min-height:30px}
+  .selectblock::after{content:"▾";color:var(--ink-mute);margin-left:auto;font-size:11px}
+  .selectblock .sb-val{color:var(--ink);min-width:0;overflow:hidden;text-overflow:ellipsis}
+  .selectblock.empty{background:#fef2f2;border-color:var(--red-bd)}
+  .selectblock.empty .sb-val{color:#dc2626;font-style:italic}
+  .selectblock.pending{background:var(--gray-bg);border-color:var(--gray-bd)}
+  .selectblock.pending .sb-val{color:var(--ink-mute);font-style:italic}
+  .conf{width:24px;height:24px;border-radius:6px;border:1px solid var(--bd);background:#fff;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;line-height:1;padding:0;transition:transform .08s ease;position:relative}
+  .conf:hover{transform:scale(1.08)}
+  .conf.green{background:var(--green-bg);color:#065f46;border-color:var(--green-bd)}
+  .conf.yellow{background:var(--yellow-bg);color:#854d0e;border-color:var(--yellow-bd)}
+  .conf.red{background:var(--red-bg);color:#7f1d1d;border-color:var(--red-bd)}
+  .conf.gray{background:var(--gray-bg);color:var(--gray);border-color:var(--gray-bd)}
+  .conf.has-note::after{content:"";position:absolute;top:-3px;right:-3px;width:7px;height:7px;background:#0369a1;border-radius:99px;border:1.5px solid #fff;display:block}
+  /* ── Label Status ── */
+  .label-row{display:grid;grid-template-columns:18px 1fr;gap:8px;padding:5px 0;border-bottom:1px dashed #f1f5f9;align-items:flex-start;font-size:13px}
+  .label-row:last-child{border-bottom:none}
+  .lbl-mark{width:14px;height:14px;border-radius:99px;border:2px solid var(--bd);background:#fff;display:inline-block;margin-top:3px}
+  .lbl-mark.done{background:var(--green);border-color:var(--green)}
+  .lbl-mark.current{background:#0f172a;border-color:#0f172a;box-shadow:0 0 0 3px #cbd5e1}
+  .label-name{color:var(--ink-soft);min-width:0;word-break:break-word}
+  .label-row.is-current .label-name{font-weight:700;color:var(--accent)}
+  .label-row .lblnote{display:block;font-size:11px;color:var(--ink-mute);margin-top:2px;font-weight:400}
+  .lblsection{font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-mute);font-weight:700;padding:10px 0 4px;border-bottom:1px dashed var(--bd);margin-bottom:2px}
+  .lblsection:first-child{padding-top:0}
+  .lblsection.photo-h{color:var(--photo)}.lblsection.copy-h{color:var(--copy)}
+  .legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;padding-top:10px;border-top:1px solid var(--bd);font-size:11px;color:var(--ink-mute)}
+  .legend span{display:flex;align-items:center;gap:5px}
+  /* ── Photo Intake — photo read expandables ── */
+  .cc-photo-read{border:1px solid var(--bd);border-radius:4px;margin-bottom:6px;overflow:hidden}
+  .cc-photo-read summary{padding:8px 12px;font-size:12px;font-weight:600;color:var(--accent);cursor:pointer;background:#f8fafc;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  .cc-photo-read summary::-webkit-details-marker{display:none}
+  .cc-photo-read summary::after{content:"▶";font-size:9px;color:var(--ink-mute);transition:transform .15s}
+  .cc-photo-read[open] summary::after{transform:rotate(90deg)}
+  .cc-photo-read .cc-read-body{padding:10px 14px;font-size:12px;line-height:1.6;color:var(--ink-soft);background:#fff;border-top:1px solid var(--bd)}
+  /* ── Photo grid ── */
+  .photo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px}
+  .photo{display:block;border:1px solid var(--bd);border-radius:4px;overflow:hidden;background:#fafaf9;text-decoration:none}
+  .photo img{display:block;width:100%;height:100px;object-fit:cover;background:#e5e7eb}
+  .photo .ph-label{font-size:10px;padding:4px 6px;color:var(--ink-soft);background:#fff;border-top:1px solid var(--bd)}
+  /* ── Field editor modal ── */
+  .modal-bd{position:fixed;inset:0;background:rgba(15,23,42,.55);display:none;align-items:center;justify-content:center;z-index:50;padding:20px}
+  .modal-bd.open{display:flex}
+  .modal{background:#fff;border-radius:8px;max-width:560px;width:100%;max-height:85vh;overflow:auto;box-shadow:0 12px 40px rgba(0,0,0,.25);border:1px solid var(--bd)}
+  .modal header{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--bd);position:sticky;top:0;background:#fff}
+  .modal header h3{font:600 14px/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent);margin:0;flex:1}
+  .modal .close{margin-left:auto;background:transparent;border:none;font-size:22px;color:var(--ink-mute);cursor:pointer;padding:0;width:28px;height:28px;line-height:1}
+  .modal .close:hover{color:var(--accent)}
+  .modal .mbody{padding:14px 18px}
+  .mb-cur{font-size:13px;background:#f8fafc;border:1px solid var(--bd);border-radius:4px;padding:10px 12px;margin-bottom:10px;line-height:1.6}
+  .mb-cur .clabel{color:var(--ink-mute);font-weight:600;text-transform:uppercase;font-size:10px;letter-spacing:.4px;display:inline-block;width:74px}
+  .note-entry{padding:8px 10px;background:#f8fafc;border:1px solid var(--bd);border-left:3px solid #0369a1;border-radius:3px;margin-bottom:6px;font-size:13px}
+  .note-entry .nmeta{display:flex;gap:8px;font-size:10px;color:var(--ink-mute);margin-bottom:3px}
+  .mb-add{margin-top:14px;padding-top:14px;border-top:1px solid var(--bd)}
+  .mb-add .row-controls{display:flex;gap:8px;margin-bottom:8px;font-size:12px;color:var(--ink-mute);align-items:center}
+  .mb-add select,.mb-add textarea{font:inherit;border:1px solid var(--bd);border-radius:4px;padding:6px 8px}
+  .mb-add textarea{width:100%;resize:vertical;min-height:60px}
+  .mb-actions{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+  .mb-actions button{font:inherit;border:1px solid var(--bd);background:#fff;border-radius:4px;padding:7px 14px;cursor:pointer;font-weight:600;font-size:13px}
+  .mb-actions .primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .mb-actions .primary:hover{background:#1e293b}
+  .mb-actions .resolve{background:var(--green);color:#fff;border-color:var(--green)}
+  .mb-actions .reopen{background:#fff;color:var(--ink-soft)}
+  .mb-empty{font-size:12px;color:var(--ink-mute);font-style:italic;padding:8px 0}
+  .resolved-banner{background:var(--green-bg);border:1px solid var(--green-bd);color:#065f46;padding:8px 10px;border-radius:4px;font-size:12px;margin:10px 0}
+  /* ── CWS blocks ── */
+  .cws-blocks{display:flex;flex-direction:column;gap:12px}
+  .cws-block{border-radius:8px;overflow:hidden;border:1px solid var(--bd);cursor:pointer;transition:box-shadow .15s ease,transform .1s ease;background:#fff;user-select:none}
+  .cws-block:hover{box-shadow:0 4px 16px rgba(0,0,0,.13);transform:translateY(-1px)}
+  .cws-block:active{transform:translateY(0)}
+  .cws-block:focus-visible{outline:2px solid #0369a1;outline-offset:2px}
+  .cws-block.cws-confirmed{border-color:#a7f3d0}
+  .cws-block.cws-confirmed .cwsb-hdr{background:#0f172a}
+  .cws-block.cws-pending{border-color:#fde68a}
+  .cws-block.cws-pending .cwsb-hdr{background:#78350f}
+  .cwsb-hdr{display:flex;align-items:center;gap:10px;padding:9px 14px}
+  .cwsb-skill{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;flex:1;color:#fff}
+  .cwsb-meta{font-size:11px;color:rgba(255,255,255,.6)}
+  .cwsb-badge{font-size:10px;font-weight:700;padding:2px 9px;border-radius:99px;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+  .cwsb-badge.cws-confirmed{background:#10b981;color:#fff}
+  .cwsb-badge.cws-pending{background:#f59e0b;color:#fff}
+  .cwsb-body{padding:12px 14px 10px}
+  .cwsb-text{font-size:13px;line-height:1.6;color:var(--ink);word-break:break-word}
+  .cwsb-text.cws-muted{color:var(--ink-mute);font-style:italic}
+  .cwsb-subfields{display:flex;flex-direction:column;gap:6px}
+  .cwsb-subfield{display:flex;gap:8px;align-items:flex-start}
+  .cwsb-sf-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--copy);background:var(--copy-bg);border:1px solid var(--copy-bd);padding:1px 6px;border-radius:3px;flex-shrink:0;margin-top:2px;line-height:1.6}
+  .cwsb-sf-val{font-size:13px;color:var(--ink);line-height:1.6;white-space:pre-wrap;word-break:break-word}
+  .cwsb-sf-val.cws-muted{color:var(--ink-mute);font-style:italic}
+  .cwsb-click-hint{display:flex;align-items:center;gap:4px;font-size:10px;color:var(--ink-mute);margin-top:8px;padding-top:6px;border-top:1px dashed var(--bd)}
+  /* ── CWS Modals ── */
+  .cws-modal-bd{position:fixed;inset:0;background:rgba(15,23,42,.62);display:none;align-items:center;justify-content:center;z-index:100;padding:20px}
+  .cws-modal-bd.open{display:flex}
+  .cws-modal{background:#fff;border-radius:8px;max-width:600px;width:100%;max-height:88vh;overflow:auto;box-shadow:0 20px 56px rgba(0,0,0,.35);border:1px solid var(--bd)}
+  .cws-modal-hdr{background:#0f172a;color:#fff;padding:14px 18px;display:flex;align-items:center;gap:12px;position:sticky;top:0;border-radius:8px 8px 0 0;z-index:1}
+  .cws-modal-hdr h3{margin:0;flex:1;font-size:14px;font-weight:700;letter-spacing:.03em;color:#fff}
+  .cws-modal-close{background:transparent;border:none;color:rgba(255,255,255,.65);font-size:22px;cursor:pointer;padding:0;width:28px;height:28px;line-height:1;display:flex;align-items:center;justify-content:center;border-radius:4px;flex-shrink:0}
+  .cws-modal-close:hover{background:rgba(255,255,255,.15);color:#fff}
+  .cws-modal-body{padding:18px}
+  .cws-cur-box{background:#f8fafc;border:1px solid var(--bd);border-radius:4px;padding:10px 12px;font-size:13px;line-height:1.6;color:var(--ink);margin-bottom:14px;word-break:break-word}
+  .cws-field-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--copy);display:block;margin-bottom:4px;margin-top:14px}
+  .cws-field-label:first-child{margin-top:0}
+  .cws-textarea{width:100%;font:13px/1.6 inherit;border:1px solid var(--bd);border-radius:4px;padding:8px 10px;resize:vertical;min-height:72px;color:var(--ink);background:#fff;display:block}
+  .cws-textarea:focus{outline:none;border-color:#0369a1;box-shadow:0 0 0 3px rgba(191,219,254,.45)}
+  .cws-char-row{display:flex;justify-content:flex-end;margin-top:3px}
+  .cws-char-ct{font-size:11px;color:var(--ink-mute)}
+  .cws-char-ct.warn{color:#ca8a04;font-weight:600}
+  .cws-char-ct.over{color:var(--red);font-weight:700}
+  .cws-modal-footer{display:flex;gap:8px;margin-top:18px;padding-top:14px;border-top:1px solid var(--bd)}
+  .cws-btn{font:inherit;border:1px solid var(--bd);background:#fff;border-radius:4px;padding:7px 16px;cursor:pointer;font-weight:600;font-size:13px;transition:background .1s}
+  .cws-btn:hover{background:#f1f5f9}
+  .cws-btn.cws-primary{background:#0f172a;color:#fff;border-color:#0f172a}
+  .cws-btn.cws-primary:hover{background:#1e293b}
+  /* ── Photo Lightbox ── */
+  .photo-lb-bd{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:2000;align-items:center;justify-content:center;flex-direction:column;gap:12px}
+  .photo-lb-bd.open{display:flex}
+  .photo-lb-bd img{max-width:90vw;max-height:82vh;object-fit:contain;border-radius:8px;box-shadow:0 8px 40px rgba(0,0,0,.6)}
+  .photo-lb-label{color:#e2e8f0;font-size:13px;letter-spacing:.02em;text-align:center}
+  .photo-lb-close{position:fixed;top:16px;right:20px;background:rgba(255,255,255,.15);border:none;color:#fff;font-size:24px;line-height:1;width:36px;height:36px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center}
+  .photo-lb-close:hover{background:rgba(255,255,255,.3)}
+  .photo-grid .photo img{cursor:zoom-in}
+  footer{margin-top:24px;padding-top:14px;border-top:1px solid var(--bd);font-size:11px;color:var(--ink-mute);display:flex;gap:14px;flex-wrap:wrap}
+  /* ── CWS Sub-blocks (P1/P2/P3 inside Description+) ── */
+  .cws-subblock{border-radius:6px;overflow:hidden;border:1px solid var(--bd);cursor:pointer;transition:box-shadow .12s ease,transform .08s ease;background:#fff;user-select:none}
+  .cws-subblock:hover{box-shadow:0 3px 10px rgba(0,0,0,.11);transform:translateY(-1px)}
+  .cws-subblock:active{transform:translateY(0)}
+  .cws-subblock:focus-visible{outline:2px solid #0369a1;outline-offset:2px}
+  .cws-subblock.cws-subblock-confirmed{border-color:#a7f3d0}
+  .cws-subblock.cws-subblock-confirmed .cws-subblock-hdr{background:#0f172a}
+  .cws-subblock.cws-subblock-pending{border-color:#fde68a}
+  .cws-subblock.cws-subblock-pending .cws-subblock-hdr{background:#78350f}
+  .cws-subblock-hdr{display:flex;align-items:center;gap:8px;padding:7px 12px;background:#374151}
+  .cws-subblock-skill{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;flex:1;color:#fff}
+  .cws-subblock-badge{font-size:10px;font-weight:700;padding:1px 8px;border-radius:99px;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+  .cws-subblock-badge.cws-subblock-confirmed{background:#10b981;color:#fff}
+  .cws-subblock-badge.cws-subblock-pending{background:#f59e0b;color:#fff}
+  .cws-subblock-body{padding:10px 12px 8px}
+
+.nav-bar{position:sticky;top:0;z-index:100;background:#0f172a;display:flex;align-items:center;justify-content:space-between;padding:8px 18px;gap:12px;font-size:13px}
+.nav-bar a,.nav-bar span{color:#e2e8f0;text-decoration:none;font-weight:500;white-space:nowrap}
+.nav-bar a:hover{color:#fff;text-decoration:underline}
+.nav-bar .nav-pos{color:#94a3b8;font-size:12px;flex:0 0 auto}
+.nav-bar .nav-disabled{color:#475569;cursor:default;pointer-events:none}
+
+</style>
+</head>
+<body>
+<nav class="nav-bar"><a href="../items/Pants-1685.html">&#8592; Prev</a><span class="nav-pos"><a href="../batches/batch-5.html" style="color:#94a3b8">Index</a> &nbsp;·&nbsp; 28 of 29</span><a href="../items/Pants-1687.html">Next &#8594;</a></nav>
+
+<div class="wrap">
+
+  <!-- ── Header ── -->
+  <div class="titlebar">
+    <div>
+      <div class="sku">Pants-1686</div>
+      <div class="nickname">Alfani · 10 · Black</div>
+    </div>
+    <div class="opbar">
+      <label style="font-size:11px;color:var(--ink-mute)">I am <select id="opIam" onchange="setIam(this.value)"><option>Vaughn</option><option>Tracie</option><option>Shital</option><option>Elle</option><option>Operator</option><option>AI</option></select></label>
+      <button class="save-btn" id="saveNotesBtn" onclick="exportHandcuff()" disabled>Save Notes <span class="pcount" id="pcount">0</span></button>
+    </div>
+  </div>
+
+  <!-- ── Meta Pills ── -->
+  <div style="margin-bottom:14px"><div class="meta-pills">
+    <span class="pill"><strong>Batch</strong></span>
+    <span class="pill"><strong>COG</strong>—</span>
+    <span class="pill"><strong>List</strong>—</span>
+    <span class="pill"><strong>Net</strong>—</span>
+    <span class="pill" style="border-color:var(--green-bd);background:var(--green-bg);color:#065f46;"><strong>Phase 2</strong>2026-05-13</span>
+  </div></div>
+
+  <!-- ── Publish blocker (P2 SMC pending = Rule #135 publish-block) ── -->
+  
+
+  <!-- ── Operational flag (from latest matching _card_corrections[]) ── -->
+  
+
+  <!-- ── 1. PHOTOS sband (collapsed) ── -->
+  <div class="sband" id="sbandPhotos">
+    <div class="sband-hdr" onclick="toggleBand(this)">
+      <span class="sband-arrow">&#9658;</span>
+      <span class="sband-label">Photos</span>
+      <span class="sband-badge">4 intake &middot; 5 reference</span>
+    </div>
+    <div class="sband-body">
+      <h4 style="margin-top:0">Intake Photos</h4>
+      <div class="photo-grid" id="photoGrid">
+<a class="photo" href="../thumbnails/Pants-1686/Pants-1686-brand-tag.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Pants-1686/Pants-1686-brand-tag.jpg" alt="Brand Tag" /><div class="ph-label">Brand Tag</div></a>
+<a class="photo" href="../thumbnails/Pants-1686/Pants-1686-care-tag.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Pants-1686/Pants-1686-care-tag.jpg" alt="Care Tag" /><div class="ph-label">Care Tag</div></a>
+<a class="photo" href="../thumbnails/Pants-1686/Pants-1686-garment-back.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Pants-1686/Pants-1686-garment-back.jpg" alt="Garment Back" /><div class="ph-label">Garment Back</div></a>
+<a class="photo" href="../thumbnails/Pants-1686/Pants-1686-garment.jpg" target="_blank" onclick="openPhotoLB(this.href,this.querySelector('.ph-label').textContent);return false;"><img loading="lazy" src="../thumbnails/Pants-1686/Pants-1686-garment.jpg" alt="Garment" /><div class="ph-label">Garment</div></a>
+</div>
+      <h4>Customer-Facing Forward Photos</h4>
+      <p style="color:var(--ink-mute);font-size:13px;margin:0">No customer-facing photos yet — will be added at listing stage.</p>
+    </div>
+  </div>
+
+  <!-- ── 2. COPY sband (closed by default) ── -->
+  <div class="sband" id="sbandCopy">
+    <div class="sband-hdr" onclick="toggleBand(this)">
+      <span class="sband-arrow">&#9658;</span>
+      <span class="sband-label">Copy</span>
+      <span class="sband-badge">Title+ &hellip; &nbsp;|&nbsp; Desc+ &hellip; &nbsp;|&nbsp; KW+ &hellip;</span>
+    </div>
+    <div class="sband-body">
+      <div class="cws-blocks">
+
+        <!-- Title+ status (dynamic: confirmed or pending) -->
+        <div class="cws-block cws-pending" id="cwsb-title" onclick="cwsOpen('title')" role="button" tabindex="0">
+          <div class="cwsb-hdr">
+            <span class="cwsb-skill">Title+</span>
+            <span class="cwsb-meta">&#8212;&nbsp;chars</span>
+            <span class="cwsb-badge cws-pending">&#9203;&nbsp;Pending</span>
+          </div>
+          <div class="cwsb-body">
+            <div class="cwsb-text" id="cws-title-display"></div>
+            <div class="cwsb-click-hint">&#9998; Click to edit</div>
+          </div>
+        </div>
+
+        <!-- Description+ (state driven by copy.pending[]) -->
+        <div class="cws-block cws-pending" id="cwsb-desc" style="cursor:default" role="region" aria-label="Description+">
+          <div class="cwsb-hdr">
+            <span class="cwsb-skill">Description+</span>
+            <span class="cwsb-badge cws-pending" id="cwsb-desc-badge">&#9203;&nbsp;Pending Review</span>
+          </div>
+          <div class="cwsb-body" style="display:flex;flex-direction:column;gap:8px">
+
+            <!-- P1 sub-block -->
+            <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p1" onclick="cwsOpen('desc-p1')" role="button" tabindex="0">
+              <div class="cws-subblock-hdr">
+                <span class="cws-subblock-skill">P1 &middot; Opening Paragraph</span>
+                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p1-badge">&#9203;&nbsp;Pending</span>
+              </div>
+              <div class="cws-subblock-body">
+                <div class="cwsb-text" id="cws-desc-p1-display"></div>
+                <div class="cwsb-click-hint">&#9998; Click to edit</div>
+              </div>
+            </div>
+
+            <!-- P2 sub-block -->
+            <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p2" onclick="cwsOpen('desc-p2')" role="button" tabindex="0">
+              <div class="cws-subblock-hdr">
+                <span class="cws-subblock-skill">P2 &middot; SMC</span>
+                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p2-badge">&#9203;&nbsp;Pending</span>
+              </div>
+              <div class="cws-subblock-body">
+                <div class="cwsb-text" id="cws-desc-p2-display"></div>
+                <div class="cwsb-click-hint">&#9998; Click to edit</div>
+              </div>
+            </div>
+
+            <!-- P3 sub-block -->
+            <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p3" onclick="cwsOpen('desc-p3')" role="button" tabindex="0">
+              <div class="cws-subblock-hdr">
+                <span class="cws-subblock-skill">P3 &middot; Badges</span>
+                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p3-badge">&#9203;&nbsp;Pending</span>
+              </div>
+              <div class="cws-subblock-body">
+                <div class="cwsb-text" id="cws-desc-p3-display"></div>
+                <div class="cwsb-click-hint">&#9998; Click to edit</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Keyword+ (state driven by copy.pending[] / keywords presence) -->
+        <div class="cws-block cws-pending" id="cwsb-kw" onclick="cwsOpen('kw')" role="button" tabindex="0">
+          <div class="cwsb-hdr">
+            <span class="cwsb-skill">Keyword+</span>
+            <span class="cwsb-badge cws-pending">&#9203;&nbsp;Pending Review</span>
+          </div>
+          <div class="cwsb-body">
+            <div class="cwsb-text" id="cws-kw-display"></div>
+            <div class="cwsb-click-hint">&#9998; Click to edit</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2b. PHOTO INTAKE sband (collapsed) ── -->
+  <div class="sband" id="sbandCopyCap">
+  <div class="sband-hdr" onclick="toggleBand(this)">
+    <span class="sband-arrow">&#9658;</span>
+    <span class="sband-label">Photo Intake</span>
+    <span class="sband-badge">captured</span>
+  </div>
+  <div class="sband-body">
+<h4 style="margin-top:0">Visual Properties</h4>
+<div class="row" data-field="cc.color.family" data-status="green" data-source="photo_agent" data-value="Black"><div class="k">Color</div><div class="v"><div class="copyblock"><span class="cb-val">Black</span><button class="cb-btn" onclick="copyVal(this,'Black')">copy</button></div></div><button class="conf green" onclick="openField('cc.color.family')">&#10003;</button></div>
+<div class="row" data-field="cc.pattern" data-status="green" data-source="photo_agent" data-value="Solid"><div class="k">Pattern</div><div class="v"><div class="copyblock"><span class="cb-val">Solid</span><button class="cb-btn" onclick="copyVal(this,'Solid')">copy</button></div></div><button class="conf green" onclick="openField('cc.pattern')">&#10003;</button></div>
+<div class="row" data-field="cc.silhouette" data-status="gray" data-source="photo_agent" data-value="—"><div class="k">Silhouette</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'—')">copy</button></div></div><button class="conf gray" onclick="openField('cc.silhouette')">&minus;</button></div>
+<div class="row" data-field="cc.closures" data-status="gray" data-source="photo_agent" data-value="—"><div class="k">Closures</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'—')">copy</button></div></div><button class="conf gray" onclick="openField('cc.closures')">&minus;</button></div>
+<div class="row" data-field="cc.aesthetic.era" data-status="gray" data-source="photo_agent" data-value="—"><div class="k">Era</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'—')">copy</button></div></div><button class="conf gray" onclick="openField('cc.aesthetic.era')">&minus;</button></div>
+<h4>Aesthetics &amp; Style</h4>
+<div class="row" data-field="cc.use_cases" data-status="green" data-source="photo_agent" data-value="work, formal, business casual"><div class="k">Use Cases</div><div class="v"><div class="copyblock"><span class="cb-val">work, formal, business casual</span><button class="cb-btn" onclick="copyVal(this,'work, formal, business casual')">copy</button></div></div><button class="conf green" onclick="openField('cc.use_cases')">&#10003;</button></div>
+<h4>Agent Flags (4)</h4>
+  </div>
+</div>
+
+  <!-- ── 3. VENDOO sband (collapsed) ── -->
+  <div class="sband" id="sbandVendoo">
+    <div class="sband-hdr" onclick="toggleBand(this)">
+      <span class="sband-arrow">&#9658;</span>
+      <span class="sband-label">Vendoo</span>
+    </div>
+    <div class="sband-body">
+      <h4>1 &middot; Item Details</h4>
+      <div class="item-details-cols">
+        <div class="item-details-left">
+          <div class="row" data-field="vendoo.brand" data-status="green" data-source="" data-value="Alfani"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Alfani</span><button class="cb-btn" onclick="copyVal(this,'Alfani')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.brand')">&#10003;</button></div>
+          <div class="row" data-field="vendoo.condition" data-options="NWT|NWOT|GPO (internal)|Pre-Loved (internal)|Fair (internal)|Pre-owned — Like New (eBay)|Pre-owned — Very Good (eBay)|Pre-owned — Good (eBay)|Pre-owned — Acceptable (eBay)|Like New (Vendoo)|Good (Vendoo)|Fair (Vendoo)|New with Tags (Vendoo)" data-status="green" data-source="Phase 1 intake &middot; GPO" data-value=""><div class="k">Condition</div><div class="v"><div class="selectblock"><span class="sb-val">—</span></div></div><button class="conf green" onclick="openField('vendoo.condition')">&#10003;</button></div>
+          <div class="row" data-field="vendoo.color1" data-options="Black|White|Gray|Brown|Tan/Beige|Red|Orange|Yellow|Green|Blue|Purple|Pink|Multi|Print|Other" data-status="green" data-source="copy_capture" data-value="Black"><div class="k">Primary Color</div><div class="v"><div class="selectblock"><span class="sb-val">Black</span></div></div><button class="conf green" onclick="openField('vendoo.color1')">&#10003;</button></div>
+          <div class="row" data-field="vendoo.color2" data-options="None|Black|White|Gray|Brown|Tan/Beige|Red|Orange|Yellow|Green|Blue|Purple|Pink|Multi|Print|Other" data-status="gray" data-source="copy_capture" data-value=""><div class="k">Secondary Color</div><div class="v"><div class="selectblock pending"><span class="sb-val">none</span></div></div><button class="conf gray" onclick="openField('vendoo.color2')">&minus;</button></div>
+          <div class="row" data-field="vendoo.zip" data-status="green" data-source="Operator default 97114" data-value="97114"><div class="k">Zip Code</div><div class="v"><div class="copyblock"><span class="cb-val">97114</span><button class="cb-btn" onclick="copyVal(this,'97114')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.zip')">&#10003;</button></div>
+          <div class="row" data-field="vendoo.sku" data-status="green" data-source="Master_SKU registry" data-value="Pants-1686"><div class="k">SKU</div><div class="v"><div class="copyblock"><span class="cb-val">Pants-1686</span><button class="cb-btn" onclick="copyVal(this,'Pants-1686')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.sku')">&#10003;</button></div>
+          <div class="row" data-field="vendoo.notes" data-status="gray" data-source="copy_capture" data-value=""><div class="k">Internal Notes</div><div class="v"><div class="copyblock pending"><span class="cb-val"></span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf gray" onclick="openField('vendoo.notes')">&minus;</button></div>
+        </div>
+        <div class="item-details-right">
+          <div class="row" data-field="vendoo.tag.1" data-status="gray" data-source="keyword_plus hashtag_run" data-value="—"><div class="k">T1</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'—')">copy</button></div></div><button class="conf gray" onclick="openField('vendoo.tag.1')">&minus;</button></div>
+          <div class="row" data-field="vendoo.tag.2" data-status="gray" data-source="keyword_plus hashtag_run" data-value="—"><div class="k">T2</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'—')">copy</button></div></div><button class="conf gray" onclick="openField('vendoo.tag.2')">&minus;</button></div>
+          <div class="row" data-field="vendoo.tag.3" data-status="gray" data-source="keyword_plus hashtag_run" data-value="—"><div class="k">T3</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'—')">copy</button></div></div><button class="conf gray" onclick="openField('vendoo.tag.3')">&minus;</button></div>
+          <div class="row" data-field="vendoo.tag.4" data-status="gray" data-source="keyword_plus hashtag_run" data-value="—"><div class="k">T4</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'—')">copy</button></div></div><button class="conf gray" onclick="openField('vendoo.tag.4')">&minus;</button></div>
+          <div class="row" data-field="vendoo.tag.5" data-status="gray" data-source="keyword_plus hashtag_run" data-value="—"><div class="k">T5</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'—')">copy</button></div></div><button class="conf gray" onclick="openField('vendoo.tag.5')">&minus;</button></div>
+          <div class="row" data-field="vendoo.qty" data-status="green" data-source="Default 1" data-value="1"><div class="k">Quantity</div><div class="v"><div class="copyblock"><span class="cb-val">1</span><button class="cb-btn" onclick="copyVal(this,'1')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.qty')">&#10003;</button></div>
+        </div>
+      </div>
+      <h4>2 &middot; Category</h4>
+      <div class="grid">
+        <div class="row" data-field="vendoo.cat" data-status="yellow" data-source="inferred" data-value="Pants"><div class="k">Category</div><div class="v"><div class="selectblock"><span class="sb-val">Pants</span></div></div><button class="conf yellow" onclick="openField('vendoo.cat')">&#9888;</button></div>
+        <div class="row" data-field="vendoo.size" data-options="XS|S|M|L|XL|XXL|XXXL|0|2|4|6|8|10|12|14|16|18|20|OS" data-status="green" data-source="Size tag photo" data-value="XL"><div class="k">US Size</div><div class="v"><div class="selectblock"><span class="sb-val">XL</span></div></div><button class="conf green" onclick="openField('vendoo.size')">&#10003;</button></div>
+        <div class="row" data-field="vendoo.size_type" data-options="Regular|Plus|Petite|Tall|Big &amp; Tall|Maternity|Junior" data-status="green" data-source="Default Regular" data-value="Regular"><div class="k">Size Type</div><div class="v"><div class="selectblock"><span class="sb-val">Regular</span></div></div><button class="conf green" onclick="openField('vendoo.size_type')">&#10003;</button></div>
+      </div>
+      <h4>3 &middot; Package Details</h4>
+      <div class="grid">
+        <div class="row" data-field="vendoo.pkg.weight.lbs" data-status="gray" data-source="estimated" data-value="0"><div class="k">Weight (lb)</div><div class="v"><div class="copyblock"><span class="cb-val">0</span><button class="cb-btn" onclick="copyVal(this,'0')">copy</button></div><span style="font-size:12px;color:var(--ink-mute);margin-left:4px">lb</span></div><button class="conf gray" onclick="openField('vendoo.pkg.weight.lbs')">&#9888;</button></div>
+        <div class="row" data-field="vendoo.pkg.weight.oz" data-status="gray" data-source="estimated" data-value="0"><div class="k">Weight (oz)</div><div class="v"><div class="copyblock"><span class="cb-val">0</span><button class="cb-btn" onclick="copyVal(this,'0')">copy</button></div><span style="font-size:12px;color:var(--ink-mute);margin-left:4px">oz</span></div><button class="conf gray" onclick="openField('vendoo.pkg.weight.oz')">&#9888;</button></div>
+        <div class="row" data-field="vendoo.pkg.dim.l" data-status="gray" data-source="estimated" data-value=""><div class="k">Length</div><div class="v"><div class="copyblock"><span class="cb-val"></span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div><span style="font-size:12px;color:var(--ink-mute);margin-left:4px">in</span></div><button class="conf gray" onclick="openField('vendoo.pkg.dim.l')">&#9888;</button></div>
+        <div class="row" data-field="vendoo.pkg.dim.w" data-status="gray" data-source="estimated" data-value=""><div class="k">Width</div><div class="v"><div class="copyblock"><span class="cb-val"></span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div><span style="font-size:12px;color:var(--ink-mute);margin-left:4px">in</span></div><button class="conf gray" onclick="openField('vendoo.pkg.dim.w')">&#9888;</button></div>
+        <div class="row" data-field="vendoo.pkg.dim.h" data-status="gray" data-source="estimated" data-value=""><div class="k">Height</div><div class="v"><div class="copyblock"><span class="cb-val"></span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div><span style="font-size:12px;color:var(--ink-mute);margin-left:4px">in</span></div><button class="conf gray" onclick="openField('vendoo.pkg.dim.h')">&#9888;</button></div>
+      </div>
+      <h4>4 &middot; Price</h4>
+      <div class="grid">
+        <div class="row" data-field="vendoo.listing_price" data-status="green" data-source="rrr-pricing &middot; eBay 75th &middot; medium confidence (n=6 90d)" data-value=""><div class="k">Listing Price</div><div class="v"><div class="copyblock"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.listing_price')">&#10003;</button></div>
+        <div class="row" data-field="vendoo.cog" data-status="green" data-source="NWLG default" data-value=""><div class="k">Cost of Goods</div><div class="v"><div class="copyblock"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.cog')">&#10003;</button></div>
+      </div>
+      <h4>5 &middot; Labels</h4>
+      <div class="grid">
+        <div class="row" data-field="vendoo.labels" data-status="yellow" data-source="Title+ on Copy Track &middot; Photo Ready on Photography Track" data-value="Title+ &middot; Photo Ready"><div class="k">Vendoo Labels</div><div class="v"><div class="selectblock"><span class="sb-val">Title+ &middot; Photo Ready</span></div></div><button class="conf yellow" onclick="openField('vendoo.labels')">&#9888;</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── eBay sband (collapsed) ── -->
+  <div class="sband" id="sbandEbay">
+    <div class="sband-hdr" onclick="toggleBand(this)">
+      <span class="sband-arrow">&#9658;</span>
+      <span class="sband-label">eBay</span>
+      <span class="sband-badge">Listing Fields &middot; Category Specifics</span>
+    </div>
+    <div class="sband-body">
+      <!-- eBay sub-section -->
+      <h4 style="margin-top:20px;padding-top:14px;border-top:2px solid var(--bd)">eBay &mdash; Top-Level Listing Fields</h4>
+      <div class="grid">
+        <div class="row" data-field="ebay.price" data-status="green" data-source="rrr-pricing &middot; eBay 75th &middot; medium confidence (n=6 90d)" data-value=""><div class="k">Price</div><div class="v"><div class="copyblock"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf green" onclick="openField('ebay.price')">&#10003;</button></div>
+        <div class="row" data-field="ebay.brand" data-status="green" data-source="" data-value="Alfani"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Alfani</span><button class="cb-btn" onclick="copyVal(this,'Alfani')">copy</button></div></div><button class="conf green" onclick="openField('ebay.brand')">&#10003;</button></div>
+        <div class="row" data-field="ebay.color" data-status="green" data-source="copy_capture" data-value="Black"><div class="k">Color</div><div class="v"><div class="selectblock"><span class="sb-val">Black</span></div></div><button class="conf green" onclick="openField('ebay.color')">&#10003;</button></div>
+        <div class="row" data-field="ebay.priceformat" data-options="Fixed Price|Auction" data-status="yellow" data-source="Default &middot; Buy It Now" data-value="Fixed Price &middot; —"><div class="k">Price Format</div><div class="v"><div class="selectblock"><span class="sb-val">Fixed Price &middot; —</span></div></div><button class="conf yellow" onclick="openField('ebay.priceformat')">&#9888;</button></div>
+        <div class="row" data-field="ebay.bestoffer" data-options="Yes|No" data-status="gray" data-source="Policy decision &middot; not in JSON" data-value=""><div class="k">Allow Best Offer</div><div class="v"><div class="selectblock pending"><span class="sb-val">policy decision</span></div></div><button class="conf gray" onclick="openField('ebay.bestoffer')">&minus;</button></div>
+        <div class="row" data-field="ebay.shipping" data-options="Buyer Pays Calculated|Free Shipping|Flat Rate" data-status="yellow" data-source="commerce.shipping" data-value="Buyer Pays Calculated"><div class="k">Shipping Policy</div><div class="v"><div class="selectblock"><span class="sb-val">Buyer Pays Calculated</span></div></div><button class="conf yellow" onclick="openField('ebay.shipping')">&#9888;</button></div>
+        <div class="row" data-field="ebay.return" data-options="Returns Accepted - 30 Days|Returns Accepted - 60 Days|No Returns" data-status="gray" data-source="Account default" data-value=""><div class="k">Return Policy</div><div class="v"><div class="selectblock pending"><span class="sb-val">account default</span></div></div><button class="conf gray" onclick="openField('ebay.return')">&minus;</button></div>
+      </div>
+      <h4>eBay &mdash; Category Specifics</h4>
+      <div class="grid">
+        <div class="row" data-field="ebay.aspect.sizetype" data-options="Regular|Plus|Petite|Big|Tall" data-status="green" data-source="aspects" data-value="—"><div class="k">Size Type</div><div class="v"><div class="selectblock"><span class="sb-val">—</span></div></div><button class="conf green" onclick="openField('ebay.aspect.sizetype')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.size" data-status="green" data-source="Size tag photo &middot; Men's XL" data-value="10"><div class="k">Size</div><div class="v"><div class="copyblock"><span class="cb-val">10</span><button class="cb-btn" onclick="copyVal(this,'10')">copy</button></div></div><button class="conf green" onclick="openField('ebay.aspect.size')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.department" data-options="Men|Women|Unisex|Boys|Girls" data-status="green" data-source="aspects" data-value="—"><div class="k">Department</div><div class="v"><div class="selectblock"><span class="sb-val">—</span></div></div><button class="conf green" onclick="openField('ebay.aspect.department')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.condition" data-options="NWT|NWOT|GPO (internal)|Pre-Loved (internal)|Fair (internal)|Pre-owned — Like New (eBay)|Pre-owned — Very Good (eBay)|Pre-owned — Good (eBay)|Pre-owned — Acceptable (eBay)|Like New (Vendoo)|Good (Vendoo)|Fair (Vendoo)|New with Tags (Vendoo)" data-status="green" data-source="Phase 1 intake &middot; " data-value=""><div class="k">Condition</div><div class="v"><div class="selectblock"><span class="sb-val">—</span></div></div><button class="conf green" onclick="openField('ebay.aspect.condition')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.sleeve" data-options="Short Sleeve|Long Sleeve|3/4 Sleeve|Sleeveless|Cap Sleeve" data-status="green" data-source="copy_capture &middot; 1.0 confidence" data-value="Long Sleeve"><div class="k">Sleeve Length</div><div class="v"><div class="selectblock"><span class="sb-val">Long Sleeve</span></div></div><button class="conf green" onclick="openField('ebay.aspect.sleeve')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.pattern" data-options="Solid|Plaid|Stripes|Checkered|Geometric|Floral|Abstract|Animal Print|Camouflage|Paisley|Graphic Print" data-status="gray" data-source="descriptors" data-value="—"><div class="k">Pattern</div><div class="v"><div class="selectblock"><span class="sb-val">—</span></div></div><button class="conf gray" onclick="openField('ebay.aspect.pattern')">&minus;</button></div>
+        <div class="row" data-field="ebay.aspect.material" data-status="green" data-source="Care tag &middot; 55% Cotton 45% Polyester" data-value="Shell: Polyester/Rayon/Spandex (percentages partially legible on tag — Spandex presence confirmed); Lining: 88% Nylon, 12% Spandex"><div class="k">Material</div><div class="v"><div class="copyblock"><span class="cb-val">Shell: Polyester/Rayon/Spandex (percentages partially legible on tag — Spandex presence confirmed); Lining: 88% Nylon, 12% Spandex</span><button class="cb-btn" onclick="copyVal(this,'Shell: Polyester/Rayon/Spandex (percentages partially legible on tag — Spandex presence confirmed); Lining: 88% Nylon, 12% Spandex')">copy</button></div></div><button class="conf green" onclick="openField('ebay.aspect.material')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.country" data-options="China|USA|Vietnam|Bangladesh|Cambodia|Mexico|India|Indonesia|Pakistan|Turkey|El Salvador|Sri Lanka" data-status="green" data-source="care tag" data-value="Indonesia"><div class="k">Country of Origin</div><div class="v"><div class="selectblock "><span class="sb-val">Indonesia</span></div></div><button class="conf green" onclick="openField('ebay.aspect.country')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.care" data-options="Machine Washable|Hand Wash Only|Dry Clean Only|Spot Clean Only" data-status="green" data-source="care tag" data-value="Machine wash cold, gentle cycle; tumble dry low (care symbols observed — text partially legible)"><div class="k">Garment Care</div><div class="v"><div class="selectblock "><span class="sb-val">Machine wash cold, gentle cycle; tumble dry low (care symbols observed — text partially legible)</span></div></div><button class="conf green" onclick="openField('ebay.aspect.care')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.neckline" data-options="Collared|V-Neck|Crew Neck|Scoop Neck|Turtleneck|Mock Neck|Henley|Boat Neck" data-status="green" data-source="Derived from copy_capture &middot; Point Collar" data-value="Collared"><div class="k">Neckline</div><div class="v"><div class="selectblock"><span class="sb-val">Collared</span></div></div><button class="conf green" onclick="openField('ebay.aspect.neckline')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.collar" data-options="Point|Button-Down|Spread|Mandarin|Band|None" data-status="green" data-source="Vaughn visual &middot; 0.9" data-value="Point"><div class="k">Collar Style</div><div class="v"><div class="selectblock"><span class="sb-val">Point</span></div></div><button class="conf green" onclick="openField('ebay.aspect.collar')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.closure" data-options="Button|Zipper|Hook and Eye|Snap|Pullover|Drawstring|Tie" data-status="green" data-source="Vaughn visual &middot; 0.95 &middot; Button Placket-Full" data-value="Button"><div class="k">Closure</div><div class="v"><div class="selectblock"><span class="sb-val">Button</span></div></div><button class="conf green" onclick="openField('ebay.aspect.closure')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.occasion" data-options="Travel|Casual|Outdoor|Sport/Athletic|Business Casual|Hiking|Fishing|Camping" data-status="green" data-source="copy_capture use_cases &middot; 0.95 &middot; Travel" data-value="Travel"><div class="k">Occasion</div><div class="v"><div class="selectblock"><span class="sb-val">Travel</span></div></div><button class="conf green" onclick="openField('ebay.aspect.occasion')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.chest" data-status="yellow" data-source="Derived: bust &times; 2 = 48 in" data-value="48"><div class="k">Chest Size</div><div class="v"><div class="copyblock"><span class="cb-val">48 in</span><button class="cb-btn" onclick="copyVal(this,'48')">copy</button></div></div><button class="conf yellow" onclick="openField('ebay.aspect.chest')">&#9888;</button></div>
+        <div class="row" data-field="ebay.aspect.productline" data-status="gray" data-source="identity" data-value=""><div class="k">Product Line</div><div class="v"><div class="selectblock pending"><span class="sb-val">—</span></div></div><button class="conf gray" onclick="openField('ebay.aspect.productline')">&minus;</button></div>
+        <div class="row" data-field="ebay.aspect.model" data-status="yellow" data-source="identity" data-value="—"><div class="k">Model</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'—')">copy</button></div></div><button class="conf yellow" onclick="openField('ebay.aspect.model')">&#9888;</button></div>
+        <div class="row" data-field="ebay.aspect.fit" data-options="Regular|Slim|Relaxed|Oversized|Athletic" data-status="gray" data-source="Silhouette flagged warn &middot; cannot confirm fit" data-value=""><div class="k">Fit</div><div class="v"><div class="selectblock pending"><span class="sb-val">empty</span></div></div><button class="conf gray" onclick="openField('ebay.aspect.fit')">&minus;</button></div>
+        <div class="row" data-field="ebay.aspect.vintage" data-options="Yes|No" data-status="gray" data-source="Era: Modern &middot; not vintage" data-value="No"><div class="k">Vintage</div><div class="v"><div class="selectblock"><span class="sb-val">No</span></div></div><button class="conf gray" onclick="openField('ebay.aspect.vintage')">&minus;</button></div>
+        <div class="row" data-field="ebay.aspect.mpn" data-status="gray" data-source="Absent on tag" data-value=""><div class="k">MPN</div><div class="v"><div class="copyblock pending"><span class="cb-val">empty</span></div></div><button class="conf gray" onclick="openField('ebay.aspect.mpn')">&minus;</button></div>
+        <div class="row" data-field="ebay.aspect.upc" data-status="gray" data-source="Absent on tag" data-value=""><div class="k">UPC</div><div class="v"><div class="copyblock pending"><span class="cb-val">empty</span></div></div><button class="conf gray" onclick="openField('ebay.aspect.upc')">&minus;</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 5. IDENTITY sband (collapsed) ── -->
+  <div class="sband" id="sbandIdentity">
+    <div class="sband-hdr" onclick="toggleBand(this)">
+      <span class="sband-arrow">&#9658;</span>
+      <span class="sband-label">Identity</span>
+      <span class="sband-badge">Alfani &middot; —</span>
+    </div>
+    <div class="sband-body">
+      <div class="grid">
+        <div class="row" data-field="ref.brand" data-status="green" data-source="" data-value="Alfani"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Alfani</span><button class="cb-btn" onclick="copyVal(this,'Alfani')">copy</button></div></div><button class="conf green" onclick="openField('ref.brand')">&#10003;</button></div>
+        <div class="row" data-field="ref.model" data-status="yellow" data-source="identity" data-value="—"><div class="k">Model</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'—')">copy</button></div></div><button class="conf yellow" onclick="openField('ref.model')">&#9888;</button></div>
+        <div class="row" data-field="ref.rn" data-status="green" data-source="brand tag" data-value="37783"><div class="k">RN</div><div class="v"><div class="copyblock "><span class="cb-val">37783</span><button class="cb-btn" onclick="copyVal(this,'37783')">copy</button></div></div><button class="conf green" onclick="openField('ref.rn')">&#10003;</button></div>
+        <div class="row" data-field="ref.style" data-status="gray" data-source="brand tag" data-value="—"><div class="k">Style Code</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'—')">copy</button></div></div><button class="conf gray" onclick="openField('ref.style')">&minus;</button></div>
+        <div class="row" data-field="ref.category" data-status="green" data-source="Internal classification" data-value="Tops / Button-Down"><div class="k">Category</div><div class="v"><div class="selectblock"><span class="sb-val">Tops &rsaquo; Button-Down</span></div></div><button class="conf green" onclick="openField('ref.category')">&#10003;</button></div>
+        <div class="row" data-field="cap.color" data-status="green" data-source="copy_capture" data-value="Black"><div class="k">Color</div><div class="v"><div class="selectblock"><span class="sb-val">Black</span></div></div><button class="conf green" onclick="openField('cap.color')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.material" data-status="green" data-source="care tag" data-value="Shell: Polyester/Rayon/Spandex (percentages partially legible on tag — Spandex presence confirmed); Lining: 88% Nylon, 12% Spandex"><div class="k">Material</div><div class="v"><div class="copyblock "><span class="cb-val">Shell: Polyester/Rayon/Spandex (percentages partially legible on tag — Spandex presence confirmed); Lining: 88% Nylon, 12% Spandex</span><button class="cb-btn" onclick="copyVal(this,'Shell: Polyester/Rayon/Spandex (percentages partially legible on tag — Spandex presence confirmed); Lining: 88% Nylon, 12% Spandex')">copy</button></div></div><button class="conf green" onclick="openField('ebay.aspect.material')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.care" data-options="Machine Washable|Hand Wash Only|Dry Clean Only|Spot Clean Only" data-status="green" data-source="care tag" data-value="Machine wash cold, gentle cycle; tumble dry low (care symbols observed — text partially legible)"><div class="k">Care</div><div class="v"><div class="copyblock "><span class="cb-val">Machine wash cold, gentle cycle; tumble dry low (care symbols observed — text partially legible)</span><button class="cb-btn" onclick="copyVal(this,'Machine wash cold, gentle cycle; tumble dry low (care symbols observed — text partially legible)')">copy</button></div></div><button class="conf green" onclick="openField('ebay.aspect.care')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.country" data-options="China|USA|Vietnam|Bangladesh|Cambodia|Mexico|India|Indonesia|Pakistan|Turkey|El Salvador|Sri Lanka" data-status="green" data-source="care tag" data-value="Indonesia"><div class="k">Country of Origin</div><div class="v"><div class="selectblock "><span class="sb-val">Indonesia</span></div></div><button class="conf green" onclick="openField('ebay.aspect.country')">&#10003;</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 6. MEASUREMENTS sband (collapsed) ── -->
+  <div class="sband" id="sbandMeasurements">
+    <div class="sband-hdr" onclick="toggleBand(this)">
+      <span class="sband-arrow">&#9658;</span>
+      <span class="sband-label">Measurements</span>
+      <span class="sband-badge">—</span>
+    </div>
+    <div class="sband-body">
+      <div style="font-size:11px;color:var(--ink-mute);margin-bottom:10px">Lay-flat unstretched &middot; all measurements in inches</div>
+      <div class="grid">
+        <div class="row" data-field="ref.waist" data-status="gray" data-source="Bench 2026-05-13" data-value=""><div class="k">Waist (Full)</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf gray" onclick="openField('ref.waist')">&minus;</button></div>
+        <div class="row" data-field="ref.hip" data-status="gray" data-source="Bench 2026-05-13" data-value=""><div class="k">Hip (Flat)</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf gray" onclick="openField('ref.hip')">&minus;</button></div>
+        <div class="row" data-field="ref.inseam" data-status="gray" data-source="Bench 2026-05-13" data-value=""><div class="k">Inseam (Full length)</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf gray" onclick="openField('ref.inseam')">&minus;</button></div>
+        <div class="row" data-field="ref.rise" data-status="gray" data-source="Bench 2026-05-13" data-value=""><div class="k">Rise (Vertical)</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf gray" onclick="openField('ref.rise')">&minus;</button></div>
+        <div class="row" data-field="ref.leg_opening" data-status="gray" data-source="Bench 2026-05-13" data-value=""><div class="k">Leg Opening (Flat)</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf gray" onclick="openField('ref.leg_opening')">&minus;</button></div>
+        <div class="row" data-field="ref.stretch" data-status="green" data-source="descriptors" data-value="Yes"><div class="k">Stretch</div><div class="v"><div class="selectblock"><span class="sb-val">Yes</span></div></div><button class="conf green" onclick="openField('ref.stretch')">&#10003;</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 7. PRICING sband (collapsed) ── -->
+  <div class="sband" id="sbandPricing">
+    <div class="sband-hdr" onclick="toggleBand(this)">
+      <span class="sband-arrow">&#9658;</span>
+      <span class="sband-label">Pricing</span>
+      <span class="sband-badge">—</span>
+    </div>
+    <div class="sband-body">
+      <div class="grid">
+        <div class="row" data-field="ref.msrp" data-status="yellow" data-source="pricing" data-value=""><div class="k">MSRP (est.)</div><div class="v"><div class="copyblock"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf yellow" onclick="openField('ref.msrp')">&#9888;</button></div>
+        <div class="row" data-field="ref.median" data-status="gray" data-source="eBay sold" data-value=""><div class="k">Comp Median</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf gray" onclick="openField('ref.median')">&minus;</button></div>
+        <div class="row" data-field="ref.p75" data-status="gray" data-source="eBay sold" data-value=""><div class="k">Comp p75</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf gray" onclick="openField('ref.p75')">&minus;</button></div>
+        <div class="row" data-field="ref.range" data-status="gray" data-source="eBay sold range" data-value=""><div class="k">Comp Range</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf gray" onclick="openField('ref.range')">&minus;</button></div>
+        <div class="row" data-field="ref.expected" data-status="gray" data-source="rrr-pricing" data-value=""><div class="k">Expected Sold</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf gray" onclick="openField('ref.expected')">&minus;</button></div>
+        <div class="row" data-field="ref.net" data-status="green" data-source="rrr-pricing net projection" data-value=""><div class="k">Net @ Sold</div><div class="v"><div class="copyblock"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf green" onclick="openField('ref.net')">&#10003;</button></div>
+      </div>
+
+      <h4 style="margin-top:20px;padding-top:14px;border-top:2px solid var(--bd)">Platform Pricing</h4>
+      <!-- Poshmark -->
+      <h4>Poshmark</h4>
+      <div class="grid">
+        <div class="row" data-field="posh.list" data-status="green" data-source="rrr-pricing chain" data-value=""><div class="k">List Price</div><div class="v"><div class="copyblock"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf green" onclick="openField('posh.list')">&#10003;</button></div>
+        <div class="row" data-field="posh.floor" data-status="gray" data-source="rrr-pricing chain" data-value=""><div class="k">Floor</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf gray" onclick="openField('posh.floor')">&minus;</button></div>
+        <div class="row" data-field="posh.walk" data-status="gray" data-source="rrr-pricing chain" data-value=""><div class="k">Walk-Away</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf gray" onclick="openField('posh.walk')">&minus;</button></div>
+      </div>
+      <!-- Depop -->
+      <h4>Depop</h4>
+      <div class="grid">
+        <div class="row" data-field="depop.list" data-status="green" data-source="rrr-pricing chain" data-value=""><div class="k">List Price</div><div class="v"><div class="copyblock"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf green" onclick="openField('depop.list')">&#10003;</button></div>
+        <div class="row" data-field="depop.floor" data-status="gray" data-source="rrr-pricing chain" data-value=""><div class="k">Floor</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf gray" onclick="openField('depop.floor')">&minus;</button></div>
+      </div>
+      <!-- Mercari -->
+      <h4>Mercari</h4>
+      <div class="grid">
+        <div class="row" data-field="merc.price" data-status="gray" data-source="Not assigned in pricing chain" data-value=""><div class="k">List Price</div><div class="v"><div class="selectblock pending"><span class="sb-val">not assigned</span></div></div><button class="conf gray" onclick="openField('merc.price')">&minus;</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 8. PROVENANCE sband (collapsed) ── -->
+  <div class="sband" id="sbandProvenance">
+    <div class="sband-hdr" onclick="toggleBand(this)">
+      <span class="sband-arrow">&#9658;</span>
+      <span class="sband-label">Provenance</span>
+      <span class="sband-badge"> &middot; bench 2026-05-13</span>
+    </div>
+    <div class="sband-body">
+      <div class="grid">
+        <div class="row" data-field="prov.source" data-status="green" data-source="intake_meta" data-value=""><div class="k">Source</div><div class="v"><div class="selectblock"><span class="sb-val"></span></div></div><button class="conf green" onclick="openField('prov.source')">&#10003;</button></div>
+        <div class="row" data-field="vendoo.cog" data-status="green" data-source="NWLG default $5.00" data-value=""><div class="k">Acquisition Cost</div><div class="v"><div class="copyblock"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.cog')">&#10003;</button></div>
+        <div class="row" data-field="prov.bench" data-status="yellow" data-source="JSON records operators as Vaughn / Tracie / Ellie &mdash; should be Elle (E-L-L-E)" data-value="2026-05-13"><div class="k">Bench Session</div><div class="v"><div class="selectblock"><span class="sb-val">2026-05-13</span></div></div><button class="conf yellow" onclick="openField('prov.bench')">&#9888;</button></div>
+        <div class="row" data-field="prov.p1" data-status="green" data-source="2026-05-06 &middot; autonomous photo-read close" data-value=""><div class="k">Phase 1 Closed</div><div class="v"><div class="selectblock"><span class="sb-val">2026-05-06</span></div></div><button class="conf green" onclick="openField('prov.p1')">&#10003;</button></div>
+        <div class="row" data-field="prov.p2" data-status="green" data-source="2026-05-06 &middot; brand verified &middot; pricing medium confidence" data-value=""><div class="k">Phase 2 Closed</div><div class="v"><div class="selectblock"><span class="sb-val">2026-05-06</span></div></div><button class="conf green" onclick="openField('prov.p2')">&#10003;</button></div>
+        <div class="row" data-field="prov.cat" data-status="yellow" data-source="inferred" data-value="Pants"><div class="k">eBay Category</div><div class="v"><div class="selectblock"><span class="sb-val">Pants</span></div></div><button class="conf yellow" onclick="openField('prov.cat')">&#9888;</button></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span><strong>Host:</strong> GitHub Pages &middot; vmonagon/Revive-Restore-Resell</span>
+    <span><strong>Render:</strong> static &middot; v0.6 (sband redesign) &middot; 2026-05-15</span>
+  </footer>
+</div>
+  <!-- ── 9. FLOW STEP tracker (preserved exactly) ── -->
+  <div class="tracker">
+    <div class="tband" id="flowStepBand"><div class="tlabel tlabel-toggle" id="flowStepToggle" onclick="toggleTracker()">FLOW Step<span class="tracker-arrow">&#9658;</span></div><div class="tcells"><div class="tcell done">Sourcing</div><div class="tcell done">Intake</div><div class="tcell current">Intake Photos</div><div class="tcell pending">Photography</div><div class="tcell pending">Listing</div><div class="tcell pending">Published</div><div class="tcell pending">Sold</div><div class="tcell pending">Fulfillment</div></div></div>
+    <div class="tracker-children" id="trackerChildren">
+      <div class="tband photo-track"><div class="tlabel">Photography Track<small>current Photo Ready</small></div><div class="tcells"><div class="tcell shared">Sourced</div><div class="tcell shared">Prep/Measure</div><div class="tcell shared">Intake Card</div><div class="tcell done">Intake Photos</div><div class="tcell current">Photo Ready</div><div class="tcell pending">Customer Photos</div><div class="tcell pending">Back Up</div><div class="tcell shared">Ready</div><div class="tcell shared">List</div><div class="tcell shared">Published</div><div class="tcell shared">Sold</div><div class="tcell shared">Shipped</div></div></div>
+      <div class="tband copy-track"><div class="tlabel">Copy Track<small>current Intake Card Title</small></div><div class="tcells"><div class="tcell shared">Sourced</div><div class="tcell shared">Prep/Measure</div><div class="tcell shared">Intake Card</div><div class="tcell done">Placeholder</div><div class="tcell done">Draft</div><div class="tcell current">Intake Card Title</div><div class="tcell pending">Review</div><div class="tcell shared">Ready</div><div class="tcell shared">List</div><div class="tcell shared">Published</div><div class="tcell shared">Sold</div><div class="tcell shared">Shipped</div></div></div>
+      <div class="tband"><div class="tlabel">Intake Microstep</div><div class="tcells"><div class="tcell done">Photo Migrated</div><div class="tcell done">Photo Intake</div><div class="tcell done">Phase Lead</div><div class="tcell done">Phase 1</div><div class="tcell done">Phase 2</div><div class="tcell current">Phase 3 (Listing Ready)</div></div></div>
+    </div>
+  </div>
+
+  <!-- ── 10. OPEN ITEMS sband (open: RED+YELLOW flags present) ── -->
+  <div class="sband open" id="sbandFlags">
+    <div class="sband-hdr" onclick="toggleBand(this)">
+      <span class="sband-arrow">&#9658;</span>
+      <span class="sband-label">Open Items</span>
+      <span class="sband-badge" id="flagsCount">6</span>
+    </div>
+    <div class="sband-body">
+      <div class="flag-item" data-field="condition_pending_bench_photos_review"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('condition_pending_bench_photos_review')">condition_pending_bench_photos_review</span></div></div>
+      <div class="flag-item" data-field="renumbered_post_capture"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('renumbered_post_capture')">renumbered_post_capture</span></div></div>
+    </div>
+  </div>
+
+  <!-- ── 11. LABEL STATUS sband (collapsed) ── -->
+  <div class="sband" id="sbandLabels">
+    <div class="sband-hdr" onclick="toggleBand(this)">
+      <span class="sband-arrow">&#9658;</span>
+      <span class="sband-label">Label Status</span>
+      <span class="sband-badge">17 labels</span>
+    </div>
+    <div class="sband-body">
+      <div class="lblsection">Pre-Intake</div>
+      <div class="label-row"><span class="lbl-mark done"></span><span class="label-name">Sourced<span class="lblnote"></span></span></div>
+      <div class="label-row"><span class="lbl-mark done"></span><span class="label-name">Prep/Measure<span class="lblnote">bench 2026-05-13</span></span></div>
+      <div class="label-row"><span class="lbl-mark done"></span><span class="label-name">Intake Card<span class="lblnote">phase 1 closed</span></span></div>
+      <div class="lblsection photo-h">Photography Track</div>
+      <div class="label-row"><span class="lbl-mark done"></span><span class="label-name">Intake Photos<span class="lblnote">4 intake + 5 reference</span></span></div>
+      <div class="label-row is-current"><span class="lbl-mark current"></span><span class="label-name">Photo Ready <em>&larr; current</em><span class="lblnote">SKU card printed &middot; waiting Tracie</span></span></div>
+      <div class="label-row"><span class="lbl-mark"></span><span class="label-name">Customer Photos<span class="lblnote">Tracie&rsquo;s session pending</span></span></div>
+      <div class="label-row"><span class="lbl-mark"></span><span class="label-name">Back Up</span></div>
+      <div class="lblsection copy-h">Copy Track</div>
+      <div class="label-row"><span class="lbl-mark done"></span><span class="label-name">Placeholder</span></div>
+      <div class="label-row"><span class="lbl-mark done"></span><span class="label-name">Draft</span></div>
+      <div class="label-row is-current"><span class="lbl-mark current"></span><span class="label-name">Intake Card Title <em>&larr; current</em><span class="lblnote">Title + P1 done &middot; SMC, Service, Keywords pending</span></span></div>
+      <div class="label-row"><span class="lbl-mark"></span><span class="label-name">Review<span class="lblnote">Tracie pass after all copy done</span></span></div>
+      <div class="label-row"><span class="lbl-mark"></span><span class="label-name">Flag<span class="lblnote">operator-set &middot; physical defects</span></span></div>
+      <div class="lblsection">List &rarr; Ship</div>
+      <div class="label-row"><span class="lbl-mark"></span><span class="label-name">Ready<span class="lblnote">Phase 3 complete</span></span></div>
+      <div class="label-row"><span class="lbl-mark"></span><span class="label-name">List</span></div>
+      <div class="label-row"><span class="lbl-mark"></span><span class="label-name">Published</span></div>
+      <div class="label-row"><span class="lbl-mark"></span><span class="label-name">Sold</span></div>
+      <div class="label-row"><span class="lbl-mark"></span><span class="label-name">Shipped</span></div>
+      <div class="legend">
+        <span><span class="conf green" style="cursor:default;width:18px;height:18px;font-size:11px">&#10003;</span>verified</span>
+        <span><span class="conf yellow" style="cursor:default;width:18px;height:18px;font-size:11px">&#9888;</span>caution</span>
+        <span><span class="conf red" style="cursor:default;width:18px;height:18px;font-size:11px">&#10007;</span>missing/wrong</span>
+        <span><span class="conf gray" style="cursor:default;width:18px;height:18px;font-size:11px">&minus;</span>n/a</span>
+      </div>
+    </div>
+  </div>
+
+
+<!-- ── Field Editor Modal ── -->
+<div class="modal-bd" id="modalBd" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <header><button class="conf" id="mdIcon" disabled style="cursor:default">&#10003;</button><h3 id="mdTitle">field</h3><button class="close" onclick="closeModal()">&times;</button></header>
+    <div class="mbody">
+      <div class="mb-cur">
+        <div><span class="clabel">Status</span><span id="mdStatus">&mdash;</span></div>
+        <div><span class="clabel">Value</span><span id="mdValue">&mdash;</span></div>
+        <div><span class="clabel">Source</span><span id="mdSource">&mdash;</span></div>
+      </div>
+      <div id="mdResolvedBanner" class="resolved-banner" style="display:none"></div>
+      <div id="mdValueEdit" style="display:none;margin:10px 0 0;padding-bottom:10px;border-bottom:1px solid var(--bd)"></div>
+      <div class="mb-notes"><h4 class="sh">Notes</h4><div id="mdNotesList"></div></div>
+      <div class="mb-add">
+        <div class="row-controls">From <select id="mdAuthor"></select></div>
+        <textarea id="mdText" placeholder="Add a note for this field&hellip;"></textarea>
+        <div class="mb-actions">
+          <button class="primary" onclick="addNote()">Add Note</button>
+          <button class="resolve" id="mdResolveBtn" onclick="markResolved()">Mark Resolved</button>
+          <button class="reopen" id="mdReopenBtn" style="display:none" onclick="reopen()">Reopen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Photo Lightbox ── -->
+<div class="photo-lb-bd" id="photoLbBd" onclick="if(event.target===this)closePhotoLB()">
+  <button class="photo-lb-close" onclick="closePhotoLB()">&times;</button>
+  <img id="photoLbImg" src="" alt="" />
+  <div class="photo-lb-label" id="photoLbLabel"></div>
+</div>
+
+<!-- ── CWS Modal: Title+ ── -->
+<div class="cws-modal-bd" id="cwsModalBd-title" onclick="if(event.target===this)cwsClose('title')">
+  <div class="cws-modal" role="dialog" aria-modal="true" aria-labelledby="cwsMdHdr-title">
+    <div class="cws-modal-hdr">
+      <h3 id="cwsMdHdr-title">Title+</h3>
+      <button class="cws-modal-close" onclick="cwsClose('title')" aria-label="Close">&times;</button>
+    </div>
+    <div class="cws-modal-body">
+      <div class="cws-cur-box" id="cwsMdCur-title"></div>
+      <label class="cws-field-label" for="cwsMdInput-title">Edit Title</label>
+      <textarea class="cws-textarea" id="cwsMdInput-title" rows="3" oninput="cwsUpdateCharCount('title',this.value,80)"></textarea>
+      <div class="cws-char-row"><span class="cws-char-ct" id="cwsCharCt-title">0 / 80</span></div>
+      <div class="cws-modal-footer">
+        <button class="cws-btn cws-primary" onclick="cwsConfirm('title')">Confirm</button>
+        <button class="cws-btn" onclick="cwsClose('title')">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── CWS Modal: Description+ P1 ── -->
+<div class="cws-modal-bd" id="cwsModalBd-desc-p1" onclick="if(event.target===this)cwsClose('desc-p1')">
+  <div class="cws-modal" role="dialog" aria-modal="true" aria-labelledby="cwsMdHdr-desc-p1">
+    <div class="cws-modal-hdr">
+      <h3 id="cwsMdHdr-desc-p1">P1 &middot; Opening Paragraph</h3>
+      <button class="cws-modal-close" onclick="cwsClose('desc-p1')" aria-label="Close">&times;</button>
+    </div>
+    <div class="cws-modal-body">
+      <div class="cws-cur-box" id="cwsMdCur-desc-p1"></div>
+      <label class="cws-field-label" for="cwsMdP1">Edit P1</label>
+      <textarea class="cws-textarea" id="cwsMdP1" rows="5" placeholder="Opening paragraph&hellip;"></textarea>
+      <div class="cws-modal-footer">
+        <button class="cws-btn cws-primary" onclick="cwsConfirm('desc-p1')">Confirm</button>
+        <button class="cws-btn" onclick="cwsClose('desc-p1')">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── CWS Modal: Description+ P2 ── -->
+<div class="cws-modal-bd" id="cwsModalBd-desc-p2" onclick="if(event.target===this)cwsClose('desc-p2')">
+  <div class="cws-modal" role="dialog" aria-modal="true" aria-labelledby="cwsMdHdr-desc-p2">
+    <div class="cws-modal-hdr">
+      <h3 id="cwsMdHdr-desc-p2">P2 &middot; SMC</h3>
+      <button class="cws-modal-close" onclick="cwsClose('desc-p2')" aria-label="Close">&times;</button>
+    </div>
+    <div class="cws-modal-body">
+      <div class="cws-cur-box" id="cwsMdCur-desc-p2"></div>
+      <label class="cws-field-label" for="cwsMdP2">Edit P2</label>
+      <textarea class="cws-textarea" id="cwsMdP2" rows="6" placeholder="Specs, measurements, condition notes&hellip;"></textarea>
+      <div class="cws-modal-footer">
+        <button class="cws-btn cws-primary" onclick="cwsConfirm('desc-p2')">Confirm</button>
+        <button class="cws-btn" onclick="cwsClose('desc-p2')">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── CWS Modal: Description+ P3 ── -->
+<div class="cws-modal-bd" id="cwsModalBd-desc-p3" onclick="if(event.target===this)cwsClose('desc-p3')">
+  <div class="cws-modal" role="dialog" aria-modal="true" aria-labelledby="cwsMdHdr-desc-p3">
+    <div class="cws-modal-hdr">
+      <h3 id="cwsMdHdr-desc-p3">P3 &middot; Service Block</h3>
+      <button class="cws-modal-close" onclick="cwsClose('desc-p3')" aria-label="Close">&times;</button>
+    </div>
+    <div class="cws-modal-body">
+      <div class="cws-cur-box" id="cwsMdCur-desc-p3"></div>
+      <label class="cws-field-label" for="cwsMdP3">Edit P3</label>
+      <textarea class="cws-textarea" id="cwsMdP3" rows="4" placeholder="Badge copy&hellip;"></textarea>
+      <div class="cws-modal-footer">
+        <button class="cws-btn cws-primary" onclick="cwsConfirm('desc-p3')">Confirm</button>
+        <button class="cws-btn" onclick="cwsClose('desc-p3')">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── CWS Modal: Keyword+ ── -->
+<div class="cws-modal-bd" id="cwsModalBd-kw" onclick="if(event.target===this)cwsClose('kw')">
+  <div class="cws-modal" role="dialog" aria-modal="true" aria-labelledby="cwsMdHdr-kw">
+    <div class="cws-modal-hdr">
+      <h3 id="cwsMdHdr-kw">Keyword+</h3>
+      <button class="cws-modal-close" onclick="cwsClose('kw')" aria-label="Close">&times;</button>
+    </div>
+    <div class="cws-modal-body">
+      <div class="cws-cur-box" id="cwsMdCur-kw"></div>
+      <label class="cws-field-label" for="cwsMdKw">P4 &middot; Keyword Line + Hashtag Run</label>
+      <textarea class="cws-textarea" id="cwsMdKw" rows="6" placeholder="Keyword line&hellip;&#10;&#10;#hashtag1 #hashtag2 &hellip;"></textarea>
+      <div class="cws-modal-footer">
+        <button class="cws-btn cws-primary" onclick="cwsConfirm('kw')">Confirm</button>
+        <button class="cws-btn" onclick="cwsClose('kw')">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+const SKU = 'Pants-1686';
+const STORE = 'rrr_' + SKU + '_v6';
+const IAM_KEY = 'rrr_iam_v1';
+
+const FACTORY_NOTES = {
+  'vendoo.title': [{author:'Vaughn', text:"Needs Tracie's approval.", at:'2026-05-07 18:00'}],
+  'vendoo.desc.p1': [{author:'Vaughn', text:"Needs Tracie's approval.", at:'2026-05-07 18:00'}],
+  'ebay.title': [{author:'Vaughn', text:"Needs Tracie's approval.", at:'2026-05-07 18:00'}],
+  'ebay.desc.p1': [{author:'Vaughn', text:"Needs Tracie's approval.", at:'2026-05-07 18:00'}]
+};
+
+let state = {};
+try { state = JSON.parse(localStorage.getItem(STORE) || '{}'); } catch(e) { state = {}; }
+Object.keys(FACTORY_NOTES).forEach(f => { if (!state[f]) state[f] = {notes: [...FACTORY_NOTES[f]]}; });
+
+const AUTHORS = ['Vaughn','Tracie','Shital','Elle','Operator','AI'];
+
+const LMAP = {
+  'vendoo':'Vendoo','ebay':'eBay','posh':'Poshmark','depop':'Depop','merc':'Mercari',
+  'ref':'Reference','cap':'Copy Capture','prov':'Provenance','aspect':'Specifics',
+  'desc':'Description','photos':'Photos','title':'Title','brand':'Brand',
+  'condition':'Condition','color1':'Primary Color','color2':'Secondary Color','sku':'SKU',
+  'zip':'Zip Code','tags':'Tags','qty':'Quantity','tag':'Tag','cat':'Category','size':'US Size','size_type':'Size Type',
+  'weight':'Weight','dim':'Dimensions','pkg':'Package','oz':'oz','lbs':'lbs','price':'Listing Price','listing_price':'Listing Price','cog':'Cost of Goods',
+  'labels':'Labels','notes':'Internal Notes','color':'Color','priceformat':'Price Format',
+  'bestoffer':'Allow Best Offer','shipping':'Shipping Policy','return':'Return Policy',
+  'sizetype':'Size Type','department':'Department','sleeve':'Sleeve Length','pattern':'Pattern',
+  'material':'Material','country':'Country of Origin','care':'Garment Care','neckline':'Neckline',
+  'collar':'Collar Style','closure':'Closure','occasion':'Occasion','vintage':'Vintage',
+  'fit':'Fit','chest':'Chest Size','productline':'Product Line','model':'Model',
+  'mpn':'MPN','upc':'UPC','bust':'Bust','length':'Length','stretch':'Stretch',
+  'msrp':'MSRP','median':'Comp Median','p75':'Comp p75','range':'Comp Range',
+  'expected':'Expected Sold','net':'Net @ Sold','silhouette':'Silhouette',
+  'aesthetic':'Aesthetic','usecases':'Use Cases','detailing':'Detailing',
+  'p1':'P1 Opening','smc':'P2 SMC','service':'P3 Service Block','keywords':'P4 Keyword Dump',
+  'p2':'Phase 2 Closed','bench':'Bench Session','source':'Source','rn':'RN',
+  'style':'Style Code','category':'Category','list':'List Price','floor':'Floor',
+  'walk':'Walk-Away','schema':'Schema'
+};
+
+function save() {
+  localStorage.setItem(STORE, JSON.stringify(state));
+  refreshSaveBtn();
+}
+
+function pathToLabel(p) {
+  return p.split('.').map(s => LMAP[s] || s).join(' › ');
+}
+
+function setIam(v) {
+  localStorage.setItem(IAM_KEY, v);
+  const a = document.getElementById('mdAuthor');
+  if (a) a.value = v;
+}
+
+function populateAuthors() {
+  const sel = document.getElementById('mdAuthor');
+  if (!sel) return;
+  sel.innerHTML = AUTHORS.map(a => '<option>' + a + '</option>').join('');
+  const iam = localStorage.getItem(IAM_KEY) || 'Vaughn';
+  sel.value = iam;
+  const op = document.getElementById('opIam');
+  if (op) op.value = iam;
+}
+
+function refreshSaveBtn() {
+  const pending = Object.values(state).filter(v =>
+    v && (
+      (v.notes && v.notes.some(n => !n.exported)) ||
+      (v.override !== undefined && !v.overrideExported)
+    )
+  ).length;
+  const btn = document.getElementById('saveNotesBtn');
+  const pc = document.getElementById('pcount');
+  if (!btn) return;
+  if (pending > 0) {
+    btn.disabled = false;
+    btn.classList.add('has-pending');
+    if (pc) { pc.style.display = 'inline-block'; pc.textContent = pending; }
+  } else {
+    btn.disabled = true;
+    btn.classList.remove('has-pending');
+    if (pc) pc.style.display = 'none';
+  }
+}
+
+function copyVal(btn, val) {
+  navigator.clipboard.writeText(val).then(() => {
+    const o = btn.textContent;
+    btn.classList.add('copied');
+    btn.textContent = 'copied ✓';
+    setTimeout(() => { btn.classList.remove('copied'); btn.textContent = o; }, 1200);
+  }).catch(() => {
+    btn.textContent = 'ctrl+c';
+    setTimeout(() => btn.textContent = 'copy', 1200);
+  });
+}
+
+// ── Section band toggle ──
+function toggleBand(hdrEl) {
+  const band = hdrEl.closest('.sband');
+  if (band) band.classList.toggle('open');
+}
+
+// ── Tracker toggle ──
+function toggleTracker() {
+  const toggle = document.getElementById('flowStepToggle');
+  const children = document.getElementById('trackerChildren');
+  if (!toggle || !children) return;
+  const isOpen = children.classList.contains('open');
+  children.classList.toggle('open', !isOpen);
+  toggle.classList.toggle('expanded', !isOpen);
+}
+
+// ── Field editor modal ──
+let _curField = null;
+
+function openField(fieldPath) {
+  _curField = fieldPath;
+  const el = document.querySelector('.row[data-field="' + fieldPath + '"]');
+  const status = el ? el.dataset.status : 'gray';
+  const value  = el ? el.dataset.value  : '';
+  const source = el ? el.dataset.source : '';
+
+  document.getElementById('mdTitle').textContent = pathToLabel(fieldPath);
+
+  const icon = document.getElementById('mdIcon');
+  icon.className = 'conf ' + status;
+  const icons = {green:'✓', yellow:'⚠', red:'✗', gray:'−'};
+  icon.textContent = icons[status] || '−';
+
+  document.getElementById('mdStatus').textContent = status || '—';
+  document.getElementById('mdValue').textContent  = value  || '(empty)';
+  document.getElementById('mdSource').textContent = source || '—';
+
+  // Render editable value select if data-options present
+  const opts = el ? el.dataset.options : null;
+  const editDiv = document.getElementById('mdValueEdit');
+  if (editDiv) {
+    if (opts) {
+      const optArr = opts.split('|');
+      let html = '<div style="padding:8px 0"><p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-soft);margin:0 0 6px">Edit Value</p>';
+      html += '<select id="mdValueSelect" style="font:13px/1.4 inherit;border:1px solid var(--bd);border-radius:4px;padding:6px 8px;width:100%">';
+      optArr.forEach(function(o) { html += '<option value="' + o + '"' + (o === value ? ' selected' : '') + '>' + o + '</option>'; });
+      html += '</select><div style="margin-top:8px"><button onclick="applyFieldValue()" style="font:inherit;background:var(--accent);color:#fff;border:none;border-radius:4px;padding:7px 14px;cursor:pointer;font-weight:600;font-size:13px">Apply Value</button></div></div>';
+      editDiv.innerHTML = html;
+      editDiv.style.display = 'block';
+    } else {
+      let html2 = '<div style="padding:8px 0">';
+      html2 += '<p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-soft);margin:0 0 6px">Edit Value</p>';
+      html2 += '<input id="mdValueInput" type="text" value="' + (value||'').replace(/"/g,'&quot;') + '" style="font:13px/1.4 inherit;border:1px solid var(--bd);border-radius:4px;padding:6px 8px;width:100%;box-sizing:border-box">';
+      html2 += '<div style="margin-top:8px"><button onclick="applyFieldValue()" style="font:inherit;background:var(--accent);color:#fff;border:none;border-radius:4px;padding:7px 14px;cursor:pointer;font-weight:600;font-size:13px">Save</button></div></div>';
+      editDiv.innerHTML = html2;
+      editDiv.style.display = 'block';
+    }
+  }
+
+  if (!state[fieldPath]) state[fieldPath] = {notes:[]};
+  const resolved = state[fieldPath].resolved;
+  const banner = document.getElementById('mdResolvedBanner');
+  const resolveBtn = document.getElementById('mdResolveBtn');
+  const reopenBtn  = document.getElementById('mdReopenBtn');
+  if (resolved) {
+    banner.style.display = 'block';
+    banner.textContent = '✓ Resolved — ' + (state[fieldPath].resolvedAt || '');
+    resolveBtn.style.display = 'none';
+    reopenBtn.style.display  = 'inline-block';
+  } else {
+    banner.style.display = 'none';
+    resolveBtn.style.display = 'inline-block';
+    reopenBtn.style.display  = 'none';
+  }
+
+  renderNotes(fieldPath);
+  populateAuthors();
+  document.getElementById('mdText').value = '';
+  document.getElementById('modalBd').classList.add('open');
+}
+
+function closeModal() {
+  document.getElementById('modalBd').classList.remove('open');
+  _curField = null;
+}
+
+function applyFieldValue() {
+  if (!_curField) return;
+  const sel = document.getElementById('mdValueSelect');
+  const inp = document.getElementById('mdValueInput');
+  const newVal = sel ? sel.value : (inp ? inp.value : '');
+  if (!newVal && newVal !== '0') return;
+  const el = document.querySelector('.row[data-field="' + _curField + '"]');
+  if (el) {
+    el.dataset.value = newVal;
+    const sbVal = el.querySelector('.sb-val');
+    if (sbVal) sbVal.textContent = newVal;
+    const cbVal = el.querySelector('.cb-val');
+    if (cbVal) cbVal.textContent = newVal;
+    document.getElementById('mdValue').textContent = newVal;
+  }
+  // Persist the override so it survives page reload
+  if (!state[_curField]) state[_curField] = {notes:[]};
+  state[_curField].override = newVal;
+  save();
+}
+
+function renderNotes(fieldPath) {
+  const list = document.getElementById('mdNotesList');
+  const notes = (state[fieldPath] && state[fieldPath].notes) || [];
+  if (!notes.length) {
+    list.innerHTML = '<div class="mb-empty">No notes yet.</div>';
+    return;
+  }
+  list.innerHTML = notes.map(n =>
+    '<div class="note-entry">' +
+    '<div class="nmeta"><span>' + (n.author||'?') + '</span><span>' + (n.at||'') + '</span></div>' +
+    '<div>' + (n.text||'') + '</div>' +
+    '</div>'
+  ).join('');
+}
+
+function addNote() {
+  if (!_curField) return;
+  const text = document.getElementById('mdText').value.trim();
+  if (!text) return;
+  const author = document.getElementById('mdAuthor').value;
+  const now = new Date().toISOString().slice(0,16).replace('T',' ');
+  if (!state[_curField]) state[_curField] = {notes:[]};
+  state[_curField].notes.push({author, text, at: now});
+  save();
+  renderNotes(_curField);
+  document.getElementById('mdText').value = '';
+  updateConfBadge(_curField);
+}
+
+function markResolved() {
+  if (!_curField) return;
+  if (!state[_curField]) state[_curField] = {notes:[]};
+  state[_curField].resolved = true;
+  state[_curField].resolvedAt = new Date().toISOString().slice(0,16).replace('T',' ');
+  save();
+  openField(_curField);
+}
+
+function reopen() {
+  if (!_curField) return;
+  if (state[_curField]) {
+    delete state[_curField].resolved;
+    delete state[_curField].resolvedAt;
+  }
+  save();
+  openField(_curField);
+}
+
+function updateConfBadge(fieldPath) {
+  const btn = document.querySelector('.row[data-field="' + fieldPath + '"] .conf');
+  if (btn && state[fieldPath] && state[fieldPath].notes && state[fieldPath].notes.length) {
+    btn.classList.add('has-note');
+  }
+}
+
+function exportHandcuff() {
+  const out = {
+    sku: SKU,
+    exported_at: new Date().toISOString().slice(0,19)
+  };
+  Object.keys(state).forEach(k => {
+    const s = state[k];
+    if (!s) return;
+    const hasNotes = s.notes && s.notes.length;
+    const hasOverride = Object.prototype.hasOwnProperty.call(s, 'override');
+    if (!hasNotes && !hasOverride) return;
+    const entry = {};
+    if (hasOverride) {
+      // Pull the live displayed value at click-time, per spec.
+      const el = document.querySelector('.row[data-field="' + k + '"]');
+      let dispVal = s.override;
+      if (el) {
+        const node = el.querySelector('.cb-val') || el.querySelector('.sb-val');
+        if (node) dispVal = node.textContent;
+      }
+      entry.value = dispVal;
+    }
+    if (hasNotes) {
+      entry.notes = s.notes;
+      entry.resolved = s.resolved || false;
+    }
+    out[k] = entry;
+  });
+  const blob = new Blob([JSON.stringify(out, null, 2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'Pants-1686-notes.json';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+// ── CWS (Copy Workstream) blocks ──
+const CWS_STORE = 'rrr_' + SKU + '_cws_v1';
+let cwsState = {};
+try { cwsState = JSON.parse(localStorage.getItem(CWS_STORE) || '{}'); } catch(e) { cwsState = {}; }
+
+function cwsSave() { localStorage.setItem(CWS_STORE, JSON.stringify(cwsState)); }
+
+function cwsOpen(key) {
+  const bd = document.getElementById('cwsModalBd-' + key);
+  if (!bd) return;
+  if (key === 'title') {
+    const cur = document.getElementById('cws-title-display');
+    const inp = document.getElementById('cwsMdInput-title');
+    const curBox = document.getElementById('cwsMdCur-title');
+    if (curBox) curBox.textContent = cur ? cur.textContent : '';
+    if (inp) { inp.value = cur ? cur.textContent : ''; cwsUpdateCharCount('title', inp.value, 80); }
+  } else if (key === 'desc-p1') {
+    const curP1 = document.getElementById('cws-desc-p1-display');
+    const valP1 = curP1 ? curP1.textContent : '';
+    const curBoxP1 = document.getElementById('cwsMdCur-desc-p1');
+    if (curBoxP1) curBoxP1.textContent = valP1;
+    const inpP1 = document.getElementById('cwsMdP1');
+    if (inpP1) inpP1.value = valP1;
+  } else if (key === 'desc-p2') {
+    const curP2 = document.getElementById('cws-desc-p2-display');
+    const valP2 = curP2 ? curP2.textContent : '';
+    const curBoxP2 = document.getElementById('cwsMdCur-desc-p2');
+    if (curBoxP2) curBoxP2.innerHTML = '<pre style="white-space:pre-wrap;font-family:inherit;margin:0">' + valP2.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</pre>';
+    const inpP2 = document.getElementById('cwsMdP2');
+    if (inpP2) inpP2.value = valP2;
+  } else if (key === 'desc-p3') {
+    const curP3 = document.getElementById('cws-desc-p3-display');
+    const valP3 = curP3 ? curP3.textContent : '';
+    const curBoxP3 = document.getElementById('cwsMdCur-desc-p3');
+    if (curBoxP3) curBoxP3.innerHTML = '<pre style="white-space:pre-wrap;font-family:inherit;margin:0">' + valP3.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</pre>';
+    const inpP3 = document.getElementById('cwsMdP3');
+    if (inpP3) inpP3.value = valP3;
+  } else if (key === 'kw') {
+    const kw = document.getElementById('cws-kw-display');
+    const kwVal = kw ? kw.textContent : '';
+    const kwCurBox = document.getElementById('cwsMdCur-kw');
+    if (kwCurBox) kwCurBox.innerHTML = '<pre style="white-space:pre-wrap;font-family:inherit;margin:0">' + kwVal.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</pre>';
+    if (document.getElementById('cwsMdKw')) document.getElementById('cwsMdKw').value = kwVal;
+  }
+  bd.classList.add('open');
+}
+
+function cwsClose(key) {
+  const bd = document.getElementById('cwsModalBd-' + key);
+  if (bd) bd.classList.remove('open');
+}
+
+function cwsUpdateCharCount(key, val, max) {
+  const ct = document.getElementById('cwsCharCt-' + key);
+  if (!ct) return;
+  const n = val.length;
+  ct.textContent = n + ' / ' + max;
+  ct.className = 'cws-char-ct' + (n > max ? ' over' : n > max * 0.9 ? ' warn' : '');
+}
+
+function cwsConfirm(key) {
+  if (key === 'title') {
+    const val = (document.getElementById('cwsMdInput-title') || {}).value || '';
+    const disp = document.getElementById('cws-title-display');
+    if (disp) disp.textContent = val;
+    const block = document.getElementById('cwsb-title');
+    if (block) {
+      block.classList.remove('cws-pending');
+      block.classList.add('cws-confirmed');
+      const badge = block.querySelector('.cwsb-badge');
+      if (badge) { badge.className = 'cwsb-badge cws-confirmed'; badge.textContent = '✓ Confirmed'; }
+      const meta = block.querySelector('.cwsb-meta');
+      if (meta) meta.textContent = val.length + ' chars';
+    }
+    cwsState.title = val;
+  } else if (key === 'desc-p1' || key === 'desc-p2' || key === 'desc-p3') {
+    const pKey = key.split('-')[1]; // 'p1', 'p2', or 'p3'
+    const inputId = pKey === 'p1' ? 'cwsMdP1' : pKey === 'p2' ? 'cwsMdP2' : 'cwsMdP3';
+    const val = (document.getElementById(inputId) || {}).value || '';
+    const disp = document.getElementById('cws-desc-' + pKey + '-display');
+    if (disp) disp.textContent = val;
+    // Mark sub-block confirmed
+    const subBlock = document.getElementById('cwsb-desc-' + pKey);
+    if (subBlock) {
+      subBlock.classList.remove('cws-subblock-pending');
+      subBlock.classList.add('cws-subblock-confirmed');
+      const badge = document.getElementById('cwsb-desc-' + pKey + '-badge');
+      if (badge) { badge.className = 'cws-subblock-badge cws-subblock-confirmed'; badge.textContent = '\u2713 Confirmed'; }
+    }
+    if (!cwsState.desc) cwsState.desc = {};
+    cwsState.desc[pKey] = val;
+    cwsState.desc[pKey + '_confirmed'] = true;
+    // Check if all 3 confirmed → mark parent
+    const allConfirmed = ['p1','p2','p3'].every(function(p) {
+      const sb = document.getElementById('cwsb-desc-' + p);
+      return sb && sb.classList.contains('cws-subblock-confirmed');
+    });
+    if (allConfirmed) {
+      const parentBlock = document.getElementById('cwsb-desc');
+      if (parentBlock) {
+        parentBlock.classList.remove('cws-pending');
+        parentBlock.classList.add('cws-confirmed');
+        const parentBadge = document.getElementById('cwsb-desc-badge');
+        if (parentBadge) { parentBadge.className = 'cwsb-badge cws-confirmed'; parentBadge.textContent = '\u2713 Confirmed'; }
+      }
+    }
+  } else if (key === 'kw') {
+    const kwv = (document.getElementById('cwsMdKw') || {}).value || '';
+    const disp = document.getElementById('cws-kw-display');
+    if (disp) disp.textContent = kwv;
+    const block = document.getElementById('cwsb-kw');
+    if (block && kwv) {
+      block.classList.remove('cws-pending');
+      block.classList.add('cws-confirmed');
+      const badge = block.querySelector('.cwsb-badge');
+      if (badge) { badge.className = 'cwsb-badge cws-confirmed'; badge.textContent = '✓ Confirmed'; }
+    }
+    cwsState.kw = kwv;
+  }
+  cwsSave();
+  cwsClose(key);
+}
+
+// ── Photo lightbox ──
+function openPhotoLB(src, label) {
+  document.getElementById('photoLbImg').src = src;
+  document.getElementById('photoLbLabel').textContent = label || '';
+  document.getElementById('photoLbBd').classList.add('open');
+}
+
+function closePhotoLB() {
+  document.getElementById('photoLbBd').classList.remove('open');
+  document.getElementById('photoLbImg').src = '';
+}
+
+// ── Photo grid: make embedded photos clickable ──
+function wirePhotoGrid() {
+  document.querySelectorAll('.photo-grid .photo img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', function(e) {
+      e.preventDefault();
+      const label = this.closest('.photo').querySelector('.ph-label');
+      openPhotoLB(this.src, label ? label.textContent : '');
+    });
+  });
+}
+
+// ── Apply saved CWS state ──
+function applyCwsState() {
+  if (cwsState.title) {
+    const disp = document.getElementById('cws-title-display');
+    if (disp) disp.textContent = cwsState.title;
+    const block = document.getElementById('cwsb-title');
+    if (block) {
+      block.classList.remove('cws-pending'); block.classList.add('cws-confirmed');
+      const badge = block.querySelector('.cwsb-badge');
+      if (badge) { badge.className = 'cwsb-badge cws-confirmed'; badge.textContent = '✓ Confirmed'; }
+      const meta = block.querySelector('.cwsb-meta');
+      if (meta) meta.textContent = cwsState.title.length + ' chars';
+    }
+  }
+  if (cwsState.desc) {
+    ['p1','p2','p3'].forEach(function(pKey) {
+      const val = cwsState.desc[pKey];
+      if (!val) return;
+      const disp = document.getElementById('cws-desc-' + pKey + '-display');
+      if (disp) disp.textContent = val;
+      if (cwsState.desc[pKey + '_confirmed']) {
+        const subBlock = document.getElementById('cwsb-desc-' + pKey);
+        if (subBlock) {
+          subBlock.classList.remove('cws-subblock-pending');
+          subBlock.classList.add('cws-subblock-confirmed');
+          const badge = document.getElementById('cwsb-desc-' + pKey + '-badge');
+          if (badge) { badge.className = 'cws-subblock-badge cws-subblock-confirmed'; badge.textContent = '✓ Confirmed'; }
+        }
+      }
+    });
+    if (cwsState.desc.p1_confirmed && cwsState.desc.p2_confirmed && cwsState.desc.p3_confirmed) {
+      const parentBlock = document.getElementById('cwsb-desc');
+      if (parentBlock) {
+        parentBlock.classList.remove('cws-pending');
+        parentBlock.classList.add('cws-confirmed');
+        const parentBadge = document.getElementById('cwsb-desc-badge');
+        if (parentBadge) { parentBadge.className = 'cwsb-badge cws-confirmed'; parentBadge.textContent = '✓ Confirmed'; }
+      }
+    }
+  }
+  if (cwsState.kw) {
+    const disp = document.getElementById('cws-kw-display');
+    if (disp) disp.textContent = cwsState.kw;
+    const block = document.getElementById('cwsb-kw');
+    if (block) {
+      block.classList.remove('cws-pending'); block.classList.add('cws-confirmed');
+      const badge = block.querySelector('.cwsb-badge');
+      if (badge) { badge.className = 'cwsb-badge cws-confirmed'; badge.textContent = '✓ Confirmed'; }
+    }
+  }
+}
+
+// ── Apply persisted field notes badges ──
+function applyState() {
+  document.querySelectorAll('.row[data-field]').forEach(row => {
+    const f = row.dataset.field;
+    if (!state[f]) return;
+    // Restore persisted value override
+    if (state[f].override !== undefined) {
+      const v = state[f].override;
+      row.dataset.value = v;
+      const sbVal = row.querySelector('.sb-val');
+      if (sbVal) sbVal.textContent = v;
+      const cbVal = row.querySelector('.cb-val');
+      if (cbVal) cbVal.textContent = v;
+      // Mark the conf button so the operator knows it was overridden
+      const btn = row.querySelector('.conf');
+      if (btn) btn.title = 'Operator override: ' + v;
+    }
+    // Restore note badge
+    if (state[f].notes && state[f].notes.length) {
+      const btn = row.querySelector('.conf');
+      if (btn) btn.classList.add('has-note');
+    }
+  });
+  refreshSaveBtn();
+}
+
+// ── Keyboard: Escape closes any open modal ──
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeModal();
+    ['title','desc-p1','desc-p2','desc-p3','kw'].forEach(cwsClose);
+    closePhotoLB();
+  }
+});
+
+// ── Init ──
+document.addEventListener('DOMContentLoaded', function() {
+  populateAuthors();
+  applyState();
+  applyCwsState();
+  wirePhotoGrid();
+});
+</script>
+
+<!-- ── Field editor modal ── -->
+<div class="modal-bd" id="modalBd" onclick="if(event.target===this)closeModal()">
+  <div class="modal" role="dialog" aria-modal="true">
+    <header>
+      <button class="conf" id="mdIcon" disabled style="cursor:default">✓</button>
+      <h3 id="mdTitle">Field</h3>
+      <button class="close" onclick="closeModal()" aria-label="Close">&times;</button>
+    </header>
+    <div class="mbody">
+      <div class="mb-cur">
+        <div><span class="clabel">Status</span> <span id="mdStatus">—</span></div>
+        <div><span class="clabel">Value</span> <span id="mdValue">—</span></div>
+        <div><span class="clabel">Source</span> <span id="mdSource">—</span></div>
+      </div>
+      <div id="mdResolvedBanner" class="resolved-banner" style="display:none"></div>
+      <div id="mdValueEdit" style="display:none;margin:10px 0 0;padding-bottom:10px;border-bottom:1px solid var(--bd)"></div>
+      <div class="mb-notes">
+        <h4 class="sh">Notes</h4>
+        <div id="mdNotesList"></div>
+      </div>
+      <div class="mb-add">
+        <div class="row-controls">From <select id="mdAuthor"></select></div>
+        <textarea id="mdText" placeholder="Add a note for this field…" rows="3"></textarea>
+        <div class="mb-actions">
+   

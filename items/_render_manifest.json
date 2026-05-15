@@ -1,828 +1,1563 @@
 {
+  "Accessories-0001": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Accessories-0001.json",
+    "source_sha256": "85ea4afb268fd73491f4eac3dce0a6b13c08f9557e7c0db9ce6bbd448510c63d",
+    "source_mtime": "2026-05-14T03:21:36.746357Z",
+    "rendered_at": "2026-05-15T02:13:53.746465Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Accessories-0002": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Accessories-0002.json",
+    "source_sha256": "cd1be376acfe72f044cd6f5d6d20be631a701cd11fd90db6a998dcdd98a586c5",
+    "source_mtime": "2026-05-14T03:21:36.752706Z",
+    "rendered_at": "2026-05-15T02:13:53.774475Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Accessories-0003": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Accessories-0003.json",
+    "source_sha256": "b90ae337fcae2caf5d21ea72567b4a41b6aa30cbc2dfde81e550c4d4565ef069",
+    "source_mtime": "2026-05-07T02:54:33.135576Z",
+    "rendered_at": "2026-05-15T02:13:53.798674Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Accessories-0004": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Accessories-0004.json",
+    "source_sha256": "3482a358614e206b92a5c1d8a07527a9b49167134b1a328ca1373169a8c01a35",
+    "source_mtime": "2026-05-14T03:21:36.758784Z",
+    "rendered_at": "2026-05-15T02:13:53.825598Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Accessories-0005": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Accessories-0005.json",
+    "source_sha256": "6edfca7d3672f43026282af04cc0890c95731b7c91b4879b3edc7cd13e166ab9",
+    "source_mtime": "2026-05-07T02:54:33.146214Z",
+    "rendered_at": "2026-05-15T02:13:53.851180Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Accessories-0006": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Accessories-0006.json",
+    "source_sha256": "c9cd9572d66d52ae8ff3ef50786a6df33ef96a88aee8d9296bb80bfb743a7d0a",
+    "source_mtime": "2026-05-07T02:54:33.151181Z",
+    "rendered_at": "2026-05-15T02:13:53.876748Z",
+    "renderer_version": "de26f26db52a"
+  },
   "Accessories-1842": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Accessories-1842.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Accessories-1842.json",
     "source_sha256": "c0052a762ae9bcac0f02d8918459911eea21d67a694a22338d780f0339e38b43",
     "source_mtime": "2026-05-15T00:54:36.085667Z",
-    "rendered_at": "2026-05-15T01:40:11.352865Z",
+    "rendered_at": "2026-05-15T02:13:48.904099Z",
     "renderer_version": "de26f26db52a"
   },
   "Accessories-1843": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Accessories-1843.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Accessories-1843.json",
     "source_sha256": "658c5683f1a1bff291b396dd71a183bda4a74fac9e6764b0a3785e9fac981980",
     "source_mtime": "2026-05-14T17:06:42.734816Z",
-    "rendered_at": "2026-05-15T01:40:11.381430Z",
+    "rendered_at": "2026-05-15T02:13:48.934537Z",
     "renderer_version": "de26f26db52a"
   },
   "Accessories-1844": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Accessories-1844.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Accessories-1844.json",
     "source_sha256": "550afdd15fd207206a0e45b58ecc00def5e76e9c47ddc0ffe7137aa599a72e08",
     "source_mtime": "2026-05-14T17:06:42.750791Z",
-    "rendered_at": "2026-05-15T01:40:11.409095Z",
+    "rendered_at": "2026-05-15T02:13:48.965688Z",
     "renderer_version": "de26f26db52a"
   },
   "Accessories-1845": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Accessories-1845.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Accessories-1845.json",
     "source_sha256": "387a39ebe4c8eb079053bdcb74cc6ae07c6fb2d23bcdb2fed3768d552f25b2d3",
     "source_mtime": "2026-05-14T17:06:42.765798Z",
-    "rendered_at": "2026-05-15T01:40:11.436294Z",
+    "rendered_at": "2026-05-15T02:13:48.994056Z",
     "renderer_version": "de26f26db52a"
   },
   "Accessories-1846": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Accessories-1846.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Accessories-1846.json",
     "source_sha256": "42fe556a7d04b09b209d5dc769873ebea96be7e32b8d2998c8f988d84418e604",
     "source_mtime": "2026-05-14T17:06:42.780792Z",
-    "rendered_at": "2026-05-15T01:40:11.465267Z",
+    "rendered_at": "2026-05-15T02:13:49.025839Z",
     "renderer_version": "de26f26db52a"
   },
   "Dresses-0418": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Dresses-0418.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Dresses-0418.json",
     "source_sha256": "497775fa058eec7c961334dfcd653f9a7d2b4e7b4b51fd4e490642d154727945",
     "source_mtime": "2026-05-14T17:06:42.795791Z",
-    "rendered_at": "2026-05-15T01:40:11.491106Z",
+    "rendered_at": "2026-05-15T02:13:49.056948Z",
     "renderer_version": "de26f26db52a"
   },
   "Dresses-0419": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Dresses-0419.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Dresses-0419.json",
     "source_sha256": "158c494f36b64eab9d4a97a90884cd3b14d8bd2b3eeed403da985fe72d1dd29d",
     "source_mtime": "2026-05-14T16:04:03.574698Z",
-    "rendered_at": "2026-05-15T01:40:11.519024Z",
+    "rendered_at": "2026-05-15T02:13:49.086178Z",
     "renderer_version": "de26f26db52a"
   },
   "Dresses-0420": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Dresses-0420.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Dresses-0420.json",
     "source_sha256": "5777fd9622155e4ba6c47211dcfa106fd1c252dc022ea13f650c1f85dcb08a11",
     "source_mtime": "2026-05-15T00:54:36.095666Z",
-    "rendered_at": "2026-05-15T01:40:11.549831Z",
+    "rendered_at": "2026-05-15T02:13:49.117433Z",
     "renderer_version": "de26f26db52a"
   },
   "Dresses-0421": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/Dresses-0421.json",
-    "source_sha256": "ac1f7441f8188ddea4c3b1328b83e2d44d8274e5a3ae1ffc8f400f5b5809b606",
-    "source_mtime": "2026-05-15T00:42:47.087057Z",
-    "rendered_at": "2026-05-15T01:40:13.352819Z",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/Dresses-0421.json",
+    "source_sha256": "9157c238dfd051ccdc52805e4d39ecd9d15793557c17afcad4e41deea9a31e86",
+    "source_mtime": "2026-05-15T01:45:13.529480Z",
+    "rendered_at": "2026-05-15T02:13:51.057527Z",
     "renderer_version": "de26f26db52a"
   },
   "Outerwear-0214": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0214.json",
-    "source_sha256": "77d6b1fc285f10b5ef16ad39447c04b70800e9466523fc62fc6de4be401aad8b",
-    "source_mtime": "2026-05-14T19:09:20.858790Z",
-    "rendered_at": "2026-05-15T01:40:11.579870Z",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0214.json",
+    "source_sha256": "d8d0739d9069507f71e0e7412f9fbaa501d6e2f576c0684b018aca242cb2c901",
+    "source_mtime": "2026-05-15T01:55:37.449426Z",
+    "rendered_at": "2026-05-15T02:13:49.147961Z",
     "renderer_version": "de26f26db52a"
   },
   "Outerwear-0215": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0215.json",
-    "source_sha256": "fb13a4a6c641aec05a3fe88d1ec499124c026f50f721f0a4ef4e19783ce5689f",
-    "source_mtime": "2026-05-14T19:09:20.874794Z",
-    "rendered_at": "2026-05-15T01:40:11.610090Z",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0215.json",
+    "source_sha256": "6193f358393dda06ed20f6dbce8da7f01c576424020e101af08067b65c69a01f",
+    "source_mtime": "2026-05-15T01:55:37.460937Z",
+    "rendered_at": "2026-05-15T02:13:49.182052Z",
     "renderer_version": "de26f26db52a"
   },
   "Outerwear-0216": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0216.json",
-    "source_sha256": "91f286833909d4b70ff43881ab31364947903faf50e8f5f74f450f05f5959e04",
-    "source_mtime": "2026-05-14T19:09:20.885561Z",
-    "rendered_at": "2026-05-15T01:40:11.642080Z",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0216.json",
+    "source_sha256": "e31e97155199236f3194fbe9bf16a612fc5acb4483248a00d494dac07ea21f0c",
+    "source_mtime": "2026-05-15T01:55:37.470450Z",
+    "rendered_at": "2026-05-15T02:13:49.218015Z",
     "renderer_version": "de26f26db52a"
   },
   "Outerwear-0217": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0217.json",
-    "source_sha256": "c0408b7ae292d8a59aad19aeb0583ded39231cbd779724778d3a55a9042c6fc7",
-    "source_mtime": "2026-05-14T19:09:20.897566Z",
-    "rendered_at": "2026-05-15T01:40:11.671674Z",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0217.json",
+    "source_sha256": "cfca905eb9e8c6de53df308d16bd2437c78c121285898daddfc95855f4474ad5",
+    "source_mtime": "2026-05-15T01:55:37.479960Z",
+    "rendered_at": "2026-05-15T02:13:49.248612Z",
     "renderer_version": "de26f26db52a"
   },
   "Outerwear-0218": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0218.json",
-    "source_sha256": "64256153a774949cc734edb898d967a7168fea6fea9ed005b13498af81e2a70c",
-    "source_mtime": "2026-05-15T00:10:53.443777Z",
-    "rendered_at": "2026-05-15T01:40:11.701485Z",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0218.json",
+    "source_sha256": "b6972131e5934f1bc54e553ca95f9766e3df19201db5f6795e537486625ce763",
+    "source_mtime": "2026-05-15T01:55:37.491019Z",
+    "rendered_at": "2026-05-15T02:13:49.281226Z",
     "renderer_version": "de26f26db52a"
   },
   "Outerwear-0219": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0219.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0219.json",
     "source_sha256": "99975920a557d7b7896243d656bd5923e36093d70b5f3d57ffcc2dc90aa63e1f",
     "source_mtime": "2026-05-14T19:09:20.919566Z",
-    "rendered_at": "2026-05-15T01:40:11.732312Z",
+    "rendered_at": "2026-05-15T02:13:49.319347Z",
     "renderer_version": "de26f26db52a"
   },
   "Outerwear-0220": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0220.json",
-    "source_sha256": "9a978fe2e061003f53a06c11868e0439420c35706e590a6d7427e863029e1c53",
-    "source_mtime": "2026-05-14T19:09:20.932935Z",
-    "rendered_at": "2026-05-15T01:40:11.762217Z",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0220.json",
+    "source_sha256": "bbbd732aa67e40432ae4fe78f4350f035765ce01d051c04c1a65bdccf71e70bf",
+    "source_mtime": "2026-05-15T01:55:37.502049Z",
+    "rendered_at": "2026-05-15T02:13:49.352603Z",
     "renderer_version": "de26f26db52a"
   },
   "Outerwear-0221": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0221.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0221.json",
     "source_sha256": "3fbc0ca05c731ee033ab9ca0dbcb8baf0ce563e50919294ee8c21a7fedd3be30",
     "source_mtime": "2026-05-15T00:11:00.419779Z",
-    "rendered_at": "2026-05-15T01:40:11.795895Z",
+    "rendered_at": "2026-05-15T02:13:49.385650Z",
     "renderer_version": "de26f26db52a"
   },
   "Outerwear-0222": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0222.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0222.json",
     "source_sha256": "9f50fec52b545c5dee3bbeba3eee335fac367d84caf31bb5c6a30b6b25d5f980",
     "source_mtime": "2026-05-14T19:10:30.838128Z",
-    "rendered_at": "2026-05-15T01:40:11.825048Z",
+    "rendered_at": "2026-05-15T02:13:49.417850Z",
     "renderer_version": "de26f26db52a"
   },
   "Outerwear-0223": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0223.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0223.json",
     "source_sha256": "18eb9dd1f416ceebf818be373f3b89133fca964307dacfbea06ba51c846037fe",
     "source_mtime": "2026-05-14T19:10:30.852594Z",
-    "rendered_at": "2026-05-15T01:40:11.855882Z",
+    "rendered_at": "2026-05-15T02:13:49.453458Z",
     "renderer_version": "de26f26db52a"
   },
   "Outerwear-0224": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0224.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0224.json",
     "source_sha256": "d1ba28592ca9406a5290662cef8b01c2ebcee6be07d7759edcf57f1bf81842ca",
     "source_mtime": "2026-05-14T19:10:30.865609Z",
-    "rendered_at": "2026-05-15T01:40:11.886612Z",
+    "rendered_at": "2026-05-15T02:13:49.485746Z",
     "renderer_version": "de26f26db52a"
   },
   "Outerwear-0225": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0225.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0225.json",
     "source_sha256": "8504dd6ff8d589b0162eb9db6dc91be577ffd3370ad5ac066dee2b4be4507233",
     "source_mtime": "2026-05-14T19:10:30.877594Z",
-    "rendered_at": "2026-05-15T01:40:11.918253Z",
+    "rendered_at": "2026-05-15T02:13:49.517412Z",
     "renderer_version": "de26f26db52a"
   },
   "Outerwear-0226": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0226.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0226.json",
     "source_sha256": "8cbf32a15ba7914fe61107f85e8386e57e77d7c066fb30e86f3c9587453c650a",
     "source_mtime": "2026-05-14T19:10:30.888594Z",
-    "rendered_at": "2026-05-15T01:40:11.947390Z",
+    "rendered_at": "2026-05-15T02:13:49.550647Z",
     "renderer_version": "de26f26db52a"
   },
   "Outerwear-0227": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0227.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0227.json",
     "source_sha256": "e5dc39101d28e2030eb99630d75b82b912767e29c1b395146901fdd286f962c2",
     "source_mtime": "2026-05-14T19:10:30.901592Z",
-    "rendered_at": "2026-05-15T01:40:11.977022Z",
+    "rendered_at": "2026-05-15T02:13:49.584156Z",
     "renderer_version": "de26f26db52a"
   },
   "Outerwear-0228": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0228.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0228.json",
     "source_sha256": "2c4e93727537adb3ae2ce5ccd0311a21258672b74dbed9f0c534e9b6960f4cca",
     "source_mtime": "2026-05-14T19:10:30.912601Z",
-    "rendered_at": "2026-05-15T01:40:12.006374Z",
+    "rendered_at": "2026-05-15T02:13:49.617050Z",
     "renderer_version": "de26f26db52a"
   },
   "Outerwear-0229": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/Outerwear-0229.json",
-    "source_sha256": "cedee375906ee85b4c0a9d33b899754b4fa9e6654d302aa15bb030dccbe5cf23",
-    "source_mtime": "2026-05-15T00:41:55.354691Z",
-    "rendered_at": "2026-05-15T01:40:13.383381Z",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/Outerwear-0229.json",
+    "source_sha256": "425e9c664fc9e178b026b0f6da6b76d5f276272c061b71e70309d253abc47e58",
+    "source_mtime": "2026-05-15T01:45:57.887211Z",
+    "rendered_at": "2026-05-15T02:13:51.088526Z",
     "renderer_version": "de26f26db52a"
   },
   "Outerwear-0230": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/Outerwear-0230.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/Outerwear-0230.json",
     "source_sha256": "0bd75603f30b94a4cca050ca227a872e0c7fb99c85f7cec6c493259db98a9aa0",
     "source_mtime": "2026-05-15T00:41:55.379690Z",
-    "rendered_at": "2026-05-15T01:40:13.411962Z",
+    "rendered_at": "2026-05-15T02:13:51.116905Z",
     "renderer_version": "de26f26db52a"
   },
   "Outerwear-0231": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/Outerwear-0231.json",
-    "source_sha256": "406df2e94d32da42d1463e714488044590785e7b3e598e278a7988720f5046b8",
-    "source_mtime": "2026-05-14T17:41:12.010372Z",
-    "rendered_at": "2026-05-15T01:40:13.442999Z",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/Outerwear-0231.json",
+    "source_sha256": "c866d4c14199dc5587c6fb660758d9af9f4b5e2b0f8fabe2d7891d628a56c389",
+    "source_mtime": "2026-05-15T01:47:45.405344Z",
+    "rendered_at": "2026-05-15T02:13:51.151646Z",
     "renderer_version": "de26f26db52a"
   },
   "Outerwear-0232": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/Outerwear-0232.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/Outerwear-0232.json",
     "source_sha256": "22cd24bd44dc7e1122120a949fc539b9282da1cd16e7159f01da2d880c8310b5",
     "source_mtime": "2026-05-15T00:41:55.402698Z",
-    "rendered_at": "2026-05-15T01:40:13.472511Z",
+    "rendered_at": "2026-05-15T02:13:51.181407Z",
     "renderer_version": "de26f26db52a"
   },
   "Outerwear-0233": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/Outerwear-0233.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/Outerwear-0233.json",
     "source_sha256": "c074a306ea23f3c18ad5d5001b685e857a6711bfaaff418ea39c5b8a4307b8aa",
     "source_mtime": "2026-05-15T00:41:55.425353Z",
-    "rendered_at": "2026-05-15T01:40:13.503571Z",
+    "rendered_at": "2026-05-15T02:13:51.216965Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0001": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0001.json",
+    "source_sha256": "1a0b98e2f5af39f02afe5aa56412cb23d0cd866941d1e6b50c80d242b14c9d42",
+    "source_mtime": "2026-05-07T03:28:58.696655Z",
+    "rendered_at": "2026-05-15T02:13:53.902060Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-0002": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0002.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0002.json",
     "source_sha256": "16955ff936d84ffd7478a252ce23f0a6e7e743ae9a81dd4806c5e74e1db3aa26",
     "source_mtime": "2026-05-14T03:21:36.488704Z",
-    "rendered_at": "2026-05-15T01:40:15.085655Z",
+    "rendered_at": "2026-05-15T02:13:53.929711Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0003": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0003.json",
+    "source_sha256": "196311f6c55a5038cdf3347e7beddf9cda552c7016aeaaa1b6b8c13fa491c19a",
+    "source_mtime": "2026-05-14T03:21:36.495023Z",
+    "rendered_at": "2026-05-15T02:13:53.958184Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0004": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0004.json",
+    "source_sha256": "5087b3b20a0eb850e0a728bbaaa21ce2ba7a867dd10eb90d9e18ee078d06c7bc",
+    "source_mtime": "2026-05-07T02:54:33.171273Z",
+    "rendered_at": "2026-05-15T02:13:53.982622Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0005": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0005.json",
+    "source_sha256": "3e6d42b032e0d809f7ec3fe138ab82edd2966ade797929574609eb7371e8791e",
+    "source_mtime": "2026-05-14T03:21:36.504069Z",
+    "rendered_at": "2026-05-15T02:13:54.013477Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0006": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0006.json",
+    "source_sha256": "7c8dbf3b8b9e8e5b7f329c91fd7c9f0afbc2f3b50297dddce9a1d1cd50dc6dda",
+    "source_mtime": "2026-05-14T03:21:36.510240Z",
+    "rendered_at": "2026-05-15T02:13:54.041946Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0007": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0007.json",
+    "source_sha256": "49bac5594d9e914770d97700d0f06fd90b6603661e9b1d88d1eb97e7b22f0ce4",
+    "source_mtime": "2026-05-14T03:21:36.517266Z",
+    "rendered_at": "2026-05-15T02:13:54.069781Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0008": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0008.json",
+    "source_sha256": "9fd0aeb1916b831c24fbe6a12fdb9513c82c58d3e4b4d2fd9b88996331421268",
+    "source_mtime": "2026-05-14T03:21:36.524069Z",
+    "rendered_at": "2026-05-15T02:13:54.097905Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0009": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0009.json",
+    "source_sha256": "9e2c3043152418a81aba0b3ca986888fbdfccc6edba0774d23ce1e8a5da7bbaf",
+    "source_mtime": "2026-05-14T03:21:36.529129Z",
+    "rendered_at": "2026-05-15T02:13:54.124391Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0010": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0010.json",
+    "source_sha256": "f4df0734b9a2f1576e0b46478e1b075d98b25cfd1ed3c0f1c9485c9f5e518372",
+    "source_mtime": "2026-05-12T18:59:01.813985Z",
+    "rendered_at": "2026-05-15T02:13:54.150557Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0011": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0011.json",
+    "source_sha256": "3fe7d26f2620b4b0018a941c259fa082cd10896da1cf94f5538b38b4c79627fb",
+    "source_mtime": "2026-05-14T03:21:36.538879Z",
+    "rendered_at": "2026-05-15T02:13:54.177687Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0012": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0012.json",
+    "source_sha256": "26dca26e5b0078770c6924ef8ba5bd42bacbb99d202553b6da3482ef1a8f6286",
+    "source_mtime": "2026-05-14T03:21:36.546212Z",
+    "rendered_at": "2026-05-15T02:13:54.205605Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0013": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0013.json",
+    "source_sha256": "e415e20ade553bcd42cd56f1c7fa87ecaec7d41298f7e2361abbd95a933f96af",
+    "source_mtime": "2026-05-14T03:21:36.554935Z",
+    "rendered_at": "2026-05-15T02:13:54.233112Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0014": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0014.json",
+    "source_sha256": "93402a028da251b4965dc753d10c0fa0e3c8e59fd89d9df4cd93b368d6d8b7b1",
+    "source_mtime": "2026-05-07T02:54:33.232701Z",
+    "rendered_at": "2026-05-15T02:13:54.260603Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0015": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0015.json",
+    "source_sha256": "6dafc0da8c8be01537468c1a76817d82194efa7eef3536d02b1976848cabdcd2",
+    "source_mtime": "2026-05-14T03:21:36.563049Z",
+    "rendered_at": "2026-05-15T02:13:54.294985Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0016": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0016.json",
+    "source_sha256": "0718cf4947340910d6b4ab060b45a04b60c41268c8bcc762fb5d69b5191d1486",
+    "source_mtime": "2026-05-14T03:21:36.571795Z",
+    "rendered_at": "2026-05-15T02:13:54.324714Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0017": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0017.json",
+    "source_sha256": "050df6fac232954ce2b4750a53b45e841505b1266cb80707dbdf2c020e1028f3",
+    "source_mtime": "2026-05-14T03:21:36.583447Z",
+    "rendered_at": "2026-05-15T02:13:54.357905Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0018": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0018.json",
+    "source_sha256": "6894df28f857883f8639f540c5b25f99f927b0bedab1241d7048404d5efb4b44",
+    "source_mtime": "2026-05-14T03:21:36.591945Z",
+    "rendered_at": "2026-05-15T02:13:54.388666Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0019": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0019.json",
+    "source_sha256": "4ca168ca2b78b65e3a84a2e7a93975dce126f43243acc5dd191a3ad751dc0391",
+    "source_mtime": "2026-05-14T03:21:36.602611Z",
+    "rendered_at": "2026-05-15T02:13:54.418401Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0020": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0020.json",
+    "source_sha256": "be879aa8923d4e53df374c61ffbed8d17e78169badaac8314d17989b6e65fce5",
+    "source_mtime": "2026-05-14T03:21:36.608614Z",
+    "rendered_at": "2026-05-15T02:13:54.446894Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0021": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0021.json",
+    "source_sha256": "49061200c1c68c4094d2186209e25120b7ff3229c339429212eda149d9387cc3",
+    "source_mtime": "2026-05-14T03:21:36.618278Z",
+    "rendered_at": "2026-05-15T02:13:54.475324Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0022": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0022.json",
+    "source_sha256": "3602822cef6ebc587cd286d58cccf0ddb97ce17ddf377ca57ecdc6e70dbd97ac",
+    "source_mtime": "2026-05-12T18:10:42.328821Z",
+    "rendered_at": "2026-05-15T02:13:54.502409Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0023": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0023.json",
+    "source_sha256": "87ff332a4ab58b990cbef095a8b8823c1d7367197c240b7d50ac279302ea8925",
+    "source_mtime": "2026-05-12T18:48:24.826595Z",
+    "rendered_at": "2026-05-15T02:13:54.533796Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0024": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0024.json",
+    "source_sha256": "e3f4ed1d6f7d9ad17b15be6b7cf981f4ab3caa631ef162731b256c815215a691",
+    "source_mtime": "2026-05-12T18:10:42.335822Z",
+    "rendered_at": "2026-05-15T02:13:54.560048Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0025": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0025.json",
+    "source_sha256": "01d0cc2f35978505ff909cd59d9830b5fa0b334d7585cd5485ed378ae32083eb",
+    "source_mtime": "2026-05-12T19:00:48.829201Z",
+    "rendered_at": "2026-05-15T02:13:54.588467Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0026": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0026.json",
+    "source_sha256": "c1b8bc7f412264eb941d2a25cc3b8e857b7c7842d6a4c9878a1bfa970a612a93",
+    "source_mtime": "2026-05-12T18:10:42.342278Z",
+    "rendered_at": "2026-05-15T02:13:54.616479Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-0027": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Pants-0027.json",
+    "source_sha256": "80f8d2acb5f2bd97adad48e325efc53e2f9b2e57525d3d95f1a845192d205fec",
+    "source_mtime": "2026-05-12T18:48:24.831606Z",
+    "rendered_at": "2026-05-15T02:13:54.641666Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-0928": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0928.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0928.json",
     "source_sha256": "b4c5fac082ba8fa131411c8c9651cb745d76713328bb86a75a1a12c7d17dd828",
     "source_mtime": "2026-05-14T19:11:37.880976Z",
-    "rendered_at": "2026-05-15T01:40:12.036065Z",
+    "rendered_at": "2026-05-15T02:13:49.652705Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-0929": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0929.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0929.json",
     "source_sha256": "bfe31c8975ac84656262d0c95b6f0966c9d897b986622da9611da1c155f59d97",
     "source_mtime": "2026-05-14T19:11:37.892991Z",
-    "rendered_at": "2026-05-15T01:40:12.066786Z",
+    "rendered_at": "2026-05-15T02:13:49.692099Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-0930": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0930.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0930.json",
     "source_sha256": "263af402523af2b01017477f1f9f24f1bd14c3e2869456fae189d012042e3d6e",
     "source_mtime": "2026-05-14T19:11:37.905978Z",
-    "rendered_at": "2026-05-15T01:40:12.095415Z",
+    "rendered_at": "2026-05-15T02:13:49.724717Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-0931": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0931.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0931.json",
     "source_sha256": "11db4523d5ee27b73c7c015207b1d055fd4d2d5e63ed5d0a638e3d623e693f30",
     "source_mtime": "2026-05-14T19:11:37.917983Z",
-    "rendered_at": "2026-05-15T01:40:12.125775Z",
+    "rendered_at": "2026-05-15T02:13:49.758844Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-0932": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0932.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0932.json",
     "source_sha256": "fd8988d860ce40cedb7fbbb05e9cdc2ab15fb25f1360cccd0299c0be392f4052",
     "source_mtime": "2026-05-14T19:11:37.930226Z",
-    "rendered_at": "2026-05-15T01:40:12.156753Z",
+    "rendered_at": "2026-05-15T02:13:49.792034Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-0933": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0933.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0933.json",
     "source_sha256": "e0efadb54499b714099b738979ad5ba1591ba7b0dd94e26140caa4f9e27e95b1",
     "source_mtime": "2026-05-14T19:11:37.940224Z",
-    "rendered_at": "2026-05-15T01:40:12.188763Z",
+    "rendered_at": "2026-05-15T02:13:49.830983Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-0934": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0934.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0934.json",
     "source_sha256": "b7cfd5acab11bf2b662bd28a73308b1450b74f70a228a281b45c85a2722a34f7",
     "source_mtime": "2026-05-14T19:11:37.951222Z",
-    "rendered_at": "2026-05-15T01:40:12.224063Z",
+    "rendered_at": "2026-05-15T02:13:49.866590Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-0935": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0935.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0935.json",
     "source_sha256": "d9a06b9a40ab99592edefdf0d86d7c34970f7ffed6797efb4626afb0083b0d3d",
     "source_mtime": "2026-05-14T19:11:37.963221Z",
-    "rendered_at": "2026-05-15T01:40:12.256359Z",
+    "rendered_at": "2026-05-15T02:13:49.904412Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-0936": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0936.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0936.json",
     "source_sha256": "609ce2991a334f0285c194ca11d7e5f6605dd10fb60327950c6938dc95dd23cb",
     "source_mtime": "2026-05-14T19:12:44.582793Z",
-    "rendered_at": "2026-05-15T01:40:12.287416Z",
+    "rendered_at": "2026-05-15T02:13:49.939427Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-0938": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0938.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0938.json",
     "source_sha256": "08a3e442dcae7d7cc40b9d93e9398b1b33c404177c07e348cf59dd8c90937350",
     "source_mtime": "2026-05-14T19:12:44.594976Z",
-    "rendered_at": "2026-05-15T01:40:12.317774Z",
+    "rendered_at": "2026-05-15T02:13:49.973070Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-0939": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0939.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0939.json",
     "source_sha256": "609b157ab8595a3b6b7a441a90f38d687cb33091fa4fe562e03bb75c7f8b2684",
     "source_mtime": "2026-05-14T19:12:44.605978Z",
-    "rendered_at": "2026-05-15T01:40:12.345477Z",
+    "rendered_at": "2026-05-15T02:13:50.003367Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-0940": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0940.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0940.json",
     "source_sha256": "7dfd70d6ed1248b0768aa58a9cdb3181ebce8cf26a3e79c2aea1250699cd26fb",
     "source_mtime": "2026-05-14T19:12:44.615974Z",
-    "rendered_at": "2026-05-15T01:40:12.375664Z",
+    "rendered_at": "2026-05-15T02:13:50.034592Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-0941": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0941.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0941.json",
     "source_sha256": "bccc52b25fb13017c521e904fc0f39e1fce362d8a625d7a45adf57345de27677",
     "source_mtime": "2026-05-14T19:12:44.626976Z",
-    "rendered_at": "2026-05-15T01:40:12.403893Z",
+    "rendered_at": "2026-05-15T02:13:50.068393Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-0942": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0942.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0942.json",
     "source_sha256": "509a810ae75a875efc1bf88095a4985f36cee724b7256340a64b648305e57270",
     "source_mtime": "2026-05-14T19:12:44.638977Z",
-    "rendered_at": "2026-05-15T01:40:12.433975Z",
+    "rendered_at": "2026-05-15T02:13:50.101316Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-0943": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0943.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0943.json",
     "source_sha256": "825f07455790fe33183bf29f13722d087121c37576cc241d2aa6c08c93c94b65",
     "source_mtime": "2026-05-14T19:12:44.650983Z",
-    "rendered_at": "2026-05-15T01:40:12.461992Z",
+    "rendered_at": "2026-05-15T02:13:50.134132Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-0944": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0944.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0944.json",
     "source_sha256": "8c8916ff762aa5c2f20e76c463f66026097b20bbee1acd2eeb2849d7f97a54ff",
     "source_mtime": "2026-05-14T19:12:44.661974Z",
-    "rendered_at": "2026-05-15T01:40:12.490550Z",
+    "rendered_at": "2026-05-15T02:13:50.166668Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-0946": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/Pants-0946.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/Pants-0946.json",
     "source_sha256": "ff0bba11b1a51b0a2b74e8e978cf66dcb56312779b330d4902710f940af95a7d",
     "source_mtime": "2026-05-14T17:45:41.739239Z",
-    "rendered_at": "2026-05-15T01:40:13.535021Z",
+    "rendered_at": "2026-05-15T02:13:51.254101Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-0947": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/Pants-0947.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/Pants-0947.json",
     "source_sha256": "e4e0773361bc9609f8acaa2d8bf80f92860845898cb1aa13bd32a68d70a3b59a",
     "source_mtime": "2026-05-15T00:42:47.121778Z",
-    "rendered_at": "2026-05-15T01:40:13.562543Z",
+    "rendered_at": "2026-05-15T02:13:51.282776Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-0948": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/Pants-0948.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/Pants-0948.json",
     "source_sha256": "fb689a3258b8a51d71d058182db4b89ab0ce23521fddbcf27d889f03a4249a9c",
     "source_mtime": "2026-05-15T00:42:47.142555Z",
-    "rendered_at": "2026-05-15T01:40:13.594505Z",
+    "rendered_at": "2026-05-15T02:13:51.317150Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-0949": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/Pants-0949.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/Pants-0949.json",
     "source_sha256": "63b9415291da76b7c2a49fa6fd3b74213b153bf7e9dea1d03ef3ff52e5f4a805",
     "source_mtime": "2026-05-14T17:45:41.783771Z",
-    "rendered_at": "2026-05-15T01:40:13.625798Z",
+    "rendered_at": "2026-05-15T02:13:51.350467Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1624": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1624.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1624.json",
     "source_sha256": "e84fb16b1f4f465b8e032ce0bf7cf2aab0023f4ab0642f336729c9fc4d10bd25",
     "source_mtime": "2026-05-13T02:24:57.667864Z",
-    "rendered_at": "2026-05-15T01:40:13.897750Z",
+    "rendered_at": "2026-05-15T02:13:51.633052Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1625": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1625.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1625.json",
     "source_sha256": "69764dc45a6ea88fd71b32e1407c0891bb794ff0d4f19c4adb138e0bb28cc93e",
     "source_mtime": "2026-05-13T02:24:57.683896Z",
-    "rendered_at": "2026-05-15T01:40:13.927691Z",
+    "rendered_at": "2026-05-15T02:13:51.667149Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1626": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1626.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1626.json",
     "source_sha256": "c33682320d19ca169695a006506288456c1843bb33c8ec00e571c0fa1c083a16",
     "source_mtime": "2026-05-13T02:24:57.699113Z",
-    "rendered_at": "2026-05-15T01:40:13.958844Z",
+    "rendered_at": "2026-05-15T02:13:51.698475Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1627": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1627.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1627.json",
     "source_sha256": "43ebc3b1cc7757a4e8bc1de9cc856a93ba2533f616bd32a2e6fbfbc9c7006999",
     "source_mtime": "2026-05-13T02:24:57.714664Z",
-    "rendered_at": "2026-05-15T01:40:13.987824Z",
+    "rendered_at": "2026-05-15T02:13:51.728461Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1628": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1628.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1628.json",
     "source_sha256": "57ba02d6b29d5bcf52e9bdfab8b80adf8f63ee9686c9390fc3740621ca100d0d",
     "source_mtime": "2026-05-15T00:41:55.127200Z",
-    "rendered_at": "2026-05-15T01:40:14.015747Z",
+    "rendered_at": "2026-05-15T02:13:51.756492Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1629": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1629.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1629.json",
     "source_sha256": "f6d43a6925b8a152b043801f758373437122c06bbf6dc0837a23466e547a7c6f",
     "source_mtime": "2026-05-13T02:24:57.741791Z",
-    "rendered_at": "2026-05-15T01:40:14.045435Z",
+    "rendered_at": "2026-05-15T02:13:51.786444Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1630": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1630.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1630.json",
     "source_sha256": "b29ff3c416208f9e7a8c842d1c07fcc063bac7a6f255f4b855ebd9ead2301227",
     "source_mtime": "2026-05-13T02:24:57.757343Z",
-    "rendered_at": "2026-05-15T01:40:14.075299Z",
+    "rendered_at": "2026-05-15T02:13:51.819226Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1631": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1631.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1631.json",
     "source_sha256": "ee5dd632715863381b48c4f4c3566a38ad5f5884cd1c843e70117fc6f5515f06",
     "source_mtime": "2026-05-13T02:24:57.773959Z",
-    "rendered_at": "2026-05-15T01:40:14.106383Z",
+    "rendered_at": "2026-05-15T02:13:51.858075Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1632": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1632.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1632.json",
     "source_sha256": "bdc9d396d6c0b498aabc583225639f0efae11913cddb034e860766dedc23476f",
     "source_mtime": "2026-05-13T02:24:57.789830Z",
-    "rendered_at": "2026-05-15T01:40:14.136663Z",
+    "rendered_at": "2026-05-15T02:13:51.889385Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1633": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1633.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1633.json",
     "source_sha256": "63ab55c588d7bce21ecbb2d8f343ec86f8e193e6fb556bd65cf242ae0749048b",
     "source_mtime": "2026-05-13T02:24:57.807169Z",
-    "rendered_at": "2026-05-15T01:40:14.168980Z",
+    "rendered_at": "2026-05-15T02:13:51.922890Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1634": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1634.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1634.json",
     "source_sha256": "747c2ea4a20a8376df1a0f61e829488b5f4f004a5907b839e7e87dac2b2c6fe9",
     "source_mtime": "2026-05-13T02:24:57.824019Z",
-    "rendered_at": "2026-05-15T01:40:14.198675Z",
+    "rendered_at": "2026-05-15T02:13:51.952354Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1635": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1635.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1635.json",
     "source_sha256": "7b2cd4d9081be605bf252debbbb2329615ec20afbcf6718bad663b6c32507090",
     "source_mtime": "2026-05-13T02:24:57.840649Z",
-    "rendered_at": "2026-05-15T01:40:14.229613Z",
+    "rendered_at": "2026-05-15T02:13:51.984336Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1636": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1636.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1636.json",
     "source_sha256": "6d90928b41dc604166f9346dc3e81850537116d495fd940b84363d67b84b186e",
     "source_mtime": "2026-05-13T02:24:57.860941Z",
-    "rendered_at": "2026-05-15T01:40:14.262413Z",
+    "rendered_at": "2026-05-15T02:13:52.026762Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1637": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1637.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1637.json",
     "source_sha256": "4b78fcb6a0ceff0ab7c9c49faeda4655629293535e90de4489dad6eafe6c4f90",
     "source_mtime": "2026-05-13T02:24:57.878483Z",
-    "rendered_at": "2026-05-15T01:40:14.294311Z",
+    "rendered_at": "2026-05-15T02:13:52.064525Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1638": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1638.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1638.json",
     "source_sha256": "c50f8e7d14f7983b1886344a45050684aa86191bc0efbaf48f6e9c591f536cc3",
     "source_mtime": "2026-05-13T02:24:57.896252Z",
-    "rendered_at": "2026-05-15T01:40:14.326297Z",
+    "rendered_at": "2026-05-15T02:13:52.100311Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1639": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1639.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1639.json",
     "source_sha256": "af8a115be13d52884b4f1e9ceb473f3dadca6102f664a970999862e9956047f6",
     "source_mtime": "2026-05-13T02:24:57.917318Z",
-    "rendered_at": "2026-05-15T01:40:14.358598Z",
+    "rendered_at": "2026-05-15T02:13:52.138734Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1640": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1640.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1640.json",
     "source_sha256": "8d3873a52a6b6367af1bfc262ec0d247423d5d0bfff98b1ca106966392de34f9",
     "source_mtime": "2026-05-13T02:24:57.939654Z",
-    "rendered_at": "2026-05-15T01:40:14.391978Z",
+    "rendered_at": "2026-05-15T02:13:52.178014Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1641": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1641.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1641.json",
     "source_sha256": "70482ca34af0d3fbfd26db0134a2e07781dd1b4704f099f3cc05629f88a94980",
     "source_mtime": "2026-05-13T02:24:57.963794Z",
-    "rendered_at": "2026-05-15T01:40:14.423729Z",
+    "rendered_at": "2026-05-15T02:13:52.215492Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1642": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1642.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1642.json",
     "source_sha256": "06f3615f4c24aaa4dbcf4c9e99bdb3f76057fccc5f107f5291710d93eccb5a4a",
     "source_mtime": "2026-05-15T00:41:55.156178Z",
-    "rendered_at": "2026-05-15T01:40:14.453472Z",
+    "rendered_at": "2026-05-15T02:13:52.253093Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1643": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1643.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1643.json",
     "source_sha256": "90c9a6a4f5c981273d02accfb7a97598e32562d297d93994e8a276a5b37f807f",
     "source_mtime": "2026-05-13T02:24:58.004482Z",
-    "rendered_at": "2026-05-15T01:40:14.482616Z",
+    "rendered_at": "2026-05-15T02:13:52.286958Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1644": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1644.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1644.json",
     "source_sha256": "a3ab0219da2c61d3b7dd60d78d5de2f15f134b2df7ec54b7f48e4fbcc3dc9a8f",
     "source_mtime": "2026-05-13T02:24:58.025433Z",
-    "rendered_at": "2026-05-15T01:40:14.512025Z",
+    "rendered_at": "2026-05-15T02:13:52.326191Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1645": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1645.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1645.json",
     "source_sha256": "62a99d5fd8f5cc22224b330dc7f164955ceac275fd9d270d0fe060ae207a14f0",
     "source_mtime": "2026-05-13T02:24:58.047291Z",
-    "rendered_at": "2026-05-15T01:40:14.543521Z",
+    "rendered_at": "2026-05-15T02:13:52.361453Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1646": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1646.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1646.json",
     "source_sha256": "009b79d41a80b57a73bd236e2ed954b13c87182cbcdd516af82b3c4993e42359",
     "source_mtime": "2026-05-15T00:41:55.184179Z",
-    "rendered_at": "2026-05-15T01:40:14.576832Z",
+    "rendered_at": "2026-05-15T02:13:52.397395Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1647": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1647.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1647.json",
     "source_sha256": "9d5eb9008a2a7affa26b0d6de5d55e59dd16dc7adcd656bb5aef7edc4d5c4e34",
     "source_mtime": "2026-05-13T02:24:58.098208Z",
-    "rendered_at": "2026-05-15T01:40:14.609330Z",
+    "rendered_at": "2026-05-15T02:13:52.440055Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1648": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1648.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1648.json",
     "source_sha256": "e80b7d620163b8a34fbb75bd5e8e908eb7eb486d970979fd159711e86b825386",
     "source_mtime": "2026-05-13T02:24:58.125551Z",
-    "rendered_at": "2026-05-15T01:40:14.646022Z",
+    "rendered_at": "2026-05-15T02:13:52.473340Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1649": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1649.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1649.json",
     "source_sha256": "7005f6373b1b1e3e7a92415582623c79cca12ece355babb0720ac2c9db3a74c4",
     "source_mtime": "2026-05-15T00:41:55.211179Z",
-    "rendered_at": "2026-05-15T01:40:14.678260Z",
+    "rendered_at": "2026-05-15T02:13:52.507906Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1650": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1650.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1650.json",
     "source_sha256": "3929639d5b4bb2dc733dce73a1b22a1f667666196b3b401e0fa8b72ed72f45d3",
     "source_mtime": "2026-05-15T00:41:55.238178Z",
-    "rendered_at": "2026-05-15T01:40:14.713790Z",
+    "rendered_at": "2026-05-15T02:13:52.543359Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1651": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1651.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1651.json",
     "source_sha256": "64ad65bf5734219353d6d875c44f1c5106e5a2f89e699cbf1a7739ebbac145da",
     "source_mtime": "2026-05-15T00:41:55.268176Z",
-    "rendered_at": "2026-05-15T01:40:14.750390Z",
+    "rendered_at": "2026-05-15T02:13:52.580408Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1652": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1652.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1652.json",
     "source_sha256": "3c30ee23f9f089c4d020b95d100a6ce357c2cd170282d393794c4967956abf22",
     "source_mtime": "2026-05-13T02:24:58.237291Z",
-    "rendered_at": "2026-05-15T01:40:14.783600Z",
+    "rendered_at": "2026-05-15T02:13:52.621490Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1653": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1653.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1653.json",
     "source_sha256": "baea020cdabb6403601a2ba79206e43a4dcd01de032b1d5f825c2f0d2d1bdeb3",
     "source_mtime": "2026-05-13T02:24:58.268151Z",
-    "rendered_at": "2026-05-15T01:40:14.818392Z",
+    "rendered_at": "2026-05-15T02:13:52.666438Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1654": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1654.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1654.json",
     "source_sha256": "4144029751878ef297f973e42e6a4e8afd19ba2337fbeaefc03513994946120b",
     "source_mtime": "2026-05-15T00:41:55.302180Z",
-    "rendered_at": "2026-05-15T01:40:14.854434Z",
+    "rendered_at": "2026-05-15T02:13:52.711131Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1655": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1655.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1655.json",
     "source_sha256": "11ecf254c6fd4e23fe0c1164374f1f79d3ad3b6e0f0a8f34e4e23fdd2312b624",
     "source_mtime": "2026-05-13T02:24:58.319250Z",
-    "rendered_at": "2026-05-15T01:40:14.889495Z",
+    "rendered_at": "2026-05-15T02:13:52.748645Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1656": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1656.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1656.json",
     "source_sha256": "fc73132d7e632214b702ec36d0acdbda32eff7008059dbdc0cdc2e31cc75a840",
     "source_mtime": "2026-05-13T02:24:58.349650Z",
-    "rendered_at": "2026-05-15T01:40:14.926327Z",
+    "rendered_at": "2026-05-15T02:13:52.789705Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1657": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1657.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1657.json",
     "source_sha256": "e4e534b04ae3b53468561012ac8e54152e723ca4f0cb5bca0a6b81c00c57796f",
     "source_mtime": "2026-05-15T00:41:55.330691Z",
-    "rendered_at": "2026-05-15T01:40:14.959510Z",
+    "rendered_at": "2026-05-15T02:13:52.828913Z",
     "renderer_version": "de26f26db52a"
   },
   "Pants-1658": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Batch 4/Pants-1658.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1658.json",
     "source_sha256": "8a783a152e23349cb6a527374439b4a1e16a25dc37dcdfb04620164e1d87e202",
     "source_mtime": "2026-05-13T02:24:58.407422Z",
-    "rendered_at": "2026-05-15T01:40:14.992775Z",
+    "rendered_at": "2026-05-15T02:13:52.865597Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1659": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1659.json",
+    "source_sha256": "d59db74fdc4578b56485ed5199598be0d0088d82031c9be237f8e970ba9d888a",
+    "source_mtime": "2026-05-14T04:18:04.657961Z",
+    "rendered_at": "2026-05-15T02:13:52.951371Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1660": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1660.json",
+    "source_sha256": "ff3494ffd1415c0b4151a678545d732302d9e18e0327087b2ac84cc25a3b504d",
+    "source_mtime": "2026-05-14T04:20:24.901222Z",
+    "rendered_at": "2026-05-15T02:13:52.978374Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1661": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1661.json",
+    "source_sha256": "bbc9bb3ab6c17369a1e73890fad5c6b66405bc3267b735a5328ed19c74e01a24",
+    "source_mtime": "2026-05-14T04:22:32.491970Z",
+    "rendered_at": "2026-05-15T02:13:53.005637Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1662": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1662.json",
+    "source_sha256": "aa38d13d4421de9e08d3c86b182ef369622aac470f102640490c62eb0fa42f48",
+    "source_mtime": "2026-05-14T04:25:23.112065Z",
+    "rendered_at": "2026-05-15T02:13:53.033764Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1663": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1663.json",
+    "source_sha256": "c55463dd766e9c96faa4746ec971d9ac92d5ccbca94a1e7afb78e4b99a672d52",
+    "source_mtime": "2026-05-14T04:27:29.280869Z",
+    "rendered_at": "2026-05-15T02:13:53.060283Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1664": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1664.json",
+    "source_sha256": "e973732f90296965dc58d708f2d756bea72de770bb0b2c3d8ba8734114a4bb1f",
+    "source_mtime": "2026-05-14T04:41:13.877120Z",
+    "rendered_at": "2026-05-15T02:13:53.088890Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1665": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1665.json",
+    "source_sha256": "6a33adea480c78cbee3cdc263736a4f79d6dad4064b9e206724ef0b711319735",
+    "source_mtime": "2026-05-14T04:42:35.763932Z",
+    "rendered_at": "2026-05-15T02:13:53.115756Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1666": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1666.json",
+    "source_sha256": "30b59c8b61604108f12f1e7bf7ae6ad76e8e6233dc32295d70ae5ddc3f5b4e07",
+    "source_mtime": "2026-05-14T04:43:51.603494Z",
+    "rendered_at": "2026-05-15T02:13:53.142743Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1667": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1667.json",
+    "source_sha256": "ed389320848d59010b7b500b86277e69643db02c64a1845f1de9c16ee95038d6",
+    "source_mtime": "2026-05-14T04:45:09.332842Z",
+    "rendered_at": "2026-05-15T02:13:53.169554Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1668": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1668.json",
+    "source_sha256": "d563f8fc5d11e0ee7b89e410607256cdea1e5a160f591dac5a2254c95d3eb83a",
+    "source_mtime": "2026-05-14T04:46:20.763728Z",
+    "rendered_at": "2026-05-15T02:14:33.409550Z",
+    "renderer_version": "edcd9aa7cc59"
+  },
+  "Pants-1669": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1669.json",
+    "source_sha256": "6f57dd68a3b09581c264dc684855ba3ae0967b319f8aa02e1bfd7a3bf8e30b58",
+    "source_mtime": "2026-05-14T04:47:37.628540Z",
+    "rendered_at": "2026-05-15T02:14:33.505308Z",
+    "renderer_version": "edcd9aa7cc59"
+  },
+  "Pants-1670": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1670.json",
+    "source_sha256": "d43221adc0c47bd1f18bbfbbd1a7c6366c88c7d41e41929d02fd98ded5e9c492",
+    "source_mtime": "2026-05-14T04:48:53.905069Z",
+    "rendered_at": "2026-05-15T02:13:53.209035Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1671": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1671.json",
+    "source_sha256": "2ae2cbc35cb17f4d5a2d4281ae04c7df5b24322add92d0d47e03b28abbfa83c6",
+    "source_mtime": "2026-05-14T04:50:18.765800Z",
+    "rendered_at": "2026-05-15T02:13:53.236155Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1672": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1672.json",
+    "source_sha256": "7c7a0a44965e180ccae2be1b29e9a31874cb183d7c4dbe573678ab1bc54b2efc",
+    "source_mtime": "2026-05-14T04:40:37.225964Z",
+    "rendered_at": "2026-05-15T02:13:53.261402Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1673": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1673.json",
+    "source_sha256": "44897e49d9a3c47e918bae20f040aa527c7b05b5f13732fb76f7bc35de6bce70",
+    "source_mtime": "2026-05-14T04:41:58.439990Z",
+    "rendered_at": "2026-05-15T02:13:53.285115Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1674": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1674.json",
+    "source_sha256": "342aa17b8cb984094b784dfdeefa3b3f7e3cf2cb88ea1d77ac35804a3995992d",
+    "source_mtime": "2026-05-14T04:43:17.679123Z",
+    "rendered_at": "2026-05-15T02:13:53.310546Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1675": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1675.json",
+    "source_sha256": "1958099dde50050736c714e091bb3da213d7e78d286eaf140494eaae5a7424a9",
+    "source_mtime": "2026-05-14T04:44:50.289800Z",
+    "rendered_at": "2026-05-15T02:13:53.336275Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1676": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1676.json",
+    "source_sha256": "33aa49d2dbcbc516de957ad55a9a0909d4d0ab0150cfc5d099e994b8cfc784fc",
+    "source_mtime": "2026-05-14T04:46:15.094133Z",
+    "rendered_at": "2026-05-15T02:13:53.363796Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1677": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1677.json",
+    "source_sha256": "f2adcbd68cf1d7259759f3caceba425d7d1574aaf89bd29daece64aeade866e1",
+    "source_mtime": "2026-05-14T04:48:12.939467Z",
+    "rendered_at": "2026-05-15T02:13:53.389711Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1678": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1678.json",
+    "source_sha256": "ebe416a265c320ffb79c7878571100061805a627adb2ea33771ef46cd169fa0a",
+    "source_mtime": "2026-05-14T04:50:37.303032Z",
+    "rendered_at": "2026-05-15T02:13:53.415502Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1679": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1679.json",
+    "source_sha256": "0f88d69508f5d429313b8ad0aed7b7e822fd0a2f4114bf11374717774a552bda",
+    "source_mtime": "2026-05-14T04:52:27.454106Z",
+    "rendered_at": "2026-05-15T02:13:53.441675Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1680": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1680.json",
+    "source_sha256": "328f6b877bd1642a13f80757d6ec1bad2e5bc015bca232d481eac62233a7b850",
+    "source_mtime": "2026-05-14T04:41:29.640805Z",
+    "rendered_at": "2026-05-15T02:13:53.466821Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1681": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1681.json",
+    "source_sha256": "e794b87530aa4a3d51dbd7332b842fd359b669c54f25f0e9c7d969cd1e4608ac",
+    "source_mtime": "2026-05-14T04:43:00.948273Z",
+    "rendered_at": "2026-05-15T02:13:53.493668Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1682": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1682.json",
+    "source_sha256": "a4b18a42bc7dfeb1ea703c8c1eeaf767225f253fb48d05cae04ca91b3240a49b",
+    "source_mtime": "2026-05-14T04:44:21.024958Z",
+    "rendered_at": "2026-05-15T02:13:53.520485Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1683": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1683.json",
+    "source_sha256": "876b595db58d65e643515411de11135f7d8cb049e2778ab82822bb4d651fcc1a",
+    "source_mtime": "2026-05-14T04:45:54.481580Z",
+    "rendered_at": "2026-05-15T02:13:53.546762Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1684": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1684.json",
+    "source_sha256": "ec9287803a6f0cc2d472e84d3d7ec5e9db2314fa14b0d1a99b5123e09caaf08e",
+    "source_mtime": "2026-05-14T04:47:22.905656Z",
+    "rendered_at": "2026-05-15T02:13:53.572285Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1685": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1685.json",
+    "source_sha256": "fb889694dbba316afb68018782394053e6b8a3538c4a3ffd441c6c622ce3cb2e",
+    "source_mtime": "2026-05-14T04:49:18.945980Z",
+    "rendered_at": "2026-05-15T02:13:53.601498Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1686": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1686.json",
+    "source_sha256": "69291b5861c298aab5a4eef96d84d967431c095cd8d04bbe5f7cf9bf689ea3c0",
+    "source_mtime": "2026-05-14T04:51:23.183659Z",
+    "rendered_at": "2026-05-15T02:13:53.631453Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Pants-1687": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 5/Pants-1687.json",
+    "source_sha256": "1e315d51979307ed72a3eb7c90f1371559bc88e5e564e77e15ab2cff27a2a44e",
+    "source_mtime": "2026-05-14T04:53:44.991632Z",
+    "rendered_at": "2026-05-15T02:13:53.657984Z",
     "renderer_version": "de26f26db52a"
   },
   "SB01-2730": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/SB01-2730.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/SB01-2730.json",
     "source_sha256": "16710bcd1e9ace3efdfbbd585c03fa4b6ab36f5e5e8b8a0e8d8cd25637845d3e",
     "source_mtime": "2026-05-15T00:54:36.157665Z",
-    "rendered_at": "2026-05-15T01:40:12.521779Z",
+    "rendered_at": "2026-05-15T02:13:50.203722Z",
     "renderer_version": "de26f26db52a"
   },
   "SB01-2733": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/SB01-2733.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/SB01-2733.json",
     "source_sha256": "153ebf8c68381de11d7a4baf178008088b62a9a101dd7289c022a62f0392dcd5",
     "source_mtime": "2026-05-14T15:45:07.237382Z",
-    "rendered_at": "2026-05-15T01:40:13.654201Z",
+    "rendered_at": "2026-05-15T02:13:51.381054Z",
     "renderer_version": "de26f26db52a"
   },
   "SB01-2739": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/SB01-2739.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/SB01-2739.json",
     "source_sha256": "db22ac1592b500d98749a5534cfa594bcd27c9d8dd0a971c07ba533d292cc90d",
     "source_mtime": "2026-05-14T15:45:07.259448Z",
-    "rendered_at": "2026-05-15T01:40:13.682781Z",
+    "rendered_at": "2026-05-15T02:13:51.411488Z",
     "renderer_version": "de26f26db52a"
   },
   "SB03-2763": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/SB03-2763.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/SB03-2763.json",
     "source_sha256": "1fcebf26461208de5de1461b1a499b87ed5de7c60fb10de5624d162acf53001e",
     "source_mtime": "2026-05-14T15:45:07.284094Z",
-    "rendered_at": "2026-05-15T01:40:13.712895Z",
+    "rendered_at": "2026-05-15T02:13:51.440692Z",
     "renderer_version": "de26f26db52a"
   },
   "SB03-2769": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/SB03-2769.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/SB03-2769.json",
     "source_sha256": "a4a562ec073740889bcad18629dc85acf4691d009a10e0ad1f9d26482497d3c1",
     "source_mtime": "2026-05-14T16:11:54.815533Z",
-    "rendered_at": "2026-05-15T01:40:13.742877Z",
+    "rendered_at": "2026-05-15T02:13:51.470841Z",
     "renderer_version": "de26f26db52a"
   },
   "SB16-1535": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/SB16-1535.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/SB16-1535.json",
     "source_sha256": "8c297ae06de8f8212ee37e6a5ad39f2786e7d21b222a1822cc42800011d1a399",
     "source_mtime": "2026-05-14T17:06:43.322547Z",
-    "rendered_at": "2026-05-15T01:40:12.546663Z",
+    "rendered_at": "2026-05-15T02:13:50.233882Z",
     "renderer_version": "de26f26db52a"
   },
   "SB18-1569": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/SB18-1569.json",
-    "source_sha256": "f848cd9de393b33f85a9a843dd00c8329abf802b4aaa1a2053badffd6113f814",
-    "source_mtime": "2026-05-14T18:01:40.662086Z",
-    "rendered_at": "2026-05-15T01:40:12.576622Z",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/SB18-1569.json",
+    "source_sha256": "05bb67e0eba14f77170bf0626ee48b286f8d2005d5f726b2433d3f2d16ed3b00",
+    "source_mtime": "2026-05-15T01:55:37.438910Z",
+    "rendered_at": "2026-05-15T02:13:50.267058Z",
     "renderer_version": "de26f26db52a"
   },
   "SB18-1585": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/SB18-1585.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/SB18-1585.json",
     "source_sha256": "86d63802cb265635eef2cd6bdd82e8fcc608a110e9482e1b48da22c491f00a21",
     "source_mtime": "2026-05-14T17:06:43.362211Z",
-    "rendered_at": "2026-05-15T01:40:12.602697Z",
+    "rendered_at": "2026-05-15T02:13:50.299667Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0001": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0001.json",
+    "source_sha256": "81c7b47a4d2a1a5ff4bc0a3d342f4f881f8e4336feb485345a9e1d25912fdb29",
+    "source_mtime": "2026-05-12T21:02:49.181218Z",
+    "rendered_at": "2026-05-15T02:13:54.669407Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0002": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0002.json",
+    "source_sha256": "8b4d87dce18db57e457bbcdf24ae20d189b509506c5e29af8783c17508555620",
+    "source_mtime": "2026-05-12T21:02:49.192241Z",
+    "rendered_at": "2026-05-15T02:13:54.698649Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0003": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0003.json",
+    "source_sha256": "309519dcd07bca19e0a8a6d4f29c78034a57ca02212e0292e0bac02c0991e7e4",
+    "source_mtime": "2026-05-14T03:21:36.684879Z",
+    "rendered_at": "2026-05-15T02:13:54.727246Z",
     "renderer_version": "de26f26db52a"
   },
   "Shorts-0004": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0004.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0004.json",
     "source_sha256": "dfb15b0bd58f5c398b6b8ce76f87b9f496ea386799721bc399acbea2307bdabc",
     "source_mtime": "2026-05-14T03:21:36.690912Z",
-    "rendered_at": "2026-05-15T01:40:15.169906Z",
+    "rendered_at": "2026-05-15T02:13:54.756450Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0005": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0005.json",
+    "source_sha256": "1e36b6e50e41ce38ec8e7bcea82cc94ab60991b05b850d52d6b3ac5fa3f0754d",
+    "source_mtime": "2026-05-14T03:21:36.694910Z",
+    "rendered_at": "2026-05-15T02:13:54.785071Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0006": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0006.json",
+    "source_sha256": "e58be918170b0acf0073ccb075ae0fbc5b4b14c15efe87fd5e62d9f2fa75463a",
+    "source_mtime": "2026-05-07T02:54:33.352393Z",
+    "rendered_at": "2026-05-15T02:13:54.813039Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0007": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0007.json",
+    "source_sha256": "6b5b99633dbbbba3671273a83d087d68bef92a99a1e7ace4deb1801dc6d95b99",
+    "source_mtime": "2026-05-07T02:54:33.358392Z",
+    "rendered_at": "2026-05-15T02:13:54.838844Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0008": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0008.json",
+    "source_sha256": "dc888e486ee9aac2a6cf819c69b8c517cf3c27decc142d8747f128e14eac48c1",
+    "source_mtime": "2026-05-07T02:54:33.365358Z",
+    "rendered_at": "2026-05-15T02:13:54.865477Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0009": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0009.json",
+    "source_sha256": "2a664ae23bab2b819186fb002944812574a8f8fb3e64beed27d02744684f65cc",
+    "source_mtime": "2026-05-07T02:54:33.372121Z",
+    "rendered_at": "2026-05-15T02:13:54.891598Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0010": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0010.json",
+    "source_sha256": "04cc07fbf759a7852b0b04f448d2773a24ae979074c7bdd04928efa81590cb02",
+    "source_mtime": "2026-05-07T06:17:54.007477Z",
+    "rendered_at": "2026-05-15T02:13:54.917173Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0011": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0011.json",
+    "source_sha256": "e984af8778effa7e56a9e1641a3773e1530091bfc8bdc71fc0072a351a0bc407",
+    "source_mtime": "2026-05-07T06:17:58.920969Z",
+    "rendered_at": "2026-05-15T02:13:54.942125Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0012": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0012.json",
+    "source_sha256": "3d90b2015b65b7287bf95e3f82ca8cd2a89ece1a4c930fb8af9d0e8490b23703",
+    "source_mtime": "2026-05-07T06:06:38.622933Z",
+    "rendered_at": "2026-05-15T02:13:54.967925Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0013": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0013.json",
+    "source_sha256": "11eab0933644eaaed0d0cdab8c5c0fe2768fd9cd958ad73c8705571b673bc86c",
+    "source_mtime": "2026-05-07T02:54:33.393120Z",
+    "rendered_at": "2026-05-15T02:13:54.994298Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0014": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0014.json",
+    "source_sha256": "2363edab9ea1e4f74309d231e33df353494586d79c9cef7815062b1acb51f37d",
+    "source_mtime": "2026-05-07T02:54:33.400388Z",
+    "rendered_at": "2026-05-15T02:13:55.020562Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0015": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0015.json",
+    "source_sha256": "7c02cca57cfe1a8f2f43386971f0dc3ce58acb0a503f64d593cb8fffdb124a51",
+    "source_mtime": "2026-05-07T02:54:33.407384Z",
+    "rendered_at": "2026-05-15T02:13:55.045712Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0016": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0016.json",
+    "source_sha256": "ab6fd7ed9532b94d3fb19322a26dcb7d31f960d03803372d6facbf7b2b5bffab",
+    "source_mtime": "2026-05-07T06:23:13.969464Z",
+    "rendered_at": "2026-05-15T02:13:55.072255Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0017": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0017.json",
+    "source_sha256": "3f09c1bdb6599a2c0f355b630c42d52ad883c1d44e42dcf97604b075deca2920",
+    "source_mtime": "2026-05-07T06:06:38.633311Z",
+    "rendered_at": "2026-05-15T02:13:55.099531Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0018": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0018.json",
+    "source_sha256": "c4eee03518d3673f91ec51ba25a5524450c54c836ffe0e3be0ecdc7e4ec6ccf6",
+    "source_mtime": "2026-05-14T03:21:36.704007Z",
+    "rendered_at": "2026-05-15T02:13:55.130305Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0019": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0019.json",
+    "source_sha256": "a4e2a2452afc3f484139fd1ed18c39ba04c3d39b922209f26a1915e71a51c5c1",
+    "source_mtime": "2026-05-14T03:21:36.712049Z",
+    "rendered_at": "2026-05-15T02:13:55.159222Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0020": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0020.json",
+    "source_sha256": "7d085b0ed8651b4f1698202bcfae04f7f8071d6ce0c9237931f6106775c56304",
+    "source_mtime": "2026-05-14T03:21:36.719090Z",
+    "rendered_at": "2026-05-15T02:13:55.186801Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0021": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0021.json",
+    "source_sha256": "1196a2ea09cb5e77b137091757ef6c885f7afeef57d2134e6f639e8a989e62fd",
+    "source_mtime": "2026-05-07T06:19:35.114420Z",
+    "rendered_at": "2026-05-15T02:13:55.215423Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0022": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0022.json",
+    "source_sha256": "2e2e32a9815b1fc9a8e382e229cf5991596cd70de1d9dba8a7405b37aacf1500",
+    "source_mtime": "2026-05-07T02:54:33.444083Z",
+    "rendered_at": "2026-05-15T02:13:55.241234Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0023": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0023.json",
+    "source_sha256": "d53bf905dc29af1eae2bcdd1e54a16fa859e54fbfbce45e890e4bc48b298afc0",
+    "source_mtime": "2026-05-14T03:21:36.726090Z",
+    "rendered_at": "2026-05-15T02:13:55.269286Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0024": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0024.json",
+    "source_sha256": "d3a2ed48964d64cd77836fe96bbb9b8625b17c4b6182c97a37cd5ff2540b0812",
+    "source_mtime": "2026-05-14T03:21:36.732700Z",
+    "rendered_at": "2026-05-15T02:13:55.299320Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0025": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0025.json",
+    "source_sha256": "440a428e302eba6a79038b1f1769730e631130244b937fbc86d0004fe8d9b4a7",
+    "source_mtime": "2026-05-14T03:21:36.740379Z",
+    "rendered_at": "2026-05-15T02:13:55.327510Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Shorts-0026": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Shorts-0026.json",
+    "source_sha256": "9bfd6795a64b443a675f83dfe95dc05a3e13c063573ae7c5eb6599e3e778525e",
+    "source_mtime": "2026-05-07T03:27:44.205084Z",
+    "rendered_at": "2026-05-15T02:13:55.352149Z",
     "renderer_version": "de26f26db52a"
   },
   "Shorts-0339": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Shorts-0339.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Shorts-0339.json",
     "source_sha256": "501d43802df5e59f01705ec8a009eb9ea9e4f531c9990f3b61c8b1ffb1a0f8bc",
     "source_mtime": "2026-05-15T00:54:36.105666Z",
-    "rendered_at": "2026-05-15T01:40:12.634508Z",
+    "rendered_at": "2026-05-15T02:13:50.332389Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Skirts-0001": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Skirts-0001.json",
+    "source_sha256": "312a62bdde6ca9a1f0c27a5090885776c55c8c223c8bbbe6bab6d4607b6fe013",
+    "source_mtime": "2026-05-14T03:21:36.629081Z",
+    "rendered_at": "2026-05-15T02:13:55.379021Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Skirts-0002": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Skirts-0002.json",
+    "source_sha256": "77f83dc8fb8c463058ef57d275c12cc956b1188abf08353842ff97db19e1a926",
+    "source_mtime": "2026-05-07T02:54:33.486176Z",
+    "rendered_at": "2026-05-15T02:13:55.404397Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Skirts-0003": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Skirts-0003.json",
+    "source_sha256": "41466ac4cd53195f485cb9778b9add79e4f6859e056f00001da287618deb2726",
+    "source_mtime": "2026-05-14T03:21:36.637118Z",
+    "rendered_at": "2026-05-15T02:13:55.432384Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Skirts-0004": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Skirts-0004.json",
+    "source_sha256": "d13e4087e359c06c588dea26565fc4805603e8c515be3a4d12f8a2fc0fc11b58",
+    "source_mtime": "2026-05-07T02:54:33.513188Z",
+    "rendered_at": "2026-05-15T02:13:55.457539Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Skirts-0005": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Skirts-0005.json",
+    "source_sha256": "5f0d14f9d230cdafc6989369f2bfb971bf84c0e3ecf078fc4659fb7eeebd2fc1",
+    "source_mtime": "2026-05-07T06:17:41.653339Z",
+    "rendered_at": "2026-05-15T02:13:55.483235Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Skirts-0006": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Skirts-0006.json",
+    "source_sha256": "166e4ef801e9d8dcad0c5226c30f65cf2b6b4fa29fd76fadefa8eea23f7fa087",
+    "source_mtime": "2026-05-07T06:17:44.787159Z",
+    "rendered_at": "2026-05-15T02:13:55.513067Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Skirts-0007": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Skirts-0007.json",
+    "source_sha256": "5482fb5d10c8649f954f6c333989bd21b037c4e88c296231d116df7dd7b4f251",
+    "source_mtime": "2026-05-14T03:21:36.644290Z",
+    "rendered_at": "2026-05-15T02:13:55.543398Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Skirts-0008": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Skirts-0008.json",
+    "source_sha256": "f27f823c7b15d531a8831bd79645c760404234ad27228ca032f43b0a132abe41",
+    "source_mtime": "2026-05-07T06:17:47.124337Z",
+    "rendered_at": "2026-05-15T02:13:55.568117Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Skirts-0009": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Skirts-0009.json",
+    "source_sha256": "0013497e1f04271ac60013ba6d0a00e420212f6b731b4c2d019ad4300e2cce88",
+    "source_mtime": "2026-05-14T03:21:36.651280Z",
+    "rendered_at": "2026-05-15T02:13:55.597652Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Skirts-0010": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Skirts-0010.json",
+    "source_sha256": "1be75c04109a05cdf1e8b2c98cd2199104d1c557043316bbf9ad01bca96502ba",
+    "source_mtime": "2026-05-14T03:21:36.657290Z",
+    "rendered_at": "2026-05-15T02:13:55.625705Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Skirts-0011": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Skirts-0011.json",
+    "source_sha256": "e6a986fb4dd37cdad2d260caa1d7f3ff898f5d6d7e26c8d8793e89e23f5ddcbd",
+    "source_mtime": "2026-05-14T03:21:36.663298Z",
+    "rendered_at": "2026-05-15T02:13:55.655701Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Skirts-0012": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Skirts-0012.json",
+    "source_sha256": "38bdf68e5cd4cb86a9f45bb39ab0afbdbc3462503597866bd5f83d678c2ece4a",
+    "source_mtime": "2026-05-14T03:21:36.671317Z",
+    "rendered_at": "2026-05-15T02:13:55.685323Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Skirts-0013": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Skirts-0013.json",
+    "source_sha256": "535506dbce8ad29bad4aa6737af0802ac93f9190fa1e274e05c9e560b51a39e6",
+    "source_mtime": "2026-05-07T02:54:33.565701Z",
+    "rendered_at": "2026-05-15T02:13:55.710512Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Skirts-0014": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Skirts-0014.json",
+    "source_sha256": "3172f6c3c7bcb145628fc5ee5562d8493825b0238d01afe878b7f0d55ef347ee",
+    "source_mtime": "2026-05-07T02:54:33.572695Z",
+    "rendered_at": "2026-05-15T02:13:55.736188Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Skirts-0015": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Skirts-0015.json",
+    "source_sha256": "6373cf0cbe8ec21f4e637467640777cde6e47e537cdf225e07cf889716a57aff",
+    "source_mtime": "2026-05-07T02:54:33.579700Z",
+    "rendered_at": "2026-05-15T02:13:55.762237Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Skirts-0016": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Skirts-0016.json",
+    "source_sha256": "691863dfa54c80d5318e3d8c99ec3e2316044df6ca1f2d2bb1ce0b633f353e79",
+    "source_mtime": "2026-05-07T02:54:33.586702Z",
+    "rendered_at": "2026-05-15T02:13:55.787558Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Skirts-0017": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Skirts-0017.json",
+    "source_sha256": "78e47fdd20d3b83f1699b4ed9dbce3d6cb8922181d15a3e033662055001417f3",
+    "source_mtime": "2026-05-07T02:54:33.593695Z",
+    "rendered_at": "2026-05-15T02:13:55.812035Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Skirts-0018": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Skirts-0018.json",
+    "source_sha256": "db3127a00e63d8aa78c95e7652d7495d501fabd718299c50eb1b81b286d4ff6f",
+    "source_mtime": "2026-05-14T03:21:36.677370Z",
+    "rendered_at": "2026-05-15T02:13:55.845883Z",
     "renderer_version": "de26f26db52a"
   },
   "Skirts-0125": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Skirts-0125.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Skirts-0125.json",
     "source_sha256": "f3a7e767d58a9c8436c04ba3aca1c756c804ec98963632bf2f45c215d3e509e8",
     "source_mtime": "2026-05-15T00:54:36.115667Z",
-    "rendered_at": "2026-05-15T01:40:12.663314Z",
+    "rendered_at": "2026-05-15T02:13:50.361365Z",
     "renderer_version": "de26f26db52a"
   },
   "Skirts-0126": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Skirts-0126.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Skirts-0126.json",
     "source_sha256": "01cfa21bf1676c262cfdfbe25e1a25d0162708f1b5d188836b2bf23ee8b58d75",
     "source_mtime": "2026-05-15T00:54:36.125668Z",
-    "rendered_at": "2026-05-15T01:40:12.692555Z",
+    "rendered_at": "2026-05-15T02:13:50.394691Z",
     "renderer_version": "de26f26db52a"
   },
   "Skirts-0127": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Skirts-0127.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Skirts-0127.json",
     "source_sha256": "f8afe72891ad1bbe769389aa21d7a6676596df275db9301e59ae7010ad4493d9",
     "source_mtime": "2026-05-15T00:54:36.136664Z",
-    "rendered_at": "2026-05-15T01:40:12.723522Z",
+    "rendered_at": "2026-05-15T02:13:50.428115Z",
     "renderer_version": "de26f26db52a"
   },
   "Skirts-0128": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Skirts-0128.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Skirts-0128.json",
     "source_sha256": "c22491a8e6de655eb2f4b1e9271e21505055463ab8dc1ab7410c3246110e0185",
     "source_mtime": "2026-05-15T00:54:36.146665Z",
-    "rendered_at": "2026-05-15T01:40:12.753488Z",
+    "rendered_at": "2026-05-15T02:13:50.460888Z",
+    "renderer_version": "de26f26db52a"
+  },
+  "Tops-0001": {
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Phase1_Migrated_April_2026/Tops-0001.json",
+    "source_sha256": "5022338c8b248a5b6711a6dfb0ec52fc8cc7b73688e4d80e8fb534bb30913a45",
+    "source_mtime": "2026-05-12T21:02:49.218502Z",
+    "rendered_at": "2026-05-15T02:13:55.870665Z",
     "renderer_version": "de26f26db52a"
   },
   "Tops-1321": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1321.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1321.json",
     "source_sha256": "6b9c65dbdc1ea6c35e4ae6ae22980dc6850faf7522ec13997dd03cc8f0f964e6",
     "source_mtime": "2026-05-14T19:13:48.987423Z",
-    "rendered_at": "2026-05-15T01:40:12.782913Z",
+    "rendered_at": "2026-05-15T02:13:50.490194Z",
     "renderer_version": "de26f26db52a"
   },
   "Tops-1322": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1322.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1322.json",
     "source_sha256": "116a9451ed26cc373d7508e8e0eb2f97f4b556f63b4ca6161ccc9db20eda614d",
     "source_mtime": "2026-05-14T19:13:48.999423Z",
-    "rendered_at": "2026-05-15T01:40:12.812055Z",
+    "rendered_at": "2026-05-15T02:13:50.520896Z",
     "renderer_version": "de26f26db52a"
   },
   "Tops-1323": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1323.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1323.json",
     "source_sha256": "d76888a30f75e1c57166c049699da88100a61b6ac687a99be005ee4cd7d4de9f",
     "source_mtime": "2026-05-14T19:13:49.011421Z",
-    "rendered_at": "2026-05-15T01:40:12.842758Z",
+    "rendered_at": "2026-05-15T02:13:50.551826Z",
     "renderer_version": "de26f26db52a"
   },
   "Tops-1324": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1324.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1324.json",
     "source_sha256": "4f1cfaeb52e81cf36154d66baed945ddb3e8ff9ab214d5d4f807bad6ac44d93a",
     "source_mtime": "2026-05-14T19:13:49.023423Z",
-    "rendered_at": "2026-05-15T01:40:12.872557Z",
+    "rendered_at": "2026-05-15T02:13:50.581627Z",
     "renderer_version": "de26f26db52a"
   },
   "Tops-1325": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1325.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1325.json",
     "source_sha256": "2a89f3624b6df7b3ceab74001f3cd4936244e9a8a247f6a8635295a369047340",
     "source_mtime": "2026-05-14T19:13:49.034423Z",
-    "rendered_at": "2026-05-15T01:40:12.901139Z",
+    "rendered_at": "2026-05-15T02:13:50.611205Z",
     "renderer_version": "de26f26db52a"
   },
   "Tops-1326": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1326.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1326.json",
     "source_sha256": "d49692be586d5706383ad0574ff226f6b38e380295f04510def08b8a8e039082",
     "source_mtime": "2026-05-14T19:13:49.045427Z",
-    "rendered_at": "2026-05-15T01:40:12.931240Z",
+    "rendered_at": "2026-05-15T02:13:50.641149Z",
     "renderer_version": "de26f26db52a"
   },
   "Tops-1327": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1327.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1327.json",
     "source_sha256": "487f92e47538bcd36ee14f12811b46442ae89a417ff3408e7078b594283a4cbd",
     "source_mtime": "2026-05-14T19:13:49.057938Z",
-    "rendered_at": "2026-05-15T01:40:12.961207Z",
+    "rendered_at": "2026-05-15T02:13:50.672979Z",
     "renderer_version": "de26f26db52a"
   },
   "Tops-1328": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1328.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1328.json",
     "source_sha256": "e81072a973dc1330666d36abd81017bbdbd1e23da24ecc8de952563bfbc008d1",
     "source_mtime": "2026-05-14T19:13:49.067938Z",
-    "rendered_at": "2026-05-15T01:40:12.990535Z",
+    "rendered_at": "2026-05-15T02:13:50.701178Z",
     "renderer_version": "de26f26db52a"
   },
   "Tops-1329": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1329.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1329.json",
     "source_sha256": "2692cf3248fdeefa6d95af4188d47177e27b06945ca0ae8975b5d8729cacce4d",
     "source_mtime": "2026-05-14T19:13:49.080938Z",
-    "rendered_at": "2026-05-15T01:40:13.020786Z",
+    "rendered_at": "2026-05-15T02:13:50.730570Z",
     "renderer_version": "de26f26db52a"
   },
   "Tops-1330": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1330.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1330.json",
     "source_sha256": "bf2e19dfa1ab1a36a6393f804374751c0d05af8f6b4fae244e7d044541eb172c",
     "source_mtime": "2026-05-14T19:14:42.138070Z",
-    "rendered_at": "2026-05-15T01:40:13.050833Z",
+    "rendered_at": "2026-05-15T02:13:50.759673Z",
     "renderer_version": "de26f26db52a"
   },
   "Tops-1331": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1331.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1331.json",
     "source_sha256": "eb6500678dd33c35b0f56a2bfd61639966e94c8dfe33ae81179fb5b576ce9fb6",
     "source_mtime": "2026-05-14T19:14:42.150043Z",
-    "rendered_at": "2026-05-15T01:40:13.081227Z",
+    "rendered_at": "2026-05-15T02:13:50.788509Z",
     "renderer_version": "de26f26db52a"
   },
   "Tops-1332": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1332.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1332.json",
     "source_sha256": "6ed81c178146fa2a30b232e8f34e3c0b44a5b92d0e8ba06f454b461ac713b170",
     "source_mtime": "2026-05-14T19:14:42.160047Z",
-    "rendered_at": "2026-05-15T01:40:13.112095Z",
+    "rendered_at": "2026-05-15T02:13:50.818048Z",
     "renderer_version": "de26f26db52a"
   },
   "Tops-1333": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1333.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1333.json",
     "source_sha256": "6d592206b9a3cac7f963d3a9453ed2d5b7bbe258a57595a1c115a5ee06e31a0a",
     "source_mtime": "2026-05-14T19:14:42.172803Z",
-    "rendered_at": "2026-05-15T01:40:13.141056Z",
+    "rendered_at": "2026-05-15T02:13:50.848982Z",
     "renderer_version": "de26f26db52a"
   },
   "Tops-1334": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1334.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1334.json",
     "source_sha256": "bb0c520b0c1919a78d1a1df2fa1d7b0363f895248d594af9c655938047950f92",
     "source_mtime": "2026-05-14T19:14:42.183802Z",
-    "rendered_at": "2026-05-15T01:40:13.170467Z",
+    "rendered_at": "2026-05-15T02:13:50.877321Z",
     "renderer_version": "de26f26db52a"
   },
   "Tops-1335": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1335.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1335.json",
     "source_sha256": "342936c2207e5b5620ebed9bd9bf7124a5381bda31e9a90e10ccdd91dc593119",
     "source_mtime": "2026-05-14T17:06:43.668041Z",
-    "rendered_at": "2026-05-15T01:40:13.197949Z",
+    "rendered_at": "2026-05-15T02:13:50.904680Z",
     "renderer_version": "de26f26db52a"
   },
   "Tops-1336": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1336.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1336.json",
     "source_sha256": "72441fd29e7f417e535dbdd94a2ed6e0f3e436b471067d1ac4ef5e02868dfc9a",
     "source_mtime": "2026-05-14T17:06:43.684039Z",
-    "rendered_at": "2026-05-15T01:40:13.224050Z",
+    "rendered_at": "2026-05-15T02:13:50.930030Z",
     "renderer_version": "de26f26db52a"
   },
   "Tops-1337": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1337.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1337.json",
     "source_sha256": "758c2186ea8fee36ae004dfcdb0cfd7a61f9002b90c1dc4264e29776d50bee11",
     "source_mtime": "2026-05-14T19:14:42.193799Z",
-    "rendered_at": "2026-05-15T01:40:13.252831Z",
+    "rendered_at": "2026-05-15T02:13:50.957190Z",
     "renderer_version": "de26f26db52a"
   },
   "Tops-1338": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/Tops-1338.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/Tops-1338.json",
     "source_sha256": "05816ec92eecbb59e4201fdc85fa99de2150cde783954c48254531ff5ef443f4",
     "source_mtime": "2026-05-15T00:42:47.165309Z",
-    "rendered_at": "2026-05-15T01:40:13.772505Z",
+    "rendered_at": "2026-05-15T02:13:51.502554Z",
     "renderer_version": "de26f26db52a"
   },
   "Tops-1339": {
-    "source_path": "/sessions/practical-hopeful-meitner/mnt/Claude/Projects/Item Intake/WERT Batch 1/Tops-1339.json",
+    "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/Tops-1339.json",
     "source_sha256": "9def370c771d592b6b00fae223d0dce91c5320c741ce9ee6be62c6dcd34e475c",
     "source_mtime": "2026-05-14T17:43:31.681134Z",
-    "rendered_at": "2026-05-15T01:40:13.806532Z",
+    "rendered_at": "2026-05-15T02:13:51.536530Z",
     "renderer_version": "de26f26db52a"
   }
 }
