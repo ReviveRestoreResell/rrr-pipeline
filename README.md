@@ -20,11 +20,11 @@ Revive-Restore-Resell/
         └── Tops-1331-archive-01..05.jpg
 ```
 
-URL pattern: `https://vmonagon.github.io/Revive-Restore-Resell/items/<SKU>.html`
+URL pattern: `https://ReviveRestoreResell.github.io/intake-cards/items/<SKU>.html`
 
 ## Deploy steps (one-time)
 
-1. Clone the repo locally: `git clone git@github.com:vmonagon/Revive-Restore-Resell.git`
+1. Clone the repo locally: `git clone git@github.com:ReviveRestoreResell/intake-cards.git`
 2. Copy this folder's contents into the clone (root level).
 3. `git add . && git commit -m "Phase A proof: Tops-1331" && git push`
 4. Repo → Settings → Pages:
@@ -32,7 +32,7 @@ URL pattern: `https://vmonagon.github.io/Revive-Restore-Resell/items/<SKU>.html`
    - Branch: `main` / `/ (root)`
    - Save
 5. Wait 1–2 minutes for first build. URL goes live.
-6. Confirm `robots.txt` is served: `https://vmonagon.github.io/Revive-Restore-Resell/robots.txt`
+6. Confirm `robots.txt` is served: `https://ReviveRestoreResell.github.io/intake-cards/robots.txt`
 
 ## Privacy notes
 
