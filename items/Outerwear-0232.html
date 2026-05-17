@@ -261,7 +261,7 @@
   <div class="titlebar">
     <div>
       <div class="sku">Outerwear-0232</div>
-      <div class="nickname">Johnston &amp; Murphy · Quilted Jacket · L · Charcoal</div>
+      <div class="nickname">Johnston &amp; Murphy · Quilted Jacket · L · Black</div>
     </div>
     <div class="opbar">
       <label style="font-size:11px;color:var(--ink-mute)">I am <select id="opIam" onchange="setIam(this.value)"><option>Vaughn</option><option>Tracie</option><option>Shital</option><option>Elle</option><option>Operator</option><option>AI</option></select></label>
@@ -310,68 +310,83 @@
     <div class="sband-hdr" onclick="toggleBand(this)">
       <span class="sband-arrow">&#9658;</span>
       <span class="sband-label">Copy</span>
-      <span class="sband-badge">Title+ &hellip; &nbsp;|&nbsp; Desc+ &hellip; &nbsp;|&nbsp; KW+ &hellip;</span>
+      <span class="sband-badge">Title+ &check; &nbsp;|&nbsp; Desc+ &check; &nbsp;|&nbsp; KW+ &check;</span>
     </div>
     <div class="sband-body">
       <div class="cws-blocks">
 
         <!-- Title+ status (dynamic: confirmed or pending) -->
-        <div class="cws-block cws-pending" id="cwsb-title" onclick="cwsOpen('title')" role="button" tabindex="0">
+        <div class="cws-block cws-confirmed" id="cwsb-title" onclick="cwsOpen('title')" role="button" tabindex="0">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Title+</span>
-            <span class="cwsb-meta">&#8212;&nbsp;chars</span>
-            <span class="cwsb-badge cws-pending">&#9203;&nbsp;Pending</span>
+            <span class="cwsb-meta">79&nbsp;chars</span>
+            <span class="cwsb-badge cws-confirmed">&#10003;&nbsp;Confirmed</span>
             <button class="cwsb-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-title-display')" aria-label="Copy Title">copy</button>
           </div>
           <div class="cwsb-body">
-            <div class="cwsb-text" id="cws-title-display"></div>
+            <div class="cwsb-text" id="cws-title-display">Johnston Murphy XC4 Performance Quilted Jacket Mens L Black Stretch Hybrid Coat</div>
             <div class="cwsb-click-hint">&#9998; Click to edit</div>
           </div>
         </div>
 
         <!-- Description+ (state driven by copy.pending[]) -->
-        <div class="cws-block cws-pending" id="cwsb-desc" style="cursor:default" role="region" aria-label="Description+">
+        <div class="cws-block cws-confirmed" id="cwsb-desc" style="cursor:default" role="region" aria-label="Description+">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Description+</span>
-            <span class="cwsb-badge cws-pending" id="cwsb-desc-badge">&#9203;&nbsp;Pending Review</span>
+            <span class="cwsb-badge cws-confirmed" id="cwsb-desc-badge">&#10003;&nbsp;Confirmed</span>
           </div>
           <div class="cwsb-body" style="display:flex;flex-direction:column;gap:8px">
 
             <!-- P1 sub-block -->
-            <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p1" onclick="cwsOpen('desc-p1')" role="button" tabindex="0">
+            <div class="cws-subblock cws-subblock-confirmed" id="cwsb-desc-p1" onclick="cwsOpen('desc-p1')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P1 &middot; Opening Paragraph</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p1-badge">&#9203;&nbsp;Pending</span>
+                <span class="cws-subblock-badge cws-subblock-confirmed" id="cwsb-desc-p1-badge">&#10003;&nbsp;Confirmed</span>
                 <button class="cws-subblock-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-desc-p1-display')" aria-label="Copy P1">copy</button>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p1-display"></div>
+                <div class="cwsb-text" id="cws-desc-p1-display">Johnston &amp; Murphy XC4 Performance Front-Quilted Jacket in black with subtle stripe-and-heathered texture across the stretch back panel. Hybrid build pairs a quilted nylon/poly front body with a nylon/spandex stretch knit back and sleeves for warmth without bulk and full range of motion. Men's size L, modern sportcore polish that crosses over to travel, everyday layering, and workwear.</div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
 
             <!-- P2 sub-block -->
-            <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p2" onclick="cwsOpen('desc-p2')" role="button" tabindex="0">
+            <div class="cws-subblock cws-subblock-confirmed" id="cwsb-desc-p2" onclick="cwsOpen('desc-p2')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P2 &middot; SMC</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p2-badge">&#9203;&nbsp;Pending</span>
+                <span class="cws-subblock-badge cws-subblock-confirmed" id="cwsb-desc-p2-badge">&#10003;&nbsp;Confirmed</span>
                 <button class="cws-subblock-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-desc-p2-display')" aria-label="Copy P2 SMC">copy</button>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p2-display"></div>
+                <div class="cwsb-text" id="cws-desc-p2-display">MEASUREMENTS (lay-flat, inches):
+- Pit to Pit: 22
+- Length: 27
+- Sleeve: 20
+
+MATERIAL:
+- Front body: 80% Nylon / 20% Polyester (quilted)
+- Back body &amp; sleeve: 86% Nylon / 14% Spandex (stretch knit)
+- Lining: 100% Polyester
+
+CONDITION: Gently pre-owned. Note: small pin-point hole in front right of jacket. Otherwise clean and structurally sound. Photos are part of the description.</div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
 
             <!-- P3 sub-block -->
-            <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p3" onclick="cwsOpen('desc-p3')" role="button" tabindex="0">
+            <div class="cws-subblock cws-subblock-confirmed" id="cwsb-desc-p3" onclick="cwsOpen('desc-p3')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P3 &middot; Badges</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p3-badge">&#9203;&nbsp;Pending</span>
+                <span class="cws-subblock-badge cws-subblock-confirmed" id="cwsb-desc-p3-badge">&#10003;&nbsp;Confirmed</span>
                 <button class="cws-subblock-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-desc-p3-display')" aria-label="Copy P3 Badges">copy</button>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p3-display"></div>
+                <div class="cwsb-text" id="cws-desc-p3-display">- Verified brand: Johnston &amp; Murphy (RN# 124179 / CA# 55637)
+- Model confirmed: XC4 Performance Front-Quilted Jacket (Stock 49-3152)
+- Stretch fabric (back + sleeve)
+- UPF / performance line
+- Smoke-free home
+- Fast shipping</div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
@@ -380,14 +395,14 @@
         </div>
 
         <!-- Keyword+ (state driven by copy.pending[] / keywords presence) -->
-        <div class="cws-block cws-pending" id="cwsb-kw" onclick="cwsOpen('kw')" role="button" tabindex="0">
+        <div class="cws-block cws-confirmed" id="cwsb-kw" onclick="cwsOpen('kw')" role="button" tabindex="0">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Keyword+</span>
-            <span class="cwsb-badge cws-pending">&#9203;&nbsp;Pending Review</span>
+            <span class="cwsb-badge cws-confirmed">&#10003;&nbsp;Confirmed</span>
             <button class="cwsb-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-kw-display')" aria-label="Copy Keywords">copy</button>
           </div>
           <div class="cwsb-body">
-            <div class="cwsb-text" id="cws-kw-display"></div>
+            <div class="cwsb-text" id="cws-kw-display">Johnston Murphy XC4 performance quilted jacket mens L black stretch hybrid coat stripe heather nylon spandex sportcore travel everyday workwear funnel collar full zip slash pocket modern menswear #JohnstonMurphy #XC4 #QuiltedJacket #MensJacket #BlackJacket #StretchJacket #HybridJacket #PerformanceJacket #Sportcore #TravelJacket #MensOuterwear #MensCoat #FullZip #FunnelNeck #MensStyle #ModernMenswear #QuietLuxury #MensLarge #EverydayJacket #MensFashion</div>
             <div class="cwsb-click-hint">&#9998; Click to edit</div>
           </div>
         </div>
@@ -405,9 +420,9 @@
   </div>
   <div class="sband-body">
 <h4 style="margin-top:0">Visual Properties</h4>
-<div class="row" data-field="cc.color.family" data-status="green" data-source="photo_agent" data-value="Charcoal · dark gray heather"><div class="k">Color</div><div class="v"><div class="copyblock"><span class="cb-val">Charcoal · dark gray heather</span><button class="cb-btn" onclick="copyVal(this,'Charcoal · dark gray heather')">copy</button></div></div><button class="conf green" onclick="openField('cc.color.family')">&#10003;</button></div>
+<div class="row" data-field="cc.color.family" data-status="green" data-source="photo_agent" data-value="Black"><div class="k">Color</div><div class="v"><div class="copyblock"><span class="cb-val">Black</span><button class="cb-btn" onclick="copyVal(this,'Black')">copy</button></div></div><button class="conf green" onclick="openField('cc.color.family')">&#10003;</button></div>
 <div class="row" data-field="cc.color.secondary" data-status="green" data-source="photo_agent" data-value="Black"><div class="k">Secondary Color</div><div class="v"><div class="copyblock"><span class="cb-val">Black</span><button class="cb-btn" onclick="copyVal(this,'Black')">copy</button></div></div><button class="conf green" onclick="openField('cc.color.secondary')">&#10003;</button></div>
-<div class="row" data-field="cc.pattern" data-status="green" data-source="photo_agent" data-value="Color Block · Large"><div class="k">Pattern</div><div class="v"><div class="copyblock"><span class="cb-val">Color Block · Large</span><button class="cb-btn" onclick="copyVal(this,'Color Block · Large')">copy</button></div></div><button class="conf green" onclick="openField('cc.pattern')">&#10003;</button></div>
+<div class="row" data-field="cc.pattern" data-status="green" data-source="photo_agent" data-value="Stripe &amp; heathered · Large"><div class="k">Pattern</div><div class="v"><div class="copyblock"><span class="cb-val">Stripe &amp; heathered · Large</span><button class="cb-btn" onclick="copyVal(this,'Stripe &amp; heathered · Large')">copy</button></div></div><button class="conf green" onclick="openField('cc.pattern')">&#10003;</button></div>
 <div class="row" data-field="cc.silhouette" data-status="green" data-source="photo_agent" data-value="Quilted"><div class="k">Silhouette</div><div class="v"><div class="copyblock"><span class="cb-val">Quilted</span><button class="cb-btn" onclick="copyVal(this,'Quilted')">copy</button></div></div><button class="conf green" onclick="openField('cc.silhouette')">&#10003;</button></div>
 <div class="row" data-field="cc.closures" data-status="green" data-source="photo_agent" data-value="Zipper-Exposed · Front"><div class="k">Closures</div><div class="v"><div class="copyblock"><span class="cb-val">Zipper-Exposed · Front</span><button class="cb-btn" onclick="copyVal(this,'Zipper-Exposed · Front')">copy</button></div></div><button class="conf green" onclick="openField('cc.closures')">&#10003;</button></div>
 <div class="row" data-field="cc.closures.details" data-status="green" data-source="photo_agent" data-value="Full-length front zipper"><div class="k">Closure Note</div><div class="v"><div class="copyblock"><span class="cb-val">Full-length front zipper</span><button class="cb-btn" onclick="copyVal(this,'Full-length front zipper')">copy</button></div></div><button class="conf green" onclick="openField('cc.closures.details')">&#10003;</button></div>
@@ -442,7 +457,7 @@
         <div class="item-details-left">
           <div class="row" data-field="vendoo.brand" data-status="green" data-source="RN# 124179 + CA# 55637 documented on care-tag photo. Johnston &amp; Murphy XC4 Performance line — confirmed via johnstonmurphy.com product page item 49-3152 (XC4 Performance Front-Quilted Jacket). Brand presence widely documented; verified product line." data-value="Johnston &amp; Murphy"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Johnston &amp; Murphy</span><button class="cb-btn" onclick="copyVal(this,'Johnston &amp; Murphy')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.brand')">&#10003;</button></div>
           <div class="row" data-field="vendoo.condition" data-options="NWT|NWOT|GPO (internal)|Pre-Loved (internal)|Fair (internal)|Pre-owned — Like New (eBay)|Pre-owned — Very Good (eBay)|Pre-owned — Good (eBay)|Pre-owned — Acceptable (eBay)|Like New (Vendoo)|Good (Vendoo)|Fair (Vendoo)|New with Tags (Vendoo)" data-status="green" data-source="Phase 1 intake &middot; GPO" data-value="GPO"><div class="k">Condition</div><div class="v"><div class="selectblock"><span class="sb-val">Pre-Owned - Good</span></div></div><button class="conf green" onclick="openField('vendoo.condition')">&#10003;</button></div>
-          <div class="row" data-field="vendoo.color1" data-options="Black|White|Gray|Brown|Tan/Beige|Red|Orange|Yellow|Green|Blue|Purple|Pink|Multi|Print|Other" data-status="green" data-source="copy_capture" data-value="Charcoal"><div class="k">Primary Color</div><div class="v"><div class="selectblock"><span class="sb-val">Charcoal</span></div></div><button class="conf green" onclick="openField('vendoo.color1')">&#10003;</button></div>
+          <div class="row" data-field="vendoo.color1" data-options="Black|White|Gray|Brown|Tan/Beige|Red|Orange|Yellow|Green|Blue|Purple|Pink|Multi|Print|Other" data-status="green" data-source="copy_capture" data-value="Black"><div class="k">Primary Color</div><div class="v"><div class="selectblock"><span class="sb-val">Black</span></div></div><button class="conf green" onclick="openField('vendoo.color1')">&#10003;</button></div>
           <div class="row" data-field="vendoo.color2" data-options="None|Black|White|Gray|Brown|Tan/Beige|Red|Orange|Yellow|Green|Blue|Purple|Pink|Multi|Print|Other" data-status="gray" data-source="copy_capture" data-value="Black"><div class="k">Secondary Color</div><div class="v"><div class="selectblock "><span class="sb-val">Black</span></div></div><button class="conf gray" onclick="openField('vendoo.color2')">&minus;</button></div>
           <div class="row" data-field="vendoo.zip" data-status="green" data-source="Operator default 97114" data-value="97114"><div class="k">Zip Code</div><div class="v"><div class="copyblock"><span class="cb-val">97114</span><button class="cb-btn" onclick="copyVal(this,'97114')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.zip')">&#10003;</button></div>
           <div class="row" data-field="vendoo.sku" data-status="green" data-source="Master_SKU registry" data-value="Outerwear-0232"><div class="k">SKU</div><div class="v"><div class="copyblock"><span class="cb-val">Outerwear-0232</span><button class="cb-btn" onclick="copyVal(this,'Outerwear-0232')">copy</button></div></div><button class="conf green" onclick="openField('vendoo.sku')">&#10003;</button></div>
@@ -496,7 +511,7 @@
       <div class="grid">
         <div class="row" data-field="ebay.price" data-status="green" data-source="rrr-pricing &middot; eBay 75th &middot; medium confidence (n=6 90d)" data-value="95.00"><div class="k">Price</div><div class="v"><div class="copyblock"><span class="cb-val">$95</span><button class="cb-btn" onclick="copyVal(this,'95.00')">copy</button></div></div><button class="conf green" onclick="openField('ebay.price')">&#10003;</button></div>
         <div class="row" data-field="ebay.brand" data-status="green" data-source="RN# 124179 + CA# 55637 documented on care-tag photo. Johnston &amp; Murphy XC4 Performance line — confirmed via johnstonmurphy.com product page item 49-3152 (XC4 Performance Front-Quilted Jacket). Brand presence widely documented; verified product line." data-value="Johnston &amp; Murphy"><div class="k">Brand</div><div class="v"><div class="copyblock"><span class="cb-val">Johnston &amp; Murphy</span><button class="cb-btn" onclick="copyVal(this,'Johnston &amp; Murphy')">copy</button></div></div><button class="conf green" onclick="openField('ebay.brand')">&#10003;</button></div>
-        <div class="row" data-field="ebay.color" data-status="green" data-source="copy_capture" data-value="Charcoal"><div class="k">Color</div><div class="v"><div class="selectblock"><span class="sb-val">Charcoal</span></div></div><button class="conf green" onclick="openField('ebay.color')">&#10003;</button></div>
+        <div class="row" data-field="ebay.color" data-status="green" data-source="copy_capture" data-value="Black"><div class="k">Color</div><div class="v"><div class="selectblock"><span class="sb-val">Black</span></div></div><button class="conf green" onclick="openField('ebay.color')">&#10003;</button></div>
         <div class="row" data-field="ebay.priceformat" data-options="Fixed Price|Auction" data-status="yellow" data-source="Default &middot; Buy It Now" data-value="Fixed Price &middot; $95"><div class="k">Price Format</div><div class="v"><div class="selectblock"><span class="sb-val">Fixed Price &middot; $95</span></div></div><button class="conf yellow" onclick="openField('ebay.priceformat')">&#9888;</button></div>
         <div class="row" data-field="ebay.bestoffer" data-options="Yes|No" data-status="gray" data-source="Policy decision &middot; not in JSON" data-value=""><div class="k">Allow Best Offer</div><div class="v"><div class="selectblock pending"><span class="sb-val">policy decision</span></div></div><button class="conf gray" onclick="openField('ebay.bestoffer')">&minus;</button></div>
         <div class="row" data-field="ebay.shipping" data-options="Buyer Pays Calculated|Free Shipping|Flat Rate" data-status="yellow" data-source="commerce.shipping" data-value="Buyer Pays Calculated (GPO condition, not NWT)"><div class="k">Shipping Policy</div><div class="v"><div class="selectblock"><span class="sb-val">Buyer Pays Calculated (GPO condition, not NWT)</span></div></div><button class="conf yellow" onclick="openField('ebay.shipping')">&#9888;</button></div>
@@ -509,7 +524,7 @@
         <div class="row" data-field="ebay.aspect.department" data-options="Men|Women|Unisex|Boys|Girls" data-status="green" data-source="aspects" data-value="Women"><div class="k">Department</div><div class="v"><div class="selectblock"><span class="sb-val">Women</span></div></div><button class="conf green" onclick="openField('ebay.aspect.department')">&#10003;</button></div>
         <div class="row" data-field="ebay.aspect.condition" data-options="NWT|NWOT|GPO (internal)|Pre-Loved (internal)|Fair (internal)|Pre-owned — Like New (eBay)|Pre-owned — Very Good (eBay)|Pre-owned — Good (eBay)|Pre-owned — Acceptable (eBay)|Like New (Vendoo)|Good (Vendoo)|Fair (Vendoo)|New with Tags (Vendoo)" data-status="green" data-source="Phase 1 intake &middot; GPO" data-value="GPO"><div class="k">Condition</div><div class="v"><div class="selectblock"><span class="sb-val">Pre-owned — Good</span></div></div><button class="conf green" onclick="openField('ebay.aspect.condition')">&#10003;</button></div>
         <div class="row" data-field="ebay.aspect.sleeve" data-options="Short Sleeve|Long Sleeve|3/4 Sleeve|Sleeveless|Cap Sleeve" data-status="green" data-source="copy_capture &middot; 1.0 confidence" data-value="Long Sleeve"><div class="k">Sleeve Length</div><div class="v"><div class="selectblock"><span class="sb-val">Long Sleeve</span></div></div><button class="conf green" onclick="openField('ebay.aspect.sleeve')">&#10003;</button></div>
-        <div class="row" data-field="ebay.aspect.pattern" data-options="Solid|Plaid|Stripes|Checkered|Geometric|Floral|Abstract|Animal Print|Camouflage|Paisley|Graphic Print" data-status="green" data-source="photo_agent" data-value="Color Block"><div class="k">Pattern</div><div class="v"><div class="selectblock"><span class="sb-val">Color Block</span></div></div><button class="conf green" onclick="openField('ebay.aspect.pattern')">&#10003;</button></div>
+        <div class="row" data-field="ebay.aspect.pattern" data-options="Solid|Plaid|Stripes|Checkered|Geometric|Floral|Abstract|Animal Print|Camouflage|Paisley|Graphic Print" data-status="green" data-source="bench_corrections_2026-05-15" data-value="Stripe &amp; heathered"><div class="k">Pattern</div><div class="v"><div class="selectblock"><span class="sb-val">Stripe &amp; heathered</span></div></div><button class="conf green" onclick="openField('ebay.aspect.pattern')">&#10003;</button></div>
         <div class="row" data-field="ebay.aspect.material" data-status="green" data-source="Care tag &middot; 55% Cotton 45% Polyester" data-value="FRONT BODY: 80% Nylon / 20% Polyester, BACK BODY &amp; SLEEVE: 86% Nylon / 14% Spandex, LINING: 100% Polyester"><div class="k">Material</div><div class="v"><div class="copyblock"><span class="cb-val">FRONT BODY: 80% Nylon / 20% Polyester, BACK BODY &amp; SLEEVE: 86% Nylon / 14% Spandex, LINING: 100% Polyester</span><button class="cb-btn" onclick="copyVal(this,'FRONT BODY: 80% Nylon / 20% Polyester, BACK BODY &amp; SLEEVE: 86% Nylon / 14% Spandex, LINING: 100% Polyester')">copy</button></div></div><button class="conf green" onclick="openField('ebay.aspect.material')">&#10003;</button></div>
         <div class="row" data-field="ebay.aspect.country" data-options="China|USA|Vietnam|Bangladesh|Cambodia|Mexico|India|Indonesia|Pakistan|Turkey|El Salvador|Sri Lanka" data-status="green" data-source="care tag" data-value="China"><div class="k">Country of Origin</div><div class="v"><div class="selectblock "><span class="sb-val">China</span></div></div><button class="conf green" onclick="openField('ebay.aspect.country')">&#10003;</button></div>
         <div class="row" data-field="ebay.aspect.care" data-options="Machine Washable|Hand Wash Only|Dry Clean Only|Spot Clean Only" data-status="green" data-source="care tag" data-value="Machine wash cold; do not bleach; tumble dry low; remove promptly; cool iron if needed; non-chlorine bleach; do not dry clean"><div class="k">Garment Care</div><div class="v"><div class="selectblock "><span class="sb-val">Machine wash cold; do not bleach; tumble dry low; remove promptly; cool iron if needed; non-chlorine bleach; do not dry clean</span></div></div><button class="conf green" onclick="openField('ebay.aspect.care')">&#10003;</button></div>
@@ -542,7 +557,7 @@
         <div class="row" data-field="ref.rn" data-status="green" data-source="brand tag" data-value="124179"><div class="k">RN</div><div class="v"><div class="copyblock "><span class="cb-val">124179</span><button class="cb-btn" onclick="copyVal(this,'124179')">copy</button></div></div><button class="conf green" onclick="openField('ref.rn')">&#10003;</button></div>
         <div class="row" data-field="ref.style" data-status="gray" data-source="brand tag" data-value="—"><div class="k">Style Code</div><div class="v"><div class="copyblock pending"><span class="cb-val">—</span><button class="cb-btn" onclick="copyVal(this,'—')">copy</button></div></div><button class="conf gray" onclick="openField('ref.style')">&minus;</button></div>
         <div class="row" data-field="ref.category" data-status="green" data-source="Internal classification" data-value="Tops / Button-Down"><div class="k">Category</div><div class="v"><div class="selectblock"><span class="sb-val">Tops &rsaquo; Button-Down</span></div></div><button class="conf green" onclick="openField('ref.category')">&#10003;</button></div>
-        <div class="row" data-field="cap.color" data-status="green" data-source="copy_capture" data-value="Charcoal"><div class="k">Color</div><div class="v"><div class="selectblock"><span class="sb-val">Charcoal</span></div></div><button class="conf green" onclick="openField('cap.color')">&#10003;</button></div>
+        <div class="row" data-field="cap.color" data-status="green" data-source="copy_capture" data-value="Black"><div class="k">Color</div><div class="v"><div class="selectblock"><span class="sb-val">Black</span></div></div><button class="conf green" onclick="openField('cap.color')">&#10003;</button></div>
         <div class="row" data-field="ebay.aspect.material" data-status="green" data-source="care tag" data-value="FRONT BODY: 80% Nylon / 20% Polyester, BACK BODY &amp; SLEEVE: 86% Nylon / 14% Spandex, LINING: 100% Polyester"><div class="k">Material</div><div class="v"><div class="copyblock "><span class="cb-val">FRONT BODY: 80% Nylon / 20% Polyester · BACK BODY &amp; SLEEVE: 86% Nylon / 14% Spandex · LINING: 100% Polyester</span><button class="cb-btn" onclick="copyVal(this,'FRONT BODY: 80% Nylon / 20% Polyester, BACK BODY &amp; SLEEVE: 86% Nylon / 14% Spandex, LINING: 100% Polyester')">copy</button></div></div><button class="conf green" onclick="openField('ebay.aspect.material')">&#10003;</button></div>
         <div class="row" data-field="ebay.aspect.care" data-options="Machine Washable|Hand Wash Only|Dry Clean Only|Spot Clean Only" data-status="green" data-source="care tag" data-value="Machine wash cold; do not bleach; tumble dry low; remove promptly; cool iron if needed; non-chlorine bleach; do not dry clean"><div class="k">Care</div><div class="v"><div class="copyblock "><span class="cb-val">Machine wash cold; do not bleach; tumble dry low; remove promptly; cool iron if needed; non-chlorine bleach; do not dry clean</span><button class="cb-btn" onclick="copyVal(this,'Machine wash cold; do not bleach; tumble dry low; remove promptly; cool iron if needed; non-chlorine bleach; do not dry clean')">copy</button></div></div><button class="conf green" onclick="openField('ebay.aspect.care')">&#10003;</button></div>
         <div class="row" data-field="ebay.aspect.country" data-options="China|USA|Vietnam|Bangladesh|Cambodia|Mexico|India|Indonesia|Pakistan|Turkey|El Salvador|Sri Lanka" data-status="green" data-source="care tag" data-value="China"><div class="k">Country of Origin</div><div class="v"><div class="selectblock "><span class="sb-val">China</span></div></div><button class="conf green" onclick="openField('ebay.aspect.country')">&#10003;</button></div>
@@ -555,13 +570,13 @@
     <div class="sband-hdr" onclick="toggleBand(this)">
       <span class="sband-arrow">&#9658;</span>
       <span class="sband-label">Measurements</span>
-      <span class="sband-badge">Bust 24&Prime; &middot; Length 28&Prime; &middot; Sleeve 20&Prime;</span>
+      <span class="sband-badge">Bust 22&Prime; &middot; Length 27&Prime; &middot; Sleeve 20&Prime;</span>
     </div>
     <div class="sband-body">
       <div style="font-size:11px;color:var(--ink-mute);margin-bottom:10px">Lay-flat unstretched &middot; all measurements in inches</div>
       <div class="grid">
-        <div class="row" data-field="ref.bust" data-status="green" data-source="Bench 2026-05-05" data-value="24"><div class="k">Pit to Pit (Flat)</div><div class="v"><div class="copyblock"><span class="cb-val">24 in</span><button class="cb-btn" onclick="copyVal(this,'24')">copy</button></div></div><button class="conf green" onclick="openField('ref.bust')">&#10003;</button></div>
-        <div class="row" data-field="ref.length" data-status="green" data-source="Bench 2026-05-05" data-value="28"><div class="k">Length (Full)</div><div class="v"><div class="copyblock"><span class="cb-val">28 in</span><button class="cb-btn" onclick="copyVal(this,'28')">copy</button></div></div><button class="conf green" onclick="openField('ref.length')">&#10003;</button></div>
+        <div class="row" data-field="ref.bust" data-status="green" data-source="Bench 2026-05-05" data-value="22"><div class="k">Pit to Pit (Flat)</div><div class="v"><div class="copyblock"><span class="cb-val">22 in</span><button class="cb-btn" onclick="copyVal(this,'22')">copy</button></div></div><button class="conf green" onclick="openField('ref.bust')">&#10003;</button></div>
+        <div class="row" data-field="ref.length" data-status="green" data-source="Bench 2026-05-05" data-value="27"><div class="k">Length (Full)</div><div class="v"><div class="copyblock"><span class="cb-val">27 in</span><button class="cb-btn" onclick="copyVal(this,'27')">copy</button></div></div><button class="conf green" onclick="openField('ref.length')">&#10003;</button></div>
         <div class="row" data-field="ref.sleeve" data-status="green" data-source="Bench 2026-05-05" data-value="20"><div class="k">Sleeve (Full)</div><div class="v"><div class="copyblock"><span class="cb-val">20 in</span><button class="cb-btn" onclick="copyVal(this,'20')">copy</button></div></div><button class="conf green" onclick="openField('ref.sleeve')">&#10003;</button></div>
         <div class="row" data-field="ref.stretch" data-status="green" data-source="descriptors" data-value="Yes"><div class="k">Stretch</div><div class="v"><div class="selectblock"><span class="sb-val">Yes</span></div></div><button class="conf green" onclick="openField('ref.stretch')">&#10003;</button></div>
       </div>
@@ -628,7 +643,7 @@
 
   <footer>
     <span><strong>Host:</strong> GitHub Pages &middot; ReviveRestoreResell/intake-cards</span>
-    <span><strong>Render:</strong> static &middot; v0.6 (sband redesign) &middot; 2026-05-15</span>
+    <span><strong>Render:</strong> static &middot; v0.6 (sband redesign) &middot; 2026-05-17</span>
   </footer>
 </div>
   <!-- ── 9. FLOW STEP tracker (preserved exactly) ── -->
@@ -649,6 +664,7 @@
       <span class="sband-badge" id="flagsCount">6</span>
     </div>
     <div class="sband-body">
+      <div class="flag-item" data-field="operator_note_surface_in_smc"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('operator_note_surface_in_smc')">operator_note_surface_in_smc</span></div></div>
       <div class="flag-item" data-field="photo_inventory.photos"><span class="flag-sev warn">WARN</span><div><span class="flag-link" onclick="openField('photo_inventory.photos')">photo_inventory.photos</span> — Back shot not present; garment shot only Front (laid in clutter, not flat)</div></div>
     </div>
   </div>
@@ -1393,4 +1409,4 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="row-controls">From <select id="mdAuthor"></select></div>
         <textarea id="mdText" placeholder="Add a note for this field…" rows="3"></textarea>
         <div class="mb-actions">
-   
+ 
