@@ -3,812 +3,812 @@
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Accessories-1842.json",
     "source_sha256": "597a96dbc8d67afb5ae9fe400747efda2ab97b458587e43530190eea0506851c",
     "source_mtime": "2026-05-17T14:56:54.075906Z",
-    "rendered_at": "2026-05-17T14:58:09.853055Z",
+    "rendered_at": "2026-05-17T15:14:44.241854Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Accessories-1843": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Accessories-1843.json",
     "source_sha256": "e243704f9ca211b270cc04fb1fcbdf4ef03d0377dc7b99859efdd98f4ba314e7",
     "source_mtime": "2026-05-17T14:56:54.088932Z",
-    "rendered_at": "2026-05-17T14:58:09.916703Z",
+    "rendered_at": "2026-05-17T15:14:44.305407Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Accessories-1844": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Accessories-1844.json",
     "source_sha256": "ba0feef2880f85fc8d32646dff424abaaf538ca2d5c38a40d9c1a0634df4b567",
     "source_mtime": "2026-05-17T14:56:54.100214Z",
-    "rendered_at": "2026-05-17T14:58:09.970380Z",
+    "rendered_at": "2026-05-17T15:14:44.355580Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Accessories-1845": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Accessories-1845.json",
     "source_sha256": "853f7b5be55fde96eb80fb17ebb7d24ba55928dd585ce0cf36362337001ae5fb",
     "source_mtime": "2026-05-17T14:56:54.112232Z",
-    "rendered_at": "2026-05-17T14:58:10.038773Z",
+    "rendered_at": "2026-05-17T15:14:44.404622Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Accessories-1846": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Accessories-1846.json",
     "source_sha256": "435ac4ef569e54e1a36d30db9f462d21740320eab427d25f3d7b9a49e2e44fff",
     "source_mtime": "2026-05-17T14:56:54.127064Z",
-    "rendered_at": "2026-05-17T14:58:10.106175Z",
+    "rendered_at": "2026-05-17T15:14:44.452850Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Dresses-0418": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Dresses-0418.json",
     "source_sha256": "f8c783e11a0fde181f2419c75e67474f35120c39dcc2da9589fc6ec6b69051c4",
     "source_mtime": "2026-05-17T14:56:54.143843Z",
-    "rendered_at": "2026-05-17T14:58:10.174649Z",
+    "rendered_at": "2026-05-17T15:14:44.503417Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Dresses-0419": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Dresses-0419.json",
     "source_sha256": "158c494f36b64eab9d4a97a90884cd3b14d8bd2b3eeed403da985fe72d1dd29d",
     "source_mtime": "2026-05-14T16:04:03.574698Z",
-    "rendered_at": "2026-05-17T14:58:10.229968Z",
+    "rendered_at": "2026-05-17T15:14:44.545309Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Dresses-0420": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Dresses-0420.json",
     "source_sha256": "07a485e5158298fcd467e3873603508cd2bcd92d1ec0197efc59fefe0825d3ab",
     "source_mtime": "2026-05-17T14:56:54.158250Z",
-    "rendered_at": "2026-05-17T14:58:10.294773Z",
+    "rendered_at": "2026-05-17T15:14:44.591985Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Dresses-0421": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/Dresses-0421.json",
     "source_sha256": "97a0ddb6581664cb5f80bf4092b8dbdfdce8dccaf0b6fb39cd7cc1b5725b8e54",
     "source_mtime": "2026-05-17T14:56:54.173699Z",
-    "rendered_at": "2026-05-17T14:58:17.256844Z",
+    "rendered_at": "2026-05-17T15:14:47.490118Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "NWLG_WERT_titles_from_May7": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/NWLG_WERT_titles_from_May7.json",
     "source_sha256": "ff2f626f3575c91d8f304a67e107f807c9045dff0bc7f06e2f53d8882a22b488",
     "source_mtime": "2026-05-17T14:41:09Z",
-    "rendered_at": "2026-05-17T14:58:10.345230Z",
+    "rendered_at": "2026-05-17T15:14:44.630955Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Outerwear-0214": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0214.json",
     "source_sha256": "1208a97434cd6006d54b8e257d7713092c5cc3131e4389dda80b97f238a19cbe",
     "source_mtime": "2026-05-17T14:52:18.594864Z",
-    "rendered_at": "2026-05-17T14:58:10.410200Z",
+    "rendered_at": "2026-05-17T15:14:44.675854Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Outerwear-0215": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0215.json",
     "source_sha256": "8a69f957ceaa48a4f3235a8c2d11ad100aba1b8615eed5e2cbc9952386e93aff",
     "source_mtime": "2026-05-17T14:52:21.382230Z",
-    "rendered_at": "2026-05-17T14:58:10.469053Z",
+    "rendered_at": "2026-05-17T15:14:44.721313Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Outerwear-0216": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0216.json",
     "source_sha256": "ce0ccb04c49bfdd40dfcd31585dcf4168fc433d6b31b17c04d5d17b4a986903e",
     "source_mtime": "2026-05-17T14:52:24.314696Z",
-    "rendered_at": "2026-05-17T14:58:10.529372Z",
+    "rendered_at": "2026-05-17T15:14:44.765050Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Outerwear-0217": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0217.json",
     "source_sha256": "eef5a273e54a88ab530112507b5b0a9d02a108cc15a502662785719ca86f6283",
     "source_mtime": "2026-05-17T14:52:27.635739Z",
-    "rendered_at": "2026-05-17T14:58:10.583804Z",
+    "rendered_at": "2026-05-17T15:14:44.815228Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Outerwear-0218": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0218.json",
     "source_sha256": "8d6bfdc884b71334a306d4105b4b1e6be49f9c1be4342c711679e5ca919344d8",
     "source_mtime": "2026-05-17T14:52:30.670094Z",
-    "rendered_at": "2026-05-17T14:58:10.637762Z",
+    "rendered_at": "2026-05-17T15:14:44.865170Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Outerwear-0219": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0219.json",
     "source_sha256": "d026339506ee1e5623665328b8878a37762c8b3d4d52cc2c1a3049472a8d5b67",
     "source_mtime": "2026-05-17T14:52:33.586257Z",
-    "rendered_at": "2026-05-17T14:58:10.689441Z",
+    "rendered_at": "2026-05-17T15:14:44.908695Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Outerwear-0220": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0220.json",
     "source_sha256": "40affa8c6985c304055a319149e2f05df7c10e98467841058c29e79faf82a4a9",
     "source_mtime": "2026-05-17T14:52:36.518783Z",
-    "rendered_at": "2026-05-17T14:58:10.739629Z",
+    "rendered_at": "2026-05-17T15:14:44.955510Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Outerwear-0221": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0221.json",
     "source_sha256": "cf6c5f85cec847bc953ef17d385bcdfa4e292ef003dfa2870beeb0b39ea7eb89",
     "source_mtime": "2026-05-17T14:52:39.543009Z",
-    "rendered_at": "2026-05-17T14:58:10.786080Z",
+    "rendered_at": "2026-05-17T15:14:45.003781Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Outerwear-0222": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0222.json",
     "source_sha256": "e26898bb8c0f1e0f5990104c4767865c9d6ff302e3270d5521d1ee3c7825c46f",
     "source_mtime": "2026-05-17T14:52:42.406646Z",
-    "rendered_at": "2026-05-17T14:58:10.831995Z",
+    "rendered_at": "2026-05-17T15:14:45.052603Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Outerwear-0223": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0223.json",
     "source_sha256": "ec3731113cd79340940b2b7f77e0c08d993e83eac098de1c4e3176c7982fb928",
     "source_mtime": "2026-05-17T14:52:45.272835Z",
-    "rendered_at": "2026-05-17T14:58:10.894043Z",
+    "rendered_at": "2026-05-17T15:14:45.098888Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Outerwear-0224": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0224.json",
     "source_sha256": "040132036e0d65923c0bbdb49124ffa8cc63d13f5af7f4719bbe02ac17963016",
     "source_mtime": "2026-05-17T14:52:48.123794Z",
-    "rendered_at": "2026-05-17T14:58:10.949447Z",
+    "rendered_at": "2026-05-17T15:14:45.146179Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Outerwear-0225": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0225.json",
     "source_sha256": "d7961261cf98954db1fb8d5cffef069492403a7a977d5f9bf8614a64f0c26850",
     "source_mtime": "2026-05-17T14:52:50.975722Z",
-    "rendered_at": "2026-05-17T14:58:11.001679Z",
+    "rendered_at": "2026-05-17T15:14:45.190966Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Outerwear-0226": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0226.json",
     "source_sha256": "6b682e5a736864856effd73e45390b1163f9693d98cd0e72da592477165f63af",
     "source_mtime": "2026-05-17T14:52:54.014875Z",
-    "rendered_at": "2026-05-17T14:58:11.053923Z",
+    "rendered_at": "2026-05-17T15:14:45.237195Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Outerwear-0227": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0227.json",
     "source_sha256": "a805894edcb21936e9e577c31bf435093b3835632933c8c9a4fe77324aabb1f1",
     "source_mtime": "2026-05-17T14:52:57.133236Z",
-    "rendered_at": "2026-05-17T14:58:11.114186Z",
+    "rendered_at": "2026-05-17T15:14:45.285139Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Outerwear-0228": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Outerwear-0228.json",
     "source_sha256": "207e17be807e2fc11d0f765eb975ac2dba11be0eb70e486706fcdf43fce58643",
     "source_mtime": "2026-05-17T14:53:00.582157Z",
-    "rendered_at": "2026-05-17T14:58:11.179783Z",
+    "rendered_at": "2026-05-17T15:14:45.329161Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Outerwear-0229": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/Outerwear-0229.json",
     "source_sha256": "069cd914c654f3e4e673e9daa9a3aa97424ce120da31f2b134fef99fabbcc286",
     "source_mtime": "2026-05-17T14:53:03.624890Z",
-    "rendered_at": "2026-05-17T14:58:17.300801Z",
+    "rendered_at": "2026-05-17T15:14:47.546116Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Outerwear-0230": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/Outerwear-0230.json",
-    "source_sha256": "339197fb83c95144e88f27cd4d1d14a54c63df50554725f179ee743701d3971b",
-    "source_mtime": "2026-05-17T14:53:06.707199Z",
-    "rendered_at": "2026-05-17T14:58:17.338063Z",
+    "source_sha256": "4bfd0961ec295785c82e0eeb92a9778e8e1982e8ad61bcd25c7769b6581600e1",
+    "source_mtime": "2026-05-17T15:14:38.662854Z",
+    "rendered_at": "2026-05-17T15:14:47.591428Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Outerwear-0231": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/Outerwear-0231.json",
     "source_sha256": "3062d48fe9bc2e9fb4f182bfb725aa18008d416fdddf00e2cbe0916367e60786",
     "source_mtime": "2026-05-17T14:53:09.696479Z",
-    "rendered_at": "2026-05-17T14:58:17.385546Z",
+    "rendered_at": "2026-05-17T15:14:47.639202Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Outerwear-0232": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/Outerwear-0232.json",
     "source_sha256": "e492bb9c7886d9350fa5097b32e14d521e20cb2d3bed42f44e1d1df7c9395e01",
     "source_mtime": "2026-05-17T14:53:12.628264Z",
-    "rendered_at": "2026-05-17T14:58:17.423563Z",
+    "rendered_at": "2026-05-17T15:14:47.682844Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Outerwear-0233": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/Outerwear-0233.json",
     "source_sha256": "e5ba58eb2e5c7e69d7dfaab02fe37d6fb6a065d8ca59450794f6a0062f51d516",
     "source_mtime": "2026-05-17T14:53:15.817708Z",
-    "rendered_at": "2026-05-17T14:58:17.469115Z",
+    "rendered_at": "2026-05-17T15:14:47.724959Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-0928": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0928.json",
     "source_sha256": "812db7a768af1cab1cee67c62882bccb89217a849f953be0462bdabfda401f43",
     "source_mtime": "2026-05-17T14:53:18.922153Z",
-    "rendered_at": "2026-05-17T14:58:11.238034Z",
+    "rendered_at": "2026-05-17T15:14:45.371427Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-0929": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0929.json",
     "source_sha256": "4213e7b3d030fc90fd4dad8306c9d008d5b2a4f018f1939fcdccd8fc4c5a2eec",
     "source_mtime": "2026-05-17T14:53:21.746899Z",
-    "rendered_at": "2026-05-17T14:58:11.287584Z",
+    "rendered_at": "2026-05-17T15:14:45.414694Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-0930": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0930.json",
     "source_sha256": "9a155f9b82f06879ea138b01cae05590b7ff6809e5cd02eaa055c0beacc982c7",
     "source_mtime": "2026-05-17T14:53:24.610872Z",
-    "rendered_at": "2026-05-17T14:58:11.339640Z",
+    "rendered_at": "2026-05-17T15:14:45.458079Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-0931": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0931.json",
     "source_sha256": "41ec87aa8d6bb838ec0c229fdf78d2e4eef09919641ea7ecf5d467afe994a6b9",
     "source_mtime": "2026-05-17T14:53:27.484079Z",
-    "rendered_at": "2026-05-17T14:58:11.389915Z",
+    "rendered_at": "2026-05-17T15:14:45.503149Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-0932": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0932.json",
     "source_sha256": "0f783cb4e78dacf64d3257276f26a729d4a29b90af96bb4f606d3c4bd3117289",
     "source_mtime": "2026-05-17T14:53:30.337672Z",
-    "rendered_at": "2026-05-17T14:58:11.438617Z",
+    "rendered_at": "2026-05-17T15:14:45.548553Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-0933": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0933.json",
     "source_sha256": "16bec139d66036145c87701ac603aa9a6b4b610e09ab351fdd23e09e2ad1ddeb",
     "source_mtime": "2026-05-17T14:53:33.186760Z",
-    "rendered_at": "2026-05-17T14:58:11.490639Z",
+    "rendered_at": "2026-05-17T15:14:45.597013Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-0934": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0934.json",
     "source_sha256": "2d6867740bd2ed11068d94bdb7cf825e4119eb5c3aa6ff2c4de2620ebf5525a3",
     "source_mtime": "2026-05-17T14:53:36.025979Z",
-    "rendered_at": "2026-05-17T14:58:11.547373Z",
+    "rendered_at": "2026-05-17T15:14:45.646080Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-0935": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0935.json",
     "source_sha256": "699ba7d7a1fce0c27da0a945a42e9179070b3c010e70e151bdd581aa7842103a",
     "source_mtime": "2026-05-17T14:53:38.812705Z",
-    "rendered_at": "2026-05-17T14:58:11.605840Z",
+    "rendered_at": "2026-05-17T15:14:45.698454Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-0936": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0936.json",
     "source_sha256": "da51c433f6c206711148c03fec02125f6f33ab63b43fe9b62a03bf856ae79d66",
     "source_mtime": "2026-05-17T14:53:41.592345Z",
-    "rendered_at": "2026-05-17T14:58:11.661071Z",
+    "rendered_at": "2026-05-17T15:14:45.745899Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-0938": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0938.json",
     "source_sha256": "95cf645a7ac1435ba0edca0b4ada76dfc6880061d71eda1018c32db5466577d5",
     "source_mtime": "2026-05-17T14:53:44.380564Z",
-    "rendered_at": "2026-05-17T14:58:11.713188Z",
+    "rendered_at": "2026-05-17T15:14:45.790892Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-0939": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0939.json",
     "source_sha256": "a29b24d013d88f08353984048139c52c2cb207335a6129daccf9de062c6f70fe",
     "source_mtime": "2026-05-17T14:53:47.127000Z",
-    "rendered_at": "2026-05-17T14:58:11.764415Z",
+    "rendered_at": "2026-05-17T15:14:45.834539Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-0940": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0940.json",
     "source_sha256": "c3f10f0beb340166d09654f3b34c3e480594ade667ab00cdbc2168951f872d01",
     "source_mtime": "2026-05-17T14:53:49.870107Z",
-    "rendered_at": "2026-05-17T14:58:11.814759Z",
+    "rendered_at": "2026-05-17T15:14:45.878622Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-0941": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0941.json",
     "source_sha256": "79a35f82cc60b1df53d7f9ba21e078fc2c4f97071621e117c835161e938cbdd9",
     "source_mtime": "2026-05-17T14:53:52.646461Z",
-    "rendered_at": "2026-05-17T14:58:11.860077Z",
+    "rendered_at": "2026-05-17T15:14:45.921051Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-0942": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0942.json",
     "source_sha256": "743f1ac8423dca4f3f5848e8cb02901faac560c3f0c2956363166e293a7e554c",
     "source_mtime": "2026-05-17T14:53:55.400257Z",
-    "rendered_at": "2026-05-17T14:58:11.909303Z",
+    "rendered_at": "2026-05-17T15:14:45.970705Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-0943": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0943.json",
     "source_sha256": "2e9aed13304339f7eae3d335d72d410f71b803a149accb532e0167fbad02f4bf",
     "source_mtime": "2026-05-17T14:53:58.159656Z",
-    "rendered_at": "2026-05-17T14:58:11.956332Z",
+    "rendered_at": "2026-05-17T15:14:46.019412Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-0944": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Pants-0944.json",
     "source_sha256": "7b7b65c1ebb23a439c2f1887e25628f755683a0edb040e244f2da576110eed30",
     "source_mtime": "2026-05-17T14:54:00.932836Z",
-    "rendered_at": "2026-05-17T14:58:12.005322Z",
+    "rendered_at": "2026-05-17T15:14:46.065909Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-0946": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/Pants-0946.json",
     "source_sha256": "ab940eb36d7b6b189fddeae30ec361db9870f54372e460355bc14653f5c47160",
     "source_mtime": "2026-05-17T14:54:03.722711Z",
-    "rendered_at": "2026-05-17T14:58:17.513373Z",
+    "rendered_at": "2026-05-17T15:14:47.773835Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-0947": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/Pants-0947.json",
-    "source_sha256": "3012f9612add986fe938fd74710adcc832f1ccaab1d7a5ca534d9e518e3699db",
-    "source_mtime": "2026-05-17T14:54:06.537149Z",
-    "rendered_at": "2026-05-17T14:58:17.552964Z",
+    "source_sha256": "1712a176a591ee4949428ca46710eec937afdec49cd32241096e9ee413c48c92",
+    "source_mtime": "2026-05-17T15:14:38.683194Z",
+    "rendered_at": "2026-05-17T15:14:47.826178Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-0948": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/Pants-0948.json",
     "source_sha256": "85ff1f7a7e5e61eafac5e9a1d4233aa321520b92067f0c276510bce7f146897e",
     "source_mtime": "2026-05-17T14:54:09.576197Z",
-    "rendered_at": "2026-05-17T14:58:17.601494Z",
+    "rendered_at": "2026-05-17T15:14:47.884595Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-0949": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/Pants-0949.json",
     "source_sha256": "8359e57190fe5d8c83226b13c412e1e8999caacc9de103e2b90df790f6098aa8",
     "source_mtime": "2026-05-17T14:54:12.586581Z",
-    "rendered_at": "2026-05-17T14:58:17.648595Z",
+    "rendered_at": "2026-05-17T15:14:47.948646Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1624": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1624.json",
-    "source_sha256": "61ed468267db76842434d0dac6c3a0b4fa4fe4ef5337533e499e76150a4d0614",
-    "source_mtime": "2026-05-17T14:57:41.118945Z",
-    "rendered_at": "2026-05-17T14:58:18.128380Z",
+    "source_sha256": "a3b79b21aeeb9d1dc936b43bdd9bf5aa9b14a9d853ce031de9a65ea0e1462e33",
+    "source_mtime": "2026-05-17T15:14:38.766592Z",
+    "rendered_at": "2026-05-17T15:14:48.365206Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1625": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1625.json",
-    "source_sha256": "5a2dcd818981576826542cac2b1cc890ed22159b236e25ae286fde8b55abde58",
-    "source_mtime": "2026-05-17T14:57:17.688446Z",
-    "rendered_at": "2026-05-17T14:58:18.179031Z",
+    "source_sha256": "45a8a5c41681b8bd53dda1cd265b4eef44224115f026d65494c550ba3e7f760e",
+    "source_mtime": "2026-05-17T15:14:38.779130Z",
+    "rendered_at": "2026-05-17T15:14:48.413003Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1626": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1626.json",
-    "source_sha256": "83b16266a63f15ac985183095647ee74fdf5d51ea201b2dab4bb24af02d3c270",
-    "source_mtime": "2026-05-17T14:57:17.711826Z",
-    "rendered_at": "2026-05-17T14:58:18.229705Z",
+    "source_sha256": "190d8a9bae3c1dcf02682060dac27c4c28103d12b7248040b2cc444e04230ded",
+    "source_mtime": "2026-05-17T15:14:38.792514Z",
+    "rendered_at": "2026-05-17T15:14:48.462216Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1627": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1627.json",
-    "source_sha256": "29ae8210295232d4656875cda4fce3f1aba232ebf6bf22687dac3a3258c9ef84",
-    "source_mtime": "2026-05-17T14:57:17.734354Z",
-    "rendered_at": "2026-05-17T14:58:18.281522Z",
+    "source_sha256": "5dc4aa3948ce5db3460d9e185978d21c5e89a64f4f97abca8def65a46803a7ad",
+    "source_mtime": "2026-05-17T15:14:38.804716Z",
+    "rendered_at": "2026-05-17T15:14:48.521707Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1628": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1628.json",
-    "source_sha256": "08256ee2aeaf4c2ff3d0b814c31fa48ac1bf4a90106030bc85b34a0c122304c8",
-    "source_mtime": "2026-05-17T14:57:17.746320Z",
-    "rendered_at": "2026-05-17T14:58:18.322082Z",
+    "source_sha256": "6f03a7a80f76d58bceee52ed6008609a46c3e3d1471ace879cb11d2cea4ee80a",
+    "source_mtime": "2026-05-17T15:14:38.813355Z",
+    "rendered_at": "2026-05-17T15:14:48.569272Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1629": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1629.json",
-    "source_sha256": "bf799e1d39fab4b93945bf3e6f7ba0f16f37cbf6c84087296375f4a26ea1803c",
-    "source_mtime": "2026-05-16T05:51:26.296965Z",
-    "rendered_at": "2026-05-17T14:58:18.370759Z",
+    "source_sha256": "a35ab295f9128e240892e9dcc7978d6368296f63159000aa3827f239d3e13d8e",
+    "source_mtime": "2026-05-17T15:14:38.826993Z",
+    "rendered_at": "2026-05-17T15:14:48.621675Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1630": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1630.json",
-    "source_sha256": "e4f927f7b84e628acb7ca8de3db477c0f254d5ed5065515f549950c0a48380b9",
-    "source_mtime": "2026-05-16T05:51:26.347781Z",
-    "rendered_at": "2026-05-17T14:58:18.416659Z",
+    "source_sha256": "df3311bc94e772741f325a30b2cb600fe607dca8ad9c7ca9f1f9d9fea80e1646",
+    "source_mtime": "2026-05-17T15:14:38.838729Z",
+    "rendered_at": "2026-05-17T15:14:48.664556Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1631": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1631.json",
-    "source_sha256": "01856285f8b209aae88784d9e0f028dd040f0bd940e2436483685b98b162fe1a",
-    "source_mtime": "2026-05-16T05:51:26.396745Z",
-    "rendered_at": "2026-05-17T14:58:18.478244Z",
+    "source_sha256": "99a6957bde4573543a31bb93a6a04b953886030d3cfe16ee8632351f7410f769",
+    "source_mtime": "2026-05-17T15:14:38.853876Z",
+    "rendered_at": "2026-05-17T15:14:48.713875Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1632": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1632.json",
-    "source_sha256": "dd33a4d4fe40c105d88c38faa306525732633261fa589deda09c6dc1afc90d3d",
-    "source_mtime": "2026-05-17T14:57:17.767647Z",
-    "rendered_at": "2026-05-17T14:58:18.544032Z",
+    "source_sha256": "1180e42a584f3aa774b45adbc08391f194d4e4e7e18164e6aeff4d5c4d1c5a4e",
+    "source_mtime": "2026-05-17T15:14:38.866819Z",
+    "rendered_at": "2026-05-17T15:14:48.786761Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1633": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1633.json",
-    "source_sha256": "3e8ab9baa3ad5f037cd29c56c6a7c018d573e930a4280809371842a09b208af0",
-    "source_mtime": "2026-05-17T14:57:17.785991Z",
-    "rendered_at": "2026-05-17T14:58:18.611837Z",
+    "source_sha256": "c1a4746879827f48798c68fb9d265dd4ed58d5cbd358bb302cce271fe8a94076",
+    "source_mtime": "2026-05-17T15:14:38.881186Z",
+    "rendered_at": "2026-05-17T15:14:48.844646Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1634": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1634.json",
-    "source_sha256": "1899ce3a4b73dcd21b523888d7f89b17057d17da13a89f693ba618581af68867",
-    "source_mtime": "2026-05-17T14:57:17.805607Z",
-    "rendered_at": "2026-05-17T14:58:18.663043Z",
+    "source_sha256": "8ab96139f158a78142390f356df82a5dc3e3e2bb458895609d4619f127aa9c4d",
+    "source_mtime": "2026-05-17T15:14:38.892868Z",
+    "rendered_at": "2026-05-17T15:14:48.890661Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1635": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1635.json",
-    "source_sha256": "425f732f76016adb8972dd4ca1c55b9b16072cd4b9ede2b67a5ef6e443c518ae",
-    "source_mtime": "2026-05-17T14:57:17.830753Z",
-    "rendered_at": "2026-05-17T14:58:18.713103Z",
+    "source_sha256": "fa047ed096f06c35fa0ed329534096b3f1df5dd5b1e26de17c3cd4050b39a2dd",
+    "source_mtime": "2026-05-17T15:14:38.906717Z",
+    "rendered_at": "2026-05-17T15:14:48.937148Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1636": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1636.json",
-    "source_sha256": "128f1d905d1439ac69ef157ff2462211c705703da5e50a469c5b69781dda2a59",
-    "source_mtime": "2026-05-17T14:57:17.847611Z",
-    "rendered_at": "2026-05-17T14:58:18.757766Z",
+    "source_sha256": "5afb97bcf258b111b04046a585378d663703143f44c21f9b7bcf6a422b964d5a",
+    "source_mtime": "2026-05-17T15:14:38.920807Z",
+    "rendered_at": "2026-05-17T15:14:48.989341Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1637": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1637.json",
-    "source_sha256": "4c98e9e1d9b79557ee55a0eb2113346bf1dc3a6f9dc7f3745dd95d4153ff5be7",
-    "source_mtime": "2026-05-17T14:57:17.866142Z",
-    "rendered_at": "2026-05-17T14:58:18.806348Z",
+    "source_sha256": "0448293c070289bed15001e8397fc50096bf6710a106e6f5ef2002eab377b077",
+    "source_mtime": "2026-05-17T15:14:38.934408Z",
+    "rendered_at": "2026-05-17T15:14:49.038697Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1638": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1638.json",
-    "source_sha256": "5380e7b7672fc8317f78583d3173977f5588c8d4b005a7f72afb22b667262162",
-    "source_mtime": "2026-05-17T14:57:17.888375Z",
-    "rendered_at": "2026-05-17T14:58:18.852951Z",
+    "source_sha256": "a5059eba9b730b12a4686efabd2c9f4ab2fe749d98f8e0fcb591d2653680e9c9",
+    "source_mtime": "2026-05-17T15:14:38.948118Z",
+    "rendered_at": "2026-05-17T15:14:49.089454Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1639": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1639.json",
-    "source_sha256": "40e07fe7c956e4189a0a5ee4358cd8ab56f82164bb29bbd19010fb5dbaa4052d",
-    "source_mtime": "2026-05-17T14:57:17.909726Z",
-    "rendered_at": "2026-05-17T14:58:18.900582Z",
+    "source_sha256": "1a60d7ecd45ca527a78e1b678dda4968b5a694bc5f84366aef70be9f9761db06",
+    "source_mtime": "2026-05-17T15:14:38.963659Z",
+    "rendered_at": "2026-05-17T15:14:49.152785Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1640": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1640.json",
-    "source_sha256": "440b9d92d6be10cdc05fce06043c23afd344fcc1d07dcbd95659ed93c3f9954e",
-    "source_mtime": "2026-05-17T14:57:17.932376Z",
-    "rendered_at": "2026-05-17T14:58:18.946241Z",
+    "source_sha256": "a84d08a50b4d8f6c2ee147c9a18941879abf022af643f2756a0daf46d5fa0c2a",
+    "source_mtime": "2026-05-17T15:14:38.979934Z",
+    "rendered_at": "2026-05-17T15:14:49.205471Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1641": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1641.json",
-    "source_sha256": "34826243321c545bd69b4f2dc754afc059fa9d35ea11153e3d6b0901e7f267f4",
-    "source_mtime": "2026-05-17T14:57:17.949603Z",
-    "rendered_at": "2026-05-17T14:58:18.991808Z",
+    "source_sha256": "9d490044c550d661828b17ed65d2abd8023f7a7b4440f3fe6b174b0dfd2f2a0e",
+    "source_mtime": "2026-05-17T15:14:38.995894Z",
+    "rendered_at": "2026-05-17T15:14:49.255441Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1642": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1642.json",
-    "source_sha256": "fd1da351a671f7d450db47a8f218ea4167550f4eede1d07f9c953b231a62b381",
-    "source_mtime": "2026-05-17T14:57:17.972873Z",
-    "rendered_at": "2026-05-17T14:58:19.037988Z",
+    "source_sha256": "f73207af83ab064cd5cfb4e12b75d6057b378d651c894dc36ebc8720b68b1883",
+    "source_mtime": "2026-05-17T15:14:39.012628Z",
+    "rendered_at": "2026-05-17T15:14:49.311565Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1643": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1643.json",
-    "source_sha256": "e0d2a3faee224953f26824c2ec2bf4c3053e7ac85f95be53bb2ccbfbb6a0246c",
-    "source_mtime": "2026-05-17T14:57:17.992818Z",
-    "rendered_at": "2026-05-17T14:58:19.083101Z",
+    "source_sha256": "2965079909c4568826e6a722e7c517094988ec965318da5d434c045042196be4",
+    "source_mtime": "2026-05-17T15:14:39.026686Z",
+    "rendered_at": "2026-05-17T15:14:49.363625Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1645": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1645.json",
     "source_sha256": "e3eafda91e3005e72dbc5f14b676eb4580ba4e0619986784b06244e4646d2f40",
     "source_mtime": "2026-05-16T06:11:06.785767Z",
-    "rendered_at": "2026-05-17T14:58:19.134974Z",
+    "rendered_at": "2026-05-17T15:14:49.423686Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1646": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1646.json",
-    "source_sha256": "5ba84f985d2c32fc1cbf7c0bf50494ee3ac31d61cd8720da370b844b62ee4635",
-    "source_mtime": "2026-05-17T14:57:18.010412Z",
-    "rendered_at": "2026-05-17T14:58:19.179869Z",
+    "source_sha256": "b1d55ccf2f16c8f8125999fcae307dd47c05e035086e808d5cd33811f2850c06",
+    "source_mtime": "2026-05-17T15:14:39.045079Z",
+    "rendered_at": "2026-05-17T15:14:49.491673Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1647": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1647.json",
-    "source_sha256": "c7d5e35469eef29d9234f13229d108de7321d9d5523f46b9ddc926a55503e203",
-    "source_mtime": "2026-05-17T14:57:18.031882Z",
-    "rendered_at": "2026-05-17T14:58:19.225173Z",
+    "source_sha256": "2c8dec3e0a85aa09dfa9473a1623a3d33895b1c9cd43bf6d0bc5e0a35b18cb6b",
+    "source_mtime": "2026-05-17T15:14:39.059634Z",
+    "rendered_at": "2026-05-17T15:14:49.560139Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1648": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1648.json",
-    "source_sha256": "264d78916c2176d95d3e456e58cb97c14c3a7c099d764fce2f3ae6dd35182334",
-    "source_mtime": "2026-05-17T14:57:18.052190Z",
-    "rendered_at": "2026-05-17T14:58:19.270712Z",
+    "source_sha256": "85fbe4f54b48f498e9de984d39e4fe0f2f22fb6aa712460c7e52d1c880f90e0d",
+    "source_mtime": "2026-05-17T15:14:39.075987Z",
+    "rendered_at": "2026-05-17T15:14:49.625140Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1649": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1649.json",
-    "source_sha256": "348cdd6525ce9f8a096d01dc8b62ae57da643c9c0d868b40b0134a99d647ce39",
-    "source_mtime": "2026-05-17T14:57:18.070812Z",
-    "rendered_at": "2026-05-17T14:58:19.318758Z",
+    "source_sha256": "8ba74b043ca79e76199bd27aadd42159a31be6d55b1535b9e8e472a09085e72e",
+    "source_mtime": "2026-05-17T15:14:39.091320Z",
+    "rendered_at": "2026-05-17T15:14:49.686574Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1650": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1650.json",
     "source_sha256": "9bd5d020d0249d39b1d9bf6580a33aaf663140a777be1c07b58d5f2f1688d920",
     "source_mtime": "2026-05-16T06:11:06.813451Z",
-    "rendered_at": "2026-05-17T14:58:19.365519Z",
+    "rendered_at": "2026-05-17T15:14:49.738876Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1651": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1651.json",
-    "source_sha256": "462b7b0a654ce165f83834329e62711f7aa7d50b7d66bd14bce10df7efdb059f",
-    "source_mtime": "2026-05-17T14:57:18.090686Z",
-    "rendered_at": "2026-05-17T14:58:19.436163Z",
+    "source_sha256": "0dec820bdb8b0353859ef5a980ca3f18c0126f17a6d21e95ebe9c0bfad90c1d6",
+    "source_mtime": "2026-05-17T15:14:39.113523Z",
+    "rendered_at": "2026-05-17T15:14:49.803451Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1652": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1652.json",
-    "source_sha256": "3f8bc1d9e1e2ea3095580b1273eafb8241c3d05f7a96537421c59090f7427889",
-    "source_mtime": "2026-05-17T14:57:18.115201Z",
-    "rendered_at": "2026-05-17T14:58:19.489750Z",
+    "source_sha256": "2b6d4986ee5de42e0641bcc794566bbbf535e8b08e44fa44597a88832f56f867",
+    "source_mtime": "2026-05-17T15:14:39.129913Z",
+    "rendered_at": "2026-05-17T15:14:49.857705Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1653": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1653.json",
-    "source_sha256": "1b9b1c3396f22b233c49dce1b8bb6a4b0dc746daef636fac72f9c0f826792e12",
-    "source_mtime": "2026-05-17T14:57:18.134683Z",
-    "rendered_at": "2026-05-17T14:58:19.552130Z",
+    "source_sha256": "0512df4b45720958518f8b0e33f37afcd99960ffd2f86255748fae9e756ef808",
+    "source_mtime": "2026-05-17T15:14:39.146059Z",
+    "rendered_at": "2026-05-17T15:14:49.914174Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1654": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1654.json",
-    "source_sha256": "662ae7d789227bf0a37556a756e31d512cc776cd9342f9ff828d32f49bc60ab9",
-    "source_mtime": "2026-05-17T14:57:18.153747Z",
-    "rendered_at": "2026-05-17T14:58:19.606609Z",
+    "source_sha256": "5565dfe1114d5d4fb36e1c31d1980cb3562fdeaf068397aa7b8bc7f172c39c8a",
+    "source_mtime": "2026-05-17T15:14:39.164911Z",
+    "rendered_at": "2026-05-17T15:14:49.973064Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1655": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1655.json",
-    "source_sha256": "49f96744ef6bd2b94285044e467165fe59c723bd659740f3889f8fa1fae3003e",
-    "source_mtime": "2026-05-17T14:57:18.172715Z",
-    "rendered_at": "2026-05-17T14:58:19.657227Z",
+    "source_sha256": "5624ba7fba2528173011eaf8475957b2b1886f7c665a088849ea8cfeb5ea58e3",
+    "source_mtime": "2026-05-17T15:14:39.181317Z",
+    "rendered_at": "2026-05-17T15:14:50.017306Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1656": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1656.json",
-    "source_sha256": "c6c0ae45759a88a4878e66ebbb46deaca2c30b4202831247049d7109a90b06d1",
-    "source_mtime": "2026-05-17T14:57:18.204169Z",
-    "rendered_at": "2026-05-17T14:58:19.707437Z",
+    "source_sha256": "02f8fa0cca482e998dbfab6c47e0b81ca9b818511e81d7df6d8c3bcf34ad820b",
+    "source_mtime": "2026-05-17T15:14:39.198928Z",
+    "rendered_at": "2026-05-17T15:14:50.066182Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1657": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1657.json",
-    "source_sha256": "e9a28b0cb900c0c0fdd7743fa3e2dcf5fdb691d4dedfd889bd8d66b2cd8f81bf",
-    "source_mtime": "2026-05-17T14:57:18.229616Z",
-    "rendered_at": "2026-05-17T14:58:19.758117Z",
+    "source_sha256": "84a941645d8cd991d431c44c2105b327390ddae07620690870296afa3de547e4",
+    "source_mtime": "2026-05-17T15:14:39.216085Z",
+    "rendered_at": "2026-05-17T15:14:50.120831Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Pants-1658": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/Batch 4/Pants-1658.json",
-    "source_sha256": "19cf118c56ba0b81bb40fee1aa75fd94fc92ccfdf8e81a252166310f1861387d",
-    "source_mtime": "2026-05-17T14:57:18.249415Z",
-    "rendered_at": "2026-05-17T14:58:19.806658Z",
+    "source_sha256": "f811bf76af375fb432dbdb9997104f362562f2a735fb87364972f2edc6bf8ceb",
+    "source_mtime": "2026-05-17T15:14:39.235352Z",
+    "rendered_at": "2026-05-17T15:14:50.173957Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "SB01-2730": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/SB01-2730.json",
     "source_sha256": "83915adf604b2432e66fa937b955a9bbd44b66fedcc00519885acb1b71295212",
     "source_mtime": "2026-05-17T14:56:53.962126Z",
-    "rendered_at": "2026-05-17T14:58:12.053144Z",
+    "rendered_at": "2026-05-17T15:14:46.109786Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "SB01-2733": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/SB01-2733.json",
-    "source_sha256": "fee41c730245b8795a616055c7f208a31988fe2d6388046a243a2fa8a9fea2e2",
-    "source_mtime": "2026-05-17T14:56:53.978740Z",
-    "rendered_at": "2026-05-17T14:58:17.690201Z",
+    "source_sha256": "7af45a99f225ca12a231e3276fb2df4434cb6e23bf4a780b59919d3007605d1b",
+    "source_mtime": "2026-05-17T15:14:38.700828Z",
+    "rendered_at": "2026-05-17T15:14:48.003137Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "SB01-2739": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/SB01-2739.json",
-    "source_sha256": "22d712761162421471c9819d3d7c582a8a71a7cc54ffc5bd6e62ef95577db689",
-    "source_mtime": "2026-05-17T14:56:53.996728Z",
-    "rendered_at": "2026-05-17T14:58:17.752706Z",
+    "source_sha256": "e49e7e2ca98ccde96544a27396712566983d8e8305d090d1526964c76b66f0ab",
+    "source_mtime": "2026-05-17T15:14:38.714206Z",
+    "rendered_at": "2026-05-17T15:14:48.050861Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "SB03-2763": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/SB03-2763.json",
-    "source_sha256": "3b6f7711b57268bae6962bfff0cd83f03504018b09cf475b557492e649960bf5",
-    "source_mtime": "2026-05-17T14:56:54.046782Z",
-    "rendered_at": "2026-05-17T14:58:17.812297Z",
+    "source_sha256": "4cb749a9aa0135a491afa6ba7feab819b90f98b1ba9816b69394036450c76a0c",
+    "source_mtime": "2026-05-17T15:14:38.727744Z",
+    "rendered_at": "2026-05-17T15:14:48.099823Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "SB03-2769": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/SB03-2769.json",
-    "source_sha256": "59f94378ca7ed3815bec392d6d3b5831fa56a2a42ea7b90dfa93ac8d98690bff",
-    "source_mtime": "2026-05-17T14:56:54.064605Z",
-    "rendered_at": "2026-05-17T14:58:17.855793Z",
+    "source_sha256": "601fced5aae7e4e2b0fa982ce0a0795ea2bcfbc00451ef7d79a9665f99543fc0",
+    "source_mtime": "2026-05-17T15:14:38.739611Z",
+    "rendered_at": "2026-05-17T15:14:48.144692Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "SB16-1535": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/SB16-1535.json",
     "source_sha256": "976c558f7ad91b52881430bbbb86f0436d6dce0f95c996a700f157b3cb8ea7e7",
     "source_mtime": "2026-05-17T14:56:54.009405Z",
-    "rendered_at": "2026-05-17T14:58:12.097375Z",
+    "rendered_at": "2026-05-17T15:14:46.154323Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "SB18-1569": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/SB18-1569.json",
     "source_sha256": "f69707fcd2c761736a719ce2d6287daf3054b0b96728a53be843f57065679bb8",
     "source_mtime": "2026-05-17T14:56:54.020522Z",
-    "rendered_at": "2026-05-17T14:58:12.148196Z",
+    "rendered_at": "2026-05-17T15:14:46.196967Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "SB18-1585": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/SB18-1585.json",
     "source_sha256": "17f32ea290b1d55948631c1e6641954f49633ab26896d228b9f84e43a3846252",
     "source_mtime": "2026-05-17T14:56:54.032216Z",
-    "rendered_at": "2026-05-17T14:58:12.192488Z",
+    "rendered_at": "2026-05-17T15:14:46.253371Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Shorts-0339": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Shorts-0339.json",
     "source_sha256": "9a26663e67d15306af4b02bae439d73b942deb8b8955d6b61c51cc9c91710142",
     "source_mtime": "2026-05-17T14:56:54.187630Z",
-    "rendered_at": "2026-05-17T14:58:12.239434Z",
+    "rendered_at": "2026-05-17T15:14:46.317837Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Skirts-0125": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Skirts-0125.json",
     "source_sha256": "8179a31e7afce127526ddcef244c884adf5b6e18282cb02595da35f4c3272a70",
     "source_mtime": "2026-05-17T14:56:53.892154Z",
-    "rendered_at": "2026-05-17T14:58:12.286038Z",
+    "rendered_at": "2026-05-17T15:14:46.384832Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Skirts-0126": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Skirts-0126.json",
     "source_sha256": "97da7e23419c583f0634544d9cb7039b077a26294be2e761e55222c06a055759",
     "source_mtime": "2026-05-17T14:56:53.916744Z",
-    "rendered_at": "2026-05-17T14:58:12.334140Z",
+    "rendered_at": "2026-05-17T15:14:46.436882Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Skirts-0127": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Skirts-0127.json",
     "source_sha256": "f799e386545d7eb0e27b161638dc6639480be1999b4cc584063a97c8dacca0b3",
     "source_mtime": "2026-05-17T14:56:53.934701Z",
-    "rendered_at": "2026-05-17T14:58:12.375793Z",
+    "rendered_at": "2026-05-17T15:14:46.481082Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Skirts-0128": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Skirts-0128.json",
     "source_sha256": "f201d85508cf44607b85bc463963bdb69b4200646a72e6bd9f2d9ed895a7ed74",
     "source_mtime": "2026-05-17T14:56:53.949098Z",
-    "rendered_at": "2026-05-17T14:58:12.420388Z",
+    "rendered_at": "2026-05-17T15:14:46.523659Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Tops-1321": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1321.json",
     "source_sha256": "84ab649590a06f10f311d1dfe08d9176ec963d79cee910aaae2ea14644ca990a",
     "source_mtime": "2026-05-17T14:54:15.715457Z",
-    "rendered_at": "2026-05-17T14:58:12.462685Z",
+    "rendered_at": "2026-05-17T15:14:46.564503Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Tops-1322": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1322.json",
     "source_sha256": "ad057abc94f9f0447960414e17e88dd63ae5118c50572fd61455a1bc1383e5d6",
     "source_mtime": "2026-05-17T14:56:53.629872Z",
-    "rendered_at": "2026-05-17T14:58:12.507536Z",
+    "rendered_at": "2026-05-17T15:14:46.605873Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Tops-1323": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1323.json",
     "source_sha256": "02b83a5182a35121b83bd1e9a8a565ff5539fb1871fa3b749ebb38ad1253fcb6",
     "source_mtime": "2026-05-17T14:56:53.644308Z",
-    "rendered_at": "2026-05-17T14:58:12.549170Z",
+    "rendered_at": "2026-05-17T15:14:46.651716Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Tops-1324": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1324.json",
     "source_sha256": "813f7a13dfc3218d2a80aa4ae770b274287e0c3494db0b58788c4d91c8aed655",
     "source_mtime": "2026-05-17T14:56:53.656616Z",
-    "rendered_at": "2026-05-17T14:58:12.596441Z",
+    "rendered_at": "2026-05-17T15:14:46.691984Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Tops-1325": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1325.json",
     "source_sha256": "2f2995d56a4d192f73b1f1ec615fcfc7d086029d37d9010a3396cffd9eabb211",
     "source_mtime": "2026-05-17T14:56:53.667669Z",
-    "rendered_at": "2026-05-17T14:58:12.640443Z",
+    "rendered_at": "2026-05-17T15:14:46.739759Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Tops-1326": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1326.json",
     "source_sha256": "6b4ac11e47821a8b755fb5a82a6bac9fa4500836333cee8bb1bf9ed8142215d6",
     "source_mtime": "2026-05-17T14:56:53.682892Z",
-    "rendered_at": "2026-05-17T14:58:12.679536Z",
+    "rendered_at": "2026-05-17T15:14:46.785866Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Tops-1327": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1327.json",
     "source_sha256": "31cb83eddc632a7e3e8e973df1c1f5e70e911ff6dfd606aac870250f9a09a402",
     "source_mtime": "2026-05-17T14:56:53.701236Z",
-    "rendered_at": "2026-05-17T14:58:12.730173Z",
+    "rendered_at": "2026-05-17T15:14:46.829911Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Tops-1328": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1328.json",
     "source_sha256": "51ca8e3526d24bb53ae2b7178d63db2f23006fa3f46fce9397a93e41003e9b31",
     "source_mtime": "2026-05-17T14:56:53.720653Z",
-    "rendered_at": "2026-05-17T14:58:12.771444Z",
+    "rendered_at": "2026-05-17T15:14:46.877187Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Tops-1329": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1329.json",
     "source_sha256": "c462c6225eea64bbb0582d7eba9d4524f2577b6f5360e37991e53192e68c15a5",
     "source_mtime": "2026-05-17T14:56:53.733872Z",
-    "rendered_at": "2026-05-17T14:58:12.811538Z",
+    "rendered_at": "2026-05-17T15:14:46.924541Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Tops-1330": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1330.json",
     "source_sha256": "e0cb6c69592601915ab5826f2e3e8b5edae48323a43646151acac67540978a34",
     "source_mtime": "2026-05-17T14:56:53.748193Z",
-    "rendered_at": "2026-05-17T14:58:12.853507Z",
+    "rendered_at": "2026-05-17T15:14:46.980150Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Tops-1331": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1331.json",
     "source_sha256": "b72616488438b79452a13a7d9732d94d5b5b5f53184251c7e6130d7c4fce6652",
     "source_mtime": "2026-05-17T14:56:53.760715Z",
-    "rendered_at": "2026-05-17T14:58:12.898152Z",
+    "rendered_at": "2026-05-17T15:14:47.028071Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Tops-1332": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1332.json",
     "source_sha256": "417a78a178b5c516a42ee9c1622663c5e1ab1f555984f4655118bed2ed426a4d",
     "source_mtime": "2026-05-17T14:56:53.779848Z",
-    "rendered_at": "2026-05-17T14:58:12.943272Z",
+    "rendered_at": "2026-05-17T15:14:47.072247Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Tops-1333": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1333.json",
     "source_sha256": "52e39d1ef64b85f9b69a1522c6f3b9fd1600a07ac45e38769f2da577a177b3f3",
     "source_mtime": "2026-05-17T14:56:53.791866Z",
-    "rendered_at": "2026-05-17T14:58:12.985587Z",
+    "rendered_at": "2026-05-17T15:14:47.115656Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Tops-1334": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1334.json",
     "source_sha256": "409b15ccb49431d59d404519e82b6cfeddddce34b48ed209aa8821a7aaae3de5",
     "source_mtime": "2026-05-17T14:56:53.804192Z",
-    "rendered_at": "2026-05-17T14:58:13.029159Z",
+    "rendered_at": "2026-05-17T15:14:47.165955Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Tops-1335": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1335.json",
     "source_sha256": "0d87af3675574c88de6ee2cfd00316157ba0504cbfae9d577ede25616e302ac9",
     "source_mtime": "2026-05-17T14:56:53.816023Z",
-    "rendered_at": "2026-05-17T14:58:13.068988Z",
+    "rendered_at": "2026-05-17T15:14:47.208489Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Tops-1336": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1336.json",
     "source_sha256": "180b8711493f27f9e09e8f43cea9e9c802eae741bb8cad61c9961bc883be9624",
     "source_mtime": "2026-05-17T14:56:53.830489Z",
-    "rendered_at": "2026-05-17T14:58:13.112038Z",
+    "rendered_at": "2026-05-17T15:14:47.259901Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Tops-1337": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/NWLG Batch 1/Tops-1337.json",
     "source_sha256": "54a320fe579c75f83a9716b10db9e1e959b3e8ea6852e11c6e4e1a8abb4b66da",
     "source_mtime": "2026-05-17T14:56:53.848617Z",
-    "rendered_at": "2026-05-17T14:58:13.155616Z",
+    "rendered_at": "2026-05-17T15:14:47.314293Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Tops-1338": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/Tops-1338.json",
-    "source_sha256": "a627b3ff57e42dd2cbfcdeeff7f01de33ded312f3d0281ee713f1ea5b30d228b",
-    "source_mtime": "2026-05-17T14:56:53.862196Z",
-    "rendered_at": "2026-05-17T14:58:17.899948Z",
+    "source_sha256": "fd8f697a0bb4f40fc9ac83d7d49c680ac451f6d8a10d5d70f8e289c116c818a2",
+    "source_mtime": "2026-05-17T15:14:38.750643Z",
+    "rendered_at": "2026-05-17T15:14:48.187513Z",
     "renderer_version": "ddfc7fa8a0fb"
   },
   "Tops-1339": {
     "source_path": "/sessions/ecstatic-eloquent-babbage/mnt/Documents/Claude/Projects/Item Intake/WERT Batch 1/Tops-1339.json",
     "source_sha256": "156e4f6dd991ff7927bc826ca2fb5c3da211cee93e1093e9a4f5c5ce37673d71",
     "source_mtime": "2026-05-17T14:56:53.878321Z",
-    "rendered_at": "2026-05-17T14:58:17.946586Z",
+    "rendered_at": "2026-05-17T15:14:48.227023Z",
     "renderer_version": "ddfc7fa8a0fb"
   }
 }

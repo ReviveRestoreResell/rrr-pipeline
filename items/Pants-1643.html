@@ -311,68 +311,78 @@
     <div class="sband-hdr" onclick="toggleBand(this)">
       <span class="sband-arrow">&#9658;</span>
       <span class="sband-label">Copy</span>
-      <span class="sband-badge">Title+ &hellip; &nbsp;|&nbsp; Desc+ &hellip; &nbsp;|&nbsp; KW+ &hellip;</span>
+      <span class="sband-badge">Title+ &check; &nbsp;|&nbsp; Desc+ &check; &nbsp;|&nbsp; KW+ &check;</span>
     </div>
     <div class="sband-body">
       <div class="cws-blocks">
 
         <!-- Title+ status (dynamic: confirmed or pending) -->
-        <div class="cws-block cws-pending" id="cwsb-title" onclick="cwsOpen('title')" role="button" tabindex="0">
+        <div class="cws-block cws-confirmed" id="cwsb-title" onclick="cwsOpen('title')" role="button" tabindex="0">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Title+</span>
-            <span class="cwsb-meta">&#8212;&nbsp;chars</span>
-            <span class="cwsb-badge cws-pending">&#9203;&nbsp;Pending</span>
+            <span class="cwsb-meta">80&nbsp;chars</span>
+            <span class="cwsb-badge cws-confirmed">&#10003;&nbsp;Confirmed</span>
             <button class="cwsb-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-title-display')" aria-label="Copy Title">copy</button>
           </div>
           <div class="cwsb-body">
-            <div class="cwsb-text" id="cws-title-display"></div>
+            <div class="cwsb-text" id="cws-title-display">Patagonia Hemp Wide Leg Pants WMNS 8 Cream Tan Ikat Drawstring Slow Fashion Boho</div>
             <div class="cwsb-click-hint">&#9998; Click to edit</div>
           </div>
         </div>
 
         <!-- Description+ (state driven by copy.pending[]) -->
-        <div class="cws-block cws-pending" id="cwsb-desc" style="cursor:default" role="region" aria-label="Description+">
+        <div class="cws-block cws-confirmed" id="cwsb-desc" style="cursor:default" role="region" aria-label="Description+">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Description+</span>
-            <span class="cwsb-badge cws-pending" id="cwsb-desc-badge">&#9203;&nbsp;Pending Review</span>
+            <span class="cwsb-badge cws-confirmed" id="cwsb-desc-badge">&#10003;&nbsp;Confirmed</span>
           </div>
           <div class="cwsb-body" style="display:flex;flex-direction:column;gap:8px">
 
             <!-- P1 sub-block -->
-            <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p1" onclick="cwsOpen('desc-p1')" role="button" tabindex="0">
+            <div class="cws-subblock cws-subblock-confirmed" id="cwsb-desc-p1" onclick="cwsOpen('desc-p1')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P1 &middot; Opening Paragraph</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p1-badge">&#9203;&nbsp;Pending</span>
+                <span class="cws-subblock-badge cws-subblock-confirmed" id="cwsb-desc-p1-badge">&#10003;&nbsp;Confirmed</span>
                 <button class="cws-subblock-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-desc-p1-display')" aria-label="Copy P1">copy</button>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p1-display"></div>
+                <div class="cwsb-text" id="cws-desc-p1-display">Patagonia hemp wide leg pants womens 8 cream tan ikat hemp organic cotton drawstring waist patch pockets lined wide leg fit with slow fashion boho chic resort core piece. Natural fiber weave delivers airy drape and earthy flow for vacation and travel rotation.</div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
 
             <!-- P2 sub-block -->
-            <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p2" onclick="cwsOpen('desc-p2')" role="button" tabindex="0">
+            <div class="cws-subblock cws-subblock-confirmed" id="cwsb-desc-p2" onclick="cwsOpen('desc-p2')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P2 &middot; SMC</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p2-badge">&#9203;&nbsp;Pending</span>
+                <span class="cws-subblock-badge cws-subblock-confirmed" id="cwsb-desc-p2-badge">&#10003;&nbsp;Confirmed</span>
                 <button class="cws-subblock-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-desc-p2-display')" aria-label="Copy P2 SMC">copy</button>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p2-display"></div>
+                <div class="cwsb-text" id="cws-desc-p2-display">- Waist: 33&quot; · Hip (flat): 19&quot; · Rise: 9&quot; · Inseam: 32.5&quot; · Leg opening (flat): 9.5&quot;
+- Material: 55% Hemp, 45% Organic Cotton.
+- Care: Wash with similar colors (multilingual EN/FR/JA care tag).
+- Made in China. Patagonia Inc, Ventura CA. B-Corp certified.
+- Closure: Drawstring waistband. Antiqued brass decorative snaps at flap back patch pockets.
+- Style STY56646SP14 (Spring 2014 production).
+- Condition: Gently Pre-Owned. Even cream ikat color, clean hardware, no fading, no pilling, drawstring intact.</div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
 
             <!-- P3 sub-block -->
-            <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p3" onclick="cwsOpen('desc-p3')" role="button" tabindex="0">
+            <div class="cws-subblock cws-subblock-confirmed" id="cwsb-desc-p3" onclick="cwsOpen('desc-p3')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P3 &middot; Badges</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p3-badge">&#9203;&nbsp;Pending</span>
+                <span class="cws-subblock-badge cws-subblock-confirmed" id="cwsb-desc-p3-badge">&#10003;&nbsp;Confirmed</span>
                 <button class="cws-subblock-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-desc-p3-display')" aria-label="Copy P3 Badges">copy</button>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p3-display"></div>
+                <div class="cwsb-text" id="cws-desc-p3-display">🚢 Ready to Ship
+📦 Bundle Discounts on Multiple Items
+🚚 Fast Delivery
+🌿 Sustainable Business
+⭐ 5 Star Seller</div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
@@ -381,14 +391,14 @@
         </div>
 
         <!-- Keyword+ (state driven by copy.pending[] / keywords presence) -->
-        <div class="cws-block cws-pending" id="cwsb-kw" onclick="cwsOpen('kw')" role="button" tabindex="0">
+        <div class="cws-block cws-confirmed" id="cwsb-kw" onclick="cwsOpen('kw')" role="button" tabindex="0">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Keyword+</span>
-            <span class="cwsb-badge cws-pending">&#9203;&nbsp;Pending Review</span>
+            <span class="cwsb-badge cws-confirmed">&#10003;&nbsp;Confirmed</span>
             <button class="cwsb-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-kw-display')" aria-label="Copy Keywords">copy</button>
           </div>
           <div class="cwsb-body">
-            <div class="cwsb-text" id="cws-kw-display"></div>
+            <div class="cwsb-text" id="cws-kw-display">slow fashion, boho chic, resort core, hemp organic cotton pants, patagonia hemp pants, womens wide leg drawstring, cream tan ikat pant, aztec ikat geometric, natural fiber wide leg, b corp sustainable, vintage patagonia, vacation resort pants, travel pant #slowfashion #bohochic #resortcore #vintagepatagonia #earthtone</div>
             <div class="cwsb-click-hint">&#9998; Click to edit</div>
           </div>
         </div>

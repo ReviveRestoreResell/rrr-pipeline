@@ -310,21 +310,21 @@
     <div class="sband-hdr" onclick="toggleBand(this)">
       <span class="sband-arrow">&#9658;</span>
       <span class="sband-label">Copy</span>
-      <span class="sband-badge">Title+ &hellip; &nbsp;|&nbsp; Desc+ &hellip; &nbsp;|&nbsp; KW+ &hellip;</span>
+      <span class="sband-badge">Title+ &check; &nbsp;|&nbsp; Desc+ &hellip; &nbsp;|&nbsp; KW+ &hellip;</span>
     </div>
     <div class="sband-body">
       <div class="cws-blocks">
 
         <!-- Title+ status (dynamic: confirmed or pending) -->
-        <div class="cws-block cws-pending" id="cwsb-title" onclick="cwsOpen('title')" role="button" tabindex="0">
+        <div class="cws-block cws-confirmed" id="cwsb-title" onclick="cwsOpen('title')" role="button" tabindex="0">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Title+</span>
-            <span class="cwsb-meta">&#8212;&nbsp;chars</span>
-            <span class="cwsb-badge cws-pending">&#9203;&nbsp;Pending</span>
+            <span class="cwsb-meta">80&nbsp;chars</span>
+            <span class="cwsb-badge cws-confirmed">&#10003;&nbsp;Confirmed</span>
             <button class="cwsb-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-title-display')" aria-label="Copy Title">copy</button>
           </div>
           <div class="cwsb-body">
-            <div class="cwsb-text" id="cws-title-display"></div>
+            <div class="cwsb-text" id="cws-title-display">Dolan Crochet Top WMNS XL White Lace Lined Short Sleeve Boho Cottagecore Coastal</div>
             <div class="cwsb-click-hint">&#9998; Click to edit</div>
           </div>
         </div>
@@ -338,14 +338,14 @@
           <div class="cwsb-body" style="display:flex;flex-direction:column;gap:8px">
 
             <!-- P1 sub-block -->
-            <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p1" onclick="cwsOpen('desc-p1')" role="button" tabindex="0">
+            <div class="cws-subblock cws-subblock-confirmed" id="cwsb-desc-p1" onclick="cwsOpen('desc-p1')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P1 &middot; Opening Paragraph</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p1-badge">&#9203;&nbsp;Pending</span>
+                <span class="cws-subblock-badge cws-subblock-confirmed" id="cwsb-desc-p1-badge">&#10003;&nbsp;Confirmed</span>
                 <button class="cws-subblock-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-desc-p1-display')" aria-label="Copy P1">copy</button>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p1-display"></div>
+                <div class="cwsb-text" id="cws-desc-p1-display">Dolan crochet top women's XL white sage green polyester crochet lace overlay lined crew neck short sleeve tie closure boxy fit with boho cottagecore coastal grandma piece. Open-weave crochet offers airy texture and feminine detail for vacation and brunch days.</div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>

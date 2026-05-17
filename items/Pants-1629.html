@@ -310,68 +310,76 @@
     <div class="sband-hdr" onclick="toggleBand(this)">
       <span class="sband-arrow">&#9658;</span>
       <span class="sband-label">Copy</span>
-      <span class="sband-badge">Title+ &hellip; &nbsp;|&nbsp; Desc+ &hellip; &nbsp;|&nbsp; KW+ &hellip;</span>
+      <span class="sband-badge">Title+ &check; &nbsp;|&nbsp; Desc+ &check; &nbsp;|&nbsp; KW+ &check;</span>
     </div>
     <div class="sband-body">
       <div class="cws-blocks">
 
         <!-- Title+ status (dynamic: confirmed or pending) -->
-        <div class="cws-block cws-pending" id="cwsb-title" onclick="cwsOpen('title')" role="button" tabindex="0">
+        <div class="cws-block cws-confirmed" id="cwsb-title" onclick="cwsOpen('title')" role="button" tabindex="0">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Title+</span>
-            <span class="cwsb-meta">&#8212;&nbsp;chars</span>
-            <span class="cwsb-badge cws-pending">&#9203;&nbsp;Pending</span>
+            <span class="cwsb-meta">76&nbsp;chars</span>
+            <span class="cwsb-badge cws-confirmed">&#10003;&nbsp;Confirmed</span>
             <button class="cwsb-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-title-display')" aria-label="Copy Title">copy</button>
           </div>
           <div class="cwsb-body">
-            <div class="cwsb-text" id="cws-title-display"></div>
+            <div class="cwsb-text" id="cws-title-display">Everlane Way High Taper Pant WMNS 10 Navy Tencel Cotton Tapered Slow Fashion</div>
             <div class="cwsb-click-hint">&#9998; Click to edit</div>
           </div>
         </div>
 
         <!-- Description+ (state driven by copy.pending[]) -->
-        <div class="cws-block cws-pending" id="cwsb-desc" style="cursor:default" role="region" aria-label="Description+">
+        <div class="cws-block cws-confirmed" id="cwsb-desc" style="cursor:default" role="region" aria-label="Description+">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Description+</span>
-            <span class="cwsb-badge cws-pending" id="cwsb-desc-badge">&#9203;&nbsp;Pending Review</span>
+            <span class="cwsb-badge cws-confirmed" id="cwsb-desc-badge">&#10003;&nbsp;Confirmed</span>
           </div>
           <div class="cwsb-body" style="display:flex;flex-direction:column;gap:8px">
 
             <!-- P1 sub-block -->
-            <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p1" onclick="cwsOpen('desc-p1')" role="button" tabindex="0">
+            <div class="cws-subblock cws-subblock-confirmed" id="cwsb-desc-p1" onclick="cwsOpen('desc-p1')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P1 &middot; Opening Paragraph</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p1-badge">&#9203;&nbsp;Pending</span>
+                <span class="cws-subblock-badge cws-subblock-confirmed" id="cwsb-desc-p1-badge">&#10003;&nbsp;Confirmed</span>
                 <button class="cws-subblock-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-desc-p1-display')" aria-label="Copy P1">copy</button>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p1-display"></div>
+                <div class="cwsb-text" id="cws-desc-p1-display">Everlane The Way-High Taper Pant womens 10 midnight navy Tencel cotton welt back pockets tapered ankle high rise with slow fashion elevated basics anchor. Drapey twill weave delivers fluid hold and polished line for office and travel rotation.</div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
 
             <!-- P2 sub-block -->
-            <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p2" onclick="cwsOpen('desc-p2')" role="button" tabindex="0">
+            <div class="cws-subblock cws-subblock-confirmed" id="cwsb-desc-p2" onclick="cwsOpen('desc-p2')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P2 &middot; SMC</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p2-badge">&#9203;&nbsp;Pending</span>
+                <span class="cws-subblock-badge cws-subblock-confirmed" id="cwsb-desc-p2-badge">&#10003;&nbsp;Confirmed</span>
                 <button class="cws-subblock-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-desc-p2-display')" aria-label="Copy P2 SMC">copy</button>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p2-display"></div>
+                <div class="cwsb-text" id="cws-desc-p2-display">- Waist: 32&quot; (lay-flat across, double for full circumference)
+- Hip: 20.5&quot; (lay-flat)
+- Rise: 13.5&quot; (vertical front)
+- Inseam: 26.5&quot;
+- Leg opening: 7&quot; (lay-flat)
+
+Material: 60% Tencel Lyocell, 40% Cotton. Made in Vietnam. RN# 139393. Style F-BTM-CTN-WHGH-TPR, master PP7215615159.
+
+Condition: Pre-Loved. No visible defects.</div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
 
             <!-- P3 sub-block -->
-            <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p3" onclick="cwsOpen('desc-p3')" role="button" tabindex="0">
+            <div class="cws-subblock cws-subblock-confirmed" id="cwsb-desc-p3" onclick="cwsOpen('desc-p3')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P3 &middot; Badges</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p3-badge">&#9203;&nbsp;Pending</span>
+                <span class="cws-subblock-badge cws-subblock-confirmed" id="cwsb-desc-p3-badge">&#10003;&nbsp;Confirmed</span>
                 <button class="cws-subblock-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-desc-p3-display')" aria-label="Copy P3 Badges">copy</button>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p3-display"></div>
+                <div class="cwsb-text" id="cws-desc-p3-display">(canonical badges)</div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
@@ -380,14 +388,14 @@
         </div>
 
         <!-- Keyword+ (state driven by copy.pending[] / keywords presence) -->
-        <div class="cws-block cws-pending" id="cwsb-kw" onclick="cwsOpen('kw')" role="button" tabindex="0">
+        <div class="cws-block cws-confirmed" id="cwsb-kw" onclick="cwsOpen('kw')" role="button" tabindex="0">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Keyword+</span>
-            <span class="cwsb-badge cws-pending">&#9203;&nbsp;Pending Review</span>
+            <span class="cwsb-badge cws-confirmed">&#10003;&nbsp;Confirmed</span>
             <button class="cwsb-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-kw-display')" aria-label="Copy Keywords">copy</button>
           </div>
           <div class="cwsb-body">
-            <div class="cwsb-text" id="cws-kw-display"></div>
+            <div class="cwsb-text" id="cws-kw-display">everlane way high taper, womens navy trouser, tencel cotton trouser, midnight navy tencel, navy high rise pant, welt back pocket, tapered ankle, slow fashion, soft tailoring, elevated basics, modern minimalist, polished tailored, office trouser womens, travel tencel pant #slowfashion #softtailoring #elevatedbasics #modernminimalist #capsulewardrobe</div>
             <div class="cwsb-click-hint">&#9998; Click to edit</div>
           </div>
         </div>

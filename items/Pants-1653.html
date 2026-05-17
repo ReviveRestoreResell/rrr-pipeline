@@ -312,68 +312,76 @@
     <div class="sband-hdr" onclick="toggleBand(this)">
       <span class="sband-arrow">&#9658;</span>
       <span class="sband-label">Copy</span>
-      <span class="sband-badge">Title+ &hellip; &nbsp;|&nbsp; Desc+ &hellip; &nbsp;|&nbsp; KW+ &hellip;</span>
+      <span class="sband-badge">Title+ &check; &nbsp;|&nbsp; Desc+ &check; &nbsp;|&nbsp; KW+ &check;</span>
     </div>
     <div class="sband-body">
       <div class="cws-blocks">
 
         <!-- Title+ status (dynamic: confirmed or pending) -->
-        <div class="cws-block cws-pending" id="cwsb-title" onclick="cwsOpen('title')" role="button" tabindex="0">
+        <div class="cws-block cws-confirmed" id="cwsb-title" onclick="cwsOpen('title')" role="button" tabindex="0">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Title+</span>
-            <span class="cwsb-meta">&#8212;&nbsp;chars</span>
-            <span class="cwsb-badge cws-pending">&#9203;&nbsp;Pending</span>
+            <span class="cwsb-meta">76&nbsp;chars</span>
+            <span class="cwsb-badge cws-confirmed">&#10003;&nbsp;Confirmed</span>
             <button class="cwsb-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-title-display')" aria-label="Copy Title">copy</button>
           </div>
           <div class="cwsb-body">
-            <div class="cwsb-text" id="cws-title-display"></div>
+            <div class="cwsb-text" id="cws-title-display">Old Navy Linen Pants WMNS 2XL Pink High Rise Straight Pull On Coastal Casual</div>
             <div class="cwsb-click-hint">&#9998; Click to edit</div>
           </div>
         </div>
 
         <!-- Description+ (state driven by copy.pending[]) -->
-        <div class="cws-block cws-pending" id="cwsb-desc" style="cursor:default" role="region" aria-label="Description+">
+        <div class="cws-block cws-confirmed" id="cwsb-desc" style="cursor:default" role="region" aria-label="Description+">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Description+</span>
-            <span class="cwsb-badge cws-pending" id="cwsb-desc-badge">&#9203;&nbsp;Pending Review</span>
+            <span class="cwsb-badge cws-confirmed" id="cwsb-desc-badge">&#10003;&nbsp;Confirmed</span>
           </div>
           <div class="cwsb-body" style="display:flex;flex-direction:column;gap:8px">
 
             <!-- P1 sub-block -->
-            <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p1" onclick="cwsOpen('desc-p1')" role="button" tabindex="0">
+            <div class="cws-subblock cws-subblock-confirmed" id="cwsb-desc-p1" onclick="cwsOpen('desc-p1')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P1 &middot; Opening Paragraph</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p1-badge">&#9203;&nbsp;Pending</span>
+                <span class="cws-subblock-badge cws-subblock-confirmed" id="cwsb-desc-p1-badge">&#10003;&nbsp;Confirmed</span>
                 <button class="cws-subblock-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-desc-p1-display')" aria-label="Copy P1">copy</button>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p1-display"></div>
+                <div class="cwsb-text" id="cws-desc-p1-display">Old Navy linen-blend pants womens 2XL dusty mauve linen viscose rayon smocked elastic comfort waistband slash patch pockets pull-on high-rise straight fit with coastalcasual softtailoring NWT drape.</div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
 
             <!-- P2 sub-block -->
-            <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p2" onclick="cwsOpen('desc-p2')" role="button" tabindex="0">
+            <div class="cws-subblock cws-subblock-confirmed" id="cwsb-desc-p2" onclick="cwsOpen('desc-p2')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P2 &middot; SMC</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p2-badge">&#9203;&nbsp;Pending</span>
+                <span class="cws-subblock-badge cws-subblock-confirmed" id="cwsb-desc-p2-badge">&#10003;&nbsp;Confirmed</span>
                 <button class="cws-subblock-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-desc-p2-display')" aria-label="Copy P2 SMC">copy</button>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p2-display"></div>
+                <div class="cwsb-text" id="cws-desc-p2-display">- Waist: 40&quot; · Hip: 26.5&quot; (flat) · Rise: 13.5&quot; · Inseam: 27&quot; (cropped/ankle) · Leg Opening: 8&quot; (flat)
+- Material: 55% Linen, 45% Viscose Rayon. Non-stretch — mechanical stretch from smocked elastic comfort waistband only.
+- Style S/68325I-02. Manufacturer colorway &quot;Warm Taupe.&quot; RN 54023. CA 17897. Made in Vietnam.
+- Original Old Navy retail hangtag attached at right hip.
+- Condition: New With Tags. Even color with no fading; exterior brand tab clean; original NWT cardboard hangtag still attached at right hip per photo evidence.</div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
 
             <!-- P3 sub-block -->
-            <div class="cws-subblock cws-subblock-pending" id="cwsb-desc-p3" onclick="cwsOpen('desc-p3')" role="button" tabindex="0">
+            <div class="cws-subblock cws-subblock-confirmed" id="cwsb-desc-p3" onclick="cwsOpen('desc-p3')" role="button" tabindex="0">
               <div class="cws-subblock-hdr">
                 <span class="cws-subblock-skill">P3 &middot; Badges</span>
-                <span class="cws-subblock-badge cws-subblock-pending" id="cwsb-desc-p3-badge">&#9203;&nbsp;Pending</span>
+                <span class="cws-subblock-badge cws-subblock-confirmed" id="cwsb-desc-p3-badge">&#10003;&nbsp;Confirmed</span>
                 <button class="cws-subblock-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-desc-p3-display')" aria-label="Copy P3 Badges">copy</button>
               </div>
               <div class="cws-subblock-body">
-                <div class="cwsb-text" id="cws-desc-p3-display"></div>
+                <div class="cwsb-text" id="cws-desc-p3-display">🚢 Ready to Ship
+📦 Bundle Discounts on Multiple Items
+🚚 Fast Delivery
+🌿 Sustainable Business
+⭐ 5 Star Seller</div>
                 <div class="cwsb-click-hint">&#9998; Click to edit</div>
               </div>
             </div>
@@ -382,14 +390,14 @@
         </div>
 
         <!-- Keyword+ (state driven by copy.pending[] / keywords presence) -->
-        <div class="cws-block cws-pending" id="cwsb-kw" onclick="cwsOpen('kw')" role="button" tabindex="0">
+        <div class="cws-block cws-confirmed" id="cwsb-kw" onclick="cwsOpen('kw')" role="button" tabindex="0">
           <div class="cwsb-hdr">
             <span class="cwsb-skill">Keyword+</span>
-            <span class="cwsb-badge cws-pending">&#9203;&nbsp;Pending Review</span>
+            <span class="cwsb-badge cws-confirmed">&#10003;&nbsp;Confirmed</span>
             <button class="cwsb-copy" onclick="event.stopPropagation();copyFromEl(this,'cws-kw-display')" aria-label="Copy Keywords">copy</button>
           </div>
           <div class="cwsb-body">
-            <div class="cwsb-text" id="cws-kw-display"></div>
+            <div class="cwsb-text" id="cws-kw-display">old navy linen pants, womens 2xl plus linen, linen viscose blend, dusty mauve linen pant, high rise straight pant, pull on smocked waist, coastal casual, soft tailoring, earth tone, plus size linen pants, vacation linen, weekend linen, lounge linen, womens linen pant nwt #coastalcasual #softtailoring #earthtone #coastalgrandmother #resortwear</div>
             <div class="cwsb-click-hint">&#9998; Click to edit</div>
           </div>
         </div>
