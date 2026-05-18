@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Pick List — May 17, 2026</title>
+<style>
+  :root {
+    --pod1:   #2d6a4f;
+    --pode:   #1b4332;
+    --podf:   #1d3557;
+    --podg:   #4a1942;
+    --podh:   #6b3a1f;
+    --podo:   #555;
+    --shoes:  #7b2d2d;
+    --unkn:   #8b6914;
+    --bg:     #f0f0f0;
+    --card:   #fff;
+    --border: #e0e0e0;
+    --text:   #111;
+    --sub:    #666;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 14px; }
+
+  /* ---- PAGE HEADER ---- */
+  .page-header {
+    background: #111;
+    color: #fff;
+    padding: 12px 16px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .page-header h1 { font-size: 15px; font-weight: 700; }
+  .page-header .meta { font-size: 11px; color: #aaa; margin-top: 2px; }
+  .page-header .total { font-size: 20px; font-weight: 800; color: #fff; }
+
+  /* ---- POD SECTION ---- */
+  .pod { margin: 12px 10px; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 5px rgba(0,0,0,.13); }
+
+  .pod-header {
+    padding: 9px 14px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 53px;
+    z-index: 100;
+  }
+  .pod-header .n { font-weight: 400; opacity: .7; font-size: 11px; }
+
+  .pod-1    .pod-header { background: var(--pod1); }
+  .pod-e    .pod-header { background: var(--pode); }
+  .pod-f    .pod-header { background: var(--podf); }
+  .pod-g    .pod-header { background: var(--podg); }
+  .pod-h    .pod-header { background: var(--podh); }
+  .pod-o    .pod-header { background: var(--podo); }
+  .pod-shoes .pod-header { background: var(--shoes); }
+  .pod-unkn  .pod-header { background: var(--unkn); }
+
+  /* ---- ITEM CARDS ---- */
+  .item {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 14px;
+    display: grid;
+    grid-template-columns: 72px 1fr auto;
+    grid-template-rows: auto auto auto;
+    gap: 0 10px;
+  }
+  .item:last-child { border-bottom: none; }
+
+  .item-loc {
+    grid-column: 1;
+    grid-row: 1 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 2px;
+  }
+  .bin-label {
+    font-family: 'SF Mono', 'Courier New', monospace;
+    font-size: 13px;
+    font-weight: 800;
+    color: #111;
+    line-height: 1.2;
+  }
+  .sku-num {
+    font-family: 'SF Mono', 'Courier New', monospace;
+    font-size: 12px;
+    color: #555;
+    margin-top: 1px;
+  }
+  .sku-legacy-loc {
+    font-family: monospace;
+    font-size: 10px;
+    color: #e07b00;
+    margin-top: 3px;
+  }
+
+  .item-brand-color {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 12px;
+  }
+  .brand { font-weight: 700; color: #222; }
+  .color { color: var(--sub); margin-left: 4px; }
+
+  .item-title {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.35;
+    color: #111;
+    margin-top: 3px;
+  }
+
+  .item-flags {
+    grid-column: 2 / 4;
+    grid-row: 3;
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .item-platform {
+    grid-column: 3;
+    grid-row: 1;
+    align-self: start;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+  }
+  .badge-ebay { background: #e53238; color: #fff; }
+  .badge-posh { background: #b2215b; color: #fff; }
+
+  .flag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+  }
+  .flag-warn   { background: #fff3cd; border: 1px solid #ffc107; color: #856404; }
+  .flag-err    { background: #fde8e8; border: 1px solid #e74c3c; color: #b71c1c; }
+  .flag-bundle { background: #e3f2fd; border: 1px solid #90caf9; color: #0d47a1; }
+  .flag-order  { font-family: monospace; font-size: 10px; color: #999; background: #f5f5f5; border: 1px solid #ddd; }
+
+  /* ---- DESKTOP TABLE (≥ 640px) ---- */
+  @media (min-width: 640px) {
+    body { font-size: 13px; }
+    .pod { margin: 14px 14px; }
+
+    .item {
+      grid-template-columns: 70px 70px 120px 100px 1fr 80px;
+      grid-template-rows: auto auto;
+      align-items: center;
+      padding: 8px 12px;
+    }
+    .item-loc {
+      grid-column: 1;
+      grid-row: 1;
+      flex-direction: column;
+    }
+    /* re-map brand/color to col 3 */
+    .item-brand  { grid-column: 3; grid-row: 1; font-weight: 700; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .item-color  { grid-column: 4; grid-row: 1; color: var(--sub); font-size: 12px; }
+    .item-title  { grid-column: 5; grid-row: 1; margin-top: 0; font-size: 12px; }
+    .item-platform { grid-column: 6; grid-row: 1; text-align: right; }
+    .item-flags  { grid-column: 1 / 7; grid-row: 2; margin-top: 4px; }
+    .item-brand-color { display: none; } /* replaced by separate cols */
+    .sku-col { grid-column: 2; grid-row: 1; }
+
+    .desktop-header {
+      display: grid;
+      grid-template-columns: 70px 70px 120px 100px 1fr 80px;
+      gap: 0 10px;
+      padding: 6px 12px;
+      background: #f5f5f5;
+      border-bottom: 2px solid var(--border);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #888;
+    }
+  }
+
+  /* Mobile: hide desktop-header */
+  .desktop-header { display: none; }
+
+  @media (max-width: 639px) {
+    .item-brand  { display: none; }
+    .item-color  { display: none; }
+    .sku-col     { display: none; }
+  }
+
+  /* ---- SECTION FOOTER ---- */
+  .pod-footer {
+    background: #f9f9f9;
+    padding: 6px 14px;
+    font-size: 11px;
+    color: #888;
+    text-align: right;
+    border-top: 1px solid var(--border);
+  }
+
+  /* ---- BOTTOM SUMMARY ---- */
+  .summary {
+    margin: 14px 10px 30px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 5px rgba(0,0,0,.1);
+  }
+  .summary-header { background: #111; color: #fff; padding: 9px 14px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+  .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0; }
+  .summary-cell { padding: 14px 12px; text-align: center; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .summary-cell .num { font-size: 26px; font-weight: 800; }
+  .summary-cell .lbl { font-size: 11px; color: var(--sub); margin-top: 2px; }
+  .summary-cell.warn { background: #fffdf0; }
+  .summary-cell.warn .num { color: #c0392b; }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div>
+    <h1>📦 Pick List · May 17, 2026</h1>
+    <div class="meta">24 items · Posh 20 · eBay 4 · 4 unresolved</div>
+  </div>
+  <div class="total">24</div>
+</div>
+
+
+<!-- ==============================
+     POD 1 — LA BINS
+     ============================== -->
+<div class="pod pod-1">
+  <div class="pod-header">Pod 1 — LA Bins <span class="n">9 items</span></div>
+  <div class="desktop-header">
+    <div>BIN</div><div>SKU</div><div>BRAND</div><div>COLOR</div><div>FULL TITLE</div><div style="text-align:right">PLT</div>
+  </div>
+
+  <!-- LA4 102 -->
+  <div class="item">
+    <div class="item-loc"><div class="bin-label">LA4</div><div class="sku-num">102</div></div>
+    <div class="sku-col"><div class="sku-num" style="font-size:11px;">LA4 102</div></div>
+    <div class="item-brand">J.Crew</div>
+    <div class="item-color">White</div>
+    <div class="item-brand-color"><span class="brand">J.Crew</span><span class="color">White</span></div>
+    <div class="item-title">J.Crew Ciel Top Womens S White Cotton Poplin Long Sleeve Boat Neck Oversized Fit</div>
+    <div class="item-platform"><span class="badge badge-posh">POSH</span></div>
+    <div class="item-flags"></div>
+  </div>
+
+  <!-- LA7 196 — eBay -->
+  <div class="item">
+    <div class="item-loc"><div class="bin-label">LA7</div><div class="sku-num">196</div></div>
+    <div class="sku-col"><div class="sku-num" style="font-size:11px;">LA7 196</div></div>
+    <div class="item-brand">J.Crew</div>
+    <div class="item-color">Black</div>
+    <div class="item-brand-color"><span class="brand">J.Crew</span><span class="color">Black</span></div>
+    <div class="item-title">J.Crew Fine Ribbed Cardigan WMNS 2XS Black Long Sleeve Crew Neck Button Up</div>
+    <div class="item-platform"><span class="badge badge-ebay">EBAY</span></div>
+    <div class="item-flags"><span class="flag flag-order">05-14463-91734</span></div>
+  </div>
+
+  <!-- LA7 211 -->
+  <div class="item">
+    <div class="item-loc"><div class="bin-label">LA7</div><div class="sku-num">211</div></div>
+    <div class="sku-col"><div class="sku-num" style="font-size:11px;">LA7 211</div></div>
+    <div class="item-brand">J.Crew</div>
+    <div class="item-color">Navy</div>
+    <div class="item-brand-color"><span class="brand">J.Crew</span><span class="color">Navy</span></div>
+    <div class="item-title">J.Crew Cashmere Shrunken T-shirt WMNS XS Navy Blue Short Sleeve Crewneck Stretch</div>
+    <div class="item-platform"><span class="badge badge-posh">POSH</span></div>
+    <div class="item-flags"></div>
+  </div>
+
+  <!-- LA8 220 -->
+  <div class="item">
+    <div class="item-loc"><div class="bin-label">LA8</div><div class="sku-num">220</div></div>
+    <div class="sku-col"><div class="sku-num" style="font-size:11px;">LA8 220</div></div>
+    <div class="item-brand">J.Crew</div>
+    <div class="item-color">Blue</div>
+    <div class="item-brand-color"><span class="brand">J.Crew</span><span class="color">Blue</span></div>
+    <div class="item-title">J.Crew Christina Midi Skirt 18 Blue Contrast Stitch Cotton Poplin Elastic Waist</div>
+    <div class="item-platform"><span class="badge badge-posh">POSH</span></div>
+    <div class="item-flags"></div>
+  </div>
+
+  <!-- LA18 588 -->
+  <div class="item">
+    <div class="item-loc"><div class="bin-label">LA18</div><div class="sku-num">588</div></div>
+    <div class="sku-col"><div class="sku-num" style="font-size:11px;">LA18 588</div></div>
+    <div class="item-brand">Madewell</div>
+    <div class="item-color">Off White</div>
+    <div class="item-brand-color"><span class="brand">Madewell</span><span class="color">Off White</span></div>
+    <div class="item-title">Madewell Silk Utility-Pocket Button-Up Shirt WMNS L Off White Long Sleeve Satin</div>
+    <div class="item-platform"><span class="badge badge-posh">POSH</span></div>
+    <div class="item-flags"></div>
+  </div>
+
+  <!-- LA38 1306 -->
+  <div class="item">
+    <div class="item-loc"><div class="bin-label">LA38</div><div class="sku-num">1306</div></div>
+    <div class="sku-col"><div class="sku-num" style="font-size:11px;">LA38 1306</div></div>
+    <div class="item-brand">J.Crew</div>
+    <div class="item-color">Black</div>
+    <div class="item-brand-color"><span class="brand">J.Crew</span><span class="color">Black</span></div>
+    <div class="item-title">J.Crew Classic Sculp Gemma Bandeau One Piece Swimsuit Sz 4 Black Removable Strap</div>
+    <div class="item-platform"><span class="badge badge-posh">POSH</span></div>
+    <div class="item-flags"></div>
+  </div>
+
+  <!-- LA38 1320 — eBay -->
+  <div class="item">
+    <div class="item-loc"><div class="bin-label">LA38</div><div class="sku-num">1320</div></div>
+    <div class="sku-col"><div class="sku-num" style="font-size:11px;">LA38 1320</div></div>
+    <div class="item-brand">J.Crew</div>
+    <div class="item-color">Gray</div>
+    <div class="item-brand-color"><span class="brand">J.Crew</span><span class="color">Gray</span></div>
+    <div class="item-title">J.Crew Broken-In T-Shirt Mens L Tall Gray Short Sleeve Crew Neck Regular Fit</div>
+    <div class="item-platform"><span class="badge badge-ebay">EBAY</span></div>
+    <div class="item-flags">
+      <span class="flag flag-order">20-14443-83909</span>
+      <span class="flag flag-warn">⚠ Verify: 1320 not 1329 (sneaker in same bin)</span>
+    </div>
+  </div>
+
+  <!-- LA42 1467 — bundle companion -->
+  <div class="item">
+    <div class="item-loc"><div class="bin-label">LA42</div><div class="sku-num">1467</div></div>
+    <div class="sku-col"><div class="sku-num" style="font-size:11px;">LA42 1467</div></div>
+    <div class="item-brand">J.Crew</div>
+    <div class="item-color">—</div>
+    <div class="item-brand-color"><span class="brand">J.Crew</span></div>
+    <div class="item-title">Bundle companion item</div>
+    <div class="item-platform"><span class="badge badge-posh">POSH</span></div>
+    <div class="item-flags"><span class="flag flag-bundle">📦 BUNDLE — ship with LA43 1469</span></div>
+  </div>
+
+  <!-- LA43 1469 — bundle primary -->
+  <div class="item">
+    <div class="item-loc"><div class="bin-label">LA43</div><div class="sku-num">1469</div></div>
+    <div class="sku-col"><div class="sku-num" style="font-size:11px;">LA43 1469</div></div>
+    <div class="item-brand">J.Crew</div>
+    <div class="item-color">—</div>
+    <div class="item-brand-color"><span class="brand">J.Crew</span></div>
+    <div class="item-title">Bundle of J.Crew New Essential Wide-Leg and 1 more item</div>
+    <div class="item-platform"><span class="badge badge-posh">POSH</span></div>
+    <div class="item-flags"><span class="flag flag-bundle">📦 BUNDLE: LA43 1469 + LA42 1467 · Ship together</span></div>
+  </div>
+
+  <div class="pod-footer">9 picks</div>
+</div>
+
+
+<!-- ==============================
+     E BINS
+     ============================== -->
+<div class="pod pod-e">
+  <div class="pod-header">E Bins <span class="n">2 items</span></div>
+  <div class="desktop-header">
+    <div>BIN</div><div>SKU</div><div>BRAND</div><div>COLOR</div><div>FULL TITLE</div><div style="text-align:right">PLT</div>
+  </div>
+
+  <div class="item">
+    <div class="item-loc"><div class="bin-label">E-2</div><div class="sku-num">2020</div></div>
+    <div class="sku-col"><div class="sku-num" style="font-size:11px;">E-2 2020</div></div>
+    <div class="item-brand">Peter Millar</div>
+    <div class="item-color">White</div>
+    <div class="item-brand-color"><span class="brand">Peter Millar</span><span class="color">White</span></div>
+    <div class="item-title">Peter Millar Performance Chino Short Mens 38 White Stretch Straight Leg Pockets</div>
+    <div class="item-platform"><span class="badge badge-posh">POSH</span></div>
+    <div class="item-flags"></div>
+  </div>
+
+  <div class="item">
+    <div class="item-loc"><div class="bin-label">E-4</div><div class="sku-num">2478</div></div>
+    <div class="sku-col"><div class="sku-num" style="font-size:11px;">E-4 2478</div></div>
+    <div class="item-brand">Mixed</div>
+    <div class="item-color">Mixed</div>
+    <div class="item-brand-color"><span class="brand">Mixed</span><span class="color">Mixed</span></div>
+    <div class="item-title">Baby Boy 0-3 Month Mixed Clothes Lot Bodysuits, Pants, Sweater, Sleepers, Cotton</div>
+    <div class="item-platform"><span class="badge badge-posh">POSH</span></div>
+    <div class="item-flags"></div>
+  </div>
+
+  <div class="pod-footer">2 picks</div>
+</div>
+
+
+<!-- ==============================
+     F BINS
+     ============================== -->
+<div class="pod pod-f">
+  <div class="pod-header">F Bins <span class="n">3 items</span></div>
+  <div class="desktop-header">
+    <div>BIN</div><div>SKU</div><div>BRAND</div><div>COLOR</div><div>FULL TITLE</div><div style="text-align:right">PLT</div>
+  </div>
+
+  <div class="item">
+    <div class="item-loc"><div class="bin-label">F-13</div><div class="sku-num">0670</div></div>
+    <div class="sku-col"><div class="sku-num" style="font-size:11px;">F-13 0670</div></div>
+    <div class="item-brand">Woolrich</div>
+    <div class="item-color">Black</div>
+    <div class="item-brand-color"><span class="brand">Woolrich</span><span class="color">Black</span></div>
+    <div class="item-title">Woolrich Corduroy Skirt WMNS 4 Black Straight Knee Length Stretch Pockets Button</div>
+    <div class="item-platform"><span class="badge badge-posh">POSH</span></div>
+    <div class="item-flags"></div>
+  </div>
+
+  <div class="item">
+    <div class="item-loc"><div class="bin-label">F-15</div><div class="sku-num">0746</div></div>
+    <div class="sku-col"><div class="sku-num" style="font-size:11px;">F-15 0746</div></div>
+    <div class="item-brand">Liverpool</div>
+    <div class="item-color">Beige</div>
+    <div class="item-brand-color"><span class="brand">Liverpool</span><span class="color">Beige</span></div>
+    <div class="item-title">Liverpool Shirt WMNS S Beige Striped Crew Neck Short Dolman Sleeve Top Blouse</div>
+    <div class="item-platform"><span class="badge badge-posh">POSH</span></div>
+    <div class="item-flags"></div>
+  </div>
+
+  <div class="item">
+    <div class="item-loc"><div class="bin-label">F-15</div><div class="sku-num">0905</div></div>
+    <div class="sku-col"><div class="sku-num" style="font-size:11px;">F-15 0905</div></div>
+    <div class="item-brand">Wild Fable</div>
+    <div class="item-color">Mint</div>
+    <div class="item-brand-color"><span class="brand">Wild Fable</span><span class="color">Mint</span></div>
+    <div class="item-title">Wild Fable Cropped T-Shirt WMNS XL Pullover Mint Green Short Sleeve Scoop Neck</div>
+    <div class="item-platform"><span class="badge badge-posh">POSH</span></div>
+    <div class="item-flags"></div>
+  </div>
+
+  <div class="pod-footer">3 picks</div>
+</div>
+
+
+<!-- ==============================
+     G BINS
+     ============================== -->
+<div class="pod pod-g">
+  <div class="pod-header">G Bins <span class="n">1 item</span></div>
+  <div class="desktop-header">
+    <div>BIN</div><div>SKU</div><div>BRAND</div><div>COLOR</div><div>FULL TITLE</div><div style="text-align:right">PLT</div>
+  </div>
+
+  <div class="item">
+    <div class="item-loc"><div class="bin-label">G-4</div><div class="sku-num">1001</div></div>
+    <div class="sku-col"><div class="sku-num" style="font-size:11px;">G-4 1001</div></div>
+    <div class="item-brand">Habitual</div>
+    <div class="item-color">Blue</div>
+    <div class="item-brand-color"><span class="brand">Habitual</span><span class="color">Blue</span></div>
+    <div class="item-title">Habitual Jeans WMNS 27 Cypress Wide Leg Denim Capris Blue Snap Button Pleated</div>
+    <div class="item-platform"><span class="badge badge-posh">POSH</span></div>
+    <div class="item-flags"></div>
+  </div>
+
+  <div class="pod-footer">1 pick</div>
+</div>
+
+
+<!-- ==============================
+     H BINS
+     ============================== -->
+<div class="pod pod-h">
+  <div class="pod-header">H Bins <span class="n">2 items</span></div>
+  <div class="desktop-header">
+    <div>BIN</div><div>SKU</div><div>BRAND</div><div>COLOR</div><div>FULL TITLE</div><div style="text-align:right">PLT</div>
+  </div>
+
+  <div class="item">
+    <div class="item-loc"><div class="bin-label">H-4</div><div class="sku-num">1667</div></div>
+    <div class="sku-col"><div class="sku-num" style="font-size:11px;">H-4 1667</div></div>
+    <div class="item-brand">Paige</div>
+    <div class="item-color">Dark Wash</div>
+    <div class="item-brand-color"><span class="brand">Paige</span><span class="color">Dark Wash</span></div>
+    <div class="item-title">Paige Bootcut Jeans Womens Size 29 Dark Wash Blue Penrose Hidden Hills Mid Rise</div>
+    <div class="item-platform"><span class="badge badge-posh">POSH</span></div>
+    <div class="item-flags"></div>
+  </div>
+
+  <div class="item">
+    <div class="item-loc"><div class="bin-label">H-6</div><div class="sku-num">1708</div></div>
+    <div class="sku-col"><div class="sku-num" style="font-size:11px;">H-6 1708</div></div>
+    <div class="item-brand">Wit &amp; Wisdom</div>
+    <div class="item-color">Med Wash</div>
+    <div class="item-brand-color"><span class="brand">Wit &amp; Wisdom</span><span class="color">Med Wash</span></div>
+    <div class="item-title">Wit &amp; Wisdom Jeans SZ 2 Medium Wash Denim Frayed Hem Floral Embroidered Low Rise</div>
+    <div class="item-platform"><span class="badge badge-posh">POSH</span></div>
+    <div class="item-flags"></div>
+  </div>
+
+  <div class="pod-footer">2 picks</div>
+</div>
+
+
+<!-- ==============================
+     OTHER LABELS
+     ============================== -->
+<div class="pod pod-o">
+  <div class="pod-header">Other Labels <span class="n">1 item · legacy format</span></div>
+  <div class="desktop-header">
+    <div>BIN</div><div>SKU</div><div>BRAND</div><div>COLOR</div><div>FULL TITLE</div><div style="text-align:right">PLT</div>
+  </div>
+
+  <div class="item">
+    <div class="item-loc"><div class="bin-label">Shorts</div><div class="sku-num">013</div></div>
+    <div class="sku-col"><div class="sku-num" style="font-size:11px;">Shorts-013</div></div>
+    <div class="item-brand">Blue Savvy</div>
+    <div class="item-color">Blue</div>
+    <div class="item-brand-color"><span class="brand">Blue Savvy</span><span class="color">Blue</span></div>
+    <div class="item-title">Blue Savvy Maternity Shorts WMNS L Blue Dark Wash Distressed Full Panel Denim</div>
+    <div class="item-platform"><span class="badge badge-posh">POSH</span></div>
+    <div class="item-flags"><span class="flag flag-warn">Legacy 3-digit label</span></div>
+  </div>
+
+  <div class="pod-footer">1 pick</div>
+</div>
+
+
+<!-- ==============================
+     SHOES
+     ============================== -->
+<div class="pod pod-shoes">
+  <div class="pod-header">👟 Shoes <span class="n">5 items</span></div>
+  <div class="desktop-header">
+    <div>BIN</div><div>SKU / Legacy</div><div>BRAND</div><div>COLOR</div><div>FULL TITLE</div><div style="text-align:right">PLT</div>
+  </div>
+
+  <!-- Dolce Vita — Shoe f -->
+  <div class="item">
+    <div class="item-loc">
+      <div class="bin-label">Shoe Box</div>
+      <div class="sku-legacy-loc">Legacy: Shoe f</div>
+    </div>
+    <div class="sku-col"><div class="sku-legacy-loc" style="font-size:11px;">Legacy: Shoe f</div></div>
+    <div class="item-brand">Dolce Vita</div>
+    <div class="item-color">Taupe</div>
+    <div class="item-brand-color"><span class="brand">Dolce Vita</span><span class="color">Taupe</span></div>
+    <div class="item-title">Dolce Vita Paily Sandals Taupe Womens 7.5 Block Heels Braided Square Toe Slip On</div>
+    <div class="item-platform"><span class="badge badge-posh">POSH</span></div>
+    <div class="item-flags"><span class="flag flag-warn">No SB SKU — legacy label only</span></div>
+  </div>
+
+  <!-- Columbia — S-E -->
+  <div class="item">
+    <div class="item-loc">
+      <div class="bin-label">Shoe Box</div>
+      <div class="sku-legacy-loc">Legacy: S-E</div>
+    </div>
+    <div class="sku-col"><div class="sku-legacy-loc" style="font-size:11px;">Legacy: S-E</div></div>
+    <div class="item-brand">Columbia</div>
+    <div class="item-color">Gray</div>
+    <div class="item-brand-color"><span class="brand">Columbia</span><span class="color">Gray</span></div>
+    <div class="item-title">Columbia Redmond III Mid Waterproof Hiking Shoes Gray Womens Size US7 UK5 EU38</div>
+    <div class="item-platform"><span class="badge badge-posh">POSH</span></div>
+    <div class="item-flags"><span class="flag flag-warn">No SB SKU — legacy label only</span></div>
+  </div>
+
+  <!-- Dr. Martens — SK -->
+  <div class="item">
+    <div class="item-loc">
+      <div class="bin-label">Shoe Box</div>
+      <div class="sku-legacy-loc">Legacy: SK</div>
+    </div>
+    <div class="sku-col"><div class="sku-legacy-loc" style="font-size:11px;">Legacy: SK</div></div>
+    <div class="item-brand">Dr. Martens</div>
+    <div class="item-color">White</div>
+    <div class="item-brand-color"><span class="brand">Dr. Martens</span><span class="color">White</span></div>
+    <div class="item-title">Dr. Martens Womens Size 5 White Leather Lace Up Zavala Combat Boot Bouncing Sole</div>
+    <div class="item-platform"><span class="badge badge-posh">POSH</span></div>
+    <div class="item-flags"><span class="flag flag-warn">No SB SKU — legacy label only</span></div>
+  </div>
+
+  <!-- L'Artistie — no SKU -->
+  <div class="item">
+    <div class="item-loc">
+      <div class="bin-label">Shoe Box</div>
+      <div class="sku-legacy-loc" style="color:#c0392b;">SKU UNKN</div>
+    </div>
+    <div class="sku-col"><div class="sku-num" style="font-size:11px;color:#c0392b;">SKU UNKN</div></div>
+    <div class="item-brand">L'Artistie</div>
+    <div class="item-color">Brown</div>
+    <div class="item-brand-color"><span class="brand">L'Artistie</span><span class="color">Brown</span></div>
+    <div class="item-title">L' Artistie Article Pelagia Brown Floral Sandals US8.5 EU39 Slingback Purple WMN</div>
+    <div class="item-platform"><span class="badge badge-posh">POSH</span></div>
+    <div class="item-flags"><span class="flag flag-err">No SKU in Poshmark listing — check Vendoo</span></div>
+  </div>
+
+  <!-- Wedge Sandals — eBay UNKN -->
+  <div class="item" style="background:#fff8f8;">
+    <div class="item-loc">
+      <div class="bin-label" style="color:#c0392b;">⚠ UNKN</div>
+    </div>
+    <div class="sku-col"><div class="sku-num" style="font-size:11px;color:#c0392b;">SKU UNKN</div></div>
+    <div class="item-brand">UNKN</div>
+    <div class="item-color">—</div>
+    <div class="item-brand-color"><span class="brand" style="color:#c0392b;">UNKN</span></div>
+    <div class="item-title">Wedge Sandals / Shoes</div>
+    <div class="item-platform"><span class="badge badge-ebay">EBAY</span></div>
+    <div class="item-flags">
+      <span class="flag flag-order">Order: 05-14883-44556 · Benrose Alexander</span>
+      <span class="flag flag-err">Order # not found — check eBay directly</span>
+      <span class="flag flag-err">SB16-1524 = never listed — can't be this item</span>
+    </div>
+  </div>
+
+  <div class="pod-footer">5 picks · 3 legacy labels · 2 unresolved</div>
+</div>
+
+
+<!-- ==============================
+     UNRESOLVED
+     ============================== -->
+<div class="pod pod-unkn">
+  <div class="pod-header">⚠️ Unresolved — Action Required <span class="n">2 items</span></div>
+
+  <!-- Purple Dress -->
+  <div class="item" style="background:#fffdf0;">
+    <div class="item-loc">
+      <div class="bin-label" style="color:#c0392b;">UNKN</div>
+    </div>
+    <div class="sku-col"><div class="sku-num" style="font-size:11px;color:#c0392b;">UNKN</div></div>
+    <div class="item-brand">UNKN</div>
+    <div class="item-color">Purple</div>
+    <div class="item-brand-color"><span class="brand" style="color:#c0392b;">UNKN</span><span class="color">Purple</span></div>
+    <div class="item-title">Purple / Dark Dress</div>
+    <div class="item-platform"><span class="badge badge-ebay">EBAY</span></div>
+    <div class="item-flags">
+      <span class="flag flag-order">Order: 05-14883-40534 · Adrienne D Milligan</span>
+      <span class="flag flag-err">Open eBay order — read custom label</span>
+    </div>
+  </div>
+
+  <!-- Nike Shorts — no bin SKU -->
+  <div class="item" style="background:#fffdf0;">
+    <div class="item-loc">
+      <div class="bin-label" style="color:#c0392b;">UNKN</div>
+    </div>
+    <div class="sku-col"><div class="sku-num" style="font-size:11px;color:#c0392b;">UNKN</div></div>
+    <div class="item-brand">Nike</div>
+    <div class="item-color">Black</div>
+    <div class="item-brand-color"><span class="brand">Nike</span><span class="color">Black</span></div>
+    <div class="item-title">Nike Tempo Shorts WMNS Plus 1X Black Dri-Fit Lined Performance Athletic Gymcore</div>
+    <div class="item-platform"><span class="badge badge-posh">POSH</span></div>
+    <div class="item-flags">
+      <span class="flag flag-err">Poshmark listing has internal ID only — no bin SKU</span>
+      <span class="flag flag-warn">Check Vendoo for bin location</span>
+    </div>
+  </div>
+
+  <div class="pod-footer">2 unresolved — ship-by at risk</div>
+</div>
+
+
+<!-- SUMMARY -->
+<div class="summary">
+  <div class="summary-header">Summary</div>
+  <div class="summary-grid">
+    <div class="summary-cell"><div class="num">20</div><div class="lbl">Poshmark</div></div>
+    <div class="summary-cell"><div class="num">4</div><div class="lbl">eBay</div></div>
+    <div class="summary-cell"><div class="num">$882</div><div class="lbl">Posh Revenue</div></div>
+    <div class="summary-cell warn"><div class="num">4</div><div class="lbl">Need Resolution</div></div>
+  </div>
+</div>
+
+</body>
+</html>
