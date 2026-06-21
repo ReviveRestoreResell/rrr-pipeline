@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>P1-R1-B1 · RRR Bin</title>
+<style>
+  :root{ --bg:#f4f1ec; --card:#fff; --ink:#1a1a1a; --muted:#8a8175; --line:#e4ddd2;
+         --accent:#7c6f5b; --done:#b9b2a6; --green:#5a8a4f; }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+       -webkit-font-smoothing:antialiased;padding-bottom:90px}
+  header{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line);
+         padding:14px 16px;display:flex;align-items:center;gap:14px}
+  header .qr{width:74px;height:74px;flex:0 0 auto;border:1px solid var(--line);border-radius:8px;padding:4px;background:#fff}
+  header .qr svg{width:100%;height:100%;display:block}
+  header .meta{flex:1;min-width:0}
+  .binid{font-size:24px;font-weight:700;letter-spacing:.5px}
+  .loc{font-size:13px;color:var(--muted);margin-top:2px}
+  .counts{font-size:12px;color:var(--accent);margin-top:6px;font-weight:600}
+  ul{list-style:none;margin:0;padding:10px 12px;display:flex;flex-direction:column;gap:8px}
+  .item{display:flex;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:10px;
+        padding:12px 12px;align-items:flex-start;transition:opacity .15s,background .15s}
+  .item.done{opacity:.45;background:#efe9df}
+  .item.done .title{text-decoration:line-through}
+  .chk{flex:0 0 auto;width:26px;height:26px;border-radius:50%;border:2px solid var(--accent);
+       background:#fff;cursor:pointer;margin-top:2px;position:relative}
+  .item.done .chk{background:var(--green);border-color:var(--green)}
+  .item.done .chk:after{content:"";position:absolute;left:8px;top:3px;width:6px;height:12px;
+       border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+  .body{min-width:0;flex:1}
+  .line1{display:flex;align-items:baseline;gap:8px;justify-content:space-between}
+  .cat{font-size:17px;font-weight:700}
+  .slot{font-size:11px;color:var(--muted);white-space:nowrap}
+  .leg{font-size:12px;color:var(--accent);margin-top:1px;font-weight:600}
+  .title{font-size:13px;color:#5b5446;margin-top:4px;line-height:1.35}
+  .bar{position:fixed;bottom:0;left:0;right:0;background:var(--card);border-top:1px solid var(--line);
+       padding:12px 16px;display:flex;gap:12px;align-items:center}
+  .prog{flex:1;font-size:13px;color:var(--muted)}
+  .prog b{color:var(--ink)}
+  .btn{border:none;border-radius:8px;padding:11px 16px;font-size:14px;font-weight:600;cursor:pointer}
+  .save{background:var(--accent);color:#fff}
+  .reset{background:#e9e2d6;color:#5b5446}
+  @media print{ .bar,.chk{display:none} .item{break-inside:avoid} body{background:#fff;padding:0} }
+</style>
+</head>
+<body>
+<header>
+  <div class="qr"><svg xmlns="http://www.w3.org/2000/svg" width="164" height="164" class="segno"><path transform="scale(4)" class="qrline" stroke="#1a1a1a" d="M2 2.5h7m6 0h5m1 0h4m2 0h2m1 0h1m1 0h7m-37 1h1m5 0h1m1 0h1m1 0h3m1 0h2m1 0h2m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m5 0h1m-37 1h1m1 0h3m1 0h1m1 0h1m1 0h3m3 0h1m1 0h1m2 0h2m3 0h2m2 0h1m1 0h3m1 0h1m-37 1h1m1 0h3m1 0h1m1 0h1m1 0h2m3 0h1m1 0h2m1 0h2m2 0h2m2 0h1m1 0h1m1 0h3m1 0h1m-37 1h1m1 0h3m1 0h1m4 0h2m1 0h7m2 0h1m1 0h2m1 0h1m1 0h1m1 0h3m1 0h1m-37 1h1m5 0h1m2 0h3m2 0h2m1 0h1m2 0h1m1 0h1m3 0h1m3 0h1m5 0h1m-37 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-29 1h1m6 0h4m1 0h1m1 0h3m1 0h2m-28 1h1m5 0h1m1 0h2m1 0h1m1 0h1m1 0h2m5 0h1m3 0h5m2 0h3m-35 1h1m1 0h3m4 0h5m1 0h3m2 0h3m3 0h2m2 0h2m1 0h2m-36 1h2m1 0h2m1 0h1m1 0h1m1 0h1m4 0h3m1 0h1m1 0h2m1 0h2m1 0h1m2 0h4m1 0h2m-37 1h1m2 0h1m1 0h1m1 0h5m1 0h2m3 0h3m3 0h1m1 0h1m4 0h3m2 0h1m-37 1h3m3 0h1m1 0h1m1 0h2m3 0h2m10 0h1m2 0h1m2 0h1m2 0h1m-36 1h1m1 0h1m10 0h2m2 0h4m1 0h1m2 0h3m2 0h1m1 0h1m1 0h1m-36 1h4m1 0h2m1 0h1m1 0h1m3 0h2m2 0h1m2 0h2m2 0h1m1 0h2m1 0h4m1 0h2m-36 1h1m3 0h1m3 0h1m2 0h2m1 0h2m3 0h1m1 0h1m3 0h1m4 0h1m1 0h4m-36 1h1m4 0h1m2 0h2m4 0h1m2 0h4m2 0h2m1 0h4m1 0h1m1 0h1m-34 1h1m9 0h3m2 0h2m3 0h1m1 0h1m2 0h1m1 0h1m4 0h1m1 0h1m-36 1h3m1 0h1m1 0h1m2 0h1m2 0h3m1 0h4m1 0h1m1 0h3m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m-32 1h1m2 0h5m1 0h3m6 0h1m3 0h5m1 0h1m2 0h1m-37 1h1m3 0h1m1 0h1m6 0h2m1 0h2m5 0h4m2 0h2m1 0h3m-35 1h2m2 0h2m2 0h1m1 0h4m1 0h1m1 0h3m2 0h2m2 0h2m1 0h1m2 0h1m1 0h1m-34 1h3m1 0h2m1 0h3m3 0h2m1 0h1m3 0h1m2 0h1m2 0h1m3 0h3m1 0h2m-37 1h1m3 0h1m2 0h1m4 0h1m2 0h1m1 0h2m1 0h1m2 0h2m1 0h8m2 0h1m-35 1h2m2 0h1m4 0h1m3 0h1m1 0h1m1 0h6m1 0h3m1 0h2m3 0h2m-37 1h3m4 0h1m3 0h2m4 0h2m1 0h2m1 0h3m1 0h1m3 0h1m1 0h2m-35 1h1m2 0h4m1 0h1m1 0h2m2 0h4m1 0h1m2 0h1m2 0h6m1 0h2m1 0h2m-37 1h1m1 0h2m3 0h1m2 0h5m1 0h1m2 0h1m2 0h1m1 0h1m2 0h2m2 0h1m1 0h4m-37 1h1m1 0h8m1 0h1m1 0h8m1 0h1m2 0h12m-29 1h1m1 0h1m1 0h2m1 0h2m1 0h4m1 0h1m1 0h4m3 0h1m2 0h1m-36 1h7m2 0h5m1 0h5m3 0h1m1 0h1m2 0h1m1 0h1m1 0h1m3 0h1m-37 1h1m5 0h1m4 0h5m5 0h1m4 0h3m3 0h1m2 0h2m-37 1h1m1 0h3m1 0h1m3 0h1m2 0h3m2 0h5m3 0h7m1 0h2m-36 1h1m1 0h3m1 0h1m2 0h3m1 0h1m3 0h1m2 0h1m1 0h3m1 0h5m5 0h1m-37 1h1m1 0h3m1 0h1m2 0h1m4 0h1m2 0h1m2 0h1m1 0h1m1 0h2m1 0h2m6 0h2m-37 1h1m5 0h1m2 0h2m3 0h3m5 0h3m2 0h3m2 0h2m2 0h1m-37 1h7m1 0h1m1 0h4m5 0h2m2 0h2m3 0h2m1 0h1m1 0h1m2 0h1"/></svg>
+</div>
+  <div class="meta">
+    <div class="binid">P1-R1-B1</div>
+    <div class="loc">Pod 1 &middot; Rack 1 &middot; Bin #1</div>
+    <div class="counts"><span id="presentN">0</span>/20 present &middot; 20 expected</div>
+  </div>
+</header>
+
+<ul id="list">
+
+    <li class="item" data-sku="Dresses-0018">
+      <button class="chk" aria-label="toggle present"></button>
+      <div class="body">
+        <div class="line1"><span class="cat">Dresses-0018</span><span class="slot">slot 1</span></div>
+        <div class="leg">Legacy F - 0934</div>
+        <div class="title">Lovers And Friends Red Lace Tank Dress Juniors Small Sleeveless Lined Mini Zip</div>
+      </div>
+    </li>
+
+    <li class="item" data-sku="Shorts-0091">
+      <button class="chk" aria-label="toggle present"></button>
+      <div class="body">
+        <div class="line1"><span class="cat">Shorts-0091</span><span class="slot">slot 2</span></div>
+        <div class="leg">Legacy 0102-SK</div>
+        <div class="title">Universal Thread WMN 2/26 Blue Light Wash Denim High Rise Shortie Shorts Cut off</div>
+      </div>
+    </li>
+
+    <li class="item" data-sku="Skirts-0107">
+      <button class="chk" aria-label="toggle present"></button>
+      <div class="body">
+        <div class="line1"><span class="cat">Skirts-0107</span><span class="slot">slot 3</span></div>
+        <div class="leg">Legacy LA5 131</div>
+        <div class="title">Madewell Fluted Midi Skirt WMNS 28 Tile White Cotton Frayed Hem Zip Back Flared</div>
+      </div>
+    </li>
+
+    <li class="item" data-sku="Shorts-0132">
+      <button class="chk" aria-label="toggle present"></button>
+      <div class="body">
+        <div class="line1"><span class="cat">Shorts-0132</span><span class="slot">slot 4</span></div>
+        <div class="leg">Legacy Jean-5 0996</div>
+        <div class="title">Old Navy Jeans Short WMNS 12 Slim Mid-Rise Bambu Cuffed Medium Wash Denim Blue</div>
+      </div>
+    </li>
+
+    <li class="item" data-sku="Shorts-0230">
+      <button class="chk" aria-label="toggle present"></button>
+      <div class="body">
+        <div class="line1"><span class="cat">Shorts-0230</span><span class="slot">slot 5</span></div>
+        <div class="leg">Legacy 0103-SK</div>
+        <div class="title">Free People Womens Size 26/2 Blue Dark Wash Denim Tulum Embroidered Shorts</div>
+      </div>
+    </li>
+
+    <li class="item" data-sku="Pants-0238">
+      <button class="chk" aria-label="toggle present"></button>
+      <div class="body">
+        <div class="line1"><span class="cat">Pants-0238</span><span class="slot">slot 6</span></div>
+        <div class="leg">Legacy F-11 0694</div>
+        <div class="title">Free People Jeans WMNS 28 Black High Rise Skinny Stretch Denim We The Free</div>
+      </div>
+    </li>
+
+    <li class="item" data-sku="Shorts-0258">
+      <button class="chk" aria-label="toggle present"></button>
+      <div class="body">
+        <div class="line1"><span class="cat">Shorts-0258</span><span class="slot">slot 7</span></div>
+        <div class="leg">Legacy M 0613</div>
+        <div class="title">Magellan Outdoors Coral Happy Camper 4&#x27;&#x27; Shorty Shorts Womens 4 Mid Rise Stretch</div>
+      </div>
+    </li>
+
+    <li class="item" data-sku="Dresses-0304">
+      <button class="chk" aria-label="toggle present"></button>
+      <div class="body">
+        <div class="line1"><span class="cat">Dresses-0304</span><span class="slot">slot 8</span></div>
+        <div class="leg">Legacy 0932- F</div>
+        <div class="title">Vans Floral Dress Button-Up WMNS Small White/Pink/Green Mini V-neck Short Sleeve</div>
+      </div>
+    </li>
+
+    <li class="item" data-sku="Dresses-0343">
+      <button class="chk" aria-label="toggle present"></button>
+      <div class="body">
+        <div class="line1"><span class="cat">Dresses-0343</span><span class="slot">slot 9</span></div>
+        <div class="leg">Legacy 0153-UK</div>
+        <div class="title">Urban Outfitters Reformed Womens Size 4 Red/Blue Floral Lace Up Back Mini Dress</div>
+      </div>
+    </li>
+
+    <li class="item" data-sku="Dresses-0425">
+      <button class="chk" aria-label="toggle present"></button>
+      <div class="body">
+        <div class="line1"><span class="cat">Dresses-0425</span><span class="slot">slot 10</span></div>
+        <div class="leg">Legacy G-10 1163</div>
+        <div class="title">Lularoe Simple Comfortable Midi T-shirt Dress Womens 2XL Black Short Sleeve Long</div>
+      </div>
+    </li>
+
+    <li class="item" data-sku="Tops-0459">
+      <button class="chk" aria-label="toggle present"></button>
+      <div class="body">
+        <div class="line1"><span class="cat">Tops-0459</span><span class="slot">slot 11</span></div>
+        <div class="leg">Legacy 0079-SK</div>
+        <div class="title">Vintage 1990s Fila Womens Small Purple Long Sleeves Pullover Sweatshirt Crewneck</div>
+      </div>
+    </li>
+
+    <li class="item" data-sku="Tops-0672">
+      <button class="chk" aria-label="toggle present"></button>
+      <div class="body">
+        <div class="line1"><span class="cat">Tops-0672</span><span class="slot">slot 12</span></div>
+        <div class="leg">Legacy 0144-SK</div>
+        <div class="title">A New Day Women&#x27;s Purple/Green Floral Top XXL Puff Sleeve V-neckline 3/4 Sleeve</div>
+      </div>
+    </li>
+
+    <li class="item" data-sku="Tops-0906">
+      <button class="chk" aria-label="toggle present"></button>
+      <div class="body">
+        <div class="line1"><span class="cat">Tops-0906</span><span class="slot">slot 13</span></div>
+        <div class="leg">Legacy 0064- SK</div>
+        <div class="title">Nike Pro Womens XS Blue Hypercool Training Racerback Yoga Gym Tank 832056-055</div>
+      </div>
+    </li>
+
+    <li class="item" data-sku="Tops-1107">
+      <button class="chk" aria-label="toggle present"></button>
+      <div class="body">
+        <div class="line1"><span class="cat">Tops-1107</span><span class="slot">slot 14</span></div>
+        <div class="leg">Legacy 0073-E-SK</div>
+        <div class="title">Under Armour Womens Small Gray Short Sleeves Semi-Fitted Heat Gear Tshirt Active</div>
+      </div>
+    </li>
+
+    <li class="item" data-sku="Pants-1267">
+      <button class="chk" aria-label="toggle present"></button>
+      <div class="body">
+        <div class="line1"><span class="cat">Pants-1267</span><span class="slot">slot 15</span></div>
+        <div class="leg">Legacy LA4 091</div>
+        <div class="title">J.Crew Ludlow Crosby Garment Dyed Suit Pants Mens 31x32 Blue Cotton Linen CF189</div>
+      </div>
+    </li>
+
+    <li class="item" data-sku="Pants-1300">
+      <button class="chk" aria-label="toggle present"></button>
+      <div class="body">
+        <div class="line1"><span class="cat">Pants-1300</span><span class="slot">slot 16</span></div>
+        <div class="leg">Legacy 0407-A4-SK</div>
+        <div class="title">Calvin Klein Black With White Stripe Stretch Pull On Pants 1X Plus Formal Work</div>
+      </div>
+    </li>
+
+    <li class="item" data-sku="Tops-1489">
+      <button class="chk" aria-label="toggle present"></button>
+      <div class="body">
+        <div class="line1"><span class="cat">Tops-1489</span><span class="slot">slot 17</span></div>
+        <div class="leg">Legacy A-23 2261</div>
+        <div class="title">Sweaty Betty Green Relaxed Athletic Crop Hoodie WMNS US 12 Athleisure Lounge Top</div>
+      </div>
+    </li>
+
+    <li class="item" data-sku="Pants-1584">
+      <button class="chk" aria-label="toggle present"></button>
+      <div class="body">
+        <div class="line1"><span class="cat">Pants-1584</span><span class="slot">slot 18</span></div>
+        <div class="leg">Legacy LA17 568</div>
+        <div class="title">J.Crew 1984 Tall Slouchy Jeans WMNS 32T White Denim High Rise Straight 5-Pockets</div>
+      </div>
+    </li>
+
+    <li class="item" data-sku="Pants-1593">
+      <button class="chk" aria-label="toggle present"></button>
+      <div class="body">
+        <div class="line1"><span class="cat">Pants-1593</span><span class="slot">slot 19</span></div>
+        <div class="leg">Legacy H-8 1833</div>
+        <div class="title">Studio by Torrid Trouser Slim Boot Pants SZ 16R Dark Charcoal Heather Ponte Knit</div>
+      </div>
+    </li>
+
+    <li class="item" data-sku="Pants-1741">
+      <button class="chk" aria-label="toggle present"></button>
+      <div class="body">
+        <div class="line1"><span class="cat">Pants-1741</span><span class="slot">slot 20</span></div>
+        <div class="leg">Legacy B-5 2687</div>
+        <div class="title">Athleta Cam Cool Plum Lounge Pant WMNS Large Wide Leg Tawny Rose High</div>
+      </div>
+    </li>
+</ul>
+
+<div class="bar">
+  <div class="prog"><b id="pN">0</b> checked &middot; <span id="mN">20</span> not found</div>
+  <button class="btn reset" onclick="resetAll()">Reset</button>
+  <button class="btn save" onclick="saveAudit()">Save audit</button>
+</div>
+
+<script>
+  var BIN="P1-R1-B1", KEY="rrr-bin-"+BIN, total=20;
+  var state={};
+  try{ state=JSON.parse(localStorage.getItem(KEY)||"{}"); }catch(e){ state={}; }
+  var items=[].slice.call(document.querySelectorAll(".item"));
+  function paint(){
+    var p=0;
+    items.forEach(function(li){
+      var sku=li.getAttribute("data-sku");
+      if(state[sku]){ li.classList.add("done"); p++; } else { li.classList.remove("done"); }
+    });
+    document.getElementById("presentN").textContent=p;
+    document.getElementById("pN").textContent=p;
+    document.getElementById("mN").textContent=(total-p);
+  }
+  items.forEach(function(li){
+    li.querySelector(".chk").addEventListener("click",function(){
+      var sku=li.getAttribute("data-sku");
+      state[sku]=!state[sku];
+      try{ localStorage.setItem(KEY,JSON.stringify(state)); }catch(e){}
+      paint();
+    });
+  });
+  function resetAll(){ state={}; try{localStorage.removeItem(KEY);}catch(e){} paint(); }
+  function saveAudit(){
+    var present=[],missing=[];
+    items.forEach(function(li){
+      var sku=li.getAttribute("data-sku");
+      (state[sku]?present:missing).push(sku);
+    });
+    var rec={bin:BIN,audited_at:new Date().toISOString(),expected:total,
+             present:present,missing:missing};
+    var blob=new Blob([JSON.stringify(rec,null,2)],{type:"application/json"});
+    var a=document.createElement("a");
+    a.href=URL.createObjectURL(blob);
+    a.download="audit-"+BIN+"-"+new Date().toISOString().slice(0,10)+".json";
+    a.click();
+  }
+  paint();
+</script>
+</body>
+</html>
